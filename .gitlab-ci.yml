@@ -11,9 +11,10 @@ ci:
     # necessary with alpine's minimal image
     - apk add --no-cache git make python3 util-linux
     - yarn install --immutable
-    - yarn build
+    # TODO figure out how to build
     - yarn dlx git-is-clean
 
   artifacts:
     paths:
-      - dist/image_background_color_picker-*.zip
+      # TODO
+      - "*/dist/*.zip"
