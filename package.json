@@ -27,6 +27,14 @@
     "resolutions": {
         "@types/react": "^17.0.34"
     },
+    "dependenciesMeta": {
+        "fsevents": {
+            "built": false
+        },
+        "parcel-bundler": {
+            "built": false
+        }
+    },
     "packageManager": "yarn@2.4.3",
     "workspaces": [
         "copy-selected-links",
