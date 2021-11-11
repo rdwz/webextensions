@@ -1,0 +1,42 @@
+label {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    &:valid {
+        border-color: green !important;
+    }
+
+    &:invalid {
+        border-color: red !important;
+    }
+}
+
+small {
+    color: grey;
+}
+
+#ipEchoServiceInfo {
+    caption-side: bottom;
+    border-collapse: collapse;
+
+    td,
+    th {
+        border: 1px solid grey;
+        padding: 0 0.5em !important;
+    }
+
+    & > tbody > tr > td:nth-child(2),
+    & > tbody > tr > td:nth-child(3) {
+        text-align: center;
+    }
+
+    & > thead {
+        background-color: black;
+        color: white;
+    }
+
+    & > caption {
+        text-align: left;
+    }
+}

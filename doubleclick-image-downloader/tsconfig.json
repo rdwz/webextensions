@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "inlineSourceMap": false, // maximum js parsing performance
+        "moduleResolution": "node",
+        "noUncheckedIndexedAccess": true,
+        "strict": true,
+        "target": "es2020", // compile as modernly as possible, parcel will downcompile anyway with babel and browserslist
+        "useUnknownInCatchVariables": true
+    },
+    "include": ["src/**/*.ts"]
+}

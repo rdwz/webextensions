@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="options.scss" />
+        <script src="options.ts" defer></script>
+        <title>Public IP Display Options</title>
+    </head>
+
+    <body>
+        <p>
+            <input type="checkbox" id="notify" />
+            <label for="notify">Notify when IP (or country) has changed</label>
+        </p>
+
+        <fieldset>
+            <legend>IP Lookup</legend>
+
+            <section>
+                <div>
+                    <label for="refreshRate">Desired refresh interval</label>
+                </div>
+                <div>
+                    <input type="number" min="1" step="1" id="refreshRate" placeholder="10" required="required" />
+                    minutes
+                </div>
+                <div>
+                    <small>Will automatically be limited to the site's specifications (see below).</small>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <label for="logLifetime">Keep a log of most recent IPs</label>
+                </div>
+                <div>
+                    <input type="number" min="0" step="1" id="logLifetime" placeholder="7" required="required" />
+                    days
+                </div>
+                <div>
+                    <small>
+                        Set to 0 to disable. Logs are kept in the browser profile. Old logs are cleared on startup.
+                        <br />
+                        The log data and this setting are
+                        <strong>not</strong>
+                        synchronized to other devices.
+                    </small>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <label for="ipEchoService">IP echo service</label>
+                </div>
+                <div>
+                    <select id="ipEchoService">
+                        <option value="curlmyip.net">curlmyip.net</option>
+                        <option value="icanhazip.com">icanhazip.com</option>
+                        <option value="jsonip.com">jsonip.com</option>
+                        <option value="myexternalip.com">myexternalip.com</option>
+                        <option value="whatismyipaddress.com">whatismyipaddress.com</option>
+                        <option value="ifconfig.co">ifconfig.co</option>
+                    </select>
+
+                    <section>
+                        <table id="ipEchoServiceInfo">
+                            <caption>
+                                <small>Public IP Display and its developer(s) are not responsible for any privacy issues regarding these services.</small>
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th>IP echo service</th>
+                                    <th>HTTPS</th>
+                                    <th>IPv6</th>
+                                    <th>Timeout (min)</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+
+                            <!-- ✖ -->
+                            <tbody>
+                                <tr>
+                                    <td>curlmyip.net</td>
+                                    <td>✔</td>
+                                    <td>✔</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>icanhazip.com</td>
+                                    <td>✔</td>
+                                    <td>✔</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>jsonip.com</td>
+                                    <td>✔</td>
+                                    <td>✔</td>
+                                    <td>1</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>myexternalip.com</td>
+                                    <td>✔</td>
+                                    <td>?</td>
+                                    <td>1</td>
+                                    <td>seems to have issues with IPv6</td>
+                                </tr>
+                                <tr>
+                                    <td>whatismyipaddress.com</td>
+                                    <td>✔</td>
+                                    <td>✔</td>
+                                    <td>5</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>ifconfig.co</td>
+                                    <td>✔</td>
+                                    <td>✔</td>
+                                    <td>1</td>
+                                    <td>stricly enforces rate limiting: you will see errors if you refresh too often</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend>Country flag</legend>
+            <section>
+                <div>
+                    <input type="checkbox" id="lookUpCountry" />
+                    <label for="lookUpCountry">Look up my IP's country</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="displayFlag" />
+                    <label for="displayFlag">... and display its flag in the toolbar</label>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <label for="countryCodeService">Lookup service</label>
+                </div>
+                <div>
+                    <select id="countryCodeService">
+                        <option value="ifconfig.co">ifconfig.co</option>
+                        <option value="ipapi.co">ipapi.co</option>
+                        <option value="freegeoip.app">freegeoip.app</option>
+                    </select>
+                </div>
+            </section>
+        </fieldset>
+    </body>
+</html>

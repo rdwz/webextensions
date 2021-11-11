@@ -1,0 +1,19 @@
+image: node:14.18.1-alpine
+
+cache:
+  paths:
+    - .yarn/cache/
+    - .yarn/unplugged/
+    - .yarn/build-state.yml
+
+ci:
+  script:
+    # necessary with alpine's minimal image
+    - apk add --no-cache git make python3 util-linux
+    - yarn install --immutable
+    - yarn build
+    - yarn dlx git-is-clean
+
+  artifacts:
+    paths:
+      - dist/public_ip_display-*.zip

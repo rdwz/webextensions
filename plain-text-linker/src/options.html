@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="options.scss" />
+        <script src="options.ts" defer></script>
+        <title>Plain Text Linker Options</title>
+    </head>
+
+    <body>
+        <section>
+            <h1>Triggering</h1>
+
+            <div>
+                <label for="requireShiftKey">
+                    <input type="checkbox" id="requireShiftKey" />
+                    Only when Shift key is held
+                </label>
+            </div>
+        </section>
+
+        <section>
+            <h1>Text processing</h1>
+
+            <div>
+                <label for="tryHttp">
+                    <input type="checkbox" id="tryHttp" />
+                    If opening a raw domain with https:// fails, try insecure http:// as well
+                    <sup>1</sup>
+                </label>
+            </div>
+
+            <p>
+                <sup>1</sup>
+                When a URL doesn't specify a protocol (e.g. "example.net/foo"), Plain Text Linker will automatically assume the https:// prefix.
+                <br />
+                This option lets you attempt an insecure connection via http:// as well if the former fails.
+            </p>
+        </section>
+
+        <section>
+            <h1>Appearance</h1>
+
+            <div>
+                <label for="notifyInvalidUrl">
+                    <input type="checkbox" id="notifyInvalidUrl" />
+                    Notify if a URL could not be opened
+                </label>
+            </div>
+            <div>
+                <label for="foregroundByDefault">
+                    <input type="checkbox" id="foregroundByDefault" />
+                    Switch to opened tab immediately (inverted by holding Ctrl key)
+                </label>
+            </div>
+            <fieldset id="newTabPositionPicker">
+                <legend>New tab position</legend>
+                <label for="newTabPositionDefault">
+                    <input type="radio" id="newTabPositionDefault" name="newTabPosition" value="default" />
+                    Browser default
+                </label>
+                <label for="newTabPositionRight">
+                    <input type="radio" id="newTabPositionRight" name="newTabPosition" value="right" />
+                    To the right of the current tab
+                </label>
+                <label for="newTabPositionFarRight">
+                    <input type="radio" id="newTabPositionFarRight" name="newTabPosition" value="farRight" />
+                    To the far right
+                </label>
+            </fieldset>
+        </section>
+    </body>
+</html>

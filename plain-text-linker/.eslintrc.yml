@@ -1,0 +1,94 @@
+env:
+  browser: true
+  es6: true
+extends:
+  - eslint:all
+  - plugin:@typescript-eslint/all
+  - plugin:prettier/recommended
+  - plugin:import/recommended
+  - plugin:import/typescript
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: 6
+  project: tsconfig.json
+  sourceType: module
+rules:
+  # https://github.com/eslint/eslint/tree/master/docs/rules
+  capitalized-comments: off
+  complexity: off
+  consistent-return: off
+  eqeqeq:
+    - error
+    - smart
+  func-style: off
+  id-length:
+    - error
+    - exceptions: [i, _]
+
+  max-statements: off
+  multiline-comment-style: off
+  no-console:
+    - error
+    - allow: [error]
+  no-continue: off
+  no-else-return: off
+  no-eq-null: off
+  no-lonely-if: off
+  no-ternary: off
+  no-undefined: off
+  no-void: off
+  no-warning-comments: off
+  one-var:
+    - error
+    - never
+  sort-imports: off
+
+  # https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
+  "@typescript-eslint/consistent-type-definitions": off
+  "@typescript-eslint/consistent-type-imports": off
+  "@typescript-eslint/explicit-function-return-type":
+    - error
+    - allowExpressions: true
+      allowTypedFunctionExpressions: true
+  "@typescript-eslint/no-confusing-void-expression":
+    - error
+    - ignoreArrowShorthand: true
+  "@typescript-eslint/no-implicit-any-catch": off
+  "@typescript-eslint/no-magic-numbers": off
+  "@typescript-eslint/no-non-null-assertion": off
+  "@typescript-eslint/no-parameter-properties": off
+  "@typescript-eslint/no-restricted-imports": off
+  "@typescript-eslint/no-type-alias": off
+  "@typescript-eslint/prefer-readonly-parameter-types": off
+  "@typescript-eslint/restrict-template-expressions":
+    - error
+    - allowBoolean: true
+      allowNullish: true
+      allowNumber: true
+  "@typescript-eslint/sort-type-union-intersection-members": off
+  # enforced through tsconfig
+  "@typescript-eslint/typedef": off
+
+  # https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+  import/no-amd: error
+  import/no-commonjs: error
+  import/no-cycle: error
+  import/no-nodejs-modules: error
+  import/no-restricted-paths:
+    - error
+    - zones:
+        - target: src/background
+          from: src/
+          except: [background/, common/]
+        - target: src/common
+          from: src/
+          except: [common/]
+        - target: src/content
+          from: src/
+          except: [content/, common/]
+        - target: src/options
+          from: src/
+          except: [options/, common/]
+  import/no-unused-modules:
+    - error
+    - unusedExports: true

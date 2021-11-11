@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="options.scss" />
+        <script src="options.ts" defer></script>
+        <title>Copy Selected Links Options</title>
+    </head>
+
+    <body>
+        <section class="my1">
+            <input type="checkbox" id="finalNewline" />
+            <label for="finalNewline">Include final newline</label>
+        </section>
+
+        <section class="my1">
+            <label>
+                Copy pattern
+                <input type="text" id="copyPattern" placeholder="%url% — (%text%)" />
+            </label>
+
+            <section>
+                Live preview:
+                <br />
+                <samp id="copyPatternPreview"></samp>
+            </section>
+
+            <dl>
+                <dt>%text%</dt>
+                <dd>Displayed text of the link</dd>
+                <dt>%url%</dt>
+                <dd>URL the link points at</dd>
+            </dl>
+        </section>
+
+        <section class="my1">
+            <strong>
+                <span style="font-size: 1.5rem; color: dodgerblue">🛈</span>
+                Hotkey settings?
+            </strong>
+            <br />
+            You can configure a hotkey to copy links through your browser's extension hotkey management!
+        </section>
+
+        <fieldset>
+            <legend>Link gathering</legend>
+
+            <section class="my1">
+                <input type="checkbox" id="includeCommandTarget" />
+                <label for="includeCommandTarget">Consider the context menu target a selected link</label>
+                <br />
+                <small>If the context menu is invoked on a link outside the selection, it can still be considered for copying.</small>
+            </section>
+
+            <section class="my1">
+                <input type="checkbox" id="deduplicateHrefs" />
+                <label for="deduplicateHrefs">Omit duplicate links</label>
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend>Notifications</legend>
+
+            <section class="my1">
+                <input type="checkbox" id="popupSuccess" />
+                <label for="popupSuccess">After copying at least 1 link</label>
+            </section>
+
+            <section class="my1">
+                <input type="checkbox" id="popupFail" />
+                <label for="popupFail">If no links were copied</label>
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend>Context menu</legend>
+
+            <section class="my1">
+                <input type="checkbox" id="showCopyMenuAction" />
+                <label for="showCopyMenuAction">Enable the titular context menu item</label>
+            </section>
+
+            <section class="my1">
+                <input type="checkbox" id="showOpenMenuAction" />
+                <label for="showOpenMenuAction">
+                    Show a context menu item to
+                    <em>open</em>
+                    selected links in new tabs
+                </label>
+            </section>
+        </fieldset>
+    </body>
+</html>

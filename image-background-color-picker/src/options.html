@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="options.scss" />
+        <script src="options.ts" defer></script>
+        <title>Image Background Color Picker Options</title>
+    </head>
+
+    <body>
+        <fieldset>
+            <legend>Background Color</legend>
+
+            <section>
+                <div>
+                    <label for="colorPicker">Color</label>
+                </div>
+                <div>
+                    <label for="colorString">#</label>
+                    <input type="text" id="colorString" required="required" size="6" maxlength="6" minlength="6" pattern="[a-fA-F0-9]{6}" />
+                    <input type="color" id="colorPicker" />
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <input type="checkbox" id="checkerBoard" />
+                    <label for="checkerBoard">Checkerboard pattern</label>
+                </div>
+            </section>
+        </fieldset>
+    </body>
+</html>

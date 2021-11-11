@@ -1,0 +1,17 @@
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    &:valid {
+        border-color: green !important;
+    }
+
+    &:invalid {
+        border-color: red !important;
+    }
+}
+
+input[type="color"] {
+    vertical-align: bottom;
+}

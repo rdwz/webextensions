@@ -1,0 +1,16 @@
+html[data-darken] {
+    background-color: black !important;
+
+    * {
+        visibility: hidden !important;
+    }
+
+    embed,
+    video,
+    object,
+    .dont-turn-off-the-lights,
+    .dont-turn-off-the-lights *,
+    iframe {
+        visibility: visible !important;
+    }
+}
