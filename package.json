@@ -5,6 +5,9 @@
     "license": "UNLICENSED",
     "repository": "https://gitlab.com/Marnes/webextensions",
     "author": "Marnes <leaumar@mailbox.org>",
+    "resolutions": {
+        "@types/react": "^17.0.34"
+    },
     "workspaces": [
         "copy-selected-links",
         "doubleclick-image-downloader",
@@ -12,5 +15,6 @@
         "page-dark",
         "plain-text-linker",
         "public-ip-display"
-    ]
+    ],
+    "packageManager": "yarn@2.4.3"
 }
