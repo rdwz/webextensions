@@ -4,6 +4,6 @@
 !/.yarn/releases/
 /.pnp.js
 
-/.cache/
-/dist/
-/extension/
+/*/.cache/
+/*/dist/
+/*/extension/
