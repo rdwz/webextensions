@@ -15,6 +15,7 @@ parserOptions:
   ecmaVersion: 6
   project: tsconfig.json
   sourceType: module
+root: true
 rules:
   # https://github.com/eslint/eslint/tree/master/docs/rules
   capitalized-comments: off
