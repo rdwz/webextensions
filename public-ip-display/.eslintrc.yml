@@ -1,3 +1,5 @@
+extends: ../.eslintrc.yml
+
 rules:
   import/no-restricted-paths:
     - error
