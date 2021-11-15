@@ -38,31 +38,33 @@ const RELATIVE_DISTANCES: Record<HoverButtonPosition, [Calculator, Calculator]> 
 };
 
 interface Offset {
-    x: number;
-    y: number;
+    // a.k.a. x or offset from left
+    left: number;
+    // a.k.a. y or offset from top
+    top: number;
 }
 
 export function topLeftOf(element: Element): Offset {
     const {left, top} = element.getBoundingClientRect();
-    return {x: left, y: top};
+    return {left, top};
 }
 
 export function relativeTo(area: Area, position: HoverButtonPosition, buttonSize: number): Offset {
     const distances = RELATIVE_DISTANCES[position];
 
-    const x = distances[0](area.width, buttonSize);
-    const y = distances[1](area.height, buttonSize);
+    const left = distances[0](area.width, buttonSize);
+    const top = distances[1](area.height, buttonSize);
 
-    return {x, y};
+    return {left, top};
 }
 
 export function add(offsetA: Offset, offsetB: Offset): Offset {
-    return {x: offsetA.x + offsetB.x, y: offsetA.y + offsetB.y};
+    return {left: offsetA.left + offsetB.left, top: offsetA.top + offsetB.top};
 }
 
 export function constrainTo(offset: Offset, area: Area): Offset {
-    const x = Math.max(0, Math.min(area.width, offset.x));
-    const y = Math.max(0, Math.min(area.height, offset.y));
+    const left = Math.max(0, Math.min(area.width, offset.left));
+    const top = Math.max(0, Math.min(area.height, offset.top));
 
-    return {x, y};
+    return {left, top};
 }

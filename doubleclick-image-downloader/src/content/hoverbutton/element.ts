@@ -67,7 +67,7 @@ export function setSize(size: number): void {
     button.style.width = `${size}px`;
 }
 
-export function setCoordinates(x: number, y: number): void {
-    button.style.left = `${x}px`;
-    button.style.top = `${y}px`;
+export function setCoordinates(left: number, top: number): void {
+    button.style.left = `${left}px`;
+    button.style.top = `${top}px`;
 }

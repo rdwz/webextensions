@@ -23,9 +23,9 @@ function alignToAnchor(): void {
     const offsetRelativeToAnchor = relativeTo(matching(anchor), makeup.position, makeup.size);
     const absoluteOffset = add(offsetRelativeToAnchor, topLeftOf(anchor));
     const whereButtonIsVisible = shrink(ofViewport(), makeup.size);
-    const {x, y} = constrainTo(absoluteOffset, whereButtonIsVisible);
+    const {left, top} = constrainTo(absoluteOffset, whereButtonIsVisible);
 
-    element.setCoordinates(x, y);
+    element.setCoordinates(left, top);
 }
 
 function setSize(settings: Settings): void {
