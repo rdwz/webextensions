@@ -1,4 +1,4 @@
-extends: ../.eslintrc.yml
+extends: ../.eslintrc.react.yml
 
 rules:
   import/no-restricted-paths:
