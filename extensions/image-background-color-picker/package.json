@@ -11,10 +11,12 @@
         "compile": "pnpify parcel build src/*.* --out-dir extension",
         "compile:watch": "pnpify parcel watch src/*.* --out-dir extension --no-autoinstall --no-hmr",
         "eslint": "eslint src/**/*.ts",
+        "lint": "run-p eslint tsc",
         "package": "web-ext build",
         "qa": "web-ext lint",
         "start": "web-ext run",
-        "start:chrome": "web-ext run -t chromium"
+        "start:chrome": "web-ext run -t chromium",
+        "tsc": "tsc"
     },
     "dependencies": {
         "fast-equals": "^2.0.3",
@@ -27,7 +29,6 @@
         "@types/webextension-polyfill": "^0.8.1",
         "@typescript-eslint/eslint-plugin": "^5.3.1",
         "@yarnpkg/pnpify": "^3.1.0",
-        "babel-types": "^6.26.0",
         "cssnano": "^4.1.11",
         "eslint": "^7.32.0",
         "eslint-plugin-import": "^2.25.3",

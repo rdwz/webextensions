@@ -6,12 +6,14 @@
     "repository": "https://gitlab.com/Marnes/webextensions",
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
+        "build": "yarn workspaces foreach run build",
         "bundle": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
         "clean": "rimraf sources.zip && yarn workspaces foreach -p run clean",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock"
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^5.3.1",
+        "babel-types": "^6.26.0",
         "bestzip": "^2.2.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
