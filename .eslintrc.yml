@@ -76,6 +76,24 @@ rules:
   import/no-commonjs: error
   import/no-cycle: error
   import/no-nodejs-modules: error
+  import/no-restricted-paths:
+    - error
+    - zones:
+        - target: src/background
+          from: src/
+          except: [background/, common/]
+        - target: src/common
+          from: src/
+          except: [common/]
+        - target: src/content
+          from: src/
+          except: [content/, common/]
+        - target: src/options
+          from: src/
+          except: [options/, common/]
+        - target: src/popup
+          from: src/
+          except: [popup/, common/]
   import/no-unresolved: error
   import/no-unused-modules:
     - error

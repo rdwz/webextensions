@@ -1,18 +1,1 @@
 extends: ../../.eslintrc.yml
-
-rules:
-  import/no-restricted-paths:
-    - error
-    - zones:
-        - target: src/background
-          from: src/
-          except: [background/, common/]
-        - target: src/common
-          from: src/
-          except: [common/]
-        - target: src/content
-          from: src/
-          except: [content/, common/]
-        - target: src/options
-          from: src/
-          except: [options/, common/]
