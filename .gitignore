@@ -2,7 +2,7 @@
 /.yarn/*
 !/.yarn/plugins/
 !/.yarn/releases/
-/.pnp.js
+/.pnp.*
 
 /extensions/*/.cache/
 /extensions/*/dist/
