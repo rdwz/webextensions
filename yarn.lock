@@ -1394,6 +1394,7 @@ __metadata:
   resolution: "@marnes/webextensions@workspace:."
   dependencies:
     "@typescript-eslint/parser": ^5.3.1
+    bestzip: ^2.2.0
     eslint: ^7.32.0
     eslint-config-prettier: ^8.3.0
     eslint-config-react: ^1.1.7
@@ -1401,6 +1402,7 @@ __metadata:
     eslint-import-resolver-node: ^0.3.6
     prettier: ^2.4.1
     prettier-plugin-package: ^1.3.0
+    rimraf: ^3.0.2
     typescript: ^4.4.4
   dependenciesMeta:
     fsevents:
@@ -4090,7 +4092,6 @@ __metadata:
     "@yarnpkg/pnpify": ^2.4.0
     babel-types: ^6.26.0
     basscss-sass: ^4.0.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3
@@ -4986,7 +4987,6 @@ __metadata:
     "@yarnpkg/pnpify": ^3.1.0
     babel-types: ^6.26.0
     basscss-sass: ^4.0.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3
@@ -7062,7 +7062,6 @@ fsevents@~2.3.2:
     "@typescript-eslint/eslint-plugin": ^5.3.1
     "@yarnpkg/pnpify": ^3.1.0
     babel-types: ^6.26.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3
@@ -9678,7 +9677,6 @@ fsevents@~2.3.2:
     "@typescript-eslint/eslint-plugin": ^5.3.1
     "@yarnpkg/pnpify": ^3.1.0
     babel-types: ^6.26.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3
@@ -10104,7 +10102,6 @@ fsevents@~2.3.2:
     "@typescript-eslint/eslint-plugin": ^5.3.1
     "@yarnpkg/pnpify": ^3.1.0
     babel-types: ^6.26.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3
@@ -10819,7 +10816,6 @@ fsevents@~2.3.2:
     "@typescript-eslint/eslint-plugin": ^5.3.1
     "@yarnpkg/pnpify": ^2.4.0
     babel-types: ^6.26.0
-    bestzip: ^2.2.0
     cssnano: ^4.1.11
     eslint: ^7.32.0
     eslint-plugin-import: ^2.25.3

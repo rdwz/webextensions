@@ -7,7 +7,6 @@
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
         "build": "run-s clean lint compile qa package bundle",
-        "bundle": "bestzip dist/sources.zip .browserslistrc .editorconfig .gitignore .node-version .prettierrc.yml license.md package.json readme.md src tsconfig.json web-ext-config.js yarn.lock",
         "clean": "rimraf dist extension .cache",
         "compile": "pnpify parcel build src/*.* --out-dir extension",
         "compile:watch": "pnpify parcel watch src/*.* --out-dir extension --no-autoinstall --no-hmr",
@@ -29,7 +28,6 @@
         "@typescript-eslint/eslint-plugin": "^5.3.1",
         "@yarnpkg/pnpify": "^3.1.0",
         "babel-types": "^6.26.0",
-        "bestzip": "^2.2.0",
         "cssnano": "^4.1.11",
         "eslint": "^7.32.0",
         "eslint-plugin-import": "^2.25.3",
