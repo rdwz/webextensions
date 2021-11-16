@@ -11,10 +11,9 @@ ci:
     # necessary with alpine's minimal image
     - apk add --no-cache git make python3 util-linux
     - yarn install --immutable
-    # TODO figure out how to build
+    - yarn build
     - yarn dlx git-is-clean
 
   artifacts:
     paths:
-      # TODO
-      - "*/dist/*.zip"
+      - extensions/*/dist/*.zip
