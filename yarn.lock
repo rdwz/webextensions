@@ -4083,9 +4083,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-selected-links@workspace:copy-selected-links":
+"copy-selected-links@workspace:extensions/copy-selected-links":
   version: 0.0.0-use.local
-  resolution: "copy-selected-links@workspace:copy-selected-links"
+  resolution: "copy-selected-links@workspace:extensions/copy-selected-links"
   dependencies:
     "@types/webextension-polyfill": ^0.8.1
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -4978,9 +4978,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"doubleclick-image-downloader@workspace:doubleclick-image-downloader":
+"doubleclick-image-downloader@workspace:extensions/doubleclick-image-downloader":
   version: 0.0.0-use.local
-  resolution: "doubleclick-image-downloader@workspace:doubleclick-image-downloader"
+  resolution: "doubleclick-image-downloader@workspace:extensions/doubleclick-image-downloader"
   dependencies:
     "@types/webextension-polyfill": ^0.8.1
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -7054,9 +7054,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"image-background-color-picker@workspace:image-background-color-picker":
+"image-background-color-picker@workspace:extensions/image-background-color-picker":
   version: 0.0.0-use.local
-  resolution: "image-background-color-picker@workspace:image-background-color-picker"
+  resolution: "image-background-color-picker@workspace:extensions/image-background-color-picker"
   dependencies:
     "@types/webextension-polyfill": ^0.8.1
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -9669,9 +9669,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"page-dark@workspace:page-dark":
+"page-dark@workspace:extensions/page-dark":
   version: 0.0.0-use.local
-  resolution: "page-dark@workspace:page-dark"
+  resolution: "page-dark@workspace:extensions/page-dark"
   dependencies:
     "@types/webextension-polyfill": ^0.8.1
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -10094,9 +10094,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"plain-text-linker@workspace:plain-text-linker":
+"plain-text-linker@workspace:extensions/plain-text-linker":
   version: 0.0.0-use.local
-  resolution: "plain-text-linker@workspace:plain-text-linker"
+  resolution: "plain-text-linker@workspace:extensions/plain-text-linker"
   dependencies:
     "@types/webextension-polyfill": ^0.8.1
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -10806,9 +10806,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"public-ip-display@workspace:public-ip-display":
+"public-ip-display@workspace:extensions/public-ip-display":
   version: 0.0.0-use.local
-  resolution: "public-ip-display@workspace:public-ip-display"
+  resolution: "public-ip-display@workspace:extensions/public-ip-display"
   dependencies:
     "@types/react": ^17.0.34
     "@types/react-dom": ^17.0.11

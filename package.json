@@ -6,7 +6,7 @@
     "repository": "https://gitlab.com/Marnes/webextensions",
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
-        "bundle": "bestzip sources.zip \"*-*/*.*\" \"*-*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
+        "bundle": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
         "clean": "rimraf sources.zip && yarn workspaces foreach -p run clean",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock"
     },
@@ -36,11 +36,6 @@
     },
     "packageManager": "yarn@2.4.3",
     "workspaces": [
-        "copy-selected-links",
-        "doubleclick-image-downloader",
-        "image-background-color-picker",
-        "page-dark",
-        "plain-text-linker",
-        "public-ip-display"
+        "extensions/*"
     ]
 }

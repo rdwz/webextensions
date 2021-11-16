@@ -1,1 +1,1 @@
-module.exports = require("../web-ext-config");
+module.exports = require("../../web-ext-config");

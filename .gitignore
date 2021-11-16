@@ -4,7 +4,7 @@
 !/.yarn/releases/
 /.pnp.js
 
-/*/.cache/
-/*/dist/
-/*/extension/
+/extensions/*/.cache/
+/extensions/*/dist/
+/extensions/*/extension/
 sources.zip
