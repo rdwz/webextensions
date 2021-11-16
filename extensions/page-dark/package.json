@@ -6,7 +6,7 @@
     "repository": "https://gitlab.com/Marnes/page-dark.git",
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
-        "build": "run-s clean lint compile qa package bundle",
+        "build": "run-s clean lint compile qa package",
         "clean": "rimraf dist extension .cache",
         "compile": "pnpify parcel build src/*.* --out-dir extension",
         "compile:watch": "pnpify parcel watch src/*.* --out-dir extension --no-autoinstall --no-hmr",
