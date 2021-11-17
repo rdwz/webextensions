@@ -2,7 +2,13 @@
 
 ## For users
 
-Official downloads:
+This repository hosts all extensions developed by Marnes (see [list](./extensions)) in one place. Please report bugs, ask questions, or request features for any of them here.
+
+Contributions in the form of developer efforts or [monetary donations](https://www.buymeacoffee.com/marnes) are most appreciated. Feedback — positive words or critical but fair review — is preferably left on the Firefox/Chrome stores.
+
+My extensions were originally created to suit my own needs, then taken public for programming practice and to be useful to more people than only me. They are (and will remain) spare time projects.
+
+### Official downloads
 
 - [Firefox add-ons](https://addons.mozilla.org/en-US/firefox/user/4545060/)
 - [Chrome extensions](https://chrome.google.com/webstore/search/Marnes?_category=extensions)
