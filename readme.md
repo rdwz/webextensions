@@ -7,9 +7,9 @@ This repository hosts all extensions developed by Marnes (see
 request features for any of them here.
 
 Contributions in the form of developer efforts or
-[monetary donations](https://www.buymeacoffee.com/marnes) are most appreciated.
-Feedback — positive words or critical but fair review — is preferably left on
-the Firefox/Chrome stores.
+[buying me some coffees](https://www.buymeacoffee.com/marnes) are most
+appreciated. Feedback — positive words or critical but fair review — is
+preferably left on the Firefox/Chrome stores.
 
 My extensions were originally created to suit my own needs, then taken public
 for programming practice and to be useful to more people than only me. They are
