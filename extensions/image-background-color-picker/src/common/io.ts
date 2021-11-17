@@ -1,10 +1,10 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {bool, matching, sanitize, str} from "./validation";
+import { bool, matching, sanitize, str } from "./validation";
 
 const spec = {
     checkerBoard: bool(true),
-    color: str("#222222", matching(/#[0-9a-f]{6}/u))
+    color: str("#222222", matching(/#[0-9a-f]{6}/u)),
 };
 
 export type Settings = {

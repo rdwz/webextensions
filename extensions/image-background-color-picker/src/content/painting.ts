@@ -1,6 +1,6 @@
-import {Settings} from "../common/io";
-import {load, monitor} from "../common/settings";
-import {isImagePage} from "./detection";
+import { Settings } from "../common/io";
+import { load, monitor } from "../common/settings";
+import { isImagePage } from "./detection";
 
 const applicable = "image-background-color-picker-applicable";
 const checkerboardClass = "image-background-color-picker-checkerboard";
@@ -26,7 +26,7 @@ export async function paintIfAppropriate(): Promise<void> {
     if (isImage) {
         const paint = enable();
 
-        monitor(settings => paint(settings));
+        monitor((settings) => paint(settings));
 
         paint(await load());
     }

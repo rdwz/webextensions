@@ -1,8 +1,11 @@
 import browser from "webextension-polyfill";
-import {toggleDarkness} from "./darkness";
+import { toggleDarkness } from "./darkness";
 
 async function toggleCurrenTabDarkness(): Promise<void> {
-    const [tab] = await browser.tabs.query({active: true, currentWindow: true});
+    const [tab] = await browser.tabs.query({
+        active: true,
+        currentWindow: true,
+    });
     if (tab?.id == null) {
         throw new Error("missing tab id");
     }
@@ -11,7 +14,7 @@ async function toggleCurrenTabDarkness(): Promise<void> {
 }
 
 export function monitorHotkey(): void {
-    browser.commands.onCommand.addListener(command => {
+    browser.commands.onCommand.addListener((command) => {
         switch (command) {
             case "darken-page":
                 toggleCurrenTabDarkness().catch(console.error);

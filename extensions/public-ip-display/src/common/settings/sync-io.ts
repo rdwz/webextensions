@@ -1,7 +1,7 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {IpService, CountryService} from "./enums";
-import {bool, gte, num, roundedTo, sanitize, stringEnum} from "./validation";
+import { IpService, CountryService } from "./enums";
+import { bool, gte, num, roundedTo, sanitize, stringEnum } from "./validation";
 
 const spec = {
     countryCodeService: stringEnum(CountryService, CountryService.ifConfig),
@@ -9,7 +9,7 @@ const spec = {
     ipEchoService: stringEnum(IpService, IpService.curl),
     lookUpCountry: bool(false),
     notify: bool(true),
-    refreshRate: num(10, gte(1), roundedTo(0))
+    refreshRate: num(10, gte(1), roundedTo(0)),
 } as const;
 
 export type SyncSettings = {
@@ -31,6 +31,8 @@ export async function write(dto: Partial<SyncSettings>): Promise<void> {
     return browser.storage.sync.set(dto);
 }
 
-export function correct(raw: Record<keyof SyncSettings, JsonValue>): SyncSettings {
+export function correct(
+    raw: Record<keyof SyncSettings, JsonValue>
+): SyncSettings {
     return sanitize<SyncSettings>(raw, spec);
 }

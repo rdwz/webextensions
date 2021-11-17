@@ -1,13 +1,35 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {DOMAIN_NAME_FILTER_PATTERN} from "../filtering";
-import {bool, gt, gte, lte, matching, notBlank, num, roundedTo, sanitize, str, stringArray, stringEnum} from "./validation";
-import {ClickType, ConflictAction, FilenameVariables, HoverButtonPosition, HoverButtonSkin} from "./enums";
+import { DOMAIN_NAME_FILTER_PATTERN } from "../filtering";
+import {
+    bool,
+    gt,
+    gte,
+    lte,
+    matching,
+    notBlank,
+    num,
+    roundedTo,
+    sanitize,
+    str,
+    stringArray,
+    stringEnum,
+} from "./validation";
+import {
+    ClickType,
+    ConflictAction,
+    FilenameVariables,
+    HoverButtonPosition,
+    HoverButtonSkin,
+} from "./enums";
 
 const spec = {
     aggressiveCursorTracking: bool(false),
     buttonOpacity: num(1, gte(0.1), lte(1), roundedTo(2)),
-    buttonPosition: stringEnum(HoverButtonPosition, HoverButtonPosition.topRightSW),
+    buttonPosition: stringEnum(
+        HoverButtonPosition,
+        HoverButtonPosition.topRightSW
+    ),
     buttonSize: num(48, Number.isInteger, gte(8), lte(512)),
     counterPadding: num(1, Number.isInteger, gte(0)),
     counterStart: num(1, Number.isInteger, gte(0)),
@@ -17,7 +39,10 @@ const spec = {
     enableRename: bool(false),
     enableSelectionContextMenu: bool(true),
     excludedPageDomains: stringArray([], matching(DOMAIN_NAME_FILTER_PATTERN)),
-    excludedSourceDomains: stringArray([], matching(DOMAIN_NAME_FILTER_PATTERN)),
+    excludedSourceDomains: stringArray(
+        [],
+        matching(DOMAIN_NAME_FILTER_PATTERN)
+    ),
     fileNamePattern: str(FilenameVariables.inferred, notBlank),
     greyOut: bool(true),
     minimumImageSize: num(100, Number.isInteger, gte(1)),
@@ -30,7 +55,7 @@ const spec = {
     singleClickEnabled: bool(false),
     sourceDomainsAreWhitelist: bool(false),
     supportDragDrop: bool(true),
-    triggerByClickType: stringEnum(ClickType, ClickType.doubleLeft)
+    triggerByClickType: stringEnum(ClickType, ClickType.doubleLeft),
 };
 
 export type Settings = {

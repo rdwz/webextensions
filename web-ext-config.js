@@ -1,10 +1,10 @@
 module.exports = {
     artifactsDir: "dist",
     build: {
-        overwriteDest: true
+        overwriteDest: true,
     },
     run: {
-        firefox: "firefoxdeveloperedition"
+        firefox: "firefoxdeveloperedition",
     },
-    sourceDir: "extension"
+    sourceDir: "extension",
 };

@@ -1,14 +1,14 @@
-import React, {ReactElement, useCallback} from "react";
-import {IpCountryData} from "../common/ipdata";
-import {copyToClipboard} from "./util/copy";
-import {FlagImage} from "./flag-image";
-import {sendCopyHappened} from "./util/messaging";
+import React, { ReactElement, useCallback } from "react";
+import { IpCountryData } from "../common/ipdata";
+import { copyToClipboard } from "./util/copy";
+import { FlagImage } from "./flag-image";
+import { sendCopyHappened } from "./util/messaging";
 
 interface Props {
     data: IpCountryData;
 }
 
-export function DataSection({data}: Props): ReactElement {
+export function DataSection({ data }: Props): ReactElement {
     const copy = useCallback(() => {
         copyToClipboard(data.ip, document)
             .then(() => sendCopyHappened(data.ip))

@@ -1,20 +1,32 @@
-import {DOMAIN_NAME_FILTER_PATTERN} from "../common/filtering";
-import {Settings, write} from "../common/settings/io";
-import {load} from "../common/settings/settings";
+import { DOMAIN_NAME_FILTER_PATTERN } from "../common/filtering";
+import { Settings, write } from "../common/settings/io";
+import { load } from "../common/settings/settings";
 
-const excludedPageDomains = document.getElementById("excludedPageDomains") as HTMLTextAreaElement;
-const excludedSourceDomains = document.getElementById("excludedSourceDomains") as HTMLTextAreaElement;
-const invertExcludedPageDomains = document.getElementById("invertExcludedPageDomains")!;
-const invertExcludedSourceDomains = document.getElementById("invertExcludedSourceDomains")!;
-const minimumImageSize = document.getElementById("minimumImageSize") as HTMLInputElement;
-const requireShiftKey = document.getElementById("requireShift") as HTMLInputElement;
+const excludedPageDomains = document.getElementById(
+    "excludedPageDomains"
+) as HTMLTextAreaElement;
+const excludedSourceDomains = document.getElementById(
+    "excludedSourceDomains"
+) as HTMLTextAreaElement;
+const invertExcludedPageDomains = document.getElementById(
+    "invertExcludedPageDomains"
+)!;
+const invertExcludedSourceDomains = document.getElementById(
+    "invertExcludedSourceDomains"
+)!;
+const minimumImageSize = document.getElementById(
+    "minimumImageSize"
+) as HTMLInputElement;
+const requireShiftKey = document.getElementById(
+    "requireShift"
+) as HTMLInputElement;
 
 function rigRequireShiftKey(settings: Settings): void {
     requireShiftKey.checked = settings.requireShift;
 
     requireShiftKey.addEventListener("change", () => {
         write({
-            requireShift: requireShiftKey.checked
+            requireShift: requireShiftKey.checked,
         }).catch(console.error);
     });
 }
@@ -25,7 +37,7 @@ function rigMinImageSize(settings: Settings): void {
     minimumImageSize.addEventListener("input", () => {
         if (minimumImageSize.checkValidity()) {
             write({
-                minimumImageSize: parseInt(minimumImageSize.value, 10)
+                minimumImageSize: parseInt(minimumImageSize.value, 10),
             }).catch(console.error);
         }
     });
@@ -36,26 +48,34 @@ function rigExcludedPageDomains(settings: Settings): void {
 
     excludedPageDomains.addEventListener("input", () => {
         write({
-            excludedPageDomains: excludedPageDomains.value.split("\n").filter(line => DOMAIN_NAME_FILTER_PATTERN.test(line))
+            excludedPageDomains: excludedPageDomains.value
+                .split("\n")
+                .filter((line) => DOMAIN_NAME_FILTER_PATTERN.test(line)),
         }).catch(console.error);
     });
 
     // update display in case filtering changes value
     excludedPageDomains.addEventListener("blur", () => {
         load()
-            .then(liveSettings => (excludedPageDomains.value = liveSettings.excludedPageDomains.join("\n")))
+            .then(
+                (liveSettings) =>
+                    (excludedPageDomains.value =
+                        liveSettings.excludedPageDomains.join("\n"))
+            )
             .catch(console.error);
     });
 }
 
 function riginvertExcludedPageDomains(settings: Settings): void {
-    const current = document.querySelector<HTMLInputElement>(`#invertExcludedPageDomains input[value='${settings.pageDomainsAreWhitelist}']`)!;
+    const current = document.querySelector<HTMLInputElement>(
+        `#invertExcludedPageDomains input[value='${settings.pageDomainsAreWhitelist}']`
+    )!;
     current.checked = true;
 
-    invertExcludedPageDomains.addEventListener("change", event => {
+    invertExcludedPageDomains.addEventListener("change", (event) => {
         const selected = event.target as HTMLInputElement;
         write({
-            pageDomainsAreWhitelist: selected.value === "true"
+            pageDomainsAreWhitelist: selected.value === "true",
         }).catch(console.error);
     });
 }
@@ -65,26 +85,34 @@ function rigExcludedImageDomains(settings: Settings): void {
 
     excludedSourceDomains.addEventListener("input", () => {
         write({
-            excludedSourceDomains: excludedSourceDomains.value.split("\n").filter(line => DOMAIN_NAME_FILTER_PATTERN.test(line))
+            excludedSourceDomains: excludedSourceDomains.value
+                .split("\n")
+                .filter((line) => DOMAIN_NAME_FILTER_PATTERN.test(line)),
         }).catch(console.error);
     });
 
     // update display in case filtering changes value
     excludedSourceDomains.addEventListener("blur", () => {
         load()
-            .then(liveSettings => (excludedSourceDomains.value = liveSettings.excludedSourceDomains.join("\n")))
+            .then(
+                (liveSettings) =>
+                    (excludedSourceDomains.value =
+                        liveSettings.excludedSourceDomains.join("\n"))
+            )
             .catch(console.error);
     });
 }
 
 function rigInvertExcludedSourceDomains(settings: Settings): void {
-    const current = document.querySelector<HTMLInputElement>(`#invertExcludedSourceDomains input[value='${settings.sourceDomainsAreWhitelist}']`)!;
+    const current = document.querySelector<HTMLInputElement>(
+        `#invertExcludedSourceDomains input[value='${settings.sourceDomainsAreWhitelist}']`
+    )!;
     current.checked = true;
 
-    invertExcludedSourceDomains.addEventListener("change", event => {
+    invertExcludedSourceDomains.addEventListener("change", (event) => {
         const selected = event.target as HTMLInputElement;
         write({
-            sourceDomainsAreWhitelist: selected.value === "true"
+            sourceDomainsAreWhitelist: selected.value === "true",
         }).catch(console.error);
     });
 }

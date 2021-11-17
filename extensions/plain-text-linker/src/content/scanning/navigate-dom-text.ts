@@ -1,8 +1,21 @@
-import {nodeWalker} from "./navigate-dom";
+import { nodeWalker } from "./navigate-dom";
 
-const MARKUP_NODE_NAMES = ["SPAN", "B", "STRONG", "I", "EM", "MARK", "SMALL", "DEL", "INS", "WBR"];
+const MARKUP_NODE_NAMES = [
+    "SPAN",
+    "B",
+    "STRONG",
+    "I",
+    "EM",
+    "MARK",
+    "SMALL",
+    "DEL",
+    "INS",
+    "WBR",
+];
 
-export function textNodeWalker(direction: "up" | "down"): (origin: Node) => Iterable<Node> {
+export function textNodeWalker(
+    direction: "up" | "down"
+): (origin: Node) => Iterable<Node> {
     const walkNodes = nodeWalker(direction);
 
     function* walkTextNodes(origin: Node): Iterable<Node> {

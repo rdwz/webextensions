@@ -1,7 +1,10 @@
-import {UnreachableCaseError} from "ts-essentials";
+import { UnreachableCaseError } from "ts-essentials";
 
 function isSignificant(node: ChildNode): boolean {
-    return node.nodeName !== "#text" || (node.textContent != null && node.textContent.trim() !== "");
+    return (
+        node.nodeName !== "#text" ||
+        (node.textContent != null && node.textContent.trim() !== "")
+    );
 }
 
 function getSignificantChildNodes(node: HTMLElement): ChildNode[] {
@@ -9,14 +12,16 @@ function getSignificantChildNodes(node: HTMLElement): ChildNode[] {
 }
 
 export async function isImagePage(): Promise<boolean> {
-    const doc = await new Promise<Document>(resolve => {
+    const doc = await new Promise<Document>((resolve) => {
         switch (document.readyState) {
             case "complete":
             case "interactive":
                 resolve(document);
                 break;
             case "loading":
-                document.addEventListener("DOMContentLoaded", () => resolve(document));
+                document.addEventListener("DOMContentLoaded", () =>
+                    resolve(document)
+                );
                 break;
             default:
                 throw new UnreachableCaseError(document.readyState);
@@ -25,5 +30,8 @@ export async function isImagePage(): Promise<boolean> {
 
     const [firstChild] = getSignificantChildNodes(doc.body);
 
-    return firstChild != null && ["IMG", "SVG"].includes(firstChild.nodeName.toUpperCase());
+    return (
+        firstChild != null &&
+        ["IMG", "SVG"].includes(firstChild.nodeName.toUpperCase())
+    );
 }

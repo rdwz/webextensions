@@ -1,15 +1,21 @@
-import {IpLogEntry} from "../../common/iplog/entry";
-import {useCallback, useEffect, useState} from "react";
-import {clearLog, hasLogProperty, loadLog} from "../../common/iplog/log";
-import browser, {Storage} from "webextension-polyfill";
+import { IpLogEntry } from "../../common/iplog/entry";
+import { useCallback, useEffect, useState } from "react";
+import { clearLog, hasLogProperty, loadLog } from "../../common/iplog/log";
+import browser, { Storage } from "webextension-polyfill";
 
 export function useLogs(): [IpLogEntry[] | null, () => void, () => void] {
     const [logs, setLog] = useState<IpLogEntry[] | null>(null);
 
-    const getLogs = useCallback(() => void loadLog().then(setLog).catch(console.error), []);
+    const getLogs = useCallback(
+        () => void loadLog().then(setLog).catch(console.error),
+        []
+    );
 
     useEffect(() => {
-        function listener(changes: Record<string, Storage.StorageChange>, area: string): void {
+        function listener(
+            changes: Record<string, Storage.StorageChange>,
+            area: string
+        ): void {
             if (logs != null && area === "local" && hasLogProperty(changes)) {
                 getLogs();
             }

@@ -1,33 +1,41 @@
-import {ClickType, ConflictAction} from "../common/settings/enums";
-import {Settings, write} from "../common/settings/io";
+import { ClickType, ConflictAction } from "../common/settings/enums";
+import { Settings, write } from "../common/settings/io";
 
 const clickTypes = document.getElementById("clickTypes")!;
 const conflictActions = document.getElementById("conflictActions")!;
-const doubleRightClickTiming = document.getElementById("doubleRightClickTiming") as HTMLInputElement;
-const aggressiveCursorTracking = document.getElementById("aggressiveCursorTracking") as HTMLInputElement;
+const doubleRightClickTiming = document.getElementById(
+    "doubleRightClickTiming"
+) as HTMLInputElement;
+const aggressiveCursorTracking = document.getElementById(
+    "aggressiveCursorTracking"
+) as HTMLInputElement;
 
 function applyDisabledState(value: ClickType): void {
     doubleRightClickTiming.disabled = value !== ClickType.doubleRight;
 }
 
 function rigConflictAction(settings: Settings): void {
-    const currentActionSelector = document.querySelector<HTMLInputElement>(`#conflictActions input[value='${settings.onFilenameConflict}']`)!;
+    const currentActionSelector = document.querySelector<HTMLInputElement>(
+        `#conflictActions input[value='${settings.onFilenameConflict}']`
+    )!;
     currentActionSelector.checked = true;
 
-    conflictActions.addEventListener("change", event => {
+    conflictActions.addEventListener("change", (event) => {
         const newActionSelector = event.target as HTMLInputElement;
         write({
-            onFilenameConflict: newActionSelector.value as ConflictAction
+            onFilenameConflict: newActionSelector.value as ConflictAction,
         }).catch(console.error);
     });
 }
 
 function rigClickType(settings: Settings): void {
-    const currentTypeSelector = document.querySelector<HTMLInputElement>(`#clickTypes input[value='${settings.triggerByClickType}']`)!;
+    const currentTypeSelector = document.querySelector<HTMLInputElement>(
+        `#clickTypes input[value='${settings.triggerByClickType}']`
+    )!;
     currentTypeSelector.checked = true;
     applyDisabledState(settings.triggerByClickType);
 
-    clickTypes.addEventListener("change", event => {
+    clickTypes.addEventListener("change", (event) => {
         const input = event.target as HTMLInputElement;
         if (input.name !== "clickType") {
             // changed the ms setting
@@ -36,7 +44,7 @@ function rigClickType(settings: Settings): void {
 
         applyDisabledState(input.value as ClickType);
         write({
-            triggerByClickType: input.value as ClickType
+            triggerByClickType: input.value as ClickType,
         }).catch(console.error);
     });
 }
@@ -47,7 +55,10 @@ function rigDoubleRightClickTiming(settings: Settings): void {
     doubleRightClickTiming.addEventListener("input", () => {
         if (doubleRightClickTiming.checkValidity()) {
             write({
-                doubleRightClickMillis: parseInt(doubleRightClickTiming.value, 10)
+                doubleRightClickMillis: parseInt(
+                    doubleRightClickTiming.value,
+                    10
+                ),
             }).catch(console.error);
         }
     });
@@ -58,7 +69,7 @@ function rigAggressiveCursorTracking(settings: Settings): void {
 
     aggressiveCursorTracking.addEventListener("change", () => {
         write({
-            aggressiveCursorTracking: aggressiveCursorTracking.checked
+            aggressiveCursorTracking: aggressiveCursorTracking.checked,
         }).catch(console.error);
     });
 }

@@ -1,9 +1,9 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {gte, num, roundedTo, sanitize} from "./validation";
+import { gte, num, roundedTo, sanitize } from "./validation";
 
 const spec = {
-    logLifetime: num(7, gte(0), roundedTo(0))
+    logLifetime: num(7, gte(0), roundedTo(0)),
 } as const;
 
 export type LocalSettings = {
@@ -19,6 +19,8 @@ export async function write(dto: Partial<LocalSettings>): Promise<void> {
     return browser.storage.local.set(dto);
 }
 
-export function correct(raw: Record<keyof LocalSettings, JsonValue>): LocalSettings {
+export function correct(
+    raw: Record<keyof LocalSettings, JsonValue>
+): LocalSettings {
     return sanitize<LocalSettings>(raw, spec);
 }

@@ -1,6 +1,8 @@
-import {write, Settings} from "../common/settings/io";
+import { write, Settings } from "../common/settings/io";
 
-const greyOutDuringDownload = document.getElementById("greyOut") as HTMLInputElement;
+const greyOutDuringDownload = document.getElementById(
+    "greyOut"
+) as HTMLInputElement;
 const notifyOnDownload = document.getElementById("notify") as HTMLInputElement;
 
 function rigNotifyOnDownload(settings: Settings): void {
@@ -8,7 +10,7 @@ function rigNotifyOnDownload(settings: Settings): void {
 
     notifyOnDownload.addEventListener("change", () => {
         write({
-            notify: notifyOnDownload.checked
+            notify: notifyOnDownload.checked,
         }).catch(console.error);
     });
 }
@@ -18,7 +20,7 @@ function rigGreyOut(settings: Settings): void {
 
     greyOutDuringDownload.addEventListener("change", () => {
         write({
-            greyOut: greyOutDuringDownload.checked
+            greyOut: greyOutDuringDownload.checked,
         }).catch(console.error);
     });
 }

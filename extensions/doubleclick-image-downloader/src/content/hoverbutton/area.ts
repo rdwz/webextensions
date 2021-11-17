@@ -4,17 +4,23 @@ export interface Area {
 }
 
 export function ofViewport(): Area {
-    const height = Math.max(document.documentElement.clientHeight, document.body.clientHeight);
-    const width = Math.max(document.documentElement.clientWidth, document.body.clientWidth);
+    const height = Math.max(
+        document.documentElement.clientHeight,
+        document.body.clientHeight
+    );
+    const width = Math.max(
+        document.documentElement.clientWidth,
+        document.body.clientWidth
+    );
 
-    return {height, width};
+    return { height, width };
 }
 
 export function matching(element: Element): Area {
-    const {height, width} = element.getBoundingClientRect();
-    return {height, width};
+    const { height, width } = element.getBoundingClientRect();
+    return { height, width };
 }
 
 export function shrink(area: Area, size: number): Area {
-    return {height: area.height - size, width: area.width - size};
+    return { height: area.height - size, width: area.width - size };
 }

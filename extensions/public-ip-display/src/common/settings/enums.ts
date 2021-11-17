@@ -4,7 +4,7 @@ export enum IpService {
     ifConfig = "ifconfig.co",
     json = "jsonip.com",
     myExt = "myexternalip.com",
-    whatIs = "whatismyipaddress.com"
+    whatIs = "whatismyipaddress.com",
 }
 
 export function isIpService(id: string): id is IpService {
@@ -15,7 +15,7 @@ export function isIpService(id: string): id is IpService {
 export enum CountryService {
     freeGeo = "freegeoip.app",
     ifConfig = "ifconfig.co",
-    ipApi = "ipapi.co"
+    ipApi = "ipapi.co",
 }
 
 export function isCountryService(id: string): id is CountryService {

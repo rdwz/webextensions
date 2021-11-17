@@ -1,12 +1,12 @@
-import React, {ReactElement} from "react";
-import {IpLogEntry} from "../common/iplog/entry";
-import {FlagImage} from "./flag-image";
+import React, { ReactElement } from "react";
+import { IpLogEntry } from "../common/iplog/entry";
+import { FlagImage } from "./flag-image";
 
 interface Props {
     entry: IpLogEntry;
 }
 
-export function LogRow({entry}: Props): ReactElement {
+export function LogRow({ entry }: Props): ReactElement {
     return (
         <tr>
             <td className="bb">
@@ -16,7 +16,8 @@ export function LogRow({entry}: Props): ReactElement {
             </td>
 
             <td className="bb">
-                {entry.country == null || entry.countryService == null ? null : (
+                {entry.country == null ||
+                entry.countryService == null ? null : (
                     <>
                         <div className="tc">
                             <FlagImage country={entry.country} />
@@ -24,7 +25,9 @@ export function LogRow({entry}: Props): ReactElement {
                             <span className="ml1">{entry.country}</span>
                         </div>
 
-                        <small className="tr db i">{entry.countryService}</small>
+                        <small className="tr db i">
+                            {entry.countryService}
+                        </small>
                     </>
                 )}
             </td>

@@ -1,6 +1,11 @@
-import type {JsonValue} from "type-fest";
-import {isMessage, Message} from "./messages";
-import {CountryService, IpService, isCountryService, isIpService} from "./settings/enums";
+import type { JsonValue } from "type-fest";
+import { isMessage, Message } from "./messages";
+import {
+    CountryService,
+    IpService,
+    isCountryService,
+    isIpService,
+} from "./settings/enums";
 
 export function asError(thrown: unknown): Error {
     if (thrown instanceof Error) {
@@ -22,7 +27,9 @@ export function asSignificantString(json: JsonValue | undefined): string {
     }
 }
 
-export function asNullableSignificantString(json: JsonValue | undefined): string | null {
+export function asNullableSignificantString(
+    json: JsonValue | undefined
+): string | null {
     return json == null ? null : asSignificantString(json);
 }
 

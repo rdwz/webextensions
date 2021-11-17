@@ -1,5 +1,5 @@
-import {deepEqual} from "fast-equals";
-import {correct, LocalSettings, read, write} from "./local-io";
+import { deepEqual } from "fast-equals";
+import { correct, LocalSettings, read, write } from "./local-io";
 
 export async function load(): Promise<LocalSettings> {
     const raw = await read();

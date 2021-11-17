@@ -1,5 +1,5 @@
-import {Settings, write} from "../common/io";
-import {checkerboardCheckbox, colorPicker, colorTextbox} from "./elements";
+import { Settings, write } from "../common/io";
+import { checkerboardCheckbox, colorPicker, colorTextbox } from "./elements";
 
 function setColorInputsDisabled(disabled: boolean): void {
     colorPicker.disabled = disabled;
@@ -14,6 +14,8 @@ export function provideCheckerboard(settings: Settings): void {
     checkerboardCheckbox.addEventListener("change", () => {
         setColorInputsDisabled(checkerboardCheckbox.checked);
 
-        write({checkerBoard: checkerboardCheckbox.checked}).catch(console.error);
+        write({ checkerBoard: checkerboardCheckbox.checked }).catch(
+            console.error
+        );
     });
 }

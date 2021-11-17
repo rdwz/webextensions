@@ -25,16 +25,19 @@
             <div>
                 <label for="tryHttp">
                     <input type="checkbox" id="tryHttp" />
-                    If opening a raw domain with https:// fails, try insecure http:// as well
+                    If opening a raw domain with https:// fails, try insecure
+                    http:// as well
                     <sup>1</sup>
                 </label>
             </div>
 
             <p>
                 <sup>1</sup>
-                When a URL doesn't specify a protocol (e.g. "example.net/foo"), Plain Text Linker will automatically assume the https:// prefix.
+                When a URL doesn't specify a protocol (e.g. "example.net/foo"),
+                Plain Text Linker will automatically assume the https:// prefix.
                 <br />
-                This option lets you attempt an insecure connection via http:// as well if the former fails.
+                This option lets you attempt an insecure connection via http://
+                as well if the former fails.
             </p>
         </section>
 
@@ -50,21 +53,37 @@
             <div>
                 <label for="foregroundByDefault">
                     <input type="checkbox" id="foregroundByDefault" />
-                    Switch to opened tab immediately (inverted by holding Ctrl key)
+                    Switch to opened tab immediately (inverted by holding Ctrl
+                    key)
                 </label>
             </div>
             <fieldset id="newTabPositionPicker">
                 <legend>New tab position</legend>
                 <label for="newTabPositionDefault">
-                    <input type="radio" id="newTabPositionDefault" name="newTabPosition" value="default" />
+                    <input
+                        type="radio"
+                        id="newTabPositionDefault"
+                        name="newTabPosition"
+                        value="default"
+                    />
                     Browser default
                 </label>
                 <label for="newTabPositionRight">
-                    <input type="radio" id="newTabPositionRight" name="newTabPosition" value="right" />
+                    <input
+                        type="radio"
+                        id="newTabPositionRight"
+                        name="newTabPosition"
+                        value="right"
+                    />
                     To the right of the current tab
                 </label>
                 <label for="newTabPositionFarRight">
-                    <input type="radio" id="newTabPositionFarRight" name="newTabPosition" value="farRight" />
+                    <input
+                        type="radio"
+                        id="newTabPositionFarRight"
+                        name="newTabPosition"
+                        value="farRight"
+                    />
                     To the far right
                 </label>
             </fieldset>

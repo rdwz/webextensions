@@ -1,4 +1,4 @@
-import {step, walk} from "./scanning/parse-text-dom";
+import { step, walk } from "./scanning/parse-text-dom";
 
 export function extractText(selection: Selection): string | null {
     if (selection.anchorNode == null) {

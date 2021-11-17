@@ -1,5 +1,5 @@
-import browser, {Tabs} from "webextension-polyfill";
-import {signal} from "../common/messages";
+import browser, { Tabs } from "webextension-polyfill";
+import { signal } from "../common/messages";
 
 export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
     if (tab.id == null) {
@@ -12,7 +12,7 @@ export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
         await browser.tabs.executeScript(tab.id, {
             allFrames: true,
             file: "content.js",
-            runAt: "document_end"
+            runAt: "document_end",
         });
     } catch (notJsonable) {
         // ignore
@@ -20,6 +20,6 @@ export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
 
     await browser.tabs.sendMessage(tab.id, signal("toggleDarkness"), {
         // we want to send it to all frames in the tab
-        frameId: undefined
+        frameId: undefined,
     });
 }

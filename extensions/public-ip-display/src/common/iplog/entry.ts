@@ -1,6 +1,10 @@
-import type {JsonValue} from "type-fest";
-import {asIpService, asNullableSignificantString, asSignificantString} from "../checks";
-import {IpService} from "../settings/enums";
+import type { JsonValue } from "type-fest";
+import {
+    asIpService,
+    asNullableSignificantString,
+    asSignificantString,
+} from "../checks";
+import { IpService } from "../settings/enums";
 
 interface Persisted {
     ip: string;
@@ -29,7 +33,9 @@ export function validate(data: JsonValue): Persisted {
         ip: asSignificantString(data.ip),
         service: asSignificantString(data.service),
         // TODO eventually remove this workaround for the firefox version's release bug
-        timestamp: asNullableSignificantString(data.timestamp) ?? new Date().toISOString()
+        timestamp:
+            asNullableSignificantString(data.timestamp) ??
+            new Date().toISOString(),
     };
 }
 
@@ -37,13 +43,13 @@ export function toDomain(data: Persisted): IpLogEntry {
     return {
         ...data,
         service: asIpService(data.service),
-        timestamp: new Date(data.timestamp)
+        timestamp: new Date(data.timestamp),
     };
 }
 
 export function toStorage(data: IpLogEntry): Persisted {
     return {
         ...data,
-        timestamp: data.timestamp.toISOString()
+        timestamp: data.timestamp.toISOString(),
     };
 }

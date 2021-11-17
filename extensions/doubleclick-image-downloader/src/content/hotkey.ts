@@ -1,8 +1,8 @@
-import {hotkeyTriggered, TriggeredMessage} from "../common/messages";
-import {getLastPosition} from "./cursor-tracking";
-import {findImageDepthFirst, isImage} from "./dom";
-import {startDownload} from "./downloads";
-import {getLastHoveredElement} from "./hover-tracking";
+import { hotkeyTriggered, TriggeredMessage } from "../common/messages";
+import { getLastPosition } from "./cursor-tracking";
+import { findImageDepthFirst, isImage } from "./dom";
+import { startDownload } from "./downloads";
+import { getLastHoveredElement } from "./hover-tracking";
 
 function downloadHoverTracked(): boolean {
     const lastHoveredElement = getLastHoveredElement();

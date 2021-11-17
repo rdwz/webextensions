@@ -1,7 +1,7 @@
-import {deepEqual} from "fast-equals";
-import {UnreachableCaseError} from "ts-essentials";
-import {Tabs} from "webextension-polyfill";
-import {correct, Position, read, Settings, write} from "./io";
+import { deepEqual } from "fast-equals";
+import { UnreachableCaseError } from "ts-essentials";
+import { Tabs } from "webextension-polyfill";
+import { correct, Position, read, Settings, write } from "./io";
 
 export async function load(): Promise<Settings> {
     const raw = await read();
@@ -20,7 +20,10 @@ export async function validate(): Promise<boolean> {
     }
 }
 
-export function toTabIndex(settings: Settings, tab?: Tabs.Tab): number | undefined {
+export function toTabIndex(
+    settings: Settings,
+    tab?: Tabs.Tab
+): number | undefined {
     switch (settings.newTabPosition) {
         case Position.right:
             if (tab == null) {

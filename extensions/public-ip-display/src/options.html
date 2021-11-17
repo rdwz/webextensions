@@ -21,25 +21,45 @@
                     <label for="refreshRate">Desired refresh interval</label>
                 </div>
                 <div>
-                    <input type="number" min="1" step="1" id="refreshRate" placeholder="10" required="required" />
+                    <input
+                        type="number"
+                        min="1"
+                        step="1"
+                        id="refreshRate"
+                        placeholder="10"
+                        required="required"
+                    />
                     minutes
                 </div>
                 <div>
-                    <small>Will automatically be limited to the site's specifications (see below).</small>
+                    <small>
+                        Will automatically be limited to the site's
+                        specifications (see below).
+                    </small>
                 </div>
             </section>
 
             <section>
                 <div>
-                    <label for="logLifetime">Keep a log of most recent IPs</label>
+                    <label for="logLifetime">
+                        Keep a log of most recent IPs
+                    </label>
                 </div>
                 <div>
-                    <input type="number" min="0" step="1" id="logLifetime" placeholder="7" required="required" />
+                    <input
+                        type="number"
+                        min="0"
+                        step="1"
+                        id="logLifetime"
+                        placeholder="7"
+                        required="required"
+                    />
                     days
                 </div>
                 <div>
                     <small>
-                        Set to 0 to disable. Logs are kept in the browser profile. Old logs are cleared on startup.
+                        Set to 0 to disable. Logs are kept in the browser
+                        profile. Old logs are cleared on startup.
                         <br />
                         The log data and this setting are
                         <strong>not</strong>
@@ -57,15 +77,23 @@
                         <option value="curlmyip.net">curlmyip.net</option>
                         <option value="icanhazip.com">icanhazip.com</option>
                         <option value="jsonip.com">jsonip.com</option>
-                        <option value="myexternalip.com">myexternalip.com</option>
-                        <option value="whatismyipaddress.com">whatismyipaddress.com</option>
+                        <option value="myexternalip.com">
+                            myexternalip.com
+                        </option>
+                        <option value="whatismyipaddress.com">
+                            whatismyipaddress.com
+                        </option>
                         <option value="ifconfig.co">ifconfig.co</option>
                     </select>
 
                     <section>
                         <table id="ipEchoServiceInfo">
                             <caption>
-                                <small>Public IP Display and its developer(s) are not responsible for any privacy issues regarding these services.</small>
+                                <small>
+                                    Public IP Display and its developer(s) are
+                                    not responsible for any privacy issues
+                                    regarding these services.
+                                </small>
                             </caption>
 
                             <thead>
@@ -120,7 +148,10 @@
                                     <td>✔</td>
                                     <td>✔</td>
                                     <td>1</td>
-                                    <td>stricly enforces rate limiting: you will see errors if you refresh too often</td>
+                                    <td>
+                                        stricly enforces rate limiting: you will
+                                        see errors if you refresh too often
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -138,7 +169,9 @@
                 </div>
                 <div>
                     <input type="checkbox" id="displayFlag" />
-                    <label for="displayFlag">... and display its flag in the toolbar</label>
+                    <label for="displayFlag">
+                        ... and display its flag in the toolbar
+                    </label>
                 </div>
             </section>
 

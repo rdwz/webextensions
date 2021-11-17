@@ -1,15 +1,18 @@
-import {noop} from "ts-essentials";
-import browser, {Menus, Tabs} from "webextension-polyfill";
-import {signal} from "../common/messages";
-import {Settings} from "../common/settings/io";
-import {load} from "../common/settings/settings";
-import {monitor} from "../common/settings/monitoring";
-import {startDownload} from "./downloads";
+import { noop } from "ts-essentials";
+import browser, { Menus, Tabs } from "webextension-polyfill";
+import { signal } from "../common/messages";
+import { Settings } from "../common/settings/io";
+import { load } from "../common/settings/settings";
+import { monitor } from "../common/settings/monitoring";
+import { startDownload } from "./downloads";
 
 const DOWNLOAD_IMAGE_ID = "doubleClickImageDownloader_DownloadImage";
-const DOWNLOAD_SELECTED_IMAGES_ID = "doubleClickImageDownloader_DownloadImagesInSelection";
+const DOWNLOAD_SELECTED_IMAGES_ID =
+    "doubleClickImageDownloader_DownloadImagesInSelection";
 
-async function createContextMenu(options: Menus.CreateCreatePropertiesType): Promise<void> {
+async function createContextMenu(
+    options: Menus.CreateCreatePropertiesType
+): Promise<void> {
     return new Promise((resolve, reject) => {
         browser.contextMenus.create(options, (): void => {
             if (browser.runtime.lastError == null) {
@@ -21,7 +24,10 @@ async function createContextMenu(options: Menus.CreateCreatePropertiesType): Pro
     });
 }
 
-async function downloadFocusedImage(contextMenuInfo: Menus.OnClickData, tab?: Tabs.Tab): Promise<void> {
+async function downloadFocusedImage(
+    contextMenuInfo: Menus.OnClickData,
+    tab?: Tabs.Tab
+): Promise<void> {
     if (tab == null) {
         throw new Error("clicked outside a tab?");
     }
@@ -35,19 +41,29 @@ async function downloadFocusedImage(contextMenuInfo: Menus.OnClickData, tab?: Ta
                 throw new Error("missing src on image");
             }
 
-            await startDownload(new URL(contextMenuInfo.srcUrl), tab, contextMenuInfo.frameId ?? null);
+            await startDownload(
+                new URL(contextMenuInfo.srcUrl),
+                tab,
+                contextMenuInfo.frameId ?? null
+            );
 
             return;
         }
         case DOWNLOAD_SELECTED_IMAGES_ID: {
-            await browser.tabs.sendMessage(tab.id, signal("getImagesInSelection"), {
-                frameId: contextMenuInfo.frameId
-            });
+            await browser.tabs.sendMessage(
+                tab.id,
+                signal("getImagesInSelection"),
+                {
+                    frameId: contextMenuInfo.frameId,
+                }
+            );
 
             return;
         }
         default: {
-            throw new Error(`received context menu ${contextMenuInfo.menuItemId} and tab ${tab.id}?`);
+            throw new Error(
+                `received context menu ${contextMenuInfo.menuItemId} and tab ${tab.id}?`
+            );
         }
     }
 }
@@ -62,7 +78,7 @@ async function manageMenus(settings: Settings): Promise<void> {
             documentUrlPatterns: ["*://*/*", "file:///*"],
             id: DOWNLOAD_IMAGE_ID,
             title: "Download image",
-            type: "normal"
+            type: "normal",
         });
     }
 
@@ -72,16 +88,25 @@ async function manageMenus(settings: Settings): Promise<void> {
             documentUrlPatterns: ["*://*/*", "file:///*"],
             id: DOWNLOAD_SELECTED_IMAGES_ID,
             title: "Download images in selection",
-            type: "normal"
+            type: "normal",
         });
     }
 }
 
 export function registerContextMenu(): void {
-    browser.contextMenus.onClicked.addListener((clicked, tab) => void downloadFocusedImage(clicked, tab).catch(console.error));
+    browser.contextMenus.onClicked.addListener(
+        (clicked, tab) =>
+            void downloadFocusedImage(clicked, tab).catch(console.error)
+    );
 
     load().then(manageMenus).catch(console.error);
 
-    monitor("enableImageContextMenu", settings => void manageMenus(settings).catch(console.error));
-    monitor("enableSelectionContextMenu", settings => void manageMenus(settings).catch(console.error));
+    monitor(
+        "enableImageContextMenu",
+        (settings) => void manageMenus(settings).catch(console.error)
+    );
+    monitor(
+        "enableSelectionContextMenu",
+        (settings) => void manageMenus(settings).catch(console.error)
+    );
 }

@@ -1,25 +1,37 @@
-function siblingFinder(direction: "up" | "down"): (origin: Node) => [Node] | null {
-    const getSibling = direction === "up" ? (node: Node) => node.previousSibling : (node: Node) => node.nextSibling;
+function siblingFinder(
+    direction: "up" | "down"
+): (origin: Node) => [Node] | null {
+    const getSibling =
+        direction === "up"
+            ? (node: Node) => node.previousSibling
+            : (node: Node) => node.nextSibling;
 
-    return origin => {
+    return (origin) => {
         const node = getSibling(origin);
         return node == null ? null : [node];
     };
 }
 
-function childFinder(direction: "up" | "down"): (origin: Node) => [Node] | null {
-    const getChild = direction === "up" ? (node: Node) => node.lastChild : (node: Node) => node.firstChild;
+function childFinder(
+    direction: "up" | "down"
+): (origin: Node) => [Node] | null {
+    const getChild =
+        direction === "up"
+            ? (node: Node) => node.lastChild
+            : (node: Node) => node.firstChild;
 
-    return origin => {
+    return (origin) => {
         const node = getChild(origin);
         return node == null ? null : [node];
     };
 }
 
-function parentsWithFirstSiblingFinder(direction: "up" | "down"): (origin: Node) => Node[] | null {
+function parentsWithFirstSiblingFinder(
+    direction: "up" | "down"
+): (origin: Node) => Node[] | null {
     const findSibling = siblingFinder(direction);
 
-    return origin => {
+    return (origin) => {
         const path: Node[] = [];
         let node: Node | null = origin;
 
@@ -37,7 +49,9 @@ function parentsWithFirstSiblingFinder(direction: "up" | "down"): (origin: Node)
     };
 }
 
-export function nodeWalker(direction: "up" | "down"): (origin: Node) => Iterable<Node> {
+export function nodeWalker(
+    direction: "up" | "down"
+): (origin: Node) => Iterable<Node> {
     const findChild = childFinder(direction);
     const findSibling = siblingFinder(direction);
     const findUpperSibling = parentsWithFirstSiblingFinder(direction);
@@ -46,7 +60,12 @@ export function nodeWalker(direction: "up" | "down"): (origin: Node) => Iterable
         let node = origin;
         let path: Node[] | null = null;
 
-        while ((path = findChild(node) ?? findSibling(node) ?? findUpperSibling(node)) != null) {
+        while (
+            (path =
+                findChild(node) ??
+                findSibling(node) ??
+                findUpperSibling(node)) != null
+        ) {
             for (const next of path) {
                 yield next;
             }

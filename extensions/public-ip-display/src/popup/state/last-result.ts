@@ -1,19 +1,35 @@
-import {IpCountryData, isPersistedIpCountryDataProperty, loadLast} from "../../common/ipdata";
-import {useCallback, useEffect, useState} from "react";
-import browser, {Storage} from "webextension-polyfill";
+import {
+    IpCountryData,
+    isPersistedIpCountryDataProperty,
+    loadLast,
+} from "../../common/ipdata";
+import { useCallback, useEffect, useState } from "react";
+import browser, { Storage } from "webextension-polyfill";
 
 const placeholder = Symbol("not yet loaded");
 
 export function useLastResult(): IpCountryData | null {
-    const [data, setData] = useState<IpCountryData | null | typeof placeholder>(placeholder);
+    const [data, setData] = useState<IpCountryData | null | typeof placeholder>(
+        placeholder
+    );
 
-    const load = useCallback(() => void loadLast().then(setData).catch(console.error), []);
+    const load = useCallback(
+        () => void loadLast().then(setData).catch(console.error),
+        []
+    );
 
     useEffect(load, [load]);
 
     useEffect(() => {
-        function listener(changes: Record<string, Storage.StorageChange>, area: string): void {
-            if (data !== placeholder && area === "local" && Object.keys(changes).some(isPersistedIpCountryDataProperty)) {
+        function listener(
+            changes: Record<string, Storage.StorageChange>,
+            area: string
+        ): void {
+            if (
+                data !== placeholder &&
+                area === "local" &&
+                Object.keys(changes).some(isPersistedIpCountryDataProperty)
+            ) {
                 load();
             }
         }

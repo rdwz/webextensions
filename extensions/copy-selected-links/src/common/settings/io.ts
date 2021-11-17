@@ -1,7 +1,7 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {PATTERN_VARIABLES} from "../pattern";
-import {bool, notBlank, sanitize, str} from "./validation";
+import { PATTERN_VARIABLES } from "../pattern";
+import { bool, notBlank, sanitize, str } from "./validation";
 
 const spec = {
     copyPattern: str(PATTERN_VARIABLES.url, notBlank),
@@ -11,7 +11,7 @@ const spec = {
     popupFail: bool(true),
     popupSuccess: bool(false),
     showCopyMenuAction: bool(true),
-    showOpenMenuAction: bool(false)
+    showOpenMenuAction: bool(false),
 };
 
 export type Settings = {

@@ -1,4 +1,8 @@
-import browser, {Downloads, Events, Notifications} from "webextension-polyfill";
+import browser, {
+    Downloads,
+    Events,
+    Notifications,
+} from "webextension-polyfill";
 
 interface FilenameSuggestion {
     filename: string;
@@ -7,7 +11,10 @@ interface FilenameSuggestion {
 
 // return true sync if calling `suggest` async
 // https://developer.chrome.com/extensions/downloads#event-onDeterminingFilename
-type DetermineFilename = (downloadItem: Downloads.DownloadItem, suggest: SuggestionCallback) => true | undefined;
+type DetermineFilename = (
+    downloadItem: Downloads.DownloadItem,
+    suggest: SuggestionCallback
+) => true | undefined;
 type DeterminingFilenameEvent = Events.Event<DetermineFilename>;
 
 export type SuggestionCallback = (suggestion?: FilenameSuggestion) => void;
@@ -24,7 +31,7 @@ export function fileNamingSupport(): DeterminingFilenameEvent | undefined {
 export interface AdvancedNotificationOptions {
     type: "image";
     imageUrl: string;
-    buttons: {title: string}[];
+    buttons: { title: string }[];
 }
 
 // TODO firefox support
@@ -38,7 +45,10 @@ export async function tryCreateFancyNotification(
     try {
         // this method throws an error immediately despite returning a promise
         // eslint-disable-next-line @typescript-eslint/return-await
-        return browser.notifications.create({...basicOptions, ...advancedOptions});
+        return browser.notifications.create({
+            ...basicOptions,
+            ...advancedOptions,
+        });
     } catch (probablyUnsupportedParams) {
         // eslint-disable-next-line @typescript-eslint/return-await
         return browser.notifications.create(basicOptions);

@@ -1,8 +1,8 @@
-import {Settings} from "../common/settings/io";
-import {findImageDepthFirst, isImage} from "./dom";
-import {startDownload} from "./downloads";
-import {drop} from "./hoverbutton/element";
-import {monitor} from "../common/settings/monitoring";
+import { Settings } from "../common/settings/io";
+import { findImageDepthFirst, isImage } from "./dom";
+import { startDownload } from "./downloads";
+import { drop } from "./hoverbutton/element";
+import { monitor } from "../common/settings/monitoring";
 
 let dragged: Element | null = null;
 function setDragged(event: DragEvent): void {
@@ -18,7 +18,9 @@ function send(): void {
         throw new Error("how did you drop without dragging?");
     }
 
-    const relevantImage = isImage(dragged) ? dragged : findImageDepthFirst(dragged);
+    const relevantImage = isImage(dragged)
+        ? dragged
+        : findImageDepthFirst(dragged);
 
     if (relevantImage != null) {
         startDownload(relevantImage).catch(console.error);
@@ -32,7 +34,10 @@ const setUpOrTearDown: (settings: Settings) => void = (() => {
         if (settings.supportDragDrop) {
             document.body.addEventListener("dragstart", setDragged);
             document.body.addEventListener("dragend", clearDragged);
-            registration = drop.subscribe(() => send(), "download dropped image");
+            registration = drop.subscribe(
+                () => send(),
+                "download dropped image"
+            );
         } else {
             if (registration != null) {
                 drop.unsubscribe(registration);
@@ -46,5 +51,5 @@ const setUpOrTearDown: (settings: Settings) => void = (() => {
 
 export function monitorDrags(settings: Settings): void {
     setUpOrTearDown(settings);
-    monitor("supportDragDrop", st => setUpOrTearDown(st));
+    monitor("supportDragDrop", (st) => setUpOrTearDown(st));
 }

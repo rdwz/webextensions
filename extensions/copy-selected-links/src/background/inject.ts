@@ -7,7 +7,7 @@ export async function injectContentScript(tabId: number): Promise<void> {
         await browser.tabs.executeScript(tabId, {
             allFrames: true,
             file: "content.js",
-            runAt: "document_end"
+            runAt: "document_end",
         });
     } catch (notJsonable) {
         // ignore

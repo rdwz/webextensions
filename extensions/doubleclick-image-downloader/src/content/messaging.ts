@@ -1,13 +1,17 @@
 import browser from "webextension-polyfill";
-import {asMessage, Message, TriggeredMessage} from "../common/messages";
-import {startDownload, completeDownload} from "./downloads";
-import {downloadHoveredImage} from "./hotkey";
-import {getImagesInSelection} from "./selection";
+import { asMessage, Message, TriggeredMessage } from "../common/messages";
+import { startDownload, completeDownload } from "./downloads";
+import { downloadHoveredImage } from "./hotkey";
+import { getImagesInSelection } from "./selection";
 
-async function reactToMessage(msg: Message): Promise<undefined | TriggeredMessage> {
+async function reactToMessage(
+    msg: Message
+): Promise<undefined | TriggeredMessage> {
     switch (msg.subject) {
         case "downloadStarted":
-            throw new Error("download start message should have been handled inline");
+            throw new Error(
+                "download start message should have been handled inline"
+            );
 
         case "getImagesInSelection":
             await Promise.all(getImagesInSelection().map(startDownload));
@@ -18,7 +22,9 @@ async function reactToMessage(msg: Message): Promise<undefined | TriggeredMessag
             return;
 
         case "downloadRequested":
-            throw new Error("content script should not receive download request");
+            throw new Error(
+                "content script should not receive download request"
+            );
 
         case "hotkeyTriggered":
             return downloadHoveredImage();
@@ -29,5 +35,7 @@ async function reactToMessage(msg: Message): Promise<undefined | TriggeredMessag
 }
 
 export function listenForMessages(): void {
-    browser.runtime.onMessage.addListener(async (data: unknown) => reactToMessage(asMessage(data)).catch(console.error));
+    browser.runtime.onMessage.addListener(async (data: unknown) =>
+        reactToMessage(asMessage(data)).catch(console.error)
+    );
 }

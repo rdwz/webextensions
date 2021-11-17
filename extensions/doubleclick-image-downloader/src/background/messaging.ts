@@ -1,14 +1,26 @@
-import browser, {Runtime} from "webextension-polyfill";
-import {asMessage, Message, started, DownloadChangedMessage} from "../common/messages";
-import {startDownload} from "./downloads";
+import browser, { Runtime } from "webextension-polyfill";
+import {
+    asMessage,
+    Message,
+    started,
+    DownloadChangedMessage,
+} from "../common/messages";
+import { startDownload } from "./downloads";
 
-async function reactToMessage(msg: Message, sender: Runtime.MessageSender): Promise<DownloadChangedMessage> {
+async function reactToMessage(
+    msg: Message,
+    sender: Runtime.MessageSender
+): Promise<DownloadChangedMessage> {
     switch (msg.subject) {
         case "downloadRequested": {
             if (sender.tab == null) {
                 throw new Error("starting a download headlessly?");
             }
-            const downloadId = await startDownload(new URL(msg.imageUrl), sender.tab, sender.frameId ?? null);
+            const downloadId = await startDownload(
+                new URL(msg.imageUrl),
+                sender.tab,
+                sender.frameId ?? null
+            );
             return started(downloadId);
         }
         default:
@@ -17,5 +29,7 @@ async function reactToMessage(msg: Message, sender: Runtime.MessageSender): Prom
 }
 
 export function listenForMessages(): void {
-    browser.runtime.onMessage.addListener(async (data: unknown, sender) => reactToMessage(asMessage(data), sender));
+    browser.runtime.onMessage.addListener(async (data: unknown, sender) =>
+        reactToMessage(asMessage(data), sender)
+    );
 }

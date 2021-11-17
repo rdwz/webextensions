@@ -1,12 +1,12 @@
-import {Settings, write} from "../common/io";
-import {colorPicker, colorTextbox} from "./elements";
+import { Settings, write } from "../common/io";
+import { colorPicker, colorTextbox } from "./elements";
 
 export function provideColorInputs(settings: Settings): void {
     colorPicker.value = settings.color;
 
     colorPicker.addEventListener("change", () => {
         colorTextbox.value = colorPicker.value.substring("#".length);
-        write({color: colorPicker.value}).catch(console.error);
+        write({ color: colorPicker.value }).catch(console.error);
     });
 
     colorTextbox.value = settings.color.substring("#".length);
@@ -15,7 +15,7 @@ export function provideColorInputs(settings: Settings): void {
         if (colorTextbox.checkValidity()) {
             const colorCode = `#${colorTextbox.value}`;
             colorPicker.value = colorCode;
-            write({color: colorCode}).catch(console.error);
+            write({ color: colorCode }).catch(console.error);
         }
     });
 }

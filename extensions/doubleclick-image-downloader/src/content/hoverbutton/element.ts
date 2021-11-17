@@ -1,31 +1,31 @@
-import {Settings} from "../../common/settings/io";
-import {triggerable} from "../../common/triggerable";
-import {HTML_BUTTON_ID, insertCss, SKIN_CLASSES} from "./skinning";
+import { Settings } from "../../common/settings/io";
+import { triggerable } from "../../common/triggerable";
+import { HTML_BUTTON_ID, insertCss, SKIN_CLASSES } from "./skinning";
 
 const button = document.createElement("div");
 button.id = HTML_BUTTON_ID;
 button.title = "Download image";
 
-const {hide: dropEvent, expose: drop} = triggerable();
-export {drop};
+const { hide: dropEvent, expose: drop } = triggerable();
+export { drop };
 
-const {hide: clickEvent, expose: click} = triggerable();
-export {click};
+const { hide: clickEvent, expose: click } = triggerable();
+export { click };
 
-button.addEventListener("dragover", event => {
+button.addEventListener("dragover", (event) => {
     if (dropEvent.hasSubscribers()) {
         // make it droppable
         event.preventDefault();
     }
 });
-button.addEventListener("drop", event => {
+button.addEventListener("drop", (event) => {
     // prevent weird browser behavior like navigating to the image
     event.preventDefault();
     dropEvent.trigger(undefined);
 });
 button.addEventListener(
     "click",
-    event => {
+    (event) => {
         event.stopPropagation();
         clickEvent.trigger(undefined);
     },

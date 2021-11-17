@@ -1,5 +1,5 @@
-import {reportState} from "../common/messages";
-import {detectClick, stopDetectingClick} from "./clicks";
+import { reportState } from "../common/messages";
+import { detectClick, stopDetectingClick } from "./clicks";
 import browser from "webextension-polyfill";
 
 let isDark = false;

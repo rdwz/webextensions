@@ -1,5 +1,5 @@
-import {HoverButtonPosition} from "../../common/settings/enums";
-import {Area} from "./area";
+import { HoverButtonPosition } from "../../common/settings/enums";
+import { Area } from "./area";
 
 type Calculator = (areaSize: number, selfSize: number) => number;
 
@@ -9,7 +9,10 @@ const CENTER: Calculator = (area: number, self: number) => (area - self) / 2;
 const POS: Calculator = (area: number, self: number) => area - self;
 const MAX: Calculator = (area: number) => area;
 
-const RELATIVE_DISTANCES: Record<HoverButtonPosition, [Calculator, Calculator]> = {
+const RELATIVE_DISTANCES: Record<
+    HoverButtonPosition,
+    [Calculator, Calculator]
+> = {
     [HoverButtonPosition.topLeftSW]: [MIN, NEG],
     [HoverButtonPosition.westWest]: [MIN, CENTER],
     [HoverButtonPosition.bottomLeftNW]: [MIN, POS],
@@ -34,7 +37,7 @@ const RELATIVE_DISTANCES: Record<HoverButtonPosition, [Calculator, Calculator]> 
 
     [HoverButtonPosition.topRightSE]: [MAX, NEG],
     [HoverButtonPosition.eastEast]: [MAX, CENTER],
-    [HoverButtonPosition.bottomRightNE]: [MAX, POS]
+    [HoverButtonPosition.bottomRightNE]: [MAX, POS],
 };
 
 interface Offset {
@@ -45,26 +48,33 @@ interface Offset {
 }
 
 export function topLeftOf(element: Element): Offset {
-    const {left, top} = element.getBoundingClientRect();
-    return {left, top};
+    const { left, top } = element.getBoundingClientRect();
+    return { left, top };
 }
 
-export function relativeTo(area: Area, position: HoverButtonPosition, buttonSize: number): Offset {
+export function relativeTo(
+    area: Area,
+    position: HoverButtonPosition,
+    buttonSize: number
+): Offset {
     const distances = RELATIVE_DISTANCES[position];
 
     const left = distances[0](area.width, buttonSize);
     const top = distances[1](area.height, buttonSize);
 
-    return {left, top};
+    return { left, top };
 }
 
 export function add(offsetA: Offset, offsetB: Offset): Offset {
-    return {left: offsetA.left + offsetB.left, top: offsetA.top + offsetB.top};
+    return {
+        left: offsetA.left + offsetB.left,
+        top: offsetA.top + offsetB.top,
+    };
 }
 
 export function constrainTo(offset: Offset, area: Area): Offset {
     const left = Math.max(0, Math.min(area.width, offset.left));
     const top = Math.max(0, Math.min(area.height, offset.top));
 
-    return {left, top};
+    return { left, top };
 }

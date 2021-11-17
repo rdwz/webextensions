@@ -1,6 +1,6 @@
-import {Tabs} from "webextension-polyfill";
-import {FilenameVariables} from "./settings/enums";
-import {Settings} from "./settings/io";
+import { Tabs } from "webextension-polyfill";
+import { FilenameVariables } from "./settings/enums";
+import { Settings } from "./settings/io";
 
 function pad(counter: number, counterPadding: number): string {
     const nr = String(counter);
@@ -10,7 +10,9 @@ function pad(counter: number, counterPadding: number): string {
 function separateExtension(filename: string): [string, string | null] {
     const dotIndex = filename.lastIndexOf(".");
 
-    return dotIndex < 0 ? [filename, null] : [filename.substring(0, dotIndex), filename.substring(dotIndex + 1)];
+    return dotIndex < 0
+        ? [filename, null]
+        : [filename.substring(0, dotIndex), filename.substring(dotIndex + 1)];
 }
 
 interface TechnicalContext {
@@ -21,14 +23,21 @@ interface TechnicalContext {
     counter: number;
 }
 
-export function renameTechnically(filename: string, pattern: string, {counterPadding, tabUrl, tabTitle, imageUrl, counter}: TechnicalContext): string {
+export function renameTechnically(
+    filename: string,
+    pattern: string,
+    { counterPadding, tabUrl, tabTitle, imageUrl, counter }: TechnicalContext
+): string {
     const [name, extension] = separateExtension(filename);
     const now = new Date();
 
     // replace in order of unlikeliness to accidentally create new %xyz% patterns, i.e. most predictable first
     let newName = pattern;
     const replace = (flag: FilenameVariables, value: string | number): void => {
-        newName = newName.replace(new RegExp(flag, "gu"), typeof value == "string" ? value : String(value));
+        newName = newName.replace(
+            new RegExp(flag, "gu"),
+            typeof value == "string" ? value : String(value)
+        );
     };
 
     replace(FilenameVariables.counter, pad(counter, counterPadding));
@@ -43,11 +52,17 @@ export function renameTechnically(filename: string, pattern: string, {counterPad
 
     replace(FilenameVariables.tabDomain, tabUrl.hostname);
     replace(FilenameVariables.tabDirs, tabUrl.pathname.substring(1));
-    replace(FilenameVariables.tabPath, tabUrl.pathname.substring(1).replace(/\//gu, "."));
+    replace(
+        FilenameVariables.tabPath,
+        tabUrl.pathname.substring(1).replace(/\//gu, ".")
+    );
 
     replace(FilenameVariables.imageDomain, imageUrl.hostname);
     replace(FilenameVariables.imageDirs, imageUrl.pathname.substring(1));
-    replace(FilenameVariables.imagePath, imageUrl.pathname.substring(1).replace(/\//gu, "."));
+    replace(
+        FilenameVariables.imagePath,
+        imageUrl.pathname.substring(1).replace(/\//gu, ".")
+    );
 
     // these last since they may contain % patterns
     replace(FilenameVariables.inferred, name);
@@ -62,7 +77,11 @@ interface FunctionalContext {
     imageUrl: URL;
 }
 
-export function renameFunctionally(filename: string, counter: (st: Settings) => number, {imageUrl, settings, tab}: FunctionalContext): string {
+export function renameFunctionally(
+    filename: string,
+    counter: (st: Settings) => number,
+    { imageUrl, settings, tab }: FunctionalContext
+): string {
     if (tab.url == null) {
         throw new Error("missing url on tab?");
     }
@@ -76,6 +95,6 @@ export function renameFunctionally(filename: string, counter: (st: Settings) => 
         counterPadding: settings.counterPadding,
         imageUrl,
         tabTitle: tab.title,
-        tabUrl
+        tabUrl,
     });
 }

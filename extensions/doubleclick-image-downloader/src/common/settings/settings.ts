@@ -1,5 +1,5 @@
-import {deepEqual} from "fast-equals";
-import {correct, read, Settings, write} from "./io";
+import { deepEqual } from "fast-equals";
+import { correct, read, Settings, write } from "./io";
 
 export async function load(): Promise<Settings> {
     const raw = await read();
@@ -18,10 +18,19 @@ export async function validate(): Promise<boolean> {
     }
 }
 
-export function passesShiftKeySetting(event: MouseEvent, settings: Settings): boolean {
+export function passesShiftKeySetting(
+    event: MouseEvent,
+    settings: Settings
+): boolean {
     return !settings.requireShift || event.shiftKey;
 }
 
-export function passesSizeRestrictions(image: HTMLImageElement, settings: Settings): boolean {
-    return image.width > settings.minimumImageSize && image.height > settings.minimumImageSize;
+export function passesSizeRestrictions(
+    image: HTMLImageElement,
+    settings: Settings
+): boolean {
+    return (
+        image.width > settings.minimumImageSize &&
+        image.height > settings.minimumImageSize
+    );
 }

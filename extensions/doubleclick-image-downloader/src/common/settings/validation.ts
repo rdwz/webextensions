@@ -1,31 +1,51 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 
 export function bool(def: boolean) {
-    return (input: unknown): boolean => (typeof input === "boolean" ? input : def);
+    return (input: unknown): boolean =>
+        typeof input === "boolean" ? input : def;
 }
 
 export function num(def: number, ...validators: ((i: number) => boolean)[]) {
-    return (input: unknown): number => (typeof input === "number" && validators.every(val => val(input)) ? input : def);
+    return (input: unknown): number =>
+        typeof input === "number" && validators.every((val) => val(input))
+            ? input
+            : def;
 }
 
 export function str(def: string, ...validators: ((i: string) => boolean)[]) {
-    return (input: unknown): string => (typeof input === "string" && validators.every(val => val(input)) ? input : def);
+    return (input: unknown): string =>
+        typeof input === "string" && validators.every((val) => val(input))
+            ? input
+            : def;
 }
 
-export function stringEnum<T extends string>(enumType: Record<string, T>, def: T) {
+export function stringEnum<T extends string>(
+    enumType: Record<string, T>,
+    def: T
+) {
     return (input: unknown): T => {
         const isValid =
             typeof input === "string" &&
             Object.values(enumType)
-                .map(entry => entry as string)
+                .map((entry) => entry as string)
                 .includes(input);
         return isValid ? (input as T) : def;
     };
 }
 
-export function stringArray(def: string[], ...validators: ((x: string) => boolean)[]) {
+export function stringArray(
+    def: string[],
+    ...validators: ((x: string) => boolean)[]
+) {
     return (input: unknown): string[] =>
-        Array.isArray(input) && input.every(entry => typeof entry === "string" && validators.every(validator => validator(entry))) ? (input as string[]) : def;
+        Array.isArray(input) &&
+        input.every(
+            (entry) =>
+                typeof entry === "string" &&
+                validators.every((validator) => validator(entry))
+        )
+            ? (input as string[])
+            : def;
 }
 
 export function roundedTo(decimals: number) {
@@ -55,7 +75,10 @@ export function lte(max: number) {
     return (input: number): boolean => input <= max;
 }
 
-export function sanitize<T, K extends keyof T = keyof T>(source: Record<K, JsonValue>, spec: Record<K, (x: unknown) => T[K]>): T {
+export function sanitize<T, K extends keyof T = keyof T>(
+    source: Record<K, JsonValue>,
+    spec: Record<K, (x: unknown) => T[K]>
+): T {
     const destination: Partial<T> = {};
 
     for (const field of Object.getOwnPropertyNames(spec) as K[]) {

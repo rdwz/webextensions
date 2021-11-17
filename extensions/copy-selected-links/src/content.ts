@@ -1,3 +1,3 @@
-import {setUp} from "./content/once";
+import { setUp } from "./content/once";
 
 setUp();

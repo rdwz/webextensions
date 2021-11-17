@@ -1,6 +1,9 @@
 // https://github.com/mdn/webextensions-examples/blob/master/context-menu-copy-link-with-types/clipboard-helper.js
-export async function copyToClipboard(text: string, doc: Document): Promise<void> {
-    await new Promise<void>(resolve => {
+export async function copyToClipboard(
+    text: string,
+    doc: Document
+): Promise<void> {
+    await new Promise<void>((resolve) => {
         const oncopy = (event: ClipboardEvent): void => {
             doc.removeEventListener("copy", oncopy, true);
             event.stopImmediatePropagation();

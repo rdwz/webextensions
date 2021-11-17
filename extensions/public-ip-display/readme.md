@@ -7,4 +7,5 @@ Official downloads:
 
 ## Acknowledgements
 
-Country flags courtesy of [emcrisostomo/flags](https://github.com/emcrisostomo/flags)
+Country flags courtesy of
+[emcrisostomo/flags](https://github.com/emcrisostomo/flags)

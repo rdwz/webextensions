@@ -1,6 +1,6 @@
 import browser from "webextension-polyfill";
-import {copied, Message, signal} from "../../common/messages";
-import {asMessage} from "../../common/checks";
+import { copied, Message, signal } from "../../common/messages";
+import { asMessage } from "../../common/checks";
 
 export function sendCopyHappened(text: string): void {
     browser.runtime.sendMessage(copied(text)).catch(console.error);

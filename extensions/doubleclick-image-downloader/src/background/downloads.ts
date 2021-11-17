@@ -1,18 +1,27 @@
-import browser, {Downloads, Tabs} from "webextension-polyfill";
-import {finished} from "../common/messages";
-import {notifyCompletion, notifyFailure} from "./notifications";
-import {downloads, TabAndFrameId, tickCounter} from "./state";
-import {SuggestionCallback, fileNamingSupport} from "../common/compatibility";
-import {renameFunctionally} from "../common/filename";
-import {load} from "../common/settings/settings";
+import browser, { Downloads, Tabs } from "webextension-polyfill";
+import { finished } from "../common/messages";
+import { notifyCompletion, notifyFailure } from "./notifications";
+import { downloads, TabAndFrameId, tickCounter } from "./state";
+import { SuggestionCallback, fileNamingSupport } from "../common/compatibility";
+import { renameFunctionally } from "../common/filename";
+import { load } from "../common/settings/settings";
 
-function indicateFinished(source: TabAndFrameId, delta: Downloads.OnChangedDownloadDeltaType): void {
+function indicateFinished(
+    source: TabAndFrameId,
+    delta: Downloads.OnChangedDownloadDeltaType
+): void {
     const [tabId, frameId] = source;
     downloads.delete(delta.id);
-    browser.tabs.sendMessage(tabId, finished(delta.id), {frameId: frameId ?? undefined}).catch(console.error);
+    browser.tabs
+        .sendMessage(tabId, finished(delta.id), {
+            frameId: frameId ?? undefined,
+        })
+        .catch(console.error);
 }
 
-async function handleEndOfDownload(delta: Downloads.OnChangedDownloadDeltaType): Promise<void> {
+async function handleEndOfDownload(
+    delta: Downloads.OnChangedDownloadDeltaType
+): Promise<void> {
     const source = downloads.get(delta.id);
     if (source == null) {
         // not a download from this addon!
@@ -29,17 +38,19 @@ async function handleEndOfDownload(delta: Downloads.OnChangedDownloadDeltaType):
 
             if (settings.notify) {
                 const [downloadItem] = await browser.downloads.search({
-                    id: delta.id
+                    id: delta.id,
                 });
 
-                return downloadItem == null ? undefined : notifyCompletion(downloadItem);
+                return downloadItem == null
+                    ? undefined
+                    : notifyCompletion(downloadItem);
             }
 
             break;
         }
         case "interrupted": {
             const [download] = await browser.downloads.search({
-                id: delta.id
+                id: delta.id,
             });
             if (download == null || download.error === "USER_CANCELED") {
                 indicateFinished(source, delta);
@@ -54,7 +65,10 @@ async function handleEndOfDownload(delta: Downloads.OnChangedDownloadDeltaType):
     }
 }
 
-function determiningFilename(downloadItem: Downloads.DownloadItem, suggest: SuggestionCallback): true | undefined {
+function determiningFilename(
+    downloadItem: Downloads.DownloadItem,
+    suggest: SuggestionCallback
+): true | undefined {
     const downloadData = downloads.get(downloadItem.id);
     if (downloadData == null) {
         // not a download from this addon!
@@ -62,18 +76,22 @@ function determiningFilename(downloadItem: Downloads.DownloadItem, suggest: Sugg
     }
 
     load()
-        .then(async settings => {
+        .then(async (settings) => {
             if (settings.enableRename) {
                 const tab = await browser.tabs.get(downloadData[0]);
-                const filename = renameFunctionally(downloadItem.filename, tickCounter, {
-                    imageUrl: new URL(downloadItem.url),
-                    settings,
-                    tab
-                });
+                const filename = renameFunctionally(
+                    downloadItem.filename,
+                    tickCounter,
+                    {
+                        imageUrl: new URL(downloadItem.url),
+                        settings,
+                        tab,
+                    }
+                );
 
                 suggest({
                     conflictAction: settings.onFilenameConflict,
-                    filename
+                    filename,
                 });
             } else {
                 suggest();
@@ -87,11 +105,15 @@ function determiningFilename(downloadItem: Downloads.DownloadItem, suggest: Sugg
     return true;
 }
 
-export async function startDownload(img: URL, tab: Tabs.Tab, frameId: number | null): Promise<number> {
+export async function startDownload(
+    img: URL,
+    tab: Tabs.Tab,
+    frameId: number | null
+): Promise<number> {
     const settings = await load();
     const downloadId = await browser.downloads.download({
         conflictAction: settings.onFilenameConflict,
-        url: img.href
+        url: img.href,
     });
 
     if (tab.id == null) {
@@ -104,5 +126,7 @@ export async function startDownload(img: URL, tab: Tabs.Tab, frameId: number | n
 
 export function monitorDownloads(): void {
     fileNamingSupport()?.addListener(determiningFilename);
-    browser.downloads.onChanged.addListener(delta => void handleEndOfDownload(delta).catch(console.error));
+    browser.downloads.onChanged.addListener(
+        (delta) => void handleEndOfDownload(delta).catch(console.error)
+    );
 }

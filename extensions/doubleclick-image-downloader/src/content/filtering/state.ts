@@ -1,6 +1,6 @@
-import {DomainFilter, domainFilterFrom} from "../../common/filtering";
-import {load} from "../../common/settings/settings";
-import {monitor} from "../../common/settings/monitoring";
+import { DomainFilter, domainFilterFrom } from "../../common/filtering";
+import { load } from "../../common/settings/settings";
+import { monitor } from "../../common/settings/monitoring";
 
 type Filter = {
     filters: Promise<DomainFilter> | null;
@@ -9,41 +9,73 @@ type Filter = {
 
 const page: Filter = {
     filters: null,
-    invert: null
+    invert: null,
 };
 const image: Filter = {
     filters: null,
-    invert: null
+    invert: null,
 };
 
 function monitorSettings(): void {
-    monitor("excludedPageDomains", st => {
-        page.filters = Promise.resolve(domainFilterFrom(st.excludedPageDomains));
+    monitor("excludedPageDomains", (st) => {
+        page.filters = Promise.resolve(
+            domainFilterFrom(st.excludedPageDomains)
+        );
     });
-    monitor("pageDomainsAreWhitelist", st => {
+    monitor("pageDomainsAreWhitelist", (st) => {
         page.invert = Promise.resolve(st.pageDomainsAreWhitelist);
     });
 
-    monitor("excludedSourceDomains", st => {
-        image.filters = Promise.resolve(domainFilterFrom(st.excludedSourceDomains));
+    monitor("excludedSourceDomains", (st) => {
+        image.filters = Promise.resolve(
+            domainFilterFrom(st.excludedSourceDomains)
+        );
     });
-    monitor("sourceDomainsAreWhitelist", st => {
+    monitor("sourceDomainsAreWhitelist", (st) => {
         image.invert = Promise.resolve(st.sourceDomainsAreWhitelist);
     });
 }
 
-export async function getFilterState(): Promise<[DomainFilter, boolean, DomainFilter, boolean]> {
-    if (page.filters == null || page.invert == null || image.filters == null || image.invert == null) {
+export async function getFilterState(): Promise<
+    [DomainFilter, boolean, DomainFilter, boolean]
+> {
+    if (
+        page.filters == null ||
+        page.invert == null ||
+        image.filters == null ||
+        image.invert == null
+    ) {
         const loading = load();
 
-        page.filters = loading.then(settings => domainFilterFrom(settings.excludedPageDomains));
-        page.invert = loading.then(settings => settings.pageDomainsAreWhitelist);
+        page.filters = loading.then((settings) =>
+            domainFilterFrom(settings.excludedPageDomains)
+        );
+        page.invert = loading.then(
+            (settings) => settings.pageDomainsAreWhitelist
+        );
 
-        image.filters = loading.then(settings => domainFilterFrom(settings.excludedSourceDomains));
-        image.invert = loading.then(settings => settings.sourceDomainsAreWhitelist);
+        image.filters = loading.then((settings) =>
+            domainFilterFrom(settings.excludedSourceDomains)
+        );
+        image.invert = loading.then(
+            (settings) => settings.sourceDomainsAreWhitelist
+        );
 
-        Promise.all([loading, page.filters, page.invert, image.filters, image.invert]).then(monitorSettings).catch(console.error);
+        Promise.all([
+            loading,
+            page.filters,
+            page.invert,
+            image.filters,
+            image.invert,
+        ])
+            .then(monitorSettings)
+            .catch(console.error);
     }
 
-    return Promise.all([page.filters, page.invert, image.filters, image.invert]);
+    return Promise.all([
+        page.filters,
+        page.invert,
+        image.filters,
+        image.invert,
+    ]);
 }

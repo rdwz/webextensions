@@ -13,7 +13,10 @@
                 <input type="checkbox" id="notify" />
                 Notify when download completes
             </label>
-            <span class="block">Functionality and look&feel varies between browsers and operating systems.</span>
+            <span class="block">
+                Functionality and look&feel varies between browsers and
+                operating systems.
+            </span>
         </section>
 
         <section class="my2">
@@ -29,7 +32,8 @@
                 Hover Hotkey settings?
             </strong>
             <br />
-            The Hover Hotkey is managed through your browser's extension hotkey management!
+            The Hover Hotkey is managed through your browser's extension hotkey
+            management!
         </section>
 
         <fieldset>
@@ -62,40 +66,79 @@
             </section>
 
             <section class="my2">
-                <label for="minimumImageSize" class="block">Ignore images smaller than</label>
-                <input type="number" min="0" step="1" id="minimumImageSize" placeholder="100" required="required" />
+                <label for="minimumImageSize" class="block">
+                    Ignore images smaller than
+                </label>
+                <input
+                    type="number"
+                    min="0"
+                    step="1"
+                    id="minimumImageSize"
+                    placeholder="100"
+                    required="required"
+                />
                 pixels
                 <span class="block">Does not restrict Hover Hotkey.</span>
             </section>
 
             <section class="mt2">
-                <label for="excludedPageDomains" class="block">Page domains to ignore</label>
-                <textarea id="excludedPageDomains" rows="3" placeholder="example.com&#10;*.example.net&#10;localhost"></textarea>
+                <label for="excludedPageDomains" class="block">
+                    Page domains to ignore
+                </label>
+                <textarea
+                    id="excludedPageDomains"
+                    rows="3"
+                    placeholder="example.com&#10;*.example.net&#10;localhost"
+                ></textarea>
             </section>
 
             <section class="mb2" id="invertExcludedPageDomains">
                 <label>
-                    <input type="radio" name="invertExcludedPageDomains" value="false" id="invertExcludedPageDomainsFalse" />
+                    <input
+                        type="radio"
+                        name="invertExcludedPageDomains"
+                        value="false"
+                        id="invertExcludedPageDomainsFalse"
+                    />
                     blacklist
                 </label>
                 <label>
-                    <input type="radio" name="invertExcludedPageDomains" value="true" />
+                    <input
+                        type="radio"
+                        name="invertExcludedPageDomains"
+                        value="true"
+                    />
                     whitelist
                 </label>
             </section>
 
             <section class="mt2">
-                <label for="excludedSourceDomains" class="block">Image domains to ignore</label>
-                <textarea id="excludedSourceDomains" rows="3" placeholder="example.com&#10;*.example.net&#10;localhost"></textarea>
+                <label for="excludedSourceDomains" class="block">
+                    Image domains to ignore
+                </label>
+                <textarea
+                    id="excludedSourceDomains"
+                    rows="3"
+                    placeholder="example.com&#10;*.example.net&#10;localhost"
+                ></textarea>
             </section>
 
             <section class="mb2" id="invertExcludedSourceDomains">
                 <label>
-                    <input type="radio" name="invertExcludedSourceDomains" value="false" id="invertExcludedSourceDomainsFalse" />
+                    <input
+                        type="radio"
+                        name="invertExcludedSourceDomains"
+                        value="false"
+                        id="invertExcludedSourceDomainsFalse"
+                    />
                     blacklist
                 </label>
                 <label>
-                    <input type="radio" name="invertExcludedSourceDomains" value="true" />
+                    <input
+                        type="radio"
+                        name="invertExcludedSourceDomains"
+                        value="true"
+                    />
                     whitelist
                 </label>
             </section>
@@ -127,11 +170,21 @@
                 <label for="oneClickStyle-alt1">Button skin</label>
                 <div id="oneClickStyles">
                     <label>
-                        <input type="radio" name="oneClickStyle" value="original" id="oneClickStyle-original" />
+                        <input
+                            type="radio"
+                            name="oneClickStyle"
+                            value="original"
+                            id="oneClickStyle-original"
+                        />
                         Original
                     </label>
                     <label>
-                        <input type="radio" name="oneClickStyle" value="alt1" id="oneClickStyle-alt1" />
+                        <input
+                            type="radio"
+                            name="oneClickStyle"
+                            value="alt1"
+                            id="oneClickStyle-alt1"
+                        />
                         Alt
                     </label>
                 </div>
@@ -139,19 +192,37 @@
 
             <section class="my2">
                 <label for="buttonSize" class="block">Button size</label>
-                <input type="number" min="8" max="512" step="1" id="buttonSize" placeholder="48" required />
+                <input
+                    type="number"
+                    min="8"
+                    max="512"
+                    step="1"
+                    id="buttonSize"
+                    placeholder="48"
+                    required
+                />
                 pixels
             </section>
 
             <section class="my2">
                 <label for="buttonOpacity" class="block">Button opacity</label>
-                <input type="range" min="10" max="100" step="1" id="buttonOpacity" />
+                <input
+                    type="range"
+                    min="10"
+                    max="100"
+                    step="1"
+                    id="buttonOpacity"
+                />
                 <output for="buttonOpacity" id="buttonOpacityOutput"></output>
                 %
             </section>
 
             <section class="my2">
-                <img id="oneClickStyle-preview" src="" alt="hover button preview" />
+                <img
+                    id="oneClickStyle-preview"
+                    src=""
+                    alt="hover button preview"
+                />
             </section>
 
             <section class="my2">
@@ -169,17 +240,29 @@
                             <td></td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="1_2" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="1_2"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="1" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="1"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="2_1" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="2_1"
+                                    />
                                 </label>
                             </td>
                             <td></td>
@@ -188,27 +271,48 @@
                         <tr>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="1_3" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="1_3"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="1_4" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="1_4"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="2" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="2"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="2_3" id="defaultPosition" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="2_3"
+                                        id="defaultPosition"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="2_4" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="2_4"
+                                    />
                                 </label>
                             </td>
                         </tr>
@@ -216,27 +320,47 @@
                         <tr>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="3" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="3"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="4" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="4"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="5" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="5"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="6" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="6"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="7" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="7"
+                                    />
                                 </label>
                             </td>
                         </tr>
@@ -244,27 +368,47 @@
                         <tr>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="3_1" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="3_1"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="3_2" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="3_2"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="8" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="8"
+                                    />
                                 </label>
                             </td>
                             <td class="image">
                                 <label>
-                                    <input type="radio" name="position" value="4_1" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="4_1"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="4_2" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="4_2"
+                                    />
                                 </label>
                             </td>
                         </tr>
@@ -273,17 +417,29 @@
                             <td></td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="3_4" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="3_4"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="9" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="9"
+                                    />
                                 </label>
                             </td>
                             <td>
                                 <label>
-                                    <input type="radio" name="position" value="4_3" />
+                                    <input
+                                        type="radio"
+                                        name="position"
+                                        value="4_3"
+                                    />
                                 </label>
                             </td>
                             <td></td>
@@ -298,8 +454,11 @@
 
             <section id="renamingSettingsNotSupported" class="display-none">
                 <strong>⚠️ Not supported by this browser!</strong>
-                This feature will be available the moment your browser supports it. For Firefox, check
-                <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1245652">bugzilla</a>
+                This feature will be available the moment your browser supports
+                it. For Firefox, check
+                <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1245652">
+                    bugzilla
+                </a>
                 .
             </section>
 
@@ -314,10 +473,16 @@
                 Live preview:
                 <ul>
                     <li>
-                        <output for="fileNamePattern counterPadding counterStart counterStep" id="previewFileNamePattern1"></output>
+                        <output
+                            for="fileNamePattern counterPadding counterStart counterStep"
+                            id="previewFileNamePattern1"
+                        ></output>
                     </li>
                     <li>
-                        <output for="fileNamePattern counterPadding counterStart counterStep" id="previewFileNamePattern2"></output>
+                        <output
+                            for="fileNamePattern counterPadding counterStart counterStep"
+                            id="previewFileNamePattern2"
+                        ></output>
                     </li>
                 </ul>
             </section>
@@ -325,7 +490,11 @@
             <section class="my2">
                 <label>
                     Filename pattern
-                    <input type="text" id="fileNamePattern" placeholder="%pagedomain%/%imagepath%/%original%" />
+                    <input
+                        type="text"
+                        id="fileNamePattern"
+                        placeholder="%pagedomain%/%imagepath%/%original%"
+                    />
                 </label>
 
                 <dl>
@@ -381,18 +550,41 @@
                     </dd>
                 </dl>
 
-                <div id="counterSettings" class="flex flex-wrap justify-between">
+                <div
+                    id="counterSettings"
+                    class="flex flex-wrap justify-between"
+                >
                     <label class="block">
                         <span class="block">Counter start</span>
-                        <input type="number" min="0" id="counterStart" placeholder="1" required />
+                        <input
+                            type="number"
+                            min="0"
+                            id="counterStart"
+                            placeholder="1"
+                            required
+                        />
                     </label>
                     <label>
                         <span class="block">Counter step</span>
-                        <input type="number" min="1" id="counterStep" placeholder="1" required />
+                        <input
+                            type="number"
+                            min="1"
+                            id="counterStep"
+                            placeholder="1"
+                            required
+                        />
                     </label>
                     <label>
-                        <span class="block">Counter digits (padded with 0)</span>
-                        <input type="number" min="1" id="counterPadding" placeholder="1" required />
+                        <span class="block">
+                            Counter digits (padded with 0)
+                        </span>
+                        <input
+                            type="number"
+                            min="1"
+                            id="counterPadding"
+                            placeholder="1"
+                            required
+                        />
                     </label>
                 </div>
             </section>
@@ -400,31 +592,49 @@
 
         <fieldset>
             <legend>Niche options</legend>
-            <span>These are not necessarily applied in realtime, unlike the regular options.</span>
+            <span>
+                These are not necessarily applied in realtime, unlike the
+                regular options.
+            </span>
 
             <section class="my2" id="conflictActions">
                 <label for="uniquify">To resolve filename conflicts</label>
                 <div>
                     <label>
-                        <input type="radio" name="conflictAction" value="uniquify" id="uniquify" />
+                        <input
+                            type="radio"
+                            name="conflictAction"
+                            value="uniquify"
+                            id="uniquify"
+                        />
                         automatically make unique
                     </label>
                     (typically with a numeric suffix)
                 </div>
                 <div>
                     <label>
-                        <input type="radio" name="conflictAction" value="prompt" />
+                        <input
+                            type="radio"
+                            name="conflictAction"
+                            value="prompt"
+                        />
                         "Save As" dialog
                     </label>
                     (⚠️ not supported by Firefox; see
-                    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction#Browser_compatibility">
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction#Browser_compatibility"
+                    >
                         MDN
                     </a>
                     )
                 </div>
                 <div>
                     <label>
-                        <input type="radio" name="conflictAction" value="overwrite" />
+                        <input
+                            type="radio"
+                            name="conflictAction"
+                            value="overwrite"
+                        />
                         overwrite
                     </label>
                     (⚠️ use at your own risk!)
@@ -439,24 +649,48 @@
                         disabled
                     </label>
                     <label>
-                        <input type="radio" name="clickType" value="singleLeft" />
+                        <input
+                            type="radio"
+                            name="clickType"
+                            value="singleLeft"
+                        />
                         single left
                     </label>
                     <label>
-                        <input type="radio" name="clickType" value="doubleLeft" id="doubleLeft" />
+                        <input
+                            type="radio"
+                            name="clickType"
+                            value="doubleLeft"
+                            id="doubleLeft"
+                        />
                         double left
                     </label>
                     <label>
-                        <input type="radio" name="clickType" value="singleRight" />
+                        <input
+                            type="radio"
+                            name="clickType"
+                            value="singleRight"
+                        />
                         single right
                     </label>
                     <div class="flex">
                         <label class="flex-auto">
-                            <input type="radio" name="clickType" value="doubleRight" />
+                            <input
+                                type="radio"
+                                name="clickType"
+                                value="doubleRight"
+                            />
                             double right
                         </label>
                         <label class="flex-auto">
-                            <input type="number" min="0" max="1000" step="1" required="required" id="doubleRightClickTiming" />
+                            <input
+                                type="number"
+                                min="0"
+                                max="1000"
+                                step="1"
+                                required="required"
+                                id="doubleRightClickTiming"
+                            />
                             ms
                         </label>
                     </div>
@@ -468,7 +702,10 @@
                     <input type="checkbox" id="aggressiveCursorTracking" />
                     Aggressively track cursor position
                 </label>
-                <span class="block">Can help detect images that otherwise go undetected. Only applies to the Hover Hotkey.</span>
+                <span class="block">
+                    Can help detect images that otherwise go undetected. Only
+                    applies to the Hover Hotkey.
+                </span>
             </section>
         </fieldset>
     </body>

@@ -1,11 +1,20 @@
-import {load} from "./common/settings/settings";
-import {provideShowCopyMenuAction, provideShowOpenMenuAction} from "./options/context-menu";
-import {provideFailurePopup, provideSuccessPopup} from "./options/notifications";
-import {provideCopyPattern, provideFinalNewline} from "./options/general";
-import {provideDeduplicateHrefs, provideIncludeCommandTarget} from "./options/gathering";
+import { load } from "./common/settings/settings";
+import {
+    provideShowCopyMenuAction,
+    provideShowOpenMenuAction,
+} from "./options/context-menu";
+import {
+    provideFailurePopup,
+    provideSuccessPopup,
+} from "./options/notifications";
+import { provideCopyPattern, provideFinalNewline } from "./options/general";
+import {
+    provideDeduplicateHrefs,
+    provideIncludeCommandTarget,
+} from "./options/gathering";
 
 load()
-    .then(settings => {
+    .then((settings) => {
         provideFinalNewline(settings);
         provideCopyPattern(settings);
 

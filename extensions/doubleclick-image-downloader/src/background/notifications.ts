@@ -1,12 +1,20 @@
-import browser, {Downloads, Notifications} from "webextension-polyfill";
-import {AdvancedNotificationOptions, tryCreateFancyNotification} from "../common/compatibility";
-import {notifications} from "./state";
+import browser, { Downloads, Notifications } from "webextension-polyfill";
+import {
+    AdvancedNotificationOptions,
+    tryCreateFancyNotification,
+} from "../common/compatibility";
+import { notifications } from "./state";
 
-async function inspectDownload(notificationId: string, buttonIndex: number): Promise<void> {
+async function inspectDownload(
+    notificationId: string,
+    buttonIndex: number
+): Promise<void> {
     const downloadId = notifications.get(notificationId);
 
     if (downloadId == null) {
-        throw new Error(`missing download id for notification ${notificationId}`);
+        throw new Error(
+            `missing download id for notification ${notificationId}`
+        );
     }
 
     switch (buttonIndex) {
@@ -21,31 +29,37 @@ async function inspectDownload(notificationId: string, buttonIndex: number): Pro
 }
 
 export function monitorNotifications(): void {
-    browser.notifications.onButtonClicked.addListener((id, index) => void inspectDownload(id, index).catch(console.error));
-    browser.notifications.onClosed.addListener(id => notifications.delete(id));
+    browser.notifications.onButtonClicked.addListener(
+        (id, index) => void inspectDownload(id, index).catch(console.error)
+    );
+    browser.notifications.onClosed.addListener((id) =>
+        notifications.delete(id)
+    );
 }
 
 const iconUrl = "images/icon-128.png";
 
-export async function notifyCompletion(downloadItem: Downloads.DownloadItem): Promise<void> {
+export async function notifyCompletion(
+    downloadItem: Downloads.DownloadItem
+): Promise<void> {
     const basicOptions: Notifications.CreateNotificationOptions = {
         iconUrl,
         message: downloadItem.filename,
         title: "Image downloaded",
-        type: "basic"
+        type: "basic",
     };
 
     const advancedOptions: AdvancedNotificationOptions = {
         buttons: [
             {
-                title: "View image"
+                title: "View image",
             },
             {
-                title: "Open folder"
-            }
+                title: "Open folder",
+            },
         ],
         imageUrl: downloadItem.filename,
-        type: "image"
+        type: "image",
     };
 
     const id = await tryCreateFancyNotification(basicOptions, advancedOptions);
@@ -57,19 +71,23 @@ export async function notifyNoImageForHotkey(): Promise<void> {
         iconUrl,
         message: "No image found under cursor.",
         title: "Hotkey activated",
-        type: "basic"
+        type: "basic",
     });
 }
 
-export async function notifyFailure(download: Downloads.DownloadItem): Promise<void> {
-    const {os} = await browser.runtime.getPlatformInfo();
+export async function notifyFailure(
+    download: Downloads.DownloadItem
+): Promise<void> {
+    const { os } = await browser.runtime.getPlatformInfo();
     const separator = os === "win" ? "\\" : "/";
-    const filename = download.filename.slice(download.filename.lastIndexOf(separator) + 1);
+    const filename = download.filename.slice(
+        download.filename.lastIndexOf(separator) + 1
+    );
 
     await browser.notifications.create({
         iconUrl: "images/error-128.png",
         message: `Reason: ${download.error}\nFile: ${filename}`,
         title: "Double-click download failed!",
-        type: "basic"
+        type: "basic",
     });
 }

@@ -2,11 +2,18 @@
 
 ## For users
 
-This repository hosts all extensions developed by Marnes (see [list](./extensions)) in one place. Please report bugs, ask questions, or request features for any of them here.
+This repository hosts all extensions developed by Marnes (see
+[list](./extensions)) in one place. Please report bugs, ask questions, or
+request features for any of them here.
 
-Contributions in the form of developer efforts or [monetary donations](https://www.buymeacoffee.com/marnes) are most appreciated. Feedback — positive words or critical but fair review — is preferably left on the Firefox/Chrome stores.
+Contributions in the form of developer efforts or
+[monetary donations](https://www.buymeacoffee.com/marnes) are most appreciated.
+Feedback — positive words or critical but fair review — is preferably left on
+the Firefox/Chrome stores.
 
-My extensions were originally created to suit my own needs, then taken public for programming practice and to be useful to more people than only me. They are (and will remain) spare time projects.
+My extensions were originally created to suit my own needs, then taken public
+for programming practice and to be useful to more people than only me. They are
+(and will remain) spare time projects.
 
 ### Official downloads
 
@@ -24,7 +31,9 @@ My extensions were originally created to suit my own needs, then taken public fo
 
 ### Testing
 
-1. install [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) or [your Chrome of choice](https://dev.chromium.org/getting-involved/dev-channel)
+1. install
+   [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) or
+   [your Chrome of choice](https://dev.chromium.org/getting-involved/dev-channel)
 2. `cd` to the relevant extension in [`./extensions`](./extensions)
 3. execute `yarn compile`
 4. execute any of the following:

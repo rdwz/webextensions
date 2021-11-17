@@ -1,8 +1,8 @@
-import type {Mutable} from "type-fest";
-import {fileNamingSupport} from "../common/compatibility";
-import {renameTechnically} from "../common/filename";
-import {FilenameVariables} from "../common/settings/enums";
-import {Settings, write} from "../common/settings/io";
+import type { Mutable } from "type-fest";
+import { fileNamingSupport } from "../common/compatibility";
+import { renameTechnically } from "../common/filename";
+import { FilenameVariables } from "../common/settings/enums";
+import { Settings, write } from "../common/settings/io";
 
 const TUMBLR_PAGE = new URL("https://photo-blog.tumblr.com/posts/1");
 const TUMBLR_TITLE = "My photo album";
@@ -14,34 +14,54 @@ const REDDIT_TITLE = "WebExtensions are awesome!";
 const GIPHY_FILENAME = "haha-yes.png";
 const GIPHY_SRC = new URL(`https://giphy.com/reactions/${GIPHY_FILENAME}`);
 
-const counterPadding = document.getElementById("counterPadding") as HTMLInputElement;
-const counterStart = document.getElementById("counterStart") as HTMLInputElement;
+const counterPadding = document.getElementById(
+    "counterPadding"
+) as HTMLInputElement;
+const counterStart = document.getElementById(
+    "counterStart"
+) as HTMLInputElement;
 const counterStep = document.getElementById("counterStep") as HTMLInputElement;
-const enableFileRename = document.getElementById("enableRename") as HTMLInputElement;
-const filenamePattern = document.getElementById("fileNamePattern") as HTMLInputElement;
-const filenamePatternPreview1 = document.getElementById("previewFileNamePattern1")!;
-const filenamePatternPreview2 = document.getElementById("previewFileNamePattern2")!;
+const enableFileRename = document.getElementById(
+    "enableRename"
+) as HTMLInputElement;
+const filenamePattern = document.getElementById(
+    "fileNamePattern"
+) as HTMLInputElement;
+const filenamePatternPreview1 = document.getElementById(
+    "previewFileNamePattern1"
+)!;
+const filenamePatternPreview2 = document.getElementById(
+    "previewFileNamePattern2"
+)!;
 const notSupported = document.getElementById("renamingSettingsNotSupported")!;
 const renamingSettings = document.getElementById("renamingSettings")!;
 
 function renderPatternPreview(): void {
     const start = parseInt(counterStart.value, 10);
-    filenamePatternPreview1.textContent = renameTechnically(IMGUR_FILENAME, filenamePattern.value, {
-        counter: start,
-        counterPadding: parseInt(counterPadding.value, 10),
-        imageUrl: IMGUR_SRC,
-        tabTitle: TUMBLR_TITLE,
-        tabUrl: TUMBLR_PAGE
-    });
+    filenamePatternPreview1.textContent = renameTechnically(
+        IMGUR_FILENAME,
+        filenamePattern.value,
+        {
+            counter: start,
+            counterPadding: parseInt(counterPadding.value, 10),
+            imageUrl: IMGUR_SRC,
+            tabTitle: TUMBLR_TITLE,
+            tabUrl: TUMBLR_PAGE,
+        }
+    );
 
     const step = parseInt(counterStep.value, 10);
-    filenamePatternPreview2.textContent = renameTechnically(GIPHY_FILENAME, filenamePattern.value, {
-        counter: start + step,
-        counterPadding: parseInt(counterPadding.value, 10),
-        imageUrl: GIPHY_SRC,
-        tabTitle: REDDIT_TITLE,
-        tabUrl: REDDIT_PAGE
-    });
+    filenamePatternPreview2.textContent = renameTechnically(
+        GIPHY_FILENAME,
+        filenamePattern.value,
+        {
+            counter: start + step,
+            counterPadding: parseInt(counterPadding.value, 10),
+            imageUrl: GIPHY_SRC,
+            tabTitle: REDDIT_TITLE,
+            tabUrl: REDDIT_PAGE,
+        }
+    );
 }
 
 function applyDisabledState(): void {
@@ -65,10 +85,13 @@ function rigEnableFileRename(settings: Settings): void {
 
     enableFileRename.addEventListener("change", () => {
         const update: Partial<Mutable<Settings>> = {
-            enableRename: enableFileRename.checked
+            enableRename: enableFileRename.checked,
         };
 
-        if (enableFileRename.checked && filenamePattern.value.trim().length === 0) {
+        if (
+            enableFileRename.checked &&
+            filenamePattern.value.trim().length === 0
+        ) {
             update.fileNamePattern = FilenameVariables.inferred;
             filenamePattern.value = update.fileNamePattern;
             renderPatternPreview();
@@ -85,7 +108,9 @@ function rigFilenamePattern(settings: Settings): void {
     filenamePattern.addEventListener("input", () => {
         if (filenamePattern.checkValidity()) {
             write({
-                fileNamePattern: filenamePattern.value.trim().replace(/\s+/gu, " ")
+                fileNamePattern: filenamePattern.value
+                    .trim()
+                    .replace(/\s+/gu, " "),
             }).catch(console.error);
             renderPatternPreview();
         }
@@ -98,7 +123,7 @@ function rigCounterPadding(settings: Settings): void {
     counterPadding.addEventListener("change", () => {
         if (counterPadding.checkValidity()) {
             write({
-                counterPadding: parseInt(counterPadding.value, 10)
+                counterPadding: parseInt(counterPadding.value, 10),
             }).catch(console.error);
             renderPatternPreview();
         }
@@ -111,7 +136,7 @@ function rigCounterStart(settings: Settings): void {
     counterStart.addEventListener("change", () => {
         if (counterStart.checkValidity()) {
             write({
-                counterStart: parseInt(counterStart.value, 10)
+                counterStart: parseInt(counterStart.value, 10),
             }).catch(console.error);
             renderPatternPreview();
         }
@@ -124,7 +149,7 @@ function rigCounterStep(settings: Settings): void {
     counterStep.addEventListener("change", () => {
         if (counterStep.checkValidity()) {
             write({
-                counterStep: parseInt(counterStep.value, 10)
+                counterStep: parseInt(counterStep.value, 10),
             }).catch(console.error);
             renderPatternPreview();
         }

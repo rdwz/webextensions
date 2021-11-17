@@ -1,6 +1,3 @@
-arrowParens: avoid
-bracketSpacing: false
-htmlWhitespaceSensitivity: ignore
 overrides:
   - files: "*.{md,yml}"
     options:
@@ -8,7 +5,5 @@ overrides:
 # required under optimized package managers until prettier reads package.json for plugins
 plugins:
   - prettier-plugin-package
-printWidth: 160
-proseWrap: never
+proseWrap: always
 tabWidth: 4
-trailingComma: none

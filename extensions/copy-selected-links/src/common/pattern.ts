@@ -1,8 +1,8 @@
-import {Link} from "./types";
+import { Link } from "./types";
 
 export const PATTERN_VARIABLES = {
     text: "%text%",
-    url: "%url%"
+    url: "%url%",
 } as const;
 
 const textRegex = new RegExp(PATTERN_VARIABLES.text, "gu");

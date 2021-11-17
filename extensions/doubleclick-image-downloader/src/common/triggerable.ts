@@ -21,11 +21,11 @@ export function triggerable<T = undefined>(): Triggerable<T> {
                 actions.set(key, action);
                 return key;
             },
-            unsubscribe: key => actions.delete(key)
+            unsubscribe: (key) => actions.delete(key),
         },
         hide: {
             hasSubscribers: () => actions.size > 0,
-            trigger: data => actions.forEach(action => action(data))
-        }
+            trigger: (data) => actions.forEach((action) => action(data)),
+        },
     };
 }

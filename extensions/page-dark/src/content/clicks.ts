@@ -1,5 +1,5 @@
 import browser from "webextension-polyfill";
-import {signal} from "../common/messages";
+import { signal } from "../common/messages";
 
 const MEDIA_NODE_NAMES = ["VIDEO", "EMBED", "OBJECT"];
 
@@ -13,7 +13,8 @@ async function requestDarknessOff(event: MouseEvent): Promise<void> {
     }
 }
 
-const listener = (event: MouseEvent): void => void requestDarknessOff(event).catch(console.error);
+const listener = (event: MouseEvent): void =>
+    void requestDarknessOff(event).catch(console.error);
 
 export function detectClick(): void {
     document.documentElement.addEventListener("click", listener);

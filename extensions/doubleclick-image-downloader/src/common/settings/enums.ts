@@ -3,7 +3,7 @@ export enum ClickType {
     singleLeft = "singleLeft",
     doubleLeft = "doubleLeft",
     singleRight = "singleRight",
-    doubleRight = "doubleRight"
+    doubleRight = "doubleRight",
 }
 
 export enum HoverButtonPosition {
@@ -33,19 +33,19 @@ export enum HoverButtonPosition {
     east = "6",
     eastEast = "7",
     south = "8",
-    southSouth = "9"
+    southSouth = "9",
 }
 
 export enum HoverButtonSkin {
     original = "original",
-    alt1 = "alt1"
+    alt1 = "alt1",
 }
 
 export enum ConflictAction {
     autoUnique = "uniquify",
     // TODO firefox support
     prompt = "prompt",
-    overwrite = "overwrite"
+    overwrite = "overwrite",
 }
 
 // *_DIRS = url path as nested dirs
@@ -69,5 +69,5 @@ export enum FilenameVariables {
     hour = "%h%",
     minute = "%m%",
     second = "%s%",
-    millisecond = "%ms%"
+    millisecond = "%ms%",
 }

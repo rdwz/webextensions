@@ -1,4 +1,7 @@
-export function deduplicateBy<T>(list: T[], keyMapper: (element: T) => string): T[] {
+export function deduplicateBy<T>(
+    list: T[],
+    keyMapper: (element: T) => string
+): T[] {
     const keys: string[] = [];
     const output: T[] = [];
 

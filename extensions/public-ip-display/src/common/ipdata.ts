@@ -1,7 +1,12 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {asCountryService, asIpService, asNullableSignificantString, asSignificantString} from "./checks";
-import {CountryService, IpService} from "./settings/enums";
+import {
+    asCountryService,
+    asIpService,
+    asNullableSignificantString,
+    asSignificantString,
+} from "./checks";
+import { CountryService, IpService } from "./settings/enums";
 
 export interface IpData {
     fetchedAt: Date;
@@ -33,17 +38,20 @@ function toPersisted(data: IpCountryData): Persisted {
         countryCodeService: data.countryService,
         date: data.fetchedAt.toISOString(),
         ip: data.ip,
-        ipEchoService: data.ipService
+        ipEchoService: data.ipService,
     };
 }
 
 function toDomain(data: Persisted): IpCountryData {
     return {
         country: data.countryCode,
-        countryService: data.countryCodeService == null ? null : asCountryService(data.countryCodeService),
+        countryService:
+            data.countryCodeService == null
+                ? null
+                : asCountryService(data.countryCodeService),
         fetchedAt: new Date(data.date),
         ip: data.ip,
-        ipService: asIpService(data.ipEchoService)
+        ipService: asIpService(data.ipEchoService),
     };
 }
 
@@ -58,16 +66,26 @@ function validate(data: Record<keyof Persisted, JsonValue>): Persisted | null {
 
     return {
         countryCode: asNullableSignificantString(data.countryCode),
-        countryCodeService: asNullableSignificantString(data.countryCodeService),
+        countryCodeService: asNullableSignificantString(
+            data.countryCodeService
+        ),
         date: asSignificantString(data.date),
         ip: asSignificantString(data.ip),
-        ipEchoService: asSignificantString(data.ipEchoService)
+        ipEchoService: asSignificantString(data.ipEchoService),
     };
 }
 
-const keys: (keyof Persisted)[] = ["date", "ip", "ipEchoService", "countryCode", "countryCodeService"];
+const keys: (keyof Persisted)[] = [
+    "date",
+    "ip",
+    "ipEchoService",
+    "countryCode",
+    "countryCodeService",
+];
 
-export function isPersistedIpCountryDataProperty(key: string): key is keyof Persisted {
+export function isPersistedIpCountryDataProperty(
+    key: string
+): key is keyof Persisted {
     return (keys as string[]).includes(key);
 }
 

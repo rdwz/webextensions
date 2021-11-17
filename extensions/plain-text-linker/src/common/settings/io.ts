@@ -1,11 +1,11 @@
-import type {JsonValue} from "type-fest";
+import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import {bool, sanitize, stringEnum} from "./validation";
+import { bool, sanitize, stringEnum } from "./validation";
 
 export enum Position {
     default = "default",
     right = "right",
-    farRight = "farRight"
+    farRight = "farRight",
 }
 
 const spec = {
@@ -13,7 +13,7 @@ const spec = {
     newTabPosition: stringEnum(Position, Position.default),
     notifyInvalidUrl: bool(true),
     requireShiftKey: bool(true),
-    tryHttp: bool(false)
+    tryHttp: bool(false),
 };
 
 export type Settings = {

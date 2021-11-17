@@ -1,10 +1,10 @@
-import {HoverButtonPosition} from "../../common/settings/enums";
-import {Settings} from "../../common/settings/io";
-import {startDownload} from "../downloads";
-import {monitor} from "../../common/settings/monitoring";
-import {matching, ofViewport, shrink} from "./area";
+import { HoverButtonPosition } from "../../common/settings/enums";
+import { Settings } from "../../common/settings/io";
+import { startDownload } from "../downloads";
+import { monitor } from "../../common/settings/monitoring";
+import { matching, ofViewport, shrink } from "./area";
 import * as element from "./element";
-import {add, constrainTo, relativeTo, topLeftOf} from "./offset";
+import { add, constrainTo, relativeTo, topLeftOf } from "./offset";
 
 let anchor: HTMLImageElement | null = null;
 let makeup: {
@@ -20,10 +20,14 @@ function alignToAnchor(): void {
         throw new Error("cannot align without anchor");
     }
 
-    const offsetRelativeToAnchor = relativeTo(matching(anchor), makeup.position, makeup.size);
+    const offsetRelativeToAnchor = relativeTo(
+        matching(anchor),
+        makeup.position,
+        makeup.size
+    );
     const absoluteOffset = add(offsetRelativeToAnchor, topLeftOf(anchor));
     const whereButtonIsVisible = shrink(ofViewport(), makeup.size);
-    const {left, top} = constrainTo(absoluteOffset, whereButtonIsVisible);
+    const { left, top } = constrainTo(absoluteOffset, whereButtonIsVisible);
 
     element.setCoordinates(left, top);
 }
@@ -59,11 +63,11 @@ function insert(): void {
 }
 
 export function updateVisualsOnChanges(): void {
-    monitor("buttonSize", settings => setSize(settings));
-    monitor("buttonPosition", settings => setPosition(settings));
+    monitor("buttonSize", (settings) => setSize(settings));
+    monitor("buttonPosition", (settings) => setPosition(settings));
 
-    monitor("buttonOpacity", settings => element.setOpacity(settings));
-    monitor("oneClickStyle", settings => element.setSkin(settings));
+    monitor("buttonOpacity", (settings) => element.setOpacity(settings));
+    monitor("oneClickStyle", (settings) => element.setSkin(settings));
 }
 
 export function remove(): void {
@@ -86,7 +90,7 @@ export function attachTo(image: HTMLImageElement): void {
 export function init(settings: Settings): void {
     makeup = {
         position: settings.buttonPosition,
-        size: settings.buttonSize
+        size: settings.buttonSize,
     };
 
     element.setSkin(settings);

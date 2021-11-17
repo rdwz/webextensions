@@ -1,4 +1,4 @@
-import {Settings} from "../common/settings/io";
+import { Settings } from "../common/settings/io";
 
 export type TabAndFrameId = [number, number | null];
 

@@ -1,6 +1,6 @@
-import browser, {Runtime} from "webextension-polyfill";
-import {ClickedMessage} from "../common/messages";
-import {load, toTabIndex} from "../common/settings/settings";
+import browser, { Runtime } from "webextension-polyfill";
+import { ClickedMessage } from "../common/messages";
+import { load, toTabIndex } from "../common/settings/settings";
 
 function toUrl(text: string): URL | null {
     try {
@@ -11,23 +11,32 @@ function toUrl(text: string): URL | null {
     }
 }
 
-async function tryWithProtocol(text: string, protocol: "http" | "https"): Promise<URL | null> {
+async function tryWithProtocol(
+    text: string,
+    protocol: "http" | "https"
+): Promise<URL | null> {
     const url = toUrl(`${protocol}://${text}`);
     if (url == null) {
         return null;
     }
     try {
-        await fetch(url.href, {method: "HEAD"});
+        await fetch(url.href, { method: "HEAD" });
         return url;
     } catch (notReachable) {
         return null;
     }
 }
 
-export async function open(msg: ClickedMessage, sender: Runtime.MessageSender): Promise<void> {
+export async function open(
+    msg: ClickedMessage,
+    sender: Runtime.MessageSender
+): Promise<void> {
     const settings = await load();
 
-    const url = toUrl(msg.text) ?? (await tryWithProtocol(msg.text, "https")) ?? (settings.tryHttp ? await tryWithProtocol(msg.text, "http") : null);
+    const url =
+        toUrl(msg.text) ??
+        (await tryWithProtocol(msg.text, "https")) ??
+        (settings.tryHttp ? await tryWithProtocol(msg.text, "http") : null);
 
     if (url === null) {
         if (settings.notifyInvalidUrl) {
@@ -35,14 +44,14 @@ export async function open(msg: ClickedMessage, sender: Runtime.MessageSender): 
                 iconUrl: "/images/icon-128.png",
                 message: `Could not read this as a URL:\n${msg.text}`,
                 title: "Invalid URL",
-                type: "basic"
+                type: "basic",
             });
         }
     } else {
         await browser.tabs.create({
             active: settings.foregroundByDefault !== msg.ctrlKey,
             index: toTabIndex(settings, sender.tab),
-            url: url.href
+            url: url.href,
         });
     }
 }

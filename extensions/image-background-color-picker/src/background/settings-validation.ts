@@ -1,5 +1,5 @@
-import browser, {Runtime} from "webextension-polyfill";
-import {validate} from "../common/settings";
+import browser, { Runtime } from "webextension-polyfill";
+import { validate } from "../common/settings";
 import OnInstalledDetailsType = Runtime.OnInstalledDetailsType;
 
 async function onInstall(details: OnInstalledDetailsType): Promise<void> {
@@ -10,5 +10,7 @@ async function onInstall(details: OnInstalledDetailsType): Promise<void> {
 }
 
 export function fixSettingsOnUpdate(): void {
-    browser.runtime.onInstalled.addListener(details => void onInstall(details).catch(console.error));
+    browser.runtime.onInstalled.addListener(
+        (details) => void onInstall(details).catch(console.error)
+    );
 }

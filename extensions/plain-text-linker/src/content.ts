@@ -1,3 +1,6 @@
-import {getTextFromSelection} from "./content/doubleclick";
+import { getTextFromSelection } from "./content/doubleclick";
 
-document.body.addEventListener("dblclick", event => void getTextFromSelection(event).catch(console.error));
+document.body.addEventListener(
+    "dblclick",
+    (event) => void getTextFromSelection(event).catch(console.error)
+);
