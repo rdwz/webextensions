@@ -1769,10 +1769,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webextension-polyfill@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "@types/webextension-polyfill@npm:0.8.1"
-  checksum: 4b24da446c7e24331cdd4f927f253fbf591cd55ff40798ffd53e47d22bf6b60ad0524516cd48d271bde7fb2fa9e641b839b634e312e74dd9891e7242c44a9f2c
+"@types/webextension-polyfill@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@types/webextension-polyfill@npm:0.8.2"
+  checksum: 967902fb84e0e4e9798abf5dec1b173a6fd9f9c3f0d4aa02c242d26dd4eedd0684ffb29994e7d0547a3bd854143aca5b837419a1b8829f50642a3c4b34939af1
   languageName: node
   linkType: hard
 
@@ -4027,7 +4027,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "copy-selected-links@workspace:extensions/copy-selected-links"
   dependencies:
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -4930,7 +4930,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "doubleclick-image-downloader@workspace:extensions/doubleclick-image-downloader"
   dependencies:
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -7031,7 +7031,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "image-background-color-picker@workspace:extensions/image-background-color-picker"
   dependencies:
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -9674,7 +9674,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "page-dark@workspace:extensions/page-dark"
   dependencies:
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -10100,7 +10100,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "plain-text-linker@workspace:extensions/plain-text-linker"
   dependencies:
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
@@ -10815,7 +10815,7 @@ fsevents@~2.3.2:
   dependencies:
     "@types/react": ^17.0.36
     "@types/react-dom": ^17.0.11
-    "@types/webextension-polyfill": ^0.8.1
+    "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     "@yarnpkg/pnpify": ^2.4.0
