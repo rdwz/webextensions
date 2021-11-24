@@ -4046,7 +4046,7 @@ __metadata:
     sass: ^1.43.4
     ts-essentials: ^9.0.0
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -4949,7 +4949,7 @@ __metadata:
     sass: ^1.43.4
     ts-essentials: ^9.0.0
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -7049,7 +7049,7 @@ fsevents@~2.3.2:
     sass: ^1.43.4
     ts-essentials: ^9.0.0
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -9691,7 +9691,7 @@ fsevents@~2.3.2:
     rimraf: ^3.0.2
     sass: ^1.43.4
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -10118,7 +10118,7 @@ fsevents@~2.3.2:
     sass: ^1.43.4
     ts-essentials: ^9.0.0
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -10838,7 +10838,7 @@ fsevents@~2.3.2:
     tachyons: ^4.12.0
     ts-essentials: ^9.0.0
     tslib: ^2.3.1
-    type-fest: ^2.5.4
+    type-fest: ^2.6.0
     typescript: ^4.4.4
     web-ext: ^6.5.0
     webextension-polyfill: ^0.8.0
@@ -12989,10 +12989,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^2.5.4":
-  version: 2.5.4
-  resolution: "type-fest@npm:2.5.4"
-  checksum: a53d349d7dea14702bf4021ef1d2e51ae0929264676daee52fd5256b7234204188e5eae1234e6db9364a6bc0ef17bbf8171dc964dc481c5fe941d39fd78364bd
+"type-fest@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "type-fest@npm:2.6.0"
+  checksum: 210b435c002acb1f5d9c6a4f2e720dffb8f7151089a63be0497912b7ad3e694ada714465c2f1c84b271b4fc22ed62310619e3ef8d944c297e50ae1f8c64bd24d
   languageName: node
   linkType: hard
 
