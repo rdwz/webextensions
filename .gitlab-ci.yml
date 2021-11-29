@@ -13,10 +13,10 @@ ci:
     - yarn install --immutable
     - yarn clean
     - yarn prettier
-    - yarn dlx git-is-clean
+    - yarn git-is-clean
     - yarn build
     - yarn bundle
-    - yarn dlx git-is-clean
+    - yarn git-is-clean
 
   artifacts:
     paths:
