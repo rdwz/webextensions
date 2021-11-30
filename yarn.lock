@@ -10767,10 +10767,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.6.1":
-  version: 10.6.1
-  resolution: "preact@npm:10.6.1"
-  checksum: 930fbf57d99da42762b342d934e000f5afe339cfd7e7418982799f37063b93ade171a179a626c9667d1ca80d4bcb669c166c9be10ba96eeb4983fe14d4604763
+"preact@npm:^10.6.2":
+  version: 10.6.2
+  resolution: "preact@npm:10.6.2"
+  checksum: 69d29dca061ee00285ff7705fd39c491c8a116b35e670b1206aa4387149b8f505e1751439b69d6f8dcfbbc4ee928e9127a2dad739a8e13bffab4a1eafa7d7917
   languageName: node
   linkType: hard
 
@@ -10967,7 +10967,7 @@ fsevents@~2.3.2:
     modern-normalize: ^1.1.0
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
-    preact: ^10.6.1
+    preact: ^10.6.2
     prettier: ^2.5.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
