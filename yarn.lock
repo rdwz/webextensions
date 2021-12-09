@@ -4021,7 +4021,7 @@ __metadata:
     eslint: ^8.4.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
     prettier: ^2.5.1
@@ -4966,7 +4966,7 @@ __metadata:
     eslint: ^8.4.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
     prettier: ^2.5.1
@@ -5883,10 +5883,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-equals@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "fast-equals@npm:2.0.3"
-  checksum: ef475f52cb93f67c9452da3aed0d60a7cf63c844325cfd741b2863b2e9037a79c81e7f6786295b7f84501971626dce9e8b5d1e02c08506514a75d9cd9703240e
+"fast-equals@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "fast-equals@npm:2.0.4"
+  checksum: 1aac8a2e16b33e5e402bb5cd46be65f1ca331903c2c44e3bd75324e8472ee04f0acdbc6889e45fc28f9707ca3964f2a86789b32305d4d8b85dc97f61e446ef4b
   languageName: node
   linkType: hard
 
@@ -7163,7 +7163,7 @@ __metadata:
     eslint: ^8.4.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
     prettier: ^2.5.1
@@ -9884,7 +9884,7 @@ __metadata:
     eslint: ^8.4.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
     prettier: ^2.5.1
@@ -10305,7 +10305,7 @@ __metadata:
     eslint: ^8.4.1
     eslint-plugin-import: ^2.25.3
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1
     prettier: ^2.5.1
@@ -11022,7 +11022,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.27.1
     eslint-plugin-react-hooks: ^4.3.0
-    fast-equals: ^2.0.3
+    fast-equals: ^2.0.4
     modern-normalize: ^1.1.0
     parcel-bundler: ^1.12.5
     parcel-plugin-web-extension: ^1.6.1

@@ -19,7 +19,7 @@
         "tsc": "tsc"
     },
     "dependencies": {
-        "fast-equals": "^2.0.3",
+        "fast-equals": "^2.0.4",
         "modern-normalize": "^1.1.0",
         "preact": "^10.6.2",
         "tachyons": "^4.12.0",
