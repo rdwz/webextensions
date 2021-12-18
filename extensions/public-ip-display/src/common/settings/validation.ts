@@ -44,7 +44,7 @@ export function sanitize<T, K extends keyof T = keyof T>(
     const destination: Partial<T> = {};
 
     for (const field of Object.getOwnPropertyNames(spec) as K[]) {
-        if (Object.prototype.hasOwnProperty.call(spec, field)) {
+        if (field in spec) {
             const validator = spec[field];
             const sourceValue = source[field];
 
