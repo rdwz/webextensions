@@ -27,8 +27,8 @@
     },
     "devDependencies": {
         "@types/webextension-polyfill": "^0.8.2",
-        "@typescript-eslint/eslint-plugin": "^5.7.0",
-        "@typescript-eslint/parser": "^5.7.0",
+        "@typescript-eslint/eslint-plugin": "^5.8.0",
+        "@typescript-eslint/parser": "^5.8.0",
         "@yarnpkg/pnpify": "^2.4.0",
         "cssnano": "^4.1.11",
         "eslint": "^8.5.0",
