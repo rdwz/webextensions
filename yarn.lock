@@ -4028,7 +4028,7 @@ __metadata:
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     sass: ^1.45.1
-    ts-essentials: ^9.0.0
+    ts-essentials: ^9.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
     typescript: ^4.5.4
@@ -4973,7 +4973,7 @@ __metadata:
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     sass: ^1.45.1
-    ts-essentials: ^9.0.0
+    ts-essentials: ^9.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
     typescript: ^4.5.4
@@ -7170,7 +7170,7 @@ __metadata:
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     sass: ^1.45.1
-    ts-essentials: ^9.0.0
+    ts-essentials: ^9.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
     typescript: ^4.5.4
@@ -10312,7 +10312,7 @@ __metadata:
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     sass: ^1.45.1
-    ts-essentials: ^9.0.0
+    ts-essentials: ^9.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
     typescript: ^4.5.4
@@ -11032,7 +11032,7 @@ __metadata:
     rimraf: ^3.0.2
     sass: ^1.45.1
     tachyons: ^4.12.0
-    ts-essentials: ^9.0.0
+    ts-essentials: ^9.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
     typescript: ^4.5.4
@@ -13110,12 +13110,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-essentials@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "ts-essentials@npm:9.0.0"
+"ts-essentials@npm:^9.1.2":
+  version: 9.1.2
+  resolution: "ts-essentials@npm:9.1.2"
   peerDependencies:
     typescript: ">=4.1.0"
-  checksum: 7122715b96dd5a93ca9e234e764ead870d11be8171b4ce1c97dad72d93f3213dac92c7e32ff198d16f44f4c27d4d9a35671f3f57ec3c18e8a215675c604326ad
+  checksum: 3b14d8511557bd1bdec068505074ee41d3b1cdb052d3c66a5046f00b483bd4722d529b32a99cca424a9d7db9caff7ba108acbf344a5477a741e0616af5649b47
   languageName: node
   linkType: hard
 
