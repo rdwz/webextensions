@@ -32,7 +32,7 @@
         "@yarnpkg/pnpify": "^2.4.0",
         "cssnano": "^4.1.11",
         "eslint": "^8.6.0",
-        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-prettier": "^4.0.0",
         "parcel-bundler": "^1.12.5",
         "parcel-plugin-web-extension": "^1.6.1",
