@@ -15,7 +15,7 @@
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock"
     },
     "resolutions": {
-        "@types/react": "^17.0.38"
+        "@types/react": "^17.0.39"
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^5.10.2",
