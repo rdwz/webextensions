@@ -23,12 +23,10 @@
         "@parcel/core": "^2.2.1",
         "@parcel/transformer-sass": "^2.2.1",
         "@typescript-eslint/parser": "^5.10.2",
-        "babel-types": "^6.26.0",
         "bestzip": "^2.2.0",
         "eslint": "^8.8.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-config-react": "^1.1.7",
-        "eslint-import-resolver-alias": "^1.1.2",
         "eslint-import-resolver-node": "^0.3.6",
         "eslint-plugin-import": "^2.25.4",
         "git-is-clean": "^3.0.1",
@@ -36,11 +34,6 @@
         "prettier-plugin-packagejson": "^2.2.15",
         "rimraf": "^3.0.2",
         "typescript": "^4.5.5"
-    },
-    "dependenciesMeta": {
-        "fsevents": {
-            "built": false
-        }
     },
     "packageManager": "yarn@3.1.1"
 }
