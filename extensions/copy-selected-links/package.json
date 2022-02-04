@@ -18,7 +18,6 @@
         "tsc": "tsc"
     },
     "dependencies": {
-        "basscss-sass": "^4.0.0",
         "fast-equals": "^2.0.4",
         "ts-essentials": "^9.1.2",
         "tslib": "^2.3.1",

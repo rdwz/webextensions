@@ -2390,121 +2390,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"basscss-addons@npm:^1.0.0-beta2":
-  version: 1.0.0
-  resolution: "basscss-addons@npm:1.0.0"
-  dependencies:
-    colors.css: ^3.0.0
-  checksum: 6ce950d32e06f2fd8f0ff070dc7b4fa4e57b908f1d643053d95672813d85d44ea77c74a50012e4a5f221e52adaa4293b59bcd2082ae78cdb56029a7e878398cd
-  languageName: node
-  linkType: hard
-
-"basscss-align@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "basscss-align@npm:1.0.2"
-  checksum: 1ebc71471803ec37b4fc2f189cc1452d633a9c7b5aed3f816f9cbc246d59df5eb6afaff5f678f505feab9b12867f6dc092a2d202779559c6cba402ffc75051be
-  languageName: node
-  linkType: hard
-
-"basscss-border@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "basscss-border@npm:4.0.2"
-  checksum: 32019e02a8de7beeb44362e23497d3998b3f63390d57fb2e6516c8b6dc68698572a1a8bc424d52b637dc9b65a45d3d8c0d627782ecb6fa5542e9e62051614ac5
-  languageName: node
-  linkType: hard
-
-"basscss-flexbox@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "basscss-flexbox@npm:1.0.2"
-  checksum: bd63df4cee905d721e396697246889060873b188efc0435cec82251cef50ffb0ccee2a83a2111350ff78d134a8810fb59d30f43f3f6f122491bd058f0c241986
-  languageName: node
-  linkType: hard
-
-"basscss-grid@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "basscss-grid@npm:2.0.0"
-  checksum: 91c25b1685ceb89e1b634b97a5a171d6c9120dce5ccb5390331b8d7b8267cbf941b4ada01c8ced96efd77512769ebe50e6a1f1e561d1d33e86cf0ab9ec4b3fc6
-  languageName: node
-  linkType: hard
-
-"basscss-hide@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "basscss-hide@npm:1.0.1"
-  checksum: 3f3de5c897dc4d748dba0c84e067f8c92f903fcb70fbb43cb6d3f7c9814410eb270d88b13df3e62dc18308a0bdec281cd42df066d04c9ee227a354bae69251b6
-  languageName: node
-  linkType: hard
-
-"basscss-layout@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "basscss-layout@npm:3.1.0"
-  checksum: 3cbe1a6abc6880a6920104186c656ecdc675a79dd74b4494ca1a586c47306580cff72335458f82aed3cdbc75518706d0abc8bd973ed0c10cef803d9b1d115897
-  languageName: node
-  linkType: hard
-
-"basscss-margin@npm:^1.0.9":
-  version: 1.0.9
-  resolution: "basscss-margin@npm:1.0.9"
-  checksum: 6bbd8b421d3beeb4198da7b359405cbe2137c962a3e6e26c4bb64e2815bf31fa18813ac4ab9a58a9a5d2be0d8a228c5099e9399ef808ade926cd46021df4a823
-  languageName: node
-  linkType: hard
-
-"basscss-padding@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "basscss-padding@npm:1.1.3"
-  checksum: 2ed77191222eca942f49bb047f8869a25f18d0686dbbfaf36b3e3d6d8035c9c7e703dff50757d6e8f68d0344dc1096e5c25de5d356ac1c5cab7663d74ace45e1
-  languageName: node
-  linkType: hard
-
-"basscss-position@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "basscss-position@npm:2.0.3"
-  checksum: c9a5ebd0ce8e19cb8d81a172104c682a9963130619cd5bb3337855614a6a7d5351021ce0bb582d2a0528fe7216756711ff66592b5f6a2eded3a420aee86da71c
-  languageName: node
-  linkType: hard
-
-"basscss-sass@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "basscss-sass@npm:4.0.0"
-  dependencies:
-    basscss: ^8.0.0
-    basscss-addons: ^1.0.0-beta2
-  checksum: 8a3e2629b61167894f367b5e76fd699638f2c243928443a3ea70da917b25123c596cd514ce4c2a126634d8c5d84463f618db9566cd973d1c6ac11cd538b6b0b9
-  languageName: node
-  linkType: hard
-
-"basscss-type-scale@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "basscss-type-scale@npm:1.0.6"
-  checksum: 61d13123cb9800ebf4317206c0d8c9c5ba6fffa29d9fb188fdf85f357cf825b6f1c10d1dce8786d7ab3b4f6f6e2bbb640a35acba41827e4296bfe92f3e168fe6
-  languageName: node
-  linkType: hard
-
-"basscss-typography@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "basscss-typography@npm:3.0.4"
-  checksum: 02093f764abf249a2d523d7ddad011cef529cfcf3261a58abfd418aeca52ed0ba351b20cf33e0d9d0cc2a330cee7bd7761c58632f3aae404e2407975a5cc5256
-  languageName: node
-  linkType: hard
-
-"basscss@npm:^8.0.0":
-  version: 8.1.0
-  resolution: "basscss@npm:8.1.0"
-  dependencies:
-    basscss-align: ^1.0.2
-    basscss-border: ^4.0.2
-    basscss-flexbox: ^1.0.2
-    basscss-grid: ^2.0.0
-    basscss-hide: ^1.0.1
-    basscss-layout: ^3.1.0
-    basscss-margin: ^1.0.9
-    basscss-padding: ^1.1.3
-    basscss-position: ^2.0.3
-    basscss-type-scale: ^1.0.6
-    basscss-typography: ^3.0.4
-  checksum: 122020a5f97c76aa820ef3beaf52ca6c20cd40353c43c27c886d8fa377de3715f7fc84a612428fe6f6aaab893d80b5ded28705c3350a0662804de52dae778b21
-  languageName: node
-  linkType: hard
-
 "bcrypt-pbkdf@npm:^1.0.0":
   version: 1.0.2
   resolution: "bcrypt-pbkdf@npm:1.0.2"
@@ -3348,13 +3233,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors.css@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "colors.css@npm:3.0.0"
-  checksum: 43e9dc5bf2a88d5a83e85fb6c7f1a7a2417a982dc7b2a886fe88db5828d29b46aa45b2a9951e5fd11855ff205fccbae67b74447d778d76ab9aaab3ddabf6976b
-  languageName: node
-  linkType: hard
-
 "columnify@npm:1.5.4":
   version: 1.5.4
   resolution: "columnify@npm:1.5.4"
@@ -3570,7 +3448,6 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.10.2
     "@typescript-eslint/parser": ^5.10.2
-    basscss-sass: ^4.0.0
     cssnano: ^4.1.11
     eslint: ^8.8.0
     eslint-plugin-import: ^2.25.4
@@ -4516,7 +4393,6 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.10.2
     "@typescript-eslint/parser": ^5.10.2
-    basscss-sass: ^4.0.0
     cssnano: ^4.1.11
     eslint: ^8.8.0
     eslint-plugin-import: ^2.25.4
