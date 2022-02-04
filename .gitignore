@@ -4,7 +4,7 @@
 !/.yarn/releases/
 /.pnp.*
 
-/extensions/*/.cache/
+/.parcel-cache/
 /extensions/*/dist/
 /extensions/*/extension/
 sources.zip

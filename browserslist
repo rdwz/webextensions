@@ -1,3 +1,2 @@
-# https://caniuse.com/#feat=async-functions
-Firefox > 52
-Chrome > 55
+# (firefox or chrome) and modern
+firefox > 1 or chrome > 1 and supports async-functions and supports es6-module
