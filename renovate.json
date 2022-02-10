@@ -5,6 +5,12 @@
         ":automergePatch",
         ":automergeTypes"
     ],
+    "packageRules": [
+        {
+            "matchPackagePatterns": "^@?parcel(/|$)",
+            "groupName": ["parcel packages"]
+        }
+    ],
     "nvm": {
         "fileMatch": ["^\\.node-version$"]
     },
