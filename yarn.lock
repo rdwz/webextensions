@@ -140,7 +140,7 @@ __metadata:
     eslint-plugin-import: ^2.25.4
     git-is-clean: ^3.0.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     typescript: ^4.5.5
   languageName: unknown
@@ -2915,7 +2915,7 @@ __metadata:
     fast-equals: ^2.0.4
     parcel: ^2.3.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     ts-essentials: ^9.1.2
     tslib: ^2.3.1
@@ -3455,26 +3455,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-indent@npm:^6.0.0":
-  version: 6.1.0
-  resolution: "detect-indent@npm:6.1.0"
-  checksum: ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
-  languageName: node
-  linkType: hard
-
 "detect-libc@npm:^1.0.3":
   version: 1.0.3
   resolution: "detect-libc@npm:1.0.3"
   bin:
     detect-libc: ./bin/detect-libc.js
   checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
-  languageName: node
-  linkType: hard
-
-"detect-newline@npm:3.1.0":
-  version: 3.1.0
-  resolution: "detect-newline@npm:3.1.0"
-  checksum: ae6cd429c41ad01b164c59ea36f264a2c479598e61cba7c99da24175a7ab80ddf066420f2bec9a1c57a6bead411b4655ff15ad7d281c000a89791f48cbe939e7
   languageName: node
   linkType: hard
 
@@ -3588,7 +3574,7 @@ __metadata:
     fast-equals: ^2.0.4
     parcel: ^2.3.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     ts-essentials: ^9.1.2
     tslib: ^2.3.1
@@ -4344,7 +4330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.0.3, fast-glob@npm:^3.1.1":
+"fast-glob@npm:^3.1.1":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -4868,13 +4854,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"git-hooks-list@npm:1.0.3":
-  version: 1.0.3
-  resolution: "git-hooks-list@npm:1.0.3"
-  checksum: a1dd03d39c1d727ba08a35dbdbdcc6e96de8c4170c942dc95bf787ca6e34998d39fb5295a00242b58a3d265de0b69a0686d0cf583baa6b7830f268542c4576b9
-  languageName: node
-  linkType: hard
-
 "git-is-clean@npm:^3.0.1":
   version: 3.0.1
   resolution: "git-is-clean@npm:3.0.1"
@@ -4976,22 +4955,6 @@ __metadata:
   dependencies:
     type-fest: ^0.20.2
   checksum: cf7877629c8f2a293b0a7d09d1dcce7f2d426ec2528600c481c5b3f3d070b0a120eb2499439ac0404990fb8a5742c0165b1bf1f52603364001ddc89bea3dda24
-  languageName: node
-  linkType: hard
-
-"globby@npm:10.0.0":
-  version: 10.0.0
-  resolution: "globby@npm:10.0.0"
-  dependencies:
-    "@types/glob": ^7.1.1
-    array-union: ^2.1.0
-    dir-glob: ^3.0.1
-    fast-glob: ^3.0.3
-    glob: ^7.1.3
-    ignore: ^5.1.1
-    merge2: ^1.2.3
-    slash: ^3.0.0
-  checksum: fbff58d2fcaedd9207901f6e3b5341ff885b6d499c3a095f7befde0fd03ec1ea634452a82f81e894e46f6a5d704da44b842ba93066f90dced52adf84d4b8d1cc
   languageName: node
   linkType: hard
 
@@ -5427,7 +5390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.1.1, ignore@npm:^5.1.4, ignore@npm:^5.1.8, ignore@npm:^5.2.0":
+"ignore@npm:^5.1.4, ignore@npm:^5.1.8, ignore@npm:^5.2.0":
   version: 5.2.0
   resolution: "ignore@npm:5.2.0"
   checksum: 6b1f926792d614f64c6c83da3a1f9c83f6196c2839aa41e1e32dd7b8d174cef2e329d75caabb62cb61ce9dc432f75e67d07d122a037312db7caa73166a1bdb77
@@ -5447,7 +5410,7 @@ __metadata:
     fast-equals: ^2.0.4
     parcel: ^2.3.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     ts-essentials: ^9.1.2
     tslib: ^2.3.1
@@ -5908,13 +5871,6 @@ __metadata:
   version: 3.0.3
   resolution: "is-path-inside@npm:3.0.3"
   checksum: abd50f06186a052b349c15e55b182326f1936c89a78bf6c8f2b707412517c097ce04bc49a0ca221787bc44e1049f51f09a2ffb63d22899051988d3a618ba13e9
-  languageName: node
-  linkType: hard
-
-"is-plain-obj@npm:2.1.0":
-  version: 2.1.0
-  resolution: "is-plain-obj@npm:2.1.0"
-  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
   languageName: node
   linkType: hard
 
@@ -7762,7 +7718,7 @@ __metadata:
     fast-equals: ^2.0.4
     parcel: ^2.3.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tslib: ^2.3.1
     type-fest: ^2.11.2
@@ -8041,7 +7997,7 @@ __metadata:
     fast-equals: ^2.0.4
     parcel: ^2.3.1
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     ts-essentials: ^9.1.2
     tslib: ^2.3.1
@@ -8449,14 +8405,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-packagejson@npm:^2.2.15":
-  version: 2.2.15
-  resolution: "prettier-plugin-packagejson@npm:2.2.15"
-  dependencies:
-    sort-package-json: 1.53.1
+"prettier-plugin-package@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "prettier-plugin-package@npm:1.3.0"
   peerDependencies:
-    prettier: ">= 1.16.0"
-  checksum: 2cd79e9fbabc2a5701e156ab5f6adc0fad270ad81b02f2b88fed6302ad790987e0fdef64deeee5fc2d0e80cdd4db431645e0904cfbd69f60c5ba01d6c8ef22d0
+    prettier: ^2.0.0
+  checksum: 830c105865ab3bde0cdfdce28d410cd8391ee4725e07e90f7570f43f6a3f30a5568b5b7391338b04dd512a4a6ded1670a1dd806cfc141264e79b3444fa629057
   languageName: node
   linkType: hard
 
@@ -8557,7 +8511,7 @@ __metadata:
     parcel: ^2.3.1
     preact: ^10.6.5
     prettier: ^2.5.1
-    prettier-plugin-packagejson: ^2.2.15
+    prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tachyons: ^4.12.0
     ts-essentials: ^9.1.2
@@ -9430,29 +9384,6 @@ __metadata:
   dependencies:
     is-plain-obj: ^1.0.0
   checksum: f0fd827fa9f8f866e98588d2a38c35209afbf1e9a05bb0e4ceeeb8bbf31d923c8902b0a7e0f561590ddb65e58eba6a74f74b991c85360bcc52e83a3f0d1cffd7
-  languageName: node
-  linkType: hard
-
-"sort-object-keys@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "sort-object-keys@npm:1.1.3"
-  checksum: abea944d6722a1710a1aa6e4f9509da085d93d5fc0db23947cb411eedc7731f80022ce8fa68ed83a53dd2ac7441fcf72a3f38c09b3d9bbc4ff80546aa2e151ad
-  languageName: node
-  linkType: hard
-
-"sort-package-json@npm:1.53.1":
-  version: 1.53.1
-  resolution: "sort-package-json@npm:1.53.1"
-  dependencies:
-    detect-indent: ^6.0.0
-    detect-newline: 3.1.0
-    git-hooks-list: 1.0.3
-    globby: 10.0.0
-    is-plain-obj: 2.1.0
-    sort-object-keys: ^1.1.3
-  bin:
-    sort-package-json: cli.js
-  checksum: 3bf0b1a625566eb061d7d811f4d8b1cebc2c4d85dcb746fa2b27d39703d3d78edead1aa990273b02264af0a618aa6e7edbf24621e280f03bb06418cbd1f07889
   languageName: node
   linkType: hard
 
