@@ -16,6 +16,7 @@
         "@parcel/config-webextension": "^2.3.1",
         "@parcel/core": "^2.3.1",
         "@parcel/transformer-sass": "^2.3.1",
+        "@parcel/transformer-vue": "2.3.1",
         "@typescript-eslint/parser": "^5.11.0",
         "bestzip": "^2.2.0",
         "eslint": "^8.9.0",
