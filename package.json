@@ -19,7 +19,7 @@
         "@typescript-eslint/parser": "^5.11.0",
         "bestzip": "^2.2.0",
         "eslint": "^8.9.0",
-        "eslint-config-prettier": "^8.3.0",
+        "eslint-config-prettier": "^8.4.0",
         "eslint-config-react": "^1.1.7",
         "eslint-import-resolver-node": "^0.3.6",
         "eslint-plugin-import": "^2.25.4",
