@@ -1,4 +1,4 @@
-import { Settings } from "../../common/settings/io";
+import type { Settings } from "../../common/settings/io";
 import {
     passesShiftKeySetting,
     passesSizeRestrictions,

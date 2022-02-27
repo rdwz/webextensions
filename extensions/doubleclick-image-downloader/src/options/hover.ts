@@ -1,4 +1,7 @@
-import { HoverButtonPosition, HoverButtonSkin } from "../common/settings/enums";
+import type {
+    HoverButtonPosition,
+    HoverButtonSkin,
+} from "../common/settings/enums";
 import { Settings, write } from "../common/settings/io";
 import browser from "webextension-polyfill";
 

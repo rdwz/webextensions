@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { IpCountryData } from "../common/ipdata";
+import type { IpCountryData } from "../common/ipdata";
 import { useRateLimiting } from "./state/rate-limit";
 import { sendRefreshWanted } from "./util/messaging";
 

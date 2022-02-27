@@ -1,6 +1,6 @@
-import { Tabs } from "webextension-polyfill";
+import type { Tabs } from "webextension-polyfill";
 import { FilenameVariables } from "./settings/enums";
-import { Settings } from "./settings/io";
+import type { Settings } from "./settings/io";
 
 function pad(counter: number, counterPadding: number): string {
     const nr = String(counter);

@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback } from "react";
-import { IpCountryData } from "../common/ipdata";
+import type { IpCountryData } from "../common/ipdata";
 import { copyToClipboard } from "./util/copy";
 import { FlagImage } from "./flag-image";
 import { sendCopyHappened } from "./util/messaging";

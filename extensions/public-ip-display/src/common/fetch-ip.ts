@@ -1,7 +1,7 @@
 import { UnreachableCaseError } from "ts-essentials";
 import type { JsonObject } from "type-fest";
 import { asIp } from "./checks";
-import { IpData } from "./ipdata";
+import type { IpData } from "./ipdata";
 import { IpService } from "./settings/enums";
 
 type GetIp = () => Promise<IpData>;

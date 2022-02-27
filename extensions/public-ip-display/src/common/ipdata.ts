@@ -6,7 +6,7 @@ import {
     asNullableSignificantString,
     asSignificantString,
 } from "./checks";
-import { CountryService, IpService } from "./settings/enums";
+import type { CountryService, IpService } from "./settings/enums";
 
 export interface IpData {
     fetchedAt: Date;

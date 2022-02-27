@@ -1,7 +1,7 @@
 import browser, { Tabs } from "webextension-polyfill";
 import { asMessage, copyRequested, Message } from "../common/messages";
 import { load } from "../common/settings/settings";
-import { Link } from "../common/types";
+import type { Link } from "../common/types";
 import { injectContentScript } from "./inject";
 
 async function notify(title: string, message: string): Promise<void> {

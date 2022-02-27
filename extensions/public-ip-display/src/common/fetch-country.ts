@@ -1,7 +1,7 @@
 import { UnreachableCaseError } from "ts-essentials";
 import type { JsonObject } from "type-fest";
 import { asCountryCode } from "./checks";
-import { CountryData } from "./ipdata";
+import type { CountryData } from "./ipdata";
 import { CountryService } from "./settings/enums";
 
 type GetCountry = () => Promise<CountryData>;

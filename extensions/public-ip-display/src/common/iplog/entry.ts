@@ -4,7 +4,7 @@ import {
     asNullableSignificantString,
     asSignificantString,
 } from "../checks";
-import { IpService } from "../settings/enums";
+import type { IpService } from "../settings/enums";
 
 interface Persisted {
     ip: string;

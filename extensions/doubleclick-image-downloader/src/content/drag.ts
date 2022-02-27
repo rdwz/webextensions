@@ -1,4 +1,4 @@
-import { Settings } from "../common/settings/io";
+import type { Settings } from "../common/settings/io";
 import { findImageDepthFirst, isImage } from "./dom";
 import { startDownload } from "./downloads";
 import { drop } from "./hoverbutton/element";

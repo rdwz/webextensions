@@ -1,4 +1,4 @@
-import { IpLogEntry } from "../../common/iplog/entry";
+import type { IpLogEntry } from "../../common/iplog/entry";
 import { useCallback, useEffect, useState } from "react";
 import { clearLog, hasLogProperty, loadLog } from "../../common/iplog/log";
 import browser, { Storage } from "webextension-polyfill";

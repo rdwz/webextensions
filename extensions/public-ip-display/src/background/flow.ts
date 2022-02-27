@@ -5,7 +5,7 @@ import { ipGetter } from "../common/fetch-ip";
 import { IpCountryData, loadLast, saveAsLast } from "../common/ipdata";
 import { loadLog, record } from "../common/iplog/log";
 import { load as loadLocal } from "../common/settings/local-settings";
-import { SyncSettings } from "../common/settings/sync-io";
+import type { SyncSettings } from "../common/settings/sync-io";
 import { load as loadSync } from "../common/settings/sync-settings";
 import { refreshOrdered } from "./messaging";
 import { showError, showNotification } from "./notification";

@@ -1,5 +1,5 @@
 import browser, { Menus, Tabs } from "webextension-polyfill";
-import { Settings } from "../common/settings/io";
+import type { Settings } from "../common/settings/io";
 import { load, monitorSettingsStorage } from "../common/settings/settings";
 import { toggleDarkness } from "./darkness";
 

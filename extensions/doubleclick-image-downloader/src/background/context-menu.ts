@@ -1,7 +1,7 @@
 import { noop } from "ts-essentials";
 import browser, { Menus, Tabs } from "webextension-polyfill";
 import { signal } from "../common/messages";
-import { Settings } from "../common/settings/io";
+import type { Settings } from "../common/settings/io";
 import { load } from "../common/settings/settings";
 import { monitor } from "../common/settings/monitoring";
 import { startDownload } from "./downloads";

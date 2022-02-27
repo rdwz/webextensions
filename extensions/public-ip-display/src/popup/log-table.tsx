@@ -1,5 +1,5 @@
 import React, { ReactElement, useMemo } from "react";
-import { IpLogEntry } from "../common/iplog/entry";
+import type { IpLogEntry } from "../common/iplog/entry";
 import { LogRow } from "./log-row";
 
 function stub(label: string): ReactElement {

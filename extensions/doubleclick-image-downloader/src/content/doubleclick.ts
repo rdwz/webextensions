@@ -1,6 +1,6 @@
 import { UnreachableCaseError } from "ts-essentials";
 import { ClickType } from "../common/settings/enums";
-import { Settings } from "../common/settings/io";
+import type { Settings } from "../common/settings/io";
 import { isImage, isLeftClick, isRightClick } from "./dom";
 import { startDownload } from "./downloads";
 import {

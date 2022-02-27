@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useMemo } from "react";
-import { IpLogEntry } from "../common/iplog/entry";
+import type { IpLogEntry } from "../common/iplog/entry";
 import { LogTable } from "./log-table";
 import { useConfirmation } from "./state/confirmation";
 import { useLogs } from "./state/logs";

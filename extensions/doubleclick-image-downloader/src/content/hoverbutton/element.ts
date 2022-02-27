@@ -1,4 +1,4 @@
-import { Settings } from "../../common/settings/io";
+import type { Settings } from "../../common/settings/io";
 import { triggerable } from "../../common/triggerable";
 import { HTML_BUTTON_ID, insertCss, SKIN_CLASSES } from "./skinning";
 

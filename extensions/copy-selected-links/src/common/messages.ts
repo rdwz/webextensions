@@ -1,4 +1,4 @@
-import { Link } from "./types";
+import type { Link } from "./types";
 
 const topics = {
     copyRequested: "copyRequested",

@@ -1,6 +1,6 @@
 import { noop } from "ts-essentials";
 import browser, { Menus, Tabs } from "webextension-polyfill";
-import { Settings } from "../common/settings/io";
+import type { Settings } from "../common/settings/io";
 import { monitor } from "../common/settings/monitoring";
 import { load } from "../common/settings/settings";
 import { arrangeCopy } from "./copy";

@@ -1,4 +1,4 @@
-import { Settings } from "../common/io";
+import type { Settings } from "../common/io";
 import { load, monitor } from "../common/settings";
 import { isImagePage } from "./detection";
 

@@ -1,9 +1,9 @@
-import {
+import type {
     CopyRequestedMessage,
     LinksRequestedMessage,
 } from "../common/messages";
-import { Settings } from "../common/settings/io";
-import { Link } from "../common/types";
+import type { Settings } from "../common/settings/io";
+import type { Link } from "../common/types";
 import { deduplicateBy } from "./deduplicate";
 
 export function getLinks(

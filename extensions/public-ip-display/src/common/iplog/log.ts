@@ -1,6 +1,6 @@
 import type { JsonObject } from "type-fest";
 import browser from "webextension-polyfill";
-import { IpCountryData } from "../ipdata";
+import type { IpCountryData } from "../ipdata";
 import { load } from "../settings/local-settings";
 import { toDomain, IpLogEntry, validate, toStorage } from "./entry";
 

@@ -1,4 +1,4 @@
-import { Link } from "./types";
+import type { Link } from "./types";
 
 export const PATTERN_VARIABLES = {
     text: "%text%",

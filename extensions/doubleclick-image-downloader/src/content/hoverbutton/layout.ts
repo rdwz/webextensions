@@ -1,5 +1,5 @@
-import { HoverButtonPosition } from "../../common/settings/enums";
-import { Settings } from "../../common/settings/io";
+import type { HoverButtonPosition } from "../../common/settings/enums";
+import type { Settings } from "../../common/settings/io";
 import { startDownload } from "../downloads";
 import { monitor } from "../../common/settings/monitoring";
 import { matching, ofViewport, shrink } from "./area";

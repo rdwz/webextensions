@@ -1,5 +1,5 @@
 import { HoverButtonPosition } from "../../common/settings/enums";
-import { Area } from "./area";
+import type { Area } from "./area";
 
 type Calculator = (areaSize: number, selfSize: number) => number;
 
