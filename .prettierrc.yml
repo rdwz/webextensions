@@ -5,5 +5,6 @@ overrides:
 # required under optimized package managers until prettier reads package.json for plugins
 plugins:
   - prettier-plugin-package
+  - prettier-plugin-svelte
 proseWrap: always
 tabWidth: 4

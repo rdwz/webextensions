@@ -133,6 +133,7 @@ __metadata:
     git-is-clean: ^3.0.1
     prettier: ^2.5.1
     prettier-plugin-package: ^1.3.0
+    prettier-plugin-svelte: ^2.6.0
     rimraf: ^3.0.2
     typescript: ^4.5.5
   languageName: unknown
@@ -592,7 +593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/plugin@npm:2.3.2":
+"@parcel/plugin@npm:2.3.2, @parcel/plugin@npm:^2.0.0":
   version: 2.3.2
   resolution: "@parcel/plugin@npm:2.3.2"
   dependencies:
@@ -878,7 +879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/utils@npm:2.3.2":
+"@parcel/utils@npm:2.3.2, @parcel/utils@npm:^2.0.0":
   version: 2.3.2
   resolution: "@parcel/utils@npm:2.3.2"
   dependencies:
@@ -1025,12 +1026,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/pug@npm:^2.0.4":
+  version: 2.0.6
+  resolution: "@types/pug@npm:2.0.6"
+  checksum: e8d09c3ddc7e6b87050a16d73694518f259a8ed74a0ab79b81b847baf89d92d44959ed68199966ac6f4a218c715c9bb3e4c86c8800d4868a4a674f4b21d2f01d
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/responselike@npm:1.0.0"
   dependencies:
     "@types/node": "*"
   checksum: e99fc7cc6265407987b30deda54c1c24bb1478803faf6037557a774b2f034c5b097ffd65847daa87e82a61a250d919f35c3588654b0fdaa816906650f596d1b0
+  languageName: node
+  linkType: hard
+
+"@types/sass@npm:^1.16.0":
+  version: 1.43.1
+  resolution: "@types/sass@npm:1.43.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 19eb71acc4b0d7db2170732a51ad18a34007021f42069652a5be8a3e3a448a470d2f970b9e85f734d1896bf3a25e48fb5132b4a989c101eb5df21cc171d426c5
   languageName: node
   linkType: hard
 
@@ -1782,7 +1799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer-crc32@npm:^0.2.1, buffer-crc32@npm:^0.2.13, buffer-crc32@npm:~0.2.3":
+"buffer-crc32@npm:^0.2.1, buffer-crc32@npm:^0.2.13, buffer-crc32@npm:^0.2.5, buffer-crc32@npm:~0.2.3":
   version: 0.2.13
   resolution: "buffer-crc32@npm:0.2.13"
   checksum: 06252347ae6daca3453b94e4b2f1d3754a3b146a111d81c68924c22d91889a40623264e95e67955b1cb4a68cbedf317abeabb5140a9766ed248973096db5ce1c
@@ -2041,6 +2058,25 @@ __metadata:
     fsevents:
       optional: true
   checksum: d1fda32fcd67d9f6170a8468ad2630a3c6194949c9db3f6a91b16478c328b2800f433fb5d2592511b6cb145a47c013ea1cce60b432b1a001ae3ee978a8bffc2d
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^3.4.1":
+  version: 3.5.3
+  resolution: "chokidar@npm:3.5.3"
+  dependencies:
+    anymatch: ~3.1.2
+    braces: ~3.0.2
+    fsevents: ~2.3.2
+    glob-parent: ~5.1.2
+    is-binary-path: ~2.1.0
+    is-glob: ~4.0.1
+    normalize-path: ~3.0.0
+    readdirp: ~3.6.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: b49fcde40176ba007ff361b198a2d35df60d9bb2a5aab228279eb810feae9294a6b4649ab15981304447afe1e6ffbf4788ad5db77235dc770ab777c6e771980c
   languageName: node
   linkType: hard
 
@@ -2793,6 +2829,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-indent@npm:^6.0.0":
+  version: 6.1.0
+  resolution: "detect-indent@npm:6.1.0"
+  checksum: ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
+  languageName: node
+  linkType: hard
+
 "detect-libc@npm:^1.0.3":
   version: 1.0.3
   resolution: "detect-libc@npm:1.0.3"
@@ -3093,6 +3136,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"es6-promise@npm:^3.1.2":
+  version: 3.3.1
+  resolution: "es6-promise@npm:3.3.1"
+  checksum: ce4044009c2b78db18b15212338eb711cd8a4d485961bc9ec18bb24e8c1e91c96d3295b0fcf63066fc0fa1b0ade36da05e6657827d4336dece382be2429b8398
+  languageName: node
+  linkType: hard
+
 "es6-promisify@npm:7.0.0":
   version: 7.0.0
   resolution: "es6-promisify@npm:7.0.0"
@@ -3203,6 +3253,16 @@ __metadata:
     eslint-config-prettier:
       optional: true
   checksum: 03d69177a3c21fa2229c7e427ce604429f0b20ab7f411e2e824912f572a207c7f5a41fd1f0a95b9b8afe121e291c1b1f1dc1d44c7aad4b0837487f9c19f5210d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-svelte3@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "eslint-plugin-svelte3@npm:3.4.1"
+  peerDependencies:
+    eslint: ">=6.0.0"
+    svelte: ^3.2.0
+  checksum: 49483ab87285d62951eb3ba2aa6b896a96b174e907a1cf6ee7a98dccda83c86b285f295dcf19bc463ee087d7c2ebb5c179953b7c4bddb001cb7fa337bf5cd304
   languageName: node
   linkType: hard
 
@@ -3563,7 +3623,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.1.1":
+"fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.7":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -4108,7 +4168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6":
   version: 4.2.9
   resolution: "graceful-fs@npm:4.2.9"
   checksum: 68ea4e07ff2c041ada184f9278b830375f8e0b75154e3f080af6b70f66172fabb4108d19b3863a96b53fc068a310b9b6493d86d1291acc5f3861eb4b79d26ad6
@@ -5499,6 +5559,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.25.7":
+  version: 0.25.7
+  resolution: "magic-string@npm:0.25.7"
+  dependencies:
+    sourcemap-codec: ^1.4.4
+  checksum: 727a1fb70f9610304fe384f1df0251eb7d1d9dd779c07ef1225690361b71b216f26f5d934bfb11c919b5b0e7ba50f6240c823a6f2e44cfd33d4a07d7747ca829
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^3.0.0":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -5822,7 +5891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:~0.5.1":
+"mkdirp@npm:^0.5.1, mkdirp@npm:~0.5.1":
   version: 0.5.5
   resolution: "mkdirp@npm:0.5.5"
   dependencies:
@@ -5844,6 +5913,13 @@ __metadata:
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
+  languageName: node
+  linkType: hard
+
+"mri@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "mri@npm:1.2.0"
+  checksum: 83f515abbcff60150873e424894a2f65d68037e5a7fcde8a9e2b285ee9c13ac581b63cfc1e6826c4732de3aeb84902f7c1e16b7aff46cd3f897a0f757a894e85
   languageName: node
   linkType: hard
 
@@ -6496,6 +6572,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parcel-transformer-svelte@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "parcel-transformer-svelte@npm:1.2.3"
+  dependencies:
+    "@parcel/plugin": ^2.0.0
+    "@parcel/source-map": ^2.0.0
+    "@parcel/utils": ^2.0.0
+    svelte: ^3.44.0
+  peerDependencies:
+    svelte: ^3.0.0
+  checksum: 81c5490b2653554fb34a292608d9e4ea8b89fbc61ab34cf493c3ddbcf0fec556272becd657f860e4c2691d520c5c120346a77e0c1f71e4e47ab85dc69271b7d3
+  languageName: node
+  linkType: hard
+
 "parcel@npm:^2.3.2":
   version: 2.3.2
   resolution: "parcel@npm:2.3.2"
@@ -7124,6 +7214,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier-plugin-svelte@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "prettier-plugin-svelte@npm:2.6.0"
+  peerDependencies:
+    prettier: ^1.16.4 || ^2.0.0
+    svelte: ^3.2.0
+  checksum: 1ee680cba9c9918a0d831e2161b774ac588bcd8ba8e87a27b33f0382873d2d8f4397bbf24968f777b48c281c97eba573c64087a8ed28eaaf17d083fa9fe6474d
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
@@ -7191,12 +7291,18 @@ __metadata:
     eslint: ^8.9.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-svelte3: ^3.4.1
     fast-equals: ^3.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.3.2
+    parcel-transformer-svelte: ^1.2.3
     prettier: ^2.5.1
     prettier-plugin-package: ^1.3.0
+    prettier-plugin-svelte: ^2.6.0
     rimraf: ^3.0.2
+    svelte: ^3.46.4
+    svelte-check: ^2.4.5
+    svelte-preprocess: ^4.10.4
     tachyons: ^4.12.0
     ts-essentials: ^9.1.2
     tslib: ^2.3.1
@@ -7559,6 +7665,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rimraf@npm:^2.5.2":
+  version: 2.7.1
+  resolution: "rimraf@npm:2.7.1"
+  dependencies:
+    glob: ^7.1.3
+  bin:
+    rimraf: ./bin.js
+  checksum: cdc7f6eacb17927f2a075117a823e1c5951792c6498ebcce81ca8203454a811d4cf8900314154d3259bb8f0b42ab17f67396a8694a54cae3283326e57ad250cd
+  languageName: node
+  linkType: hard
+
 "rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
   version: 3.0.2
   resolution: "rimraf@npm:3.0.2"
@@ -7587,6 +7704,15 @@ __metadata:
   dependencies:
     queue-microtask: ^1.2.2
   checksum: cb4f97ad25a75ebc11a8ef4e33bb962f8af8516bb2001082ceabd8902e15b98f4b84b4f8a9b222e5d57fc3bd1379c483886ed4619367a7680dad65316993021d
+  languageName: node
+  linkType: hard
+
+"sade@npm:^1.7.4":
+  version: 1.8.1
+  resolution: "sade@npm:1.8.1"
+  dependencies:
+    mri: ^1.1.0
+  checksum: 0756e5b04c51ccdc8221ebffd1548d0ce5a783a44a0fa9017a026659b97d632913e78f7dca59f2496aa996a0be0b0c322afd87ca72ccd909406f49dbffa0f45d
   languageName: node
   linkType: hard
 
@@ -7631,6 +7757,18 @@ __metadata:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
+  languageName: node
+  linkType: hard
+
+"sander@npm:^0.5.0":
+  version: 0.5.1
+  resolution: "sander@npm:0.5.1"
+  dependencies:
+    es6-promise: ^3.1.2
+    graceful-fs: ^4.1.3
+    mkdirp: ^0.5.1
+    rimraf: ^2.5.2
+  checksum: 76da5b91dd7848de0c985adf035fc39ca76a3cd15d68bdae0a4672659a4bdef7b716747b31245af5dd769f19765a9e8e16ad577984b12cc041bdb09599921f3a
   languageName: node
   linkType: hard
 
@@ -7892,6 +8030,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sorcery@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "sorcery@npm:0.10.0"
+  dependencies:
+    buffer-crc32: ^0.2.5
+    minimist: ^1.2.0
+    sander: ^0.5.0
+    sourcemap-codec: ^1.3.0
+  bin:
+    sorcery: bin/index.js
+  checksum: e23fc06336c6e47274bd5e23849f8a7a40071d06a6fe1105f2557eb8613563b4c867230fd5f7b143e86a9bf45f62279e39ce68545482821d7b51b185133f2bc9
+  languageName: node
+  linkType: hard
+
 "source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
@@ -7953,10 +8105,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map@npm:~0.7.2":
+"source-map@npm:^0.7.3, source-map@npm:~0.7.2":
   version: 0.7.3
   resolution: "source-map@npm:0.7.3"
   checksum: cd24efb3b8fa69b64bf28e3c1b1a500de77e84260c5b7f2b873f88284df17974157cc88d386ee9b6d081f08fdd8242f3fc05c953685a6ad81aad94c7393dedea
+  languageName: node
+  linkType: hard
+
+"sourcemap-codec@npm:^1.3.0, sourcemap-codec@npm:^1.4.4":
+  version: 1.4.8
+  resolution: "sourcemap-codec@npm:1.4.8"
+  checksum: b57981c05611afef31605732b598ccf65124a9fcb03b833532659ac4d29ac0f7bfacbc0d6c5a28a03e84c7510e7e556d758d0bb57786e214660016fb94279316
   languageName: node
   linkType: hard
 
@@ -8271,6 +8430,83 @@ __metadata:
   dependencies:
     has-flag: ^4.0.0
   checksum: 3dda818de06ebbe5b9653e07842d9479f3555ebc77e9a0280caf5a14fb877ffee9ed57007c3b78f5a6324b8dbeec648d9e97a24e2ed9fdb81ddc69ea07100f4a
+  languageName: node
+  linkType: hard
+
+"svelte-check@npm:^2.4.5":
+  version: 2.4.5
+  resolution: "svelte-check@npm:2.4.5"
+  dependencies:
+    chokidar: ^3.4.1
+    fast-glob: ^3.2.7
+    import-fresh: ^3.2.1
+    minimist: ^1.2.5
+    picocolors: ^1.0.0
+    sade: ^1.7.4
+    source-map: ^0.7.3
+    svelte-preprocess: ^4.0.0
+    typescript: "*"
+  peerDependencies:
+    svelte: ^3.24.0
+  bin:
+    svelte-check: bin/svelte-check
+  checksum: 40d1e0d352da33136b023be0664af11aa074eb9c410aa36cc7a336bfef87a6fd8e2f24a34c4367ba4af52f7d4e7f032763b68fc9885d702c78b202d37c559758
+  languageName: node
+  linkType: hard
+
+"svelte-preprocess@npm:^4.0.0, svelte-preprocess@npm:^4.10.4":
+  version: 4.10.4
+  resolution: "svelte-preprocess@npm:4.10.4"
+  dependencies:
+    "@types/pug": ^2.0.4
+    "@types/sass": ^1.16.0
+    detect-indent: ^6.0.0
+    magic-string: ^0.25.7
+    sorcery: ^0.10.0
+    strip-indent: ^3.0.0
+  peerDependencies:
+    "@babel/core": ^7.10.2
+    coffeescript: ^2.5.1
+    less: ^3.11.3 || ^4.0.0
+    postcss: ^7 || ^8
+    postcss-load-config: ^2.1.0 || ^3.0.0
+    pug: ^3.0.0
+    sass: ^1.26.8
+    stylus: ^0.55.0
+    sugarss: ^2.0.0
+    svelte: ^3.23.0
+    typescript: ^3.9.5 || ^4.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    coffeescript:
+      optional: true
+    less:
+      optional: true
+    node-sass:
+      optional: true
+    postcss:
+      optional: true
+    postcss-load-config:
+      optional: true
+    pug:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 323eca0fe691875b2b32a6c421aeb0aeee9e76050116e2d4de1bc027d8991ff150af3667b2880e5d3e19c80ff3fedaa70ff9c5e7b495a50acd5a268659578894
+  languageName: node
+  linkType: hard
+
+"svelte@npm:^3.44.0, svelte@npm:^3.46.4":
+  version: 3.46.4
+  resolution: "svelte@npm:3.46.4"
+  checksum: 929e6790cdd6d94c123b4b8a7b5a541164dbea6d4f4ed311f4e65cde60caa1c704e531bbf2e63519d1a96163cd3f812c6e5be5b2fd05f72d0177af5fd8ca8637
   languageName: node
   linkType: hard
 
@@ -8600,7 +8836,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.5.5":
+"typescript@npm:*, typescript@npm:^4.5.5":
   version: 4.5.5
   resolution: "typescript@npm:4.5.5"
   bin:
@@ -8610,7 +8846,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
   version: 4.5.5
   resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"
   bin:

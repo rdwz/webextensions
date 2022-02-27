@@ -1,2 +1,14 @@
 extends:
   - .eslintrc.yml
+
+parserOptions:
+  extraFileExtensions: [.svelte]
+
+plugins: [svelte3]
+
+overrides:
+  - files: ["*.svelte"]
+    processor: svelte3/svelte3
+
+settings:
+  svelte3/typescript: true
