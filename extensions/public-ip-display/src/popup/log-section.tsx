@@ -1,4 +1,3 @@
-import React, { ReactElement, useCallback, useMemo } from "react";
 import type { IpLogEntry } from "../common/iplog/entry";
 import { LogTable } from "./log-table";
 import { useConfirmation } from "./state/confirmation";

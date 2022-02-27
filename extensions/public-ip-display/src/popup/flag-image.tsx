@@ -1,4 +1,3 @@
-import React, { ReactElement, useMemo } from "react";
 import browser from "webextension-polyfill";
 
 interface Props {

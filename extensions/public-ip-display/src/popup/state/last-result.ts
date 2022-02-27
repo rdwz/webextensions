@@ -3,7 +3,6 @@ import {
     isPersistedIpCountryDataProperty,
     loadLast,
 } from "../../common/ipdata";
-import { useCallback, useEffect, useState } from "react";
 import browser, { Storage } from "webextension-polyfill";
 
 const placeholder = Symbol("not yet loaded");

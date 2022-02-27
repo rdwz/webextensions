@@ -1,4 +1,3 @@
-import React, { ReactElement, useCallback } from "react";
 import type { IpCountryData } from "../common/ipdata";
 import { copyToClipboard } from "./util/copy";
 import { FlagImage } from "./flag-image";

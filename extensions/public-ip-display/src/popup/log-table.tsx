@@ -1,4 +1,3 @@
-import React, { ReactElement, useMemo } from "react";
 import type { IpLogEntry } from "../common/iplog/entry";
 import { LogRow } from "./log-row";
 

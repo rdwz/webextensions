@@ -7,7 +7,7 @@
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
         "build": "yarn workspaces foreach run build",
-        "bundle": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
+        "bundle": "bestzip sources.zip \\\"extensions/*/*.*\\\" \\\"extensions/*/src\\\" .editorconfig .eslintrc.svelte.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
         "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach run clean",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock"
     },
@@ -20,7 +20,6 @@
         "bestzip": "^2.2.0",
         "eslint": "^8.9.0",
         "eslint-config-prettier": "^8.4.0",
-        "eslint-config-react": "^1.1.7",
         "eslint-import-resolver-node": "^0.3.6",
         "eslint-plugin-import": "^2.25.4",
         "git-is-clean": "^3.0.1",
@@ -28,9 +27,6 @@
         "prettier-plugin-package": "^1.3.0",
         "rimraf": "^3.0.2",
         "typescript": "^4.5.5"
-    },
-    "resolutions": {
-        "@types/react": "^17.0.39"
     },
     "packageManager": "yarn@3.2.0",
     "workspaces": [

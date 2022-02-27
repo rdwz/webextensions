@@ -1,5 +1,3 @@
-import { useCallback, useState } from "react";
-
 type Callback = () => void;
 
 export function useConfirmation(
