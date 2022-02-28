@@ -18,6 +18,7 @@ rules:
         - react-dom$
 
   # https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
+  react/hook-use-state: off
   react/jsx-filename-extension:
     - error
     - allow: as-needed
