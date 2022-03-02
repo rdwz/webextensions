@@ -1,5 +1,4 @@
-import { FilenameVariables } from "./settings/enums";
-import type { Settings } from "./settings/io";
+import { FilenameVariables, Settings } from "./settings";
 import type { Tabs } from "webextension-polyfill";
 
 function pad(counter: number, counterPadding: number): string {

@@ -1,5 +1,4 @@
-import { waitForMessage } from "./background/messaging";
-import { validateSettingsOnInstall } from "./background/settings-validation";
+import { validateSettingsOnInstall, waitForMessage } from "./background/";
 
 validateSettingsOnInstall();
 waitForMessage();

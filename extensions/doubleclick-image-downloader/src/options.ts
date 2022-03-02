@@ -1,10 +1,12 @@
-import { load } from "./common/settings/settings";
-import { rigContextMenu } from "./options/context";
-import { rigGeneral } from "./options/general";
-import { rigHoverButton } from "./options/hover";
-import { rigNiche } from "./options/niche";
-import { rigRenaming } from "./options/renaming";
-import { rigRestrictions } from "./options/restrictions";
+import { load } from "./common/";
+import {
+    rigContextMenu,
+    rigGeneral,
+    rigHoverButton,
+    rigNiche,
+    rigRenaming,
+    rigRestrictions,
+} from "./options/";
 
 load()
     .then((settings) => {

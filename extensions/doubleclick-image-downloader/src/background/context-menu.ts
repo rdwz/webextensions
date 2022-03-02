@@ -1,7 +1,4 @@
-import { signal } from "../common/messages";
-import type { Settings } from "../common/settings/io";
-import { monitor } from "../common/settings/monitoring";
-import { load } from "../common/settings/settings";
+import { Settings, load, monitor, signal } from "../common/";
 import { startDownload } from "./downloads";
 import { noop } from "ts-essentials";
 import browser, { Menus, Tabs } from "webextension-polyfill";

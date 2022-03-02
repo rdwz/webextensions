@@ -1,4 +1,4 @@
-import { Message, asMessage } from "../common/messages";
+import { Message, asMessage } from "../common/";
 import { open } from "./tabs";
 import { UnreachableCaseError } from "ts-essentials";
 import browser, { Runtime } from "webextension-polyfill";

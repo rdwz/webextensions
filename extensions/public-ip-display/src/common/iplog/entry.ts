@@ -3,7 +3,7 @@ import {
     asNullableSignificantString,
     asSignificantString,
 } from "../checks";
-import type { IpService } from "../settings/enums";
+import type { IpService } from "../settings";
 import type { JsonValue } from "type-fest";
 
 interface Persisted {
@@ -22,7 +22,7 @@ export interface IpLogEntry {
     countryService: string | null;
 }
 
-export function validate(data: JsonValue): Persisted {
+export function validateLog(data: JsonValue): Persisted {
     if (typeof data != "object" || Array.isArray(data) || data == null) {
         throw new Error(`expected a log entry, got ${JSON.stringify(data)}`);
     }

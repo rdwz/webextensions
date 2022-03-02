@@ -1,16 +1,15 @@
-import { load as loadLocal } from "./common/settings/local-settings";
-import { load as loadSync } from "./common/settings/sync-settings";
-import { rigLogLifetime } from "./options/local-options";
+import { Local, Sync } from "./common/";
 import {
     rigCountryCodeService,
     rigDisplayFlag,
     rigIpService,
+    rigLogLifetime,
     rigLookUpCountry,
     rigNotify,
     rigRefreshRate,
-} from "./options/sync-options";
+} from "./options/";
 
-loadSync()
+Sync.load()
     .then((settings) => {
         rigNotify(settings);
         rigRefreshRate(settings);
@@ -22,4 +21,4 @@ loadSync()
     })
     .catch(console.error);
 
-loadLocal().then(rigLogLifetime).catch(console.error);
+Local.load().then(rigLogLifetime).catch(console.error);

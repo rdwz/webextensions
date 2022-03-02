@@ -1,7 +1,10 @@
-import { fileNamingSupport } from "../common/compatibility";
-import { renameTechnically } from "../common/filename";
-import { FilenameVariables } from "../common/settings/enums";
-import { Settings, write } from "../common/settings/io";
+import {
+    FilenameVariables,
+    Settings,
+    fileNamingSupport,
+    renameTechnically,
+    write,
+} from "../common/";
 import type { Mutable } from "type-fest";
 
 const TUMBLR_PAGE = new URL("https://photo-blog.tumblr.com/posts/1");

@@ -1,7 +1,6 @@
-import type { IpCountryData } from "../common/ipdata";
+import type { IpCountryData } from "../common/";
 import { FlagImage } from "./flag-image";
-import { copyToClipboard } from "./util/copy";
-import { sendCopyHappened } from "./util/messaging";
+import { copyToClipboard, sendCopyHappened } from "./util";
 import React, { ReactElement, useCallback } from "react";
 
 interface Props {

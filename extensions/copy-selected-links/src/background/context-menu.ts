@@ -1,6 +1,4 @@
-import type { Settings } from "../common/settings/io";
-import { monitor } from "../common/settings/monitoring";
-import { load } from "../common/settings/settings";
+import { Settings, load, monitor } from "../common/";
 import { arrangeCopy } from "./copy";
 import { arrangeOpen } from "./open";
 import { noop } from "ts-essentials";

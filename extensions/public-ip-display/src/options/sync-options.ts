@@ -1,5 +1,4 @@
-import type { CountryService, IpService } from "../common/settings/enums";
-import { SyncSettings, write } from "../common/settings/sync-io";
+import { CountryService, IpService, SyncIO } from "../common/";
 
 const html = {
     countryCodeService: document.getElementById(
@@ -14,39 +13,39 @@ const html = {
     refreshRate: document.getElementById("refreshRate") as HTMLInputElement,
 };
 
-export function rigNotify(settings: SyncSettings): void {
+export function rigNotify(settings: SyncIO.SyncSettings): void {
     html.notify.checked = settings.notify;
 
     html.notify.addEventListener("change", () => {
-        write({
+        SyncIO.write({
             notify: html.notify.checked,
         }).catch(console.error);
     });
 }
 
-export function rigRefreshRate(settings: SyncSettings): void {
+export function rigRefreshRate(settings: SyncIO.SyncSettings): void {
     html.refreshRate.value = String(settings.refreshRate);
 
     html.refreshRate.addEventListener("change", () => {
-        write({
+        SyncIO.write({
             refreshRate: parseInt(html.refreshRate.value, 10),
         }).catch(console.error);
     });
 }
 
-export function rigIpService(settings: SyncSettings): void {
+export function rigIpService(settings: SyncIO.SyncSettings): void {
     html.ipEchoService.selectedIndex = Array.from(
         html.ipEchoService.options
     ).findIndex((option) => option.value === settings.ipEchoService);
 
     html.ipEchoService.addEventListener("change", () => {
-        write({
+        SyncIO.write({
             ipEchoService: html.ipEchoService.value as IpService,
         }).catch(console.error);
     });
 }
 
-export function rigLookUpCountry(settings: SyncSettings): void {
+export function rigLookUpCountry(settings: SyncIO.SyncSettings): void {
     html.lookUpCountry.checked = settings.lookUpCountry;
     html.displayFlag.disabled = !settings.lookUpCountry;
     html.countryCodeService.disabled = !settings.lookUpCountry;
@@ -55,29 +54,29 @@ export function rigLookUpCountry(settings: SyncSettings): void {
         html.displayFlag.disabled = !html.lookUpCountry.checked;
         html.countryCodeService.disabled = !html.lookUpCountry.checked;
 
-        write({
+        SyncIO.write({
             lookUpCountry: html.lookUpCountry.checked,
         }).catch(console.error);
     });
 }
 
-export function rigDisplayFlag(settings: SyncSettings): void {
+export function rigDisplayFlag(settings: SyncIO.SyncSettings): void {
     html.displayFlag.checked = settings.displayFlag;
 
     html.displayFlag.addEventListener("change", () => {
-        write({
+        SyncIO.write({
             displayFlag: html.displayFlag.checked,
         }).catch(console.error);
     });
 }
 
-export function rigCountryCodeService(settings: SyncSettings): void {
+export function rigCountryCodeService(settings: SyncIO.SyncSettings): void {
     html.countryCodeService.selectedIndex = Array.from(
         html.countryCodeService.options
     ).findIndex((option) => option.value === settings.countryCodeService);
 
     html.countryCodeService.addEventListener("change", () => {
-        write({
+        SyncIO.write({
             countryCodeService: html.countryCodeService.value as CountryService,
         }).catch(console.error);
     });

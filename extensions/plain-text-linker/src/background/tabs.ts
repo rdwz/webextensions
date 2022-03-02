@@ -1,5 +1,4 @@
-import type { ClickedMessage } from "../common/messages";
-import { load, toTabIndex } from "../common/settings/settings";
+import { ClickedMessage, load, toTabIndex } from "../common/";
 import browser, { Runtime } from "webextension-polyfill";
 
 function toUrl(text: string): URL | null {

@@ -1,9 +1,9 @@
 import {
     DownloadChangedMessage,
     asMessage,
+    load,
     requestDownload,
-} from "../common/messages";
-import { load } from "../common/settings/settings";
+} from "../common/";
 import browser from "webextension-polyfill";
 
 const activeClass = "doubleclick-image-downloader-active";

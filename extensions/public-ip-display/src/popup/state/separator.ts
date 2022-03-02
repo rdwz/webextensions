@@ -1,4 +1,4 @@
-import { requestSeparator } from "../util/messaging";
+import { requestSeparator } from "../util";
 import { useCallback, useState } from "react";
 
 async function messageForSeparator(): Promise<string> {

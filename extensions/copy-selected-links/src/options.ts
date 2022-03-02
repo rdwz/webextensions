@@ -1,17 +1,14 @@
-import { load } from "./common/settings/settings";
+import { load } from "./common/";
 import {
+    provideCopyPattern,
+    provideDeduplicateHrefs,
+    provideFailurePopup,
+    provideFinalNewline,
+    provideIncludeCommandTarget,
     provideShowCopyMenuAction,
     provideShowOpenMenuAction,
-} from "./options/context-menu";
-import {
-    provideDeduplicateHrefs,
-    provideIncludeCommandTarget,
-} from "./options/gathering";
-import { provideCopyPattern, provideFinalNewline } from "./options/general";
-import {
-    provideFailurePopup,
     provideSuccessPopup,
-} from "./options/notifications";
+} from "./options/";
 
 load()
     .then((settings) => {

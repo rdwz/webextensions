@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/io";
+import { Settings, write } from "../common/";
 import { colorPicker, colorTextbox } from "./elements";
 
 export function provideColorInputs(settings: Settings): void {

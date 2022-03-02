@@ -1,4 +1,4 @@
-import { load } from "../common/settings";
+import { load } from "../common/";
 import { provideCheckerboard } from "./checkerboard";
 import { provideColorInputs } from "./colour";
 

@@ -1,6 +1,6 @@
-import type { IpCountryData } from "../common/ipdata";
-import { useRateLimiting } from "./state/rate-limit";
-import { sendRefreshWanted } from "./util/messaging";
+import type { IpCountryData } from "../common/";
+import { useRateLimiting } from "./state";
+import { sendRefreshWanted } from "./util";
 import React, { ReactElement } from "react";
 
 interface Props {

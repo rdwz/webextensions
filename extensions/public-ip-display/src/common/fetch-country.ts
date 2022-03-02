@@ -1,6 +1,6 @@
 import { asCountryCode } from "./checks";
 import type { CountryData } from "./ipdata";
-import { CountryService } from "./settings/enums";
+import { CountryService } from "./settings";
 import { UnreachableCaseError } from "ts-essentials";
 import type { JsonObject } from "type-fest";
 

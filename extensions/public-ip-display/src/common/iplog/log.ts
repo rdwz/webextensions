@@ -1,6 +1,6 @@
 import type { IpCountryData } from "../ipdata";
-import { load } from "../settings/local-settings";
-import { IpLogEntry, toDomain, toStorage, validate } from "./entry";
+import { Local } from "../settings";
+import { IpLogEntry, toDomain, toStorage, validateLog } from "./entry";
 import type { JsonObject } from "type-fest";
 import browser from "webextension-polyfill";
 
@@ -21,7 +21,7 @@ export async function loadLog(): Promise<IpLogEntry[]> {
     const json = (await browser.storage.local.get(empty)) as JsonObject;
 
     if (Array.isArray(json.ipLog)) {
-        return json.ipLog.map(validate).map(toDomain);
+        return json.ipLog.map(validateLog).map(toDomain);
     } else {
         throw new Error("stored ip log data is not an array");
     }
@@ -33,7 +33,7 @@ async function persist(entries: IpLogEntry[]): Promise<void> {
 }
 
 async function trim(): Promise<void> {
-    const [settings, log] = await Promise.all([load(), loadLog()]);
+    const [settings, log] = await Promise.all([Local.load(), loadLog()]);
 
     const maxAgeMillis = 1000 * 60 * 60 * 24 * settings.logLifetime;
     const expirationMoment = Date.now() - maxAgeMillis;

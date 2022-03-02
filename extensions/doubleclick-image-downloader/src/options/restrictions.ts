@@ -1,6 +1,4 @@
-import { DOMAIN_NAME_FILTER_PATTERN } from "../common/filtering";
-import { Settings, write } from "../common/settings/io";
-import { load } from "../common/settings/settings";
+import { DOMAIN_NAME_FILTER_PATTERN, Settings, load, write } from "../common/";
 
 const excludedPageDomains = document.getElementById(
     "excludedPageDomains"

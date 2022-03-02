@@ -3,11 +3,11 @@ import {
     CopyRequestedMessage,
     LinksPickedMessage,
     LinksRequestedMessage,
+    applyPattern,
     copied,
     linksPicked,
-} from "../common/messages";
-import { applyPattern } from "../common/pattern";
-import { load } from "../common/settings/settings";
+    load,
+} from "../common/";
 import { copyToClipboard } from "./clipboard";
 import { getLinks } from "./selection";
 

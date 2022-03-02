@@ -1,14 +1,14 @@
-import { LocalSettings, write } from "../common/settings/local-io";
+import { LocalIO } from "../common/";
 
 const html = {
     logLifetime: document.getElementById("logLifetime") as HTMLInputElement,
 };
 
-export function rigLogLifetime(settings: LocalSettings): void {
+export function rigLogLifetime(settings: LocalIO.LocalSettings): void {
     html.logLifetime.value = String(settings.logLifetime);
 
     html.logLifetime.addEventListener("input", () => {
-        write({
+        LocalIO.write({
             logLifetime: parseInt(html.logLifetime.value, 10),
         }).catch(console.error);
     });

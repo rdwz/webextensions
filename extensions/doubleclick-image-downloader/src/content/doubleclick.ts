@@ -1,9 +1,9 @@
-import { ClickType } from "../common/settings/enums";
-import type { Settings } from "../common/settings/io";
 import {
+    ClickType,
+    Settings,
     passesShiftKeySetting,
     passesSizeRestrictions,
-} from "../common/settings/settings";
+} from "../common/";
 import { isImage, isLeftClick, isRightClick } from "./dom";
 import { startDownload } from "./downloads";
 import { filteringAllows } from "./filtering";

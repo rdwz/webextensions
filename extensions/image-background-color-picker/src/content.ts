@@ -1,3 +1,3 @@
-import { paintIfAppropriate } from "./content/painting";
+import { paintIfAppropriate } from "./content/";
 
 paintIfAppropriate().catch(console.error);

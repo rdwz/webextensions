@@ -1,8 +1,7 @@
-import type { Settings } from "../common/settings/io";
-import { monitor } from "../common/settings/monitoring";
+import { Settings, monitor } from "../common/";
 import { findImageDepthFirst, isImage } from "./dom";
 import { startDownload } from "./downloads";
-import { drop } from "./hoverbutton/element";
+import { drop } from "./hoverbutton";
 
 let dragged: Element | null = null;
 function setDragged(event: DragEvent): void {

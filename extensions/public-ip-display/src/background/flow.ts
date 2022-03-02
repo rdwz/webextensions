@@ -1,11 +1,16 @@
-import { asError } from "../common/checks";
-import { countryGetter } from "../common/fetch-country";
-import { ipGetter } from "../common/fetch-ip";
-import { IpCountryData, loadLast, saveAsLast } from "../common/ipdata";
-import { loadLog, record } from "../common/iplog/log";
-import { load as loadLocal } from "../common/settings/local-settings";
-import type { SyncSettings } from "../common/settings/sync-io";
-import { load as loadSync } from "../common/settings/sync-settings";
+import {
+    IpCountryData,
+    Local,
+    Sync,
+    SyncIO,
+    asError,
+    countryGetter,
+    ipGetter,
+    loadLast,
+    loadLog,
+    record,
+    saveAsLast,
+} from "../common/";
 import { refreshOrdered } from "./messaging";
 import { showError, showNotification } from "./notification";
 import { essentialConfigChanged } from "./settings-validation";
@@ -13,7 +18,9 @@ import { setTimer, timerPassed } from "./timing";
 import { setToolbarIcon, setToolbarTooltip } from "./toolbar";
 import browser from "webextension-polyfill";
 
-async function callServices(options: SyncSettings): Promise<IpCountryData> {
+async function callServices(
+    options: SyncIO.SyncSettings
+): Promise<IpCountryData> {
     const [getIp, ipCooldown] = ipGetter(options.ipEchoService);
     const [getCountry, countryCooldown] = options.lookUpCountry
         ? countryGetter(options.countryCodeService)
@@ -46,7 +53,7 @@ async function appendLog(
     current: IpCountryData,
     previous: IpCountryData | null
 ): Promise<void> {
-    const settings = await loadLocal();
+    const settings = await Local.load();
     if (settings.logLifetime > 0) {
         const ipLog = await loadLog();
 
@@ -87,7 +94,7 @@ async function notify(
 }
 
 async function run(): Promise<void> {
-    const options = await loadSync();
+    const options = await Sync.load();
 
     try {
         const current = await callServices(options);

@@ -1,7 +1,10 @@
-import { SuggestionCallback, fileNamingSupport } from "../common/compatibility";
-import { renameFunctionally } from "../common/filename";
-import { finished } from "../common/messages";
-import { load } from "../common/settings/settings";
+import {
+    SuggestionCallback,
+    fileNamingSupport,
+    finished,
+    load,
+    renameFunctionally,
+} from "../common/";
 import { notifyCompletion, notifyFailure } from "./notifications";
 import { TabAndFrameId, downloads, tickCounter } from "./state";
 import browser, { Downloads, Tabs } from "webextension-polyfill";

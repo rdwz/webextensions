@@ -1,5 +1,4 @@
-import type { Settings } from "../common/settings/io";
-import { monitor } from "../common/settings/monitoring";
+import { Settings, monitor } from "../common/";
 
 type Coordinates = [x: number, y: number];
 

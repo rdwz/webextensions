@@ -1,12 +1,12 @@
-import type { Settings } from "../../common/settings/io";
-import { monitor } from "../../common/settings/monitoring";
 import {
+    Settings,
+    monitor,
     passesShiftKeySetting,
     passesSizeRestrictions,
-} from "../../common/settings/settings";
+} from "../../common/";
 import { isImage } from "../dom";
 import { filteringAllows } from "../filtering";
-import { hover } from "../hover-tracking";
+import { hover } from "./hover-tracking";
 import * as layout from "./layout";
 
 async function adaptToHoveredElement(

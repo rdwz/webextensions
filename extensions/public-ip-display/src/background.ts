@@ -1,8 +1,10 @@
-import { refreshDataOnTriggers } from "./background/flow";
-import { listenForMessages } from "./background/messaging";
-import { watchSettingsChanges } from "./background/settings-validation";
-import { armTimer } from "./background/timing";
-import { trimLogOnBoot } from "./common/iplog/log";
+import {
+    armTimer,
+    listenForMessages,
+    refreshDataOnTriggers,
+    watchSettingsChanges,
+} from "./background/";
+import { trimLogOnBoot } from "./common/";
 
 refreshDataOnTriggers();
 

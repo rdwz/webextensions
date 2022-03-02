@@ -1,6 +1,4 @@
-import { asMessage } from "../common/checks";
-import { Message, reportSeparator } from "../common/messages";
-import { triggerable } from "../common/triggerable";
+import { Message, asMessage, reportSeparator, triggerable } from "../common/";
 import { showNotification } from "./notification";
 import type { JsonObject } from "type-fest";
 import browser from "webextension-polyfill";

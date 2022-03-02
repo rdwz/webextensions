@@ -1,4 +1,4 @@
-import type { IpLogEntry } from "../common/iplog/entry";
+import type { IpLogEntry } from "../common/";
 import { FlagImage } from "./flag-image";
 import React, { ReactElement } from "react";
 

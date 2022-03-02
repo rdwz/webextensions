@@ -1,6 +1,6 @@
 import { asIp } from "./checks";
 import type { IpData } from "./ipdata";
-import { IpService } from "./settings/enums";
+import { IpService } from "./settings";
 import { UnreachableCaseError } from "ts-essentials";
 import type { JsonObject } from "type-fest";
 

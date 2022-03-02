@@ -1,6 +1,4 @@
-import { Message, asMessage, copyRequested } from "../common/messages";
-import { load } from "../common/settings/settings";
-import type { Link } from "../common/types";
+import { Link, Message, asMessage, copyRequested, load } from "../common/";
 import { injectContentScript } from "./inject";
 import browser, { Tabs } from "webextension-polyfill";
 

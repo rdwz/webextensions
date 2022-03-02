@@ -1,4 +1,4 @@
-import { triggerable } from "../common/triggerable";
+import { triggerable } from "../common/";
 import browser from "webextension-polyfill";
 
 const REFRESH_IP = "refresh";

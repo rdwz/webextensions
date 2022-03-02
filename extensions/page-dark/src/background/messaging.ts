@@ -1,4 +1,4 @@
-import { Message, asMessage, signal } from "../common/messages";
+import { Message, asMessage, signal } from "../common/";
 import browser, { Runtime } from "webextension-polyfill";
 
 function getIcon(dark: boolean): Record<19 | 38, string> {

@@ -1,6 +1,5 @@
-import { clickedText } from "../common/messages";
-import { load } from "../common/settings/settings";
-import { extractText } from "./scanning";
+import { clickedText, load } from "../common/";
+import { extractText } from "./scan";
 import browser from "webextension-polyfill";
 
 const IGNORED_NODE_NAMES = ["TEXTAREA", "INPUT"];

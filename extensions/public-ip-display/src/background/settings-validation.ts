@@ -1,14 +1,4 @@
-import { ipGetter } from "../common/fetch-ip";
-import { validate as validateLocal } from "../common/settings/local-settings";
-import {
-    SyncSettings,
-    isSyncSettingsProperty,
-} from "../common/settings/sync-io";
-import {
-    load as loadSync,
-    validate as validateSync,
-} from "../common/settings/sync-settings";
-import { triggerable } from "../common/triggerable";
+import { Local, Sync, SyncIO, ipGetter, triggerable } from "../common/";
 import { setTimer } from "./timing";
 import { setToolbarIcon } from "./toolbar";
 import browser, { Runtime, Storage } from "webextension-polyfill";
@@ -18,8 +8,8 @@ async function monitorUpdates(
 ): Promise<void> {
     if (details.reason === "install" || details.reason === "update") {
         const [syncValid, localValid] = await Promise.all([
-            validateSync(),
-            validateLocal(),
+            Sync.validate(),
+            Local.validate(),
         ]);
         if (!syncValid || !localValid) {
             await browser.runtime.openOptionsPage();
@@ -32,7 +22,7 @@ const { hide: essentialConfigChangedEvent, expose: essentialConfigChanged } =
 export { essentialConfigChanged };
 
 async function onSettingChange(
-    key: keyof SyncSettings,
+    key: keyof SyncIO.SyncSettings,
     change: Storage.StorageChange
 ): Promise<void> {
     switch (key) {
@@ -49,7 +39,7 @@ async function onSettingChange(
             break;
 
         case "refreshRate": {
-            const settings = await loadSync();
+            const settings = await Sync.load();
             const [, timeout] = ipGetter(settings.ipEchoService);
             setTimer(Math.max(change.newValue as number, timeout));
             break;
@@ -66,7 +56,7 @@ async function monitorChanges(
 ): Promise<void> {
     if (areaName === "sync") {
         const promises = Object.keys(changes)
-            .filter(isSyncSettingsProperty)
+            .filter(SyncIO.isSyncSettingsProperty)
             .map(async (key) => {
                 const change = changes[key];
                 if (change == null) {

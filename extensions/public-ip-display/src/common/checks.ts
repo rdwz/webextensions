@@ -4,7 +4,7 @@ import {
     IpService,
     isCountryService,
     isIpService,
-} from "./settings/enums";
+} from "./settings";
 import type { JsonValue } from "type-fest";
 
 export function asError(thrown: unknown): Error {

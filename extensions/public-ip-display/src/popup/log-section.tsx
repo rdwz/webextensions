@@ -1,9 +1,7 @@
-import type { IpLogEntry } from "../common/iplog/entry";
+import type { IpLogEntry } from "../common/";
 import { LogTable } from "./log-table";
-import { useConfirmation } from "./state/confirmation";
-import { useLogs } from "./state/logs";
-import { useSeparator } from "./state/separator";
-import { copyToClipboard } from "./util/copy";
+import { useConfirmation, useLogs, useSeparator } from "./state";
+import { copyToClipboard } from "./util";
 import React, { ReactElement, useCallback, useMemo } from "react";
 
 function toCsvRow(...values: string[]): string {

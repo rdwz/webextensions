@@ -1,7 +1,7 @@
 import {
     AdvancedNotificationOptions,
     tryCreateFancyNotification,
-} from "../common/compatibility";
+} from "../common/";
 import { notifications } from "./state";
 import browser, { Downloads, Notifications } from "webextension-polyfill";
 

@@ -1,8 +1,9 @@
-import type {
+import {
     HoverButtonPosition,
     HoverButtonSkin,
-} from "../common/settings/enums";
-import { Settings, write } from "../common/settings/io";
+    Settings,
+    write,
+} from "../common/";
 import browser from "webextension-polyfill";
 
 const dragDropSupported = document.getElementById(

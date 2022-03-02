@@ -1,4 +1,4 @@
-import { validate } from "../common/settings";
+import { validate } from "../common/";
 import browser, { Runtime } from "webextension-polyfill";
 
 import OnInstalledDetailsType = Runtime.OnInstalledDetailsType;

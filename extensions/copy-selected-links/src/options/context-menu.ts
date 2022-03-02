@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/settings/io";
+import { Settings, write } from "../common/";
 
 export function provideShowCopyMenuAction(settings: Settings): void {
     const showCopyMenuActionCheckbox = document.getElementById(

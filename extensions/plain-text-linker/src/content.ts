@@ -1,4 +1,4 @@
-import { getTextFromSelection } from "./content/doubleclick";
+import { getTextFromSelection } from "./content/";
 
 document.body.addEventListener(
     "dblclick",

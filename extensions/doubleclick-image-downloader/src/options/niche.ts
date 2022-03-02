@@ -1,5 +1,4 @@
-import { ClickType, ConflictAction } from "../common/settings/enums";
-import { Settings, write } from "../common/settings/io";
+import { ClickType, ConflictAction, Settings, write } from "../common/";
 
 const clickTypes = document.getElementById("clickTypes")!;
 const conflictActions = document.getElementById("conflictActions")!;

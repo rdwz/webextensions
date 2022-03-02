@@ -1,5 +1,4 @@
-import { Settings, write } from "./common/settings/io";
-import { load } from "./common/settings/settings";
+import { Settings, load, write } from "./common/";
 
 const enableContextMenuCheckbox = document.getElementById(
     "enableContextMenu"

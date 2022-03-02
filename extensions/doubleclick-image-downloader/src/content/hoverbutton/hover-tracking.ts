@@ -1,5 +1,5 @@
-import { triggerable } from "../common/triggerable";
-import { isButton } from "./hoverbutton/element";
+import { triggerable } from "../../common/";
+import { isButton } from "./element";
 
 let lastHoveredElement: Element | null = null;
 

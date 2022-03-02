@@ -1,8 +1,4 @@
-import type {
-    CopiedMessage,
-    LinksPickedMessage,
-    Message,
-} from "../common/messages";
+import type { CopiedMessage, LinksPickedMessage, Message } from "../common/";
 import { onCopyRequested, onLinksRequested } from "./actions";
 
 export async function onMessageReceived(

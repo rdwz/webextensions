@@ -1,5 +1,4 @@
-import type { Settings } from "../common/io";
-import { load, monitor } from "../common/settings";
+import { Settings, load, monitor } from "../common/";
 import { isImagePage } from "./detection";
 
 const applicable = "image-background-color-picker-applicable";

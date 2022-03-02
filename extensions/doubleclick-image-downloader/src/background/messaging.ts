@@ -3,7 +3,7 @@ import {
     Message,
     asMessage,
     started,
-} from "../common/messages";
+} from "../common/";
 import { startDownload } from "./downloads";
 import browser, { Runtime } from "webextension-polyfill";
 

@@ -1,7 +1,9 @@
-import { registerMenu } from "./background/context-menu";
-import { monitorHotkey } from "./background/hotkey";
-import { validateSettingsOnInstall } from "./background/settings-validation";
-import { monitorStorage } from "./common/settings/monitoring";
+import {
+    monitorHotkey,
+    registerMenu,
+    validateSettingsOnInstall,
+} from "./background/";
+import { monitorStorage } from "./common/";
 
 monitorStorage();
 validateSettingsOnInstall();

@@ -4,7 +4,7 @@ import {
     asNullableSignificantString,
     asSignificantString,
 } from "./checks";
-import type { CountryService, IpService } from "./settings/enums";
+import type { CountryService, IpService } from "./settings";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 

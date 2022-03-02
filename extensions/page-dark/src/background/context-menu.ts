@@ -1,5 +1,4 @@
-import type { Settings } from "../common/settings/io";
-import { load, monitorSettingsStorage } from "../common/settings/settings";
+import { Settings, load, monitorSettingsStorage } from "../common/";
 import { toggleDarkness } from "./darkness";
 import browser, { Menus, Tabs } from "webextension-polyfill";
 

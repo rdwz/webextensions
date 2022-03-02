@@ -1,6 +1,4 @@
-import type { HoverButtonPosition } from "../../common/settings/enums";
-import type { Settings } from "../../common/settings/io";
-import { monitor } from "../../common/settings/monitoring";
+import { HoverButtonPosition, Settings, monitor } from "../../common/";
 import { startDownload } from "../downloads";
 import { matching, ofViewport, shrink } from "./area";
 import * as element from "./element";
