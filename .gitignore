@@ -6,4 +6,5 @@
 
 /.parcel-cache/
 /extensions/*/dist/
+/libs/*/dist/
 sources.zip

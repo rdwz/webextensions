@@ -7,8 +7,8 @@
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
         "build": "yarn workspaces foreach run build",
-        "bundle": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
-        "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach run clean",
+        "bundle": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" \"libs/*/*.*\" \"libs/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
+        "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach -p run clean",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock"
     },
     "devDependencies": {
@@ -35,6 +35,7 @@
     },
     "packageManager": "yarn@3.2.0",
     "workspaces": [
-        "extensions/*"
+        "extensions/*",
+        "libs/*"
     ]
 }

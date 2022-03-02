@@ -1,0 +1,5 @@
+extends: ../../.eslintrc.yml
+overrides:
+  - files: src/index.ts
+    rules:
+      import/no-unused-modules: off

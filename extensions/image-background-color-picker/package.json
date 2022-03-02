@@ -15,9 +15,10 @@
         "qa": "web-ext lint",
         "start": "web-ext run",
         "start:chrome": "web-ext run -t chromium",
-        "tsc": "tsc"
+        "tsc": "tsc -b"
     },
     "dependencies": {
+        "@webextensions/common": "*",
         "fast-equals": "^3.0.0",
         "ts-essentials": "^9.1.2",
         "tslib": "^2.3.1",

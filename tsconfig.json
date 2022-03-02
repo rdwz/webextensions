@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "composite": true,
         "esModuleInterop": true,
         "importHelpers": true,
         "inlineSourceMap": false, // maximum js parsing performance
@@ -13,5 +14,5 @@
         "target": "es2020", // compile as modernly as possible, parcel will downcompile anyway with babel and browserslist
         "useUnknownInCatchVariables": true
     },
-    "include": []
+    "include": [] // against accidentally building the root
 }
