@@ -1,10 +1,10 @@
 module.exports = {
-    artifactsDir: "dist",
+    artifactsDir: "dist/webext",
     build: {
         overwriteDest: true,
     },
     run: {
         firefox: "firefoxdeveloperedition",
     },
-    sourceDir: "extension",
+    sourceDir: "dist/parcel",
 };

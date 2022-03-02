@@ -7,9 +7,9 @@
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
         "build": "yarn clean && yarn tsc && yarn eslint && yarn compile && yarn qa && yarn package",
-        "clean": "rimraf dist extension",
-        "compile": "parcel build \"src/*.*\" \"src/images/*.*\" --dist-dir extension",
-        "compile:watch": "parcel watch \"src/*.*\" \"src/images/*.*\" --dist-dir extension --no-autoinstall --no-hmr",
+        "clean": "rimraf dist",
+        "compile": "parcel build \"src/*.*\" \"src/images/*.*\" --dist-dir dist/parcel",
+        "compile:watch": "parcel watch \"src/*.*\" \"src/images/*.*\" --dist-dir dist/parcel --no-autoinstall --no-hmr",
         "eslint": "eslint \"src/**/*.ts\"",
         "package": "web-ext build",
         "qa": "web-ext lint",

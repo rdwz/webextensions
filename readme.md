@@ -38,6 +38,6 @@ for programming practice and to be useful to more people than only me. They are
 3. execute `yarn compile`
 4. execute any of the following:
 
-- `yarn package` to build the webext zip into `./dist`
+- `yarn package` to build the webext zip into `./dist/webext`
 - `yarn start` to run the addon in Firefox
 - `yarn start:chrome` to run the addon in Chrome
