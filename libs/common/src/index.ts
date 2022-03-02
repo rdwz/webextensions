@@ -1,1 +1,1 @@
-export const place = "holder";
+export * from "./settings-validators";

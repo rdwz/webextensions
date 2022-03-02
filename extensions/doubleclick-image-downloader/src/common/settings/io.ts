@@ -6,6 +6,7 @@ import {
     HoverButtonPosition,
     HoverButtonSkin,
 } from "./enums";
+import { sanitize } from "./validation";
 import {
     bool,
     gt,
@@ -15,11 +16,10 @@ import {
     notBlank,
     num,
     roundedTo,
-    sanitize,
     str,
     stringArray,
     stringEnum,
-} from "./validation";
+} from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 

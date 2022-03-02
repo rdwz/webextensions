@@ -1,4 +1,5 @@
-import { gte, num, roundedTo, sanitize } from "./validation";
+import { sanitize } from "./validation";
+import { gte, num, roundedTo } from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 

@@ -1,5 +1,6 @@
 import { PATTERN_VARIABLES } from "../pattern";
-import { bool, notBlank, sanitize, str } from "./validation";
+import { sanitize } from "./validation";
+import { bool, notBlank, str } from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 
