@@ -1,11 +1,11 @@
-import browser, { Runtime } from "webextension-polyfill";
 import {
-    asMessage,
-    Message,
-    started,
     DownloadChangedMessage,
+    Message,
+    asMessage,
+    started,
 } from "../common/messages";
 import { startDownload } from "./downloads";
+import browser, { Runtime } from "webextension-polyfill";
 
 async function reactToMessage(
     msg: Message,

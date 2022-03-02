@@ -1,9 +1,8 @@
-import browser, { Runtime, Storage } from "webextension-polyfill";
 import { ipGetter } from "../common/fetch-ip";
 import { validate as validateLocal } from "../common/settings/local-settings";
 import {
-    isSyncSettingsProperty,
     SyncSettings,
+    isSyncSettingsProperty,
 } from "../common/settings/sync-io";
 import {
     load as loadSync,
@@ -12,6 +11,7 @@ import {
 import { triggerable } from "../common/triggerable";
 import { setTimer } from "./timing";
 import { setToolbarIcon } from "./toolbar";
+import browser, { Runtime, Storage } from "webextension-polyfill";
 
 async function monitorUpdates(
     details: Runtime.OnInstalledDetailsType

@@ -1,7 +1,7 @@
-import React, { ReactElement } from "react";
 import type { IpCountryData } from "../common/ipdata";
 import { useRateLimiting } from "./state/rate-limit";
 import { sendRefreshWanted } from "./util/messaging";
+import React, { ReactElement } from "react";
 
 interface Props {
     lastResult: IpCountryData | null;

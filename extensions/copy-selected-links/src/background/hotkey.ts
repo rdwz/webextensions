@@ -1,5 +1,5 @@
-import browser from "webextension-polyfill";
 import { arrangeCopy } from "./copy";
+import browser from "webextension-polyfill";
 
 async function copyLinks(): Promise<void> {
     const [tab] = await browser.tabs.query({

@@ -1,5 +1,3 @@
-import type { JsonValue } from "type-fest";
-import browser from "webextension-polyfill";
 import {
     asCountryService,
     asIpService,
@@ -7,6 +5,8 @@ import {
     asSignificantString,
 } from "./checks";
 import type { CountryService, IpService } from "./settings/enums";
+import type { JsonValue } from "type-fest";
+import browser from "webextension-polyfill";
 
 export interface IpData {
     fetchedAt: Date;

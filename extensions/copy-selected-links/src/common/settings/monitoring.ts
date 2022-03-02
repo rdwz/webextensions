@@ -1,6 +1,6 @@
-import browser, { Storage } from "webextension-polyfill";
+import { Settings, isSetting } from "./io";
 import { load } from "./settings";
-import { isSetting, Settings } from "./io";
+import browser, { Storage } from "webextension-polyfill";
 
 type SettingListener = (settings: Settings) => void;
 const callbacks = new Map<keyof Settings, SettingListener[]>();

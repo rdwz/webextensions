@@ -1,10 +1,10 @@
-import { noop } from "ts-essentials";
-import browser, { Menus, Tabs } from "webextension-polyfill";
 import { signal } from "../common/messages";
 import type { Settings } from "../common/settings/io";
-import { load } from "../common/settings/settings";
 import { monitor } from "../common/settings/monitoring";
+import { load } from "../common/settings/settings";
 import { startDownload } from "./downloads";
+import { noop } from "ts-essentials";
+import browser, { Menus, Tabs } from "webextension-polyfill";
 
 const DOWNLOAD_IMAGE_ID = "doubleClickImageDownloader_DownloadImage";
 const DOWNLOAD_SELECTED_IMAGES_ID =

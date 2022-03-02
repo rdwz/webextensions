@@ -1,10 +1,10 @@
-import { noop } from "ts-essentials";
-import browser, { Menus, Tabs } from "webextension-polyfill";
 import type { Settings } from "../common/settings/io";
 import { monitor } from "../common/settings/monitoring";
 import { load } from "../common/settings/settings";
 import { arrangeCopy } from "./copy";
 import { arrangeOpen } from "./open";
+import { noop } from "ts-essentials";
+import browser, { Menus, Tabs } from "webextension-polyfill";
 
 const CONTEXT_MENU_IDS = {
     copyLinks: "copySelectedLinks_CopySelectedLinks",

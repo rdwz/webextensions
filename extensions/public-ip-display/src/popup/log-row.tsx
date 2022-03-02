@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
 import type { IpLogEntry } from "../common/iplog/entry";
 import { FlagImage } from "./flag-image";
+import React, { ReactElement } from "react";
 
 interface Props {
     entry: IpLogEntry;

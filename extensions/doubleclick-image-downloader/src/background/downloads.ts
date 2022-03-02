@@ -1,10 +1,10 @@
-import browser, { Downloads, Tabs } from "webextension-polyfill";
-import { finished } from "../common/messages";
-import { notifyCompletion, notifyFailure } from "./notifications";
-import { downloads, TabAndFrameId, tickCounter } from "./state";
 import { SuggestionCallback, fileNamingSupport } from "../common/compatibility";
 import { renameFunctionally } from "../common/filename";
+import { finished } from "../common/messages";
 import { load } from "../common/settings/settings";
+import { notifyCompletion, notifyFailure } from "./notifications";
+import { TabAndFrameId, downloads, tickCounter } from "./state";
+import browser, { Downloads, Tabs } from "webextension-polyfill";
 
 function indicateFinished(
     source: TabAndFrameId,

@@ -1,7 +1,7 @@
+import { Message, asMessage } from "../common/messages";
+import { open } from "./tabs";
 import { UnreachableCaseError } from "ts-essentials";
 import browser, { Runtime } from "webextension-polyfill";
-import { asMessage, Message } from "../common/messages";
-import { open } from "./tabs";
 
 async function interpretMessage(
     message: Message,

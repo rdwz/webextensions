@@ -1,7 +1,7 @@
+import { CountryService, IpService } from "./enums";
+import { bool, gte, num, roundedTo, sanitize, stringEnum } from "./validation";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import { IpService, CountryService } from "./enums";
-import { bool, gte, num, roundedTo, sanitize, stringEnum } from "./validation";
 
 const spec = {
     countryCodeService: stringEnum(CountryService, CountryService.ifConfig),

@@ -1,6 +1,6 @@
-import browser from "webextension-polyfill";
 import { asMessage } from "../common/messages";
 import { onMessageReceived } from "./messaging";
+import browser from "webextension-polyfill";
 
 const flag = Symbol.for("copy-selected-links-script-injection");
 const register = window as {

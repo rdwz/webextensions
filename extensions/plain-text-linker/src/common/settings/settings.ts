@@ -1,7 +1,7 @@
+import { Position, Settings, correct, read, write } from "./io";
 import { deepEqual } from "fast-equals";
 import { UnreachableCaseError } from "ts-essentials";
 import type { Tabs } from "webextension-polyfill";
-import { correct, Position, read, Settings, write } from "./io";
 
 export async function load(): Promise<Settings> {
     const raw = await read();

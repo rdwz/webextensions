@@ -1,13 +1,13 @@
-import { UnreachableCaseError } from "ts-essentials";
 import { ClickType } from "../common/settings/enums";
 import type { Settings } from "../common/settings/io";
-import { isImage, isLeftClick, isRightClick } from "./dom";
-import { startDownload } from "./downloads";
 import {
     passesShiftKeySetting,
     passesSizeRestrictions,
 } from "../common/settings/settings";
+import { isImage, isLeftClick, isRightClick } from "./dom";
+import { startDownload } from "./downloads";
 import { filteringAllows } from "./filtering";
+import { UnreachableCaseError } from "ts-essentials";
 
 type MouseEventListener = (event: MouseEvent) => void;
 type ClickEventType = "click" | "dblclick" | "mouseup";

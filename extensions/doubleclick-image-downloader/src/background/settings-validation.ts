@@ -1,5 +1,5 @@
-import browser, { Runtime } from "webextension-polyfill";
 import { validate } from "../common/settings/settings";
+import browser, { Runtime } from "webextension-polyfill";
 
 async function showOptions(
     details: Runtime.OnInstalledDetailsType

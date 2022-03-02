@@ -1,5 +1,5 @@
-import browser from "webextension-polyfill";
 import { renderSvg } from "./svg";
+import browser from "webextension-polyfill";
 
 export async function setToolbarIcon(
     countryCode: string | null

@@ -1,7 +1,7 @@
-import type { JsonValue } from "type-fest";
-import browser from "webextension-polyfill";
 import { PATTERN_VARIABLES } from "../pattern";
 import { bool, notBlank, sanitize, str } from "./validation";
+import type { JsonValue } from "type-fest";
+import browser from "webextension-polyfill";
 
 const spec = {
     copyPattern: str(PATTERN_VARIABLES.url, notBlank),

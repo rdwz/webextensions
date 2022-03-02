@@ -1,6 +1,6 @@
-import browser from "webextension-polyfill";
 import { asMessage, signal } from "../common/messages";
 import { notifyNoImageForHotkey } from "./notifications";
+import browser from "webextension-polyfill";
 
 async function downloadFocusedImage(): Promise<void> {
     const [tab] = await browser.tabs.query({

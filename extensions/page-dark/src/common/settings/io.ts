@@ -1,6 +1,6 @@
+import { bool, sanitize } from "./validation";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import { bool, sanitize } from "./validation";
 
 const spec = {
     enableDarkeningFromContextMenu: bool(true),

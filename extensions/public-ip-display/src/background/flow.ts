@@ -1,4 +1,3 @@
-import browser from "webextension-polyfill";
 import { asError } from "../common/checks";
 import { countryGetter } from "../common/fetch-country";
 import { ipGetter } from "../common/fetch-ip";
@@ -10,8 +9,9 @@ import { load as loadSync } from "../common/settings/sync-settings";
 import { refreshOrdered } from "./messaging";
 import { showError, showNotification } from "./notification";
 import { essentialConfigChanged } from "./settings-validation";
-import { timerPassed, setTimer } from "./timing";
+import { setTimer, timerPassed } from "./timing";
 import { setToolbarIcon, setToolbarTooltip } from "./toolbar";
+import browser from "webextension-polyfill";
 
 async function callServices(options: SyncSettings): Promise<IpCountryData> {
     const [getIp, ipCooldown] = ipGetter(options.ipEchoService);

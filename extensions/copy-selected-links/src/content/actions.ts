@@ -1,14 +1,14 @@
 import {
-    copied,
     CopiedMessage,
     CopyRequestedMessage,
-    linksPicked,
     LinksPickedMessage,
     LinksRequestedMessage,
+    copied,
+    linksPicked,
 } from "../common/messages";
+import { applyPattern } from "../common/pattern";
 import { load } from "../common/settings/settings";
 import { copyToClipboard } from "./clipboard";
-import { applyPattern } from "../common/pattern";
 import { getLinks } from "./selection";
 
 export async function onCopyRequested(

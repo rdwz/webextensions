@@ -1,5 +1,6 @@
-import browser, { Runtime } from "webextension-polyfill";
 import { validate } from "../common/settings";
+import browser, { Runtime } from "webextension-polyfill";
+
 import OnInstalledDetailsType = Runtime.OnInstalledDetailsType;
 
 async function onInstall(details: OnInstalledDetailsType): Promise<void> {

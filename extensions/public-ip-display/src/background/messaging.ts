@@ -1,9 +1,9 @@
-import type { JsonObject } from "type-fest";
-import browser from "webextension-polyfill";
 import { asMessage } from "../common/checks";
 import { Message, reportSeparator } from "../common/messages";
 import { triggerable } from "../common/triggerable";
 import { showNotification } from "./notification";
+import type { JsonObject } from "type-fest";
+import browser from "webextension-polyfill";
 
 const { hide: refreshEvent, expose: refreshOrdered } = triggerable();
 export { refreshOrdered };

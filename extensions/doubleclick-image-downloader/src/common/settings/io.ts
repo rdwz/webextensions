@@ -1,6 +1,11 @@
-import type { JsonValue } from "type-fest";
-import browser from "webextension-polyfill";
 import { DOMAIN_NAME_FILTER_PATTERN } from "../filtering";
+import {
+    ClickType,
+    ConflictAction,
+    FilenameVariables,
+    HoverButtonPosition,
+    HoverButtonSkin,
+} from "./enums";
 import {
     bool,
     gt,
@@ -15,13 +20,8 @@ import {
     stringArray,
     stringEnum,
 } from "./validation";
-import {
-    ClickType,
-    ConflictAction,
-    FilenameVariables,
-    HoverButtonPosition,
-    HoverButtonSkin,
-} from "./enums";
+import type { JsonValue } from "type-fest";
+import browser from "webextension-polyfill";
 
 const spec = {
     aggressiveCursorTracking: bool(false),

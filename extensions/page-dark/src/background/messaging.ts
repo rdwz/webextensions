@@ -1,5 +1,5 @@
+import { Message, asMessage, signal } from "../common/messages";
 import browser, { Runtime } from "webextension-polyfill";
-import { asMessage, Message, signal } from "../common/messages";
 
 function getIcon(dark: boolean): Record<19 | 38, string> {
     const variant = dark ? "on" : "off";

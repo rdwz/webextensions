@@ -1,10 +1,10 @@
-import type { JsonValue } from "type-fest";
 import {
     asIpService,
     asNullableSignificantString,
     asSignificantString,
 } from "../checks";
 import type { IpService } from "../settings/enums";
+import type { JsonValue } from "type-fest";
 
 interface Persisted {
     ip: string;

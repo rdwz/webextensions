@@ -1,8 +1,8 @@
-import type { JsonObject } from "type-fest";
-import browser from "webextension-polyfill";
 import type { IpCountryData } from "../ipdata";
 import { load } from "../settings/local-settings";
-import { toDomain, IpLogEntry, validate, toStorage } from "./entry";
+import { IpLogEntry, toDomain, toStorage, validate } from "./entry";
+import type { JsonObject } from "type-fest";
+import browser from "webextension-polyfill";
 
 const FIELD_NAME = "ipLog";
 

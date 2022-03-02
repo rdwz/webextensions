@@ -1,5 +1,5 @@
-import browser from "webextension-polyfill";
 import { toggleDarkness } from "./darkness";
+import browser from "webextension-polyfill";
 
 async function toggleCurrenTabDarkness(): Promise<void> {
     const [tab] = await browser.tabs.query({

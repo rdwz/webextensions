@@ -1,6 +1,6 @@
 import type { IpLogEntry } from "../../common/iplog/entry";
-import { useCallback, useEffect, useState } from "react";
 import { clearLog, hasLogProperty, loadLog } from "../../common/iplog/log";
+import { useCallback, useEffect, useState } from "react";
 import browser, { Storage } from "webextension-polyfill";
 
 export function useLogs(): [IpLogEntry[] | null, () => void, () => void] {

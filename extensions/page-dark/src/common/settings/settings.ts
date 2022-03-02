@@ -1,6 +1,6 @@
+import { Settings, correct, isSetting, read, write } from "./io";
 import { deepEqual } from "fast-equals";
 import browser from "webextension-polyfill";
-import { correct, isSetting, read, Settings, write } from "./io";
 
 export async function load(): Promise<Settings> {
     const raw = await read();

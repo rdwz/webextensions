@@ -1,6 +1,6 @@
+import { bool, sanitize, stringEnum } from "./validation";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import { bool, sanitize, stringEnum } from "./validation";
 
 export enum Position {
     default = "default",

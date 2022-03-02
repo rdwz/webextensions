@@ -1,5 +1,5 @@
-import browser from "webextension-polyfill";
 import { HoverButtonSkin } from "../../common/settings/enums";
+import browser from "webextension-polyfill";
 
 export const HTML_BUTTON_ID = "singleclick-image-downloader";
 export const SKIN_CLASSES: Record<HoverButtonSkin, string> = {

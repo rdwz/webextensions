@@ -1,5 +1,5 @@
-import browser, { Tabs } from "webextension-polyfill";
 import { signal } from "../common/messages";
+import browser, { Tabs } from "webextension-polyfill";
 
 export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
     if (tab.id == null) {

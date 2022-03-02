@@ -1,8 +1,8 @@
-import type { Mutable } from "type-fest";
 import { fileNamingSupport } from "../common/compatibility";
 import { renameTechnically } from "../common/filename";
 import { FilenameVariables } from "../common/settings/enums";
 import { Settings, write } from "../common/settings/io";
+import type { Mutable } from "type-fest";
 
 const TUMBLR_PAGE = new URL("https://photo-blog.tumblr.com/posts/1");
 const TUMBLR_TITLE = "My photo album";

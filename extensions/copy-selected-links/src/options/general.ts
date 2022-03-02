@@ -1,4 +1,4 @@
-import { applyPattern, PATTERN_VARIABLES } from "../common/pattern";
+import { PATTERN_VARIABLES, applyPattern } from "../common/pattern";
 import { Settings, write } from "../common/settings/io";
 
 export function provideFinalNewline(settings: Settings): void {

@@ -1,7 +1,7 @@
 import type { HoverButtonPosition } from "../../common/settings/enums";
 import type { Settings } from "../../common/settings/io";
-import { startDownload } from "../downloads";
 import { monitor } from "../../common/settings/monitoring";
+import { startDownload } from "../downloads";
 import { matching, ofViewport, shrink } from "./area";
 import * as element from "./element";
 import { add, constrainTo, relativeTo, topLeftOf } from "./offset";

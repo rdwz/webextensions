@@ -1,4 +1,4 @@
-import type { IpService, CountryService } from "../common/settings/enums";
+import type { CountryService, IpService } from "../common/settings/enums";
 import { SyncSettings, write } from "../common/settings/sync-io";
 
 const html = {

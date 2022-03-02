@@ -1,10 +1,10 @@
-import React, { ReactElement, useCallback, useMemo } from "react";
 import type { IpLogEntry } from "../common/iplog/entry";
 import { LogTable } from "./log-table";
 import { useConfirmation } from "./state/confirmation";
 import { useLogs } from "./state/logs";
 import { useSeparator } from "./state/separator";
 import { copyToClipboard } from "./util/copy";
+import React, { ReactElement, useCallback, useMemo } from "react";
 
 function toCsvRow(...values: string[]): string {
     return values.map((value) => `"${value}"`).join(",");

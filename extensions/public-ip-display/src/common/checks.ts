@@ -1,11 +1,11 @@
-import type { JsonValue } from "type-fest";
-import { isMessage, Message } from "./messages";
+import { Message, isMessage } from "./messages";
 import {
     CountryService,
     IpService,
     isCountryService,
     isIpService,
 } from "./settings/enums";
+import type { JsonValue } from "type-fest";
 
 export function asError(thrown: unknown): Error {
     if (thrown instanceof Error) {

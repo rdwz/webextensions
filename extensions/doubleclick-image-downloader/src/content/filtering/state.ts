@@ -1,6 +1,6 @@
 import { DomainFilter, domainFilterFrom } from "../../common/filtering";
-import { load } from "../../common/settings/settings";
 import { monitor } from "../../common/settings/monitoring";
+import { load } from "../../common/settings/settings";
 
 type Filter = {
     filters: Promise<DomainFilter> | null;

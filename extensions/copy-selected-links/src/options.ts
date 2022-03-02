@@ -4,14 +4,14 @@ import {
     provideShowOpenMenuAction,
 } from "./options/context-menu";
 import {
-    provideFailurePopup,
-    provideSuccessPopup,
-} from "./options/notifications";
-import { provideCopyPattern, provideFinalNewline } from "./options/general";
-import {
     provideDeduplicateHrefs,
     provideIncludeCommandTarget,
 } from "./options/gathering";
+import { provideCopyPattern, provideFinalNewline } from "./options/general";
+import {
+    provideFailurePopup,
+    provideSuccessPopup,
+} from "./options/notifications";
 
 load()
     .then((settings) => {

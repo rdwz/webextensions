@@ -1,4 +1,4 @@
-import { write, Settings } from "../common/settings/io";
+import { Settings, write } from "../common/settings/io";
 
 const greyOutDuringDownload = document.getElementById(
     "greyOut"

@@ -1,6 +1,6 @@
+import { gte, num, roundedTo, sanitize } from "./validation";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import { gte, num, roundedTo, sanitize } from "./validation";
 
 const spec = {
     logLifetime: num(7, gte(0), roundedTo(0)),

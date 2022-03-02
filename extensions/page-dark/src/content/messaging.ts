@@ -1,6 +1,6 @@
-import browser from "webextension-polyfill";
-import { asMessage, Message } from "../common/messages";
+import { Message, asMessage } from "../common/messages";
 import { toggle } from "./darkness";
+import browser from "webextension-polyfill";
 
 async function interpretMessage(data: Message): Promise<void> {
     switch (data.subject) {

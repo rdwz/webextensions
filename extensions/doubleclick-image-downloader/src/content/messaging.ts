@@ -1,8 +1,8 @@
-import browser from "webextension-polyfill";
-import { asMessage, Message, TriggeredMessage } from "../common/messages";
-import { startDownload, completeDownload } from "./downloads";
+import { Message, TriggeredMessage, asMessage } from "../common/messages";
+import { completeDownload, startDownload } from "./downloads";
 import { downloadHoveredImage } from "./hotkey";
 import { getImagesInSelection } from "./selection";
+import browser from "webextension-polyfill";
 
 async function reactToMessage(
     msg: Message

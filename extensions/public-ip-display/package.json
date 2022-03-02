@@ -29,6 +29,7 @@
     },
     "devDependencies": {
         "@parcel/transformer-raw": "^2.3.2",
+        "@trivago/prettier-plugin-sort-imports": "^3.2.0",
         "@types/react": "^17.0.39",
         "@types/react-dom": "^17.0.12",
         "@types/webextension-polyfill": "^0.8.2",

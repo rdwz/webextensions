@@ -1,7 +1,7 @@
-import browser, { Menus, Tabs } from "webextension-polyfill";
 import type { Settings } from "../common/settings/io";
 import { load, monitorSettingsStorage } from "../common/settings/settings";
 import { toggleDarkness } from "./darkness";
+import browser, { Menus, Tabs } from "webextension-polyfill";
 
 const TOGGLE_DARKNESS_ID = "pageDark_toggleDarkness";
 

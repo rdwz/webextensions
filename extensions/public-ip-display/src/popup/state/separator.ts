@@ -1,5 +1,5 @@
-import { useCallback, useState } from "react";
 import { requestSeparator } from "../util/messaging";
+import { useCallback, useState } from "react";
 
 async function messageForSeparator(): Promise<string> {
     const response = await requestSeparator();

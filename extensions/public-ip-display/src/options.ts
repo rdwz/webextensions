@@ -1,5 +1,5 @@
-import { load as loadSync } from "./common/settings/sync-settings";
 import { load as loadLocal } from "./common/settings/local-settings";
+import { load as loadSync } from "./common/settings/sync-settings";
 import { rigLogLifetime } from "./options/local-options";
 import {
     rigCountryCodeService,

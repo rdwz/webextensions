@@ -1,9 +1,9 @@
-import browser, { Downloads, Notifications } from "webextension-polyfill";
 import {
     AdvancedNotificationOptions,
     tryCreateFancyNotification,
 } from "../common/compatibility";
 import { notifications } from "./state";
+import browser, { Downloads, Notifications } from "webextension-polyfill";
 
 async function inspectDownload(
     notificationId: string,

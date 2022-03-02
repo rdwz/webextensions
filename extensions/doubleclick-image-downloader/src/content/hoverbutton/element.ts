@@ -1,6 +1,6 @@
 import type { Settings } from "../../common/settings/io";
 import { triggerable } from "../../common/triggerable";
-import { HTML_BUTTON_ID, insertCss, SKIN_CLASSES } from "./skinning";
+import { HTML_BUTTON_ID, SKIN_CLASSES, insertCss } from "./skinning";
 
 const button = document.createElement("div");
 button.id = HTML_BUTTON_ID;

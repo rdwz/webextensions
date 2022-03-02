@@ -1,10 +1,10 @@
-import browser from "webextension-polyfill";
 import {
-    asMessage,
     DownloadChangedMessage,
+    asMessage,
     requestDownload,
 } from "../common/messages";
 import { load } from "../common/settings/settings";
+import browser from "webextension-polyfill";
 
 const activeClass = "doubleclick-image-downloader-active";
 const downloadingImages = new Map<number, HTMLImageElement>();

@@ -1,6 +1,6 @@
-import browser, { Tabs } from "webextension-polyfill";
 import { asMessage, linksRequested } from "../common/messages";
 import { injectContentScript } from "./inject";
+import browser, { Tabs } from "webextension-polyfill";
 
 export async function arrangeOpen(
     tab: Tabs.Tab,

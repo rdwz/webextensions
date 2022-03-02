@@ -1,5 +1,5 @@
+import { SyncSettings, correct, read, write } from "./sync-io";
 import { deepEqual } from "fast-equals";
-import { SyncSettings, read, write, correct } from "./sync-io";
 
 export async function load(): Promise<SyncSettings> {
     const raw = await read();

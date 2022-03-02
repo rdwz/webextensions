@@ -1,5 +1,5 @@
+import { Settings, correct, read, write } from "./io";
 import { deepEqual } from "fast-equals";
-import { correct, read, Settings, write } from "./io";
 
 export async function load(): Promise<Settings> {
     const raw = await read();

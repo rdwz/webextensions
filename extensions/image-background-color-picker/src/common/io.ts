@@ -1,6 +1,6 @@
+import { bool, matching, sanitize, str } from "./validation";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
-import { bool, matching, sanitize, str } from "./validation";
 
 const spec = {
     checkerBoard: bool(true),
