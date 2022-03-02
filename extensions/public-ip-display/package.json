@@ -8,10 +8,9 @@
     "scripts": {
         "build": "yarn clean && yarn tsc && yarn eslint && yarn compile && yarn qa && yarn package",
         "clean": "rimraf dist extension",
-        "compile": "yarn flags && yarn parcel build \"src/*.*\" \"src/images/*.*\" --dist-dir extension",
-        "compile:watch": "yarn flags && yarn parcel watch \"src/*.*\" \"src/images/*.*\" --dist-dir extension --no-autoinstall --no-hmr",
+        "compile": "parcel build \"src/*.*\" \"src/images/**/*.*\" --dist-dir extension",
+        "compile:watch": "parcel watch \"src/*.*\" \"src/images/**/*.*\" --dist-dir extension --no-autoinstall --no-hmr",
         "eslint": "eslint \"src/**/*.{ts,tsx}\"",
-        "flags": "yarn rimraf extension/images/flags && yarn cpy \"src/images/flags/*.svg\" extension/images/flags",
         "package": "web-ext build",
         "qa": "web-ext lint",
         "start": "web-ext run",
@@ -29,12 +28,12 @@
         "webextension-polyfill": "^0.8.0"
     },
     "devDependencies": {
+        "@parcel/transformer-raw": "^2.3.2",
         "@types/react": "^17.0.39",
         "@types/react-dom": "^17.0.12",
         "@types/webextension-polyfill": "^0.8.2",
         "@typescript-eslint/eslint-plugin": "^5.13.0",
         "@typescript-eslint/parser": "^5.13.0",
-        "cpy-cli": "^4.0.0",
         "eslint": "^8.10.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-prettier": "^4.0.0",

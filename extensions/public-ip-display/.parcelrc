@@ -1,3 +1,6 @@
 {
-    "extends": "../../.parcelrc"
+    "extends": "../../.parcelrc",
+    "transformers": {
+        "*.svg": ["@parcel/transformer-raw"]
+    }
 }
