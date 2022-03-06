@@ -6,7 +6,7 @@
     "repository": "https://gitlab.com/Marnes/webextensions",
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
-        "build": "yarn workspaces foreach --include \"*/common\" run build && yarn workspaces foreach --exclude \"*/common\" run build",
+        "build": "yarn workspaces foreach --include \"*/common\" run build && yarn workspaces foreach -p --exclude \"*/common\" run build",
         "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach -p run clean",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock",
         "zip": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/src\" \"libs/*/*.*\" \"libs/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock"
