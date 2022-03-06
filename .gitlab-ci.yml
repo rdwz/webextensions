@@ -5,6 +5,7 @@ cache:
     - .yarn/cache/
     - .yarn/unplugged/
     - .yarn/build-state.yml
+    - "*/*/dist/eslint/*"
 
 ci:
   script:
@@ -15,10 +16,10 @@ ci:
     - yarn prettier
     - yarn git-is-clean
     - yarn build
-    - yarn bundle
+    - yarn sources
     - yarn git-is-clean
 
   artifacts:
     paths:
-      - extensions/*/dist/*.zip
+      - extensions/*/dist/webext/*.zip
       - sources.zip
