@@ -9,7 +9,7 @@
     "scripts": {
         "build": "yarn clean && yarn tsc && yarn eslint",
         "clean": "rimraf dist",
-        "eslint": "eslint \"src/**/*.ts\"",
+        "eslint": "eslint \"src/**/*.ts\" --cache --cache-location dist/eslint/",
         "tsc": "tsc"
     },
     "dependencies": {
