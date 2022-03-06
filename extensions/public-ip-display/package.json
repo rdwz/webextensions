@@ -6,16 +6,16 @@
     "repository": "https://gitlab.com/Marnes/public-ip-display.git",
     "author": "Marnes <leaumar@mailbox.org>",
     "scripts": {
-        "build": "yarn clean && yarn tsc && yarn eslint && yarn compile && yarn qa && yarn package",
+        "build": "yarn clean && yarn tsc && yarn eslint && yarn parcel:build && yarn webext:lint && yarn webext:build",
         "clean": "rimraf dist",
-        "compile": "parcel build \"src/*.*\" \"src/images/**/*.*\" --dist-dir dist/parcel",
-        "compile:watch": "parcel watch \"src/*.*\" \"src/images/**/*.*\" --dist-dir dist/parcel --no-autoinstall --no-hmr",
         "eslint": "eslint \"src/**/*.{ts,tsx}\" --cache --cache-location dist/eslint/",
-        "package": "web-ext build",
-        "qa": "web-ext lint",
+        "parcel:build": "parcel build \"src/*.*\" \"src/images/**/*.*\" --dist-dir dist/parcel",
+        "parcel:watch": "parcel watch \"src/*.*\" \"src/images/**/*.*\" --dist-dir dist/parcel --no-autoinstall --no-hmr",
         "start": "web-ext run",
         "start:chrome": "web-ext run -t chromium",
-        "tsc": "tsc -b"
+        "tsc": "tsc -b",
+        "webext:build": "web-ext build",
+        "webext:lint": "web-ext lint"
     },
     "dependencies": {
         "@webextensions/common": "*",
