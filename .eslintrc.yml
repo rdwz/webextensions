@@ -52,6 +52,7 @@ rules:
     - error
     - allowExpressions: true
       allowTypedFunctionExpressions: true
+  "@typescript-eslint/naming-convention": off
   "@typescript-eslint/no-confusing-void-expression":
     - error
     - ignoreArrowShorthand: true
