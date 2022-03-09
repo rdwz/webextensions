@@ -1,0 +1,16 @@
+{
+    "name": "@marnes/webextensions-libs",
+    "version": "0.0.0",
+    "private": true,
+    "license": "MPL-2.0",
+    "repository": "https://gitlab.com/Marnes/webextensions",
+    "author": "Marnes <leaumar@mailbox.org>",
+    "scripts": {
+        "build": "yarn workspaces foreach run build",
+        "tsc": "yarn workspaces foreach run tsc"
+    },
+    "packageManager": "yarn@3.2.0",
+    "workspaces": [
+        "*"
+    ]
+}

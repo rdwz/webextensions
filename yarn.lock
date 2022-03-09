@@ -384,6 +384,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@marnes/webextensions-extensions@workspace:extensions":
+  version: 0.0.0-use.local
+  resolution: "@marnes/webextensions-extensions@workspace:extensions"
+  languageName: unknown
+  linkType: soft
+
+"@marnes/webextensions-libs@workspace:libs":
+  version: 0.0.0-use.local
+  resolution: "@marnes/webextensions-libs@workspace:libs"
+  languageName: unknown
+  linkType: soft
+
 "@marnes/webextensions@workspace:.":
   version: 0.0.0-use.local
   resolution: "@marnes/webextensions@workspace:."
