@@ -1447,7 +1447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webextensions/common@*, @webextensions/common@workspace:libs/common":
+"@webextensions/common@workspace:*, @webextensions/common@workspace:libs/common":
   version: 0.0.0-use.local
   resolution: "@webextensions/common@workspace:libs/common"
   dependencies:
@@ -2515,7 +2515,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
@@ -2998,7 +2998,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
@@ -4372,7 +4372,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
@@ -6099,7 +6099,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
@@ -6292,7 +6292,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
@@ -6787,7 +6787,7 @@ __metadata:
     "@types/webextension-polyfill": ^0.8.2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
-    "@webextensions/common": "*"
+    "@webextensions/common": "workspace:*"
     eslint: ^8.10.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
