@@ -1,4 +1,4 @@
-import { bool, sanitize, stringEnum } from "@webextensions/common";
+import { SettingsOf, bool, sanitize, stringEnum } from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 
@@ -16,9 +16,7 @@ const spec = {
     tryHttp: bool(false),
 };
 
-export type Settings = {
-    readonly [P in keyof typeof spec]: ReturnType<typeof spec[P]>;
-};
+export type Settings = SettingsOf<typeof spec>;
 
 export async function read(): Promise<Record<keyof Settings, JsonValue>> {
     const json = await browser.storage.sync.get(Object.keys(spec));

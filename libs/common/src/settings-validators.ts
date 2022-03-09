@@ -92,3 +92,7 @@ export function sanitize<T, K extends keyof T = keyof T>(
 
     return destination as T;
 }
+
+export type SettingsOf<T extends Record<string, (val: unknown) => unknown>> = {
+    readonly [P in keyof T]: ReturnType<T[P]>;
+};

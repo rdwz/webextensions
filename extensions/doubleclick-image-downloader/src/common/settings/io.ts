@@ -7,6 +7,7 @@ import {
     HoverButtonSkin,
 } from "./enums";
 import {
+    SettingsOf,
     bool,
     gt,
     gte,
@@ -58,9 +59,7 @@ const spec = {
     triggerByClickType: stringEnum(ClickType, ClickType.doubleLeft),
 };
 
-export type Settings = {
-    readonly [P in keyof typeof spec]: ReturnType<typeof spec[P]>;
-};
+export type Settings = SettingsOf<typeof spec>;
 
 export function isSetting(key: string): key is keyof Settings {
     return key in spec;

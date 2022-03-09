@@ -1,5 +1,6 @@
 import { CountryService, IpService } from "./enums";
 import {
+    SettingsOf,
     bool,
     gte,
     num,
@@ -19,9 +20,7 @@ const spec = {
     refreshRate: num(10, gte(1), roundedTo(0)),
 } as const;
 
-export type SyncSettings = {
-    readonly [P in keyof typeof spec]: ReturnType<typeof spec[P]>;
-};
+export type SyncSettings = SettingsOf<typeof spec>;
 
 const keys = Object.keys(spec);
 

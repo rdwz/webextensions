@@ -1,5 +1,11 @@
 import { PATTERN_VARIABLES } from "../pattern";
-import { bool, notBlank, sanitize, str } from "@webextensions/common";
+import {
+    SettingsOf,
+    bool,
+    notBlank,
+    sanitize,
+    str,
+} from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 
@@ -14,9 +20,7 @@ const spec = {
     showOpenMenuAction: bool(false),
 };
 
-export type Settings = {
-    readonly [P in keyof typeof spec]: ReturnType<typeof spec[P]>;
-};
+export type Settings = SettingsOf<typeof spec>;
 
 export function isSetting(key: string): key is keyof Settings {
     return key in spec;

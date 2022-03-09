@@ -1,4 +1,10 @@
-import { bool, matching, sanitize, str } from "@webextensions/common";
+import {
+    SettingsOf,
+    bool,
+    matching,
+    sanitize,
+    str,
+} from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 
@@ -7,9 +13,7 @@ const spec = {
     color: str("#222222", matching(/#[0-9a-f]{6}/u)),
 };
 
-export type Settings = {
-    readonly [P in keyof typeof spec]: ReturnType<typeof spec[P]>;
-};
+export type Settings = SettingsOf<typeof spec>;
 
 export function isSetting(key: string): key is keyof Settings {
     return key in spec;
