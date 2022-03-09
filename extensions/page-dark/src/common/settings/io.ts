@@ -1,5 +1,4 @@
-import { sanitize } from "./validation";
-import { bool } from "@webextensions/common";
+import { bool, sanitize } from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 

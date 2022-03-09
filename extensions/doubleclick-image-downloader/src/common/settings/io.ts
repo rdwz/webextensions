@@ -6,7 +6,6 @@ import {
     HoverButtonPosition,
     HoverButtonSkin,
 } from "./enums";
-import { sanitize } from "./validation";
 import {
     bool,
     gt,
@@ -16,6 +15,7 @@ import {
     notBlank,
     num,
     roundedTo,
+    sanitize,
     str,
     stringArray,
     stringEnum,

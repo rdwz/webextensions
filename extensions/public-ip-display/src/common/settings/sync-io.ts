@@ -1,6 +1,12 @@
 import { CountryService, IpService } from "./enums";
-import { sanitize } from "./validation";
-import { bool, gte, num, roundedTo, stringEnum } from "@webextensions/common";
+import {
+    bool,
+    gte,
+    num,
+    roundedTo,
+    sanitize,
+    stringEnum,
+} from "@webextensions/common";
 import type { JsonValue } from "type-fest";
 import browser from "webextension-polyfill";
 
