@@ -407,7 +407,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ^3.2.0
     "@typescript-eslint/parser": ^5.16.0
     bestzip: ^2.2.0
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-config-prettier: ^8.5.0
     eslint-config-react: ^1.1.7
     eslint-import-resolver-node: ^0.3.6
@@ -1466,7 +1466,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ^3.2.0
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     prettier: ^2.6.1
@@ -2528,7 +2528,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     fast-equals: ^3.0.0
@@ -3011,7 +3011,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     fast-equals: ^3.0.0
@@ -3455,9 +3455,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.11.0":
-  version: 8.11.0
-  resolution: "eslint@npm:8.11.0"
+"eslint@npm:^8.12.0":
+  version: 8.12.0
+  resolution: "eslint@npm:8.12.0"
   dependencies:
     "@eslint/eslintrc": ^1.2.1
     "@humanwhocodes/config-array": ^0.9.2
@@ -3496,7 +3496,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: a06a2ea37002d6c0a4f462fe31b4411185dc3da7857fafb896eb392ba95a1289cc3538056474b2f44f08012f265bede01a39d46df4ac39ebc6d7be90e2c8f9fa
+  checksum: 111bf9046b7a463049788dd00d7f4cd91e024029982352dff4811ce5dfa8cb1136aa127cd8a7a91508234d3e1b4fb6f638a1f5ef9ea08b1af93a18703a4a8dc1
   languageName: node
   linkType: hard
 
@@ -4385,7 +4385,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     fast-equals: ^3.0.0
@@ -6112,7 +6112,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     fast-equals: ^3.0.0
@@ -6305,7 +6305,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     fast-equals: ^3.0.0
@@ -6800,7 +6800,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.16.0
     "@typescript-eslint/parser": ^5.16.0
     "@webextensions/common": "workspace:*"
-    eslint: ^8.11.0
+    eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.29.4
