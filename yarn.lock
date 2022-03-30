@@ -6660,10 +6660,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.6.6":
-  version: 10.6.6
-  resolution: "preact@npm:10.6.6"
-  checksum: d6a9581b222c60595f987be28738b68dabb3045f72043e2619af81e9ca00b2b0942717642bcfcaab77a0afa50a97cd35039139c7f425a62a4f02ceb793d8ef83
+"preact@npm:^10.7.0":
+  version: 10.7.0
+  resolution: "preact@npm:10.7.0"
+  checksum: fd0c0164379279f1b381c1438ef29bb56aaf55965ff5e72fce6b0d8e06aa1c621f685c17f3e1c969e0c609df6053106e4f0463c737f6dcc1fe98c8e24fa7a012
   languageName: node
   linkType: hard
 
@@ -6795,7 +6795,7 @@ __metadata:
     fast-equals: ^3.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.3.2
-    preact: ^10.6.6
+    preact: ^10.7.0
     prettier: ^2.6.1
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
