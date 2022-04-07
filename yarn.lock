@@ -2514,7 +2514,7 @@ __metadata:
     eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     parcel: ^2.3.2
     prettier: ^2.6.2
     prettier-plugin-package: ^1.3.0
@@ -2997,7 +2997,7 @@ __metadata:
     eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     parcel: ^2.3.2
     prettier: ^2.6.2
     prettier-plugin-package: ^1.3.0
@@ -3602,10 +3602,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-equals@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "fast-equals@npm:3.0.0"
-  checksum: e04cf6082420c62096b461ac63a64bb81befc5175fda0fa5c29984b0a4d65b28e6b5198cb0222392a89df487f67c0c9d6c996e5fe2f44e07f157727d619d986f
+"fast-equals@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "fast-equals@npm:3.0.1"
+  checksum: d030206d1da71d1b9928e5a374cb70dd4a97ba962a8b944e9abd91766ff2d0f470b0b30ac9a44ae15a409514075c7fde51483fa638a186f68d54e0e8097f7f67
   languageName: node
   linkType: hard
 
@@ -4339,7 +4339,7 @@ __metadata:
     eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     parcel: ^2.3.2
     prettier: ^2.6.2
     prettier-plugin-package: ^1.3.0
@@ -6082,7 +6082,7 @@ __metadata:
     eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     parcel: ^2.3.2
     prettier: ^2.6.2
     prettier-plugin-package: ^1.3.0
@@ -6275,7 +6275,7 @@ __metadata:
     eslint: ^8.12.0
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     parcel: ^2.3.2
     prettier: ^2.6.2
     prettier-plugin-package: ^1.3.0
@@ -6792,7 +6792,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.4.0
-    fast-equals: ^3.0.0
+    fast-equals: ^3.0.1
     modern-normalize: ^1.1.0
     parcel: ^2.3.2
     preact: ^10.7.1
