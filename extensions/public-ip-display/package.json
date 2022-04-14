@@ -31,7 +31,7 @@
     "devDependencies": {
         "@parcel/transformer-raw": "^2.3.2",
         "@trivago/prettier-plugin-sort-imports": "^3.2.0",
-        "@types/react": "^18.0.3",
+        "@types/react": "^18.0.4",
         "@types/react-dom": "^18.0.0",
         "@types/webextension-polyfill": "^0.8.3",
         "@typescript-eslint/eslint-plugin": "^5.19.0",
