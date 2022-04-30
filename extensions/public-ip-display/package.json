@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@webextensions/common": "workspace:*",
-        "fast-equals": "^3.0.1",
+        "fast-equals": "^3.0.2",
         "modern-normalize": "^1.1.0",
         "preact": "^10.7.1",
         "tachyons": "^4.12.0",
