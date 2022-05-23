@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "@webextensions/common": "workspace:*",
-        "fast-equals": "^3.0.2",
+        "fast-equals": "^3.0.3",
         "ts-essentials": "^9.1.2",
         "tslib": "^2.4.0",
         "type-fest": "^2.12.2",
