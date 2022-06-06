@@ -1,26 +1,23 @@
 import { UnreachableCaseError } from "ts-essentials";
 
-function isSignificant(node: ChildNode): boolean {
+// documents tend to contain #text nodes with only a linebreak, i.e. the source code formatting
+function isNotWhitespace(node: ChildNode): boolean {
     return (
         node.nodeName !== "#text" ||
         (node.textContent != null && node.textContent.trim() !== "")
     );
 }
 
-function getSignificantChildNodes(node: HTMLElement): ChildNode[] {
-    return [...node.childNodes].filter(isSignificant);
-}
-
-async function getLoadedPage(): Promise<Document> {
+async function getLoadedPage(): Promise<HTMLElement> {
     return new Promise((resolve) => {
         switch (document.readyState) {
             case "complete":
             case "interactive":
-                resolve(document);
+                resolve(document.body);
                 break;
             case "loading":
                 document.addEventListener("DOMContentLoaded", () =>
-                    resolve(document)
+                    resolve(document.body)
                 );
                 break;
             default:
@@ -30,12 +27,16 @@ async function getLoadedPage(): Promise<Document> {
 }
 
 export async function isImagePage(): Promise<boolean> {
-    const doc = await getLoadedPage();
+    const bodyTag = await getLoadedPage();
 
-    const [firstChild] = getSignificantChildNodes(doc.body);
+    const [firstChild] = [...bodyTag.childNodes].filter(isNotWhitespace);
+
+    // don't check sibling childNodes as other extensions might inject stuff like image info panels or buttons
+    // (*cough* doubleclickimagedownloader *cough*)
+    // a legit website having an <img> as the first element in <body> seems unlikely
 
     return (
         firstChild != null &&
-        ["IMG", "SVG"].includes(firstChild.nodeName.toUpperCase())
+        ["img", "svg"].includes(firstChild.nodeName.toLowerCase())
     );
 }

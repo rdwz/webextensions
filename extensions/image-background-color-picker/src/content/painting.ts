@@ -3,18 +3,25 @@ import { isImagePage } from "./detection";
 
 const applicable = "image-background-color-picker-applicable";
 const checkerboardClass = "image-background-color-picker-checkerboard";
-const page = document.documentElement;
+const htmlTag = document.documentElement;
 
 function enable(): (settings: Settings) => void {
-    page.classList.add(applicable);
+    htmlTag.classList.add(applicable);
+
+    // these manual resets are needed because chrome sets element styles that overrule our scss
+    // and we'd rather not add a viral !important to the scss
+    const bodyTag = document.body;
+    bodyTag.style.background = "unset";
+    const imgTag = bodyTag.getElementsByTagName("img").item(0)!;
+    imgTag.style.background = "unset";
 
     return (settings: Settings) => {
         if (settings.checkerBoard) {
-            page.classList.add(checkerboardClass);
-            page.style.backgroundColor = "";
+            htmlTag.classList.add(checkerboardClass);
+            htmlTag.style.backgroundColor = "";
         } else {
-            page.style.backgroundColor = settings.color;
-            page.classList.remove(checkerboardClass);
+            htmlTag.style.backgroundColor = settings.color;
+            htmlTag.classList.remove(checkerboardClass);
         }
     };
 }

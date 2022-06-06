@@ -1,15 +1,15 @@
-html {
-    &.image-background-color-picker-applicable > body {
-        background: initial !important;
-
-        & > img {
-            background-image: initial !important;
-            background-size: initial !important;
-            background-position: initial !important;
-            background: initial !important;
-        }
+:root.image-background-color-picker-applicable {
+    // first, remove all backgrounds
+    &,
+    & > body,
+    & > body > img {
+        background: unset;
     }
 
+    // second, the code will set/remove an appropriate background-color on the root
+    // it can't be hardcoded here since it's variable
+
+    // third, paint checkers if the code sets this class
     &.image-background-color-picker-checkerboard {
         background-color: darkgrey;
         background-image: linear-gradient(
