@@ -11,8 +11,8 @@ function getSignificantChildNodes(node: HTMLElement): ChildNode[] {
     return [...node.childNodes].filter(isSignificant);
 }
 
-export async function isImagePage(): Promise<boolean> {
-    const doc = await new Promise<Document>((resolve) => {
+async function getLoadedPage(): Promise<Document> {
+    return new Promise((resolve) => {
         switch (document.readyState) {
             case "complete":
             case "interactive":
@@ -27,6 +27,10 @@ export async function isImagePage(): Promise<boolean> {
                 throw new UnreachableCaseError(document.readyState);
         }
     });
+}
+
+export async function isImagePage(): Promise<boolean> {
+    const doc = await getLoadedPage();
 
     const [firstChild] = getSignificantChildNodes(doc.body);
 
