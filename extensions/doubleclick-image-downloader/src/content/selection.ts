@@ -5,7 +5,5 @@ export function getImagesInSelection(): HTMLImageElement[] {
         throw new Error("too late to get the selection?");
     }
 
-    return Array.from(document.images).filter((link) =>
-        selection.containsNode(link)
-    );
+    return [...document.images].filter((link) => selection.containsNode(link));
 }

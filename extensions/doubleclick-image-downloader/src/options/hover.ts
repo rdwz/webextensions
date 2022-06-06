@@ -58,10 +58,10 @@ function applyDisabledState(): void {
     hoverButtonOpacity.required = enabled;
     hoverButtonOpacity.disabled = !enabled;
 
-    Array.from(hoverButtonSkins.getElementsByTagName("input")).forEach(
+    [...hoverButtonSkins.getElementsByTagName("input")].forEach(
         (skinSelector) => (skinSelector.disabled = !enabled)
     );
-    Array.from(hoverButtonPositionPicker.getElementsByTagName("input")).forEach(
+    [...hoverButtonPositionPicker.getElementsByTagName("input")].forEach(
         (positionSelector) => (positionSelector.disabled = !enabled)
     );
 }

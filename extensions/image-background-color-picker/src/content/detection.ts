@@ -8,7 +8,7 @@ function isSignificant(node: ChildNode): boolean {
 }
 
 function getSignificantChildNodes(node: HTMLElement): ChildNode[] {
-    return Array.from(node.childNodes).filter(isSignificant);
+    return [...node.childNodes].filter(isSignificant);
 }
 
 export async function isImagePage(): Promise<boolean> {

@@ -4,6 +4,7 @@ import type { Opaque } from "type-fest";
 type Name = Opaque<string, "name">;
 // [bar, foo, *]
 type Tail = Opaque<Name[], "tail">;
+
 // *.foo.bar.com -> tld=com, tail=[bar, foo, *]
 interface DomainSpec {
     tail: Tail;
@@ -50,7 +51,7 @@ function matches(tree: Map<Name, Set<Tail>>, domain: string): boolean {
 
     return filtersForTld == null
         ? false
-        : Array.from(filtersForTld).some((filter) =>
+        : [...filtersForTld].some((filter) =>
               fallsUnderTail(target.tail, filter)
           );
 }

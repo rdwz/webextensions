@@ -16,7 +16,7 @@ export function getLinks(
         throw new Error("selection disappeared?");
     }
 
-    const links = Array.from(document.links)
+    const links = [...document.links]
         .filter((anchor) => selection.containsNode(anchor, true))
         .map<Link>((link) => ({ text: link.innerText, url: link.href }));
 

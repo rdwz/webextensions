@@ -34,9 +34,9 @@ export function rigRefreshRate(settings: SyncIO.SyncSettings): void {
 }
 
 export function rigIpService(settings: SyncIO.SyncSettings): void {
-    html.ipEchoService.selectedIndex = Array.from(
-        html.ipEchoService.options
-    ).findIndex((option) => option.value === settings.ipEchoService);
+    html.ipEchoService.selectedIndex = [
+        ...html.ipEchoService.options,
+    ].findIndex((option) => option.value === settings.ipEchoService);
 
     html.ipEchoService.addEventListener("change", () => {
         SyncIO.write({
@@ -71,9 +71,9 @@ export function rigDisplayFlag(settings: SyncIO.SyncSettings): void {
 }
 
 export function rigCountryCodeService(settings: SyncIO.SyncSettings): void {
-    html.countryCodeService.selectedIndex = Array.from(
-        html.countryCodeService.options
-    ).findIndex((option) => option.value === settings.countryCodeService);
+    html.countryCodeService.selectedIndex = [
+        ...html.countryCodeService.options,
+    ].findIndex((option) => option.value === settings.countryCodeService);
 
     html.countryCodeService.addEventListener("change", () => {
         SyncIO.write({
