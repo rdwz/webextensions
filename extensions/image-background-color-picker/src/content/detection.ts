@@ -29,14 +29,13 @@ async function getLoadedPage(): Promise<HTMLElement> {
 export async function isImagePage(): Promise<boolean> {
     const bodyTag = await getLoadedPage();
 
-    const [firstChild] = [...bodyTag.childNodes].filter(isNotWhitespace);
-
-    // don't check sibling childNodes as other extensions might inject stuff like image info panels or buttons
-    // (*cough* doubleclickimagedownloader *cough*)
-    // a legit website having an <img> as the first element in <body> seems unlikely
+    const [firstChild, ...rest] = [...bodyTag.childNodes].filter(
+        isNotWhitespace
+    );
 
     return (
         firstChild != null &&
-        ["img", "svg"].includes(firstChild.nodeName.toLowerCase())
+        ["img", "svg"].includes(firstChild.nodeName.toLowerCase()) &&
+        rest.length === 0
     );
 }
