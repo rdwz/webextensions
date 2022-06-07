@@ -7,7 +7,7 @@
     },
     "name": "Image Background Color Picker",
     "short_name": "IBCP",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "description": "Lets you choose a background color for plain images.",
     "author": "marnick.leau@gmail.com",
     "icons": {
