@@ -9,7 +9,7 @@
     "short_name": "PTL",
     "version": "2.5.3",
     "description": "Opens plain text URLs when you double-click on them.",
-    "author": "marnick.leau@gmail.com",
+    "author": "leaumar@mailbox.org",
     "icons": {
         "16": "images/icon-16.png",
         "48": "images/icon-48.png",

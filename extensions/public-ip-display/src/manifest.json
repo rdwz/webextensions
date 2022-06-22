@@ -9,7 +9,7 @@
     "short_name": "PID",
     "version": "4.5.2",
     "description": "Displays your IP address and country using lookup services of your choice. Auto-refreshes, notifies, and displays.",
-    "author": "marnick.leau@gmail.com",
+    "author": "leaumar@mailbox.org",
     "icons": {
         "16": "images/icon-16.png",
         "48": "images/icon-48.png",
