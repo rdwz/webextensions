@@ -49,7 +49,7 @@ export function insert(): void {
 }
 
 export function unsert(): void {
-    document.body.removeChild(button);
+    button.remove();
 }
 
 export function setSkin(settings: Settings): void {
