@@ -27,7 +27,7 @@
         "browser_style": true
     },
     "background": {
-        "page": "background.html",
+        "scripts": ["background.ts"],
         "persistent": false
     },
     "permissions": [

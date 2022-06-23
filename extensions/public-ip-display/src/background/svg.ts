@@ -8,11 +8,13 @@ export async function renderSvg(
     imgName: string,
     fileName: string
 ): Promise<Record<"38", Action.ImageDataType>> {
-    const canvas = document.getElementById(canvasName) as HTMLCanvasElement;
+    const canvas = document.createElement("canvas");
+    document.documentElement.appendChild(canvas);
     canvas.width = flagSize;
     canvas.height = flagSize;
     const context = canvas.getContext("2d")!;
-    const img = document.getElementById(imgName) as HTMLImageElement;
+    const img = document.createElement("img");
+    document.documentElement.appendChild(img);
 
     await new Promise<void>((resolve) => {
         const onLoad = (): void => {
@@ -49,8 +51,8 @@ export async function renderSvg(
         ) as Action.ImageDataType,
     };
 
-    img.src = "";
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    img.remove();
+    canvas.remove();
 
     return imageData;
 }
