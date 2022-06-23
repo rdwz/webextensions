@@ -1,59 +1,32 @@
 import type { Link } from "./types";
 
 const topics = {
-    copyRequested: "copyRequested",
-    linksCopied: "linksCopied",
     linksPicked: "linksPicked",
     linksRequested: "linksRequested",
 } as const;
 
-export type CopyRequestedMessage = {
-    subject: typeof topics.copyRequested;
-    isWindows: boolean;
-    externalContextLink: Link | undefined;
-};
-export function copyRequested(
-    isWindows: boolean,
-    externalContextLink: Link | undefined
-): CopyRequestedMessage {
-    return {
-        externalContextLink,
-        isWindows,
-        subject: topics.copyRequested,
-    };
-}
-
 export type LinksRequestedMessage = {
     subject: typeof topics.linksRequested;
-    externalContextUrl: string | null;
+    externalContextLink: Link | null;
 };
+
 export function linksRequested(
-    externalContextUrl: string | null
+    externalContextLink: Link | null
 ): LinksRequestedMessage {
     return {
-        externalContextUrl,
+        externalContextLink,
         subject: topics.linksRequested,
-    };
-}
-
-export type CopiedMessage = {
-    subject: typeof topics.linksCopied;
-    linksCopied: number;
-};
-export function copied(linksCopied: number): CopiedMessage {
-    return {
-        linksCopied,
-        subject: topics.linksCopied,
     };
 }
 
 export type LinksPickedMessage = {
     subject: typeof topics.linksPicked;
-    hrefs: string[];
+    links: Link[];
 };
-export function linksPicked(hrefs: string[]): LinksPickedMessage {
+
+export function linksPicked(links: Link[]): LinksPickedMessage {
     return {
-        hrefs,
+        links,
         subject: topics.linksPicked,
     };
 }
@@ -62,11 +35,7 @@ export function linksPicked(hrefs: string[]): LinksPickedMessage {
 
 const subjects = Object.values(topics) as string[];
 
-export type Message =
-    | CopyRequestedMessage
-    | CopiedMessage
-    | LinksPickedMessage
-    | LinksRequestedMessage;
+export type Message = LinksPickedMessage | LinksRequestedMessage;
 
 function hasSubject(value: {
     subject?: unknown;

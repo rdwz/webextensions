@@ -1,11 +1,11 @@
-import { asMessage, linksRequested } from "../common/";
+import { Link, asMessage, linksRequested } from "../common/";
 import { injectContentScript } from "./inject";
 import browser, { Tabs } from "webextension-polyfill";
 
 export async function arrangeOpen(
     tab: Tabs.Tab,
     frameId?: number,
-    contextualUrl?: string
+    contextualUrl?: Link
 ): Promise<void> {
     if (tab.id == null) {
         throw new Error(`received a tab without an id?`);
@@ -22,8 +22,8 @@ export async function arrangeOpen(
     }
 
     await Promise.all(
-        response.hrefs.map(async (href) =>
-            browser.tabs.create({ active: false, url: href })
+        response.links.map(async (link) =>
+            browser.tabs.create({ active: false, url: link.url })
         )
     );
 }

@@ -1,13 +1,10 @@
-import type { CopiedMessage, LinksPickedMessage, Message } from "../common/";
-import { onCopyRequested, onLinksRequested } from "./actions";
+import type { LinksPickedMessage, Message } from "../common/";
+import { onLinksRequested } from "./actions";
 
 export async function onMessageReceived(
     msg: Message
-): Promise<CopiedMessage | LinksPickedMessage> {
+): Promise<LinksPickedMessage> {
     switch (msg.subject) {
-        case "copyRequested": {
-            return onCopyRequested(msg);
-        }
         case "linksRequested": {
             return onLinksRequested(msg);
         }

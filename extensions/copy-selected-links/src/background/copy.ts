@@ -1,4 +1,10 @@
-import { Link, Message, asMessage, copyRequested, load } from "../common/";
+import {
+    Link,
+    applyPattern,
+    asMessage,
+    linksRequested,
+    load,
+} from "../common/";
 import { injectContentScript } from "./inject";
 import browser, { Tabs } from "webextension-polyfill";
 
@@ -9,27 +15,6 @@ async function notify(title: string, message: string): Promise<void> {
         title,
         type: "basic",
     });
-}
-
-async function afterCopying(data: Message): Promise<void> {
-    if (data.subject === "linksCopied") {
-        const settings = await load();
-
-        if (data.linksCopied > 0) {
-            if (settings.popupSuccess) {
-                await notify(
-                    "",
-                    `Copied ${data.linksCopied} links to clipboard.`
-                );
-            }
-        } else {
-            if (settings.popupFail) {
-                await notify("", "No links found.");
-            }
-        }
-    } else {
-        throw new Error(`unknown response ${JSON.stringify(data)}`);
-    }
 }
 
 const isWindows = browser.runtime
@@ -47,10 +32,36 @@ export async function arrangeCopy(
 
     await injectContentScript(tab.id);
 
-    const message = copyRequested(await isWindows, externalContextLink);
+    const message = linksRequested(externalContextLink ?? null);
     const response = await browser.tabs
         .sendMessage(tab.id, message, { frameId })
         .then(asMessage);
 
-    await afterCopying(response);
+    if (response.subject !== "linksPicked") {
+        throw new Error(`unknown response ${JSON.stringify(response)}`);
+    }
+
+    const settings = await load();
+
+    if (response.links.length > 0) {
+        const newline = (await isWindows) ? "\r\n" : "\n";
+        const joined = response.links
+            .map((link) => applyPattern(link, settings.copyPattern))
+            .join(newline);
+
+        await navigator.clipboard.writeText(
+            settings.finalNewline ? joined + newline : joined
+        );
+
+        if (settings.popupSuccess) {
+            await notify(
+                "",
+                `Copied ${response.links.length} links to clipboard.`
+            );
+        }
+    } else {
+        if (settings.popupFail) {
+            await notify("", "No links found.");
+        }
+    }
 }

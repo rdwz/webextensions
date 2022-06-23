@@ -1,7 +1,6 @@
 import type { IpLogEntry } from "../common/";
 import { LogTable } from "./log-table";
 import { useConfirmation, useLogs, useSeparator } from "./state";
-import { copyToClipboard } from "./util";
 import React, { ReactElement, useCallback, useMemo } from "react";
 
 function toCsvRow(...values: string[]): string {
@@ -37,10 +36,13 @@ export function LogSection(): ReactElement {
             return undefined;
         }
 
-        return () =>
-            void copyToClipboard(toCsv(logs, separator), document).catch(
-                console.error
-            );
+        return () => {
+            navigator.clipboard
+                .writeText(toCsv(logs, separator))
+                .catch((error) =>
+                    console.error("Failed to copy to clipboard.", error)
+                );
+        };
     }, [logs, separator]);
 
     const [confirmClear, denyClear] = useConfirmation(clearLogs);

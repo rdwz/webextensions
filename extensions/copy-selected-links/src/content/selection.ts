@@ -1,13 +1,8 @@
-import type {
-    CopyRequestedMessage,
-    Link,
-    LinksRequestedMessage,
-    Settings,
-} from "../common/";
+import type { Link, LinksRequestedMessage, Settings } from "../common/";
 import { deduplicateBy } from "./deduplicate";
 
 export function getLinks(
-    msg: CopyRequestedMessage | LinksRequestedMessage,
+    msg: LinksRequestedMessage,
     settings: Settings
 ): Link[] {
     const selection = getSelection();
@@ -20,11 +15,7 @@ export function getLinks(
         .filter((anchor) => selection.containsNode(anchor, true))
         .map<Link>((link) => ({ text: link.innerText, url: link.href }));
 
-    if (
-        settings.includeCommandTarget &&
-        "externalContextLink" in msg &&
-        msg.externalContextLink != null
-    ) {
+    if (settings.includeCommandTarget && msg.externalContextLink != null) {
         // people probably drag from start to end
         // so the clicked node is probably at the end
         links.push(msg.externalContextLink);

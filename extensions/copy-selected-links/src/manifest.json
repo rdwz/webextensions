@@ -23,7 +23,13 @@
         "scripts": ["background.ts"],
         "persistent": true
     },
-    "permissions": ["notifications", "contextMenus", "storage", "activeTab"],
+    "permissions": [
+        "activeTab",
+        "clipboardWrite",
+        "contextMenus",
+        "notifications",
+        "storage"
+    ],
     "commands": {
         "copy-selected-links": {
             "suggested_key": {

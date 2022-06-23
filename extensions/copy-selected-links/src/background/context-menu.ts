@@ -1,4 +1,4 @@
-import { Settings, load, monitor } from "../common/";
+import { Link, Settings, load, monitor } from "../common/";
 import { arrangeCopy } from "./copy";
 import { arrangeOpen } from "./open";
 import { noop } from "ts-essentials";
@@ -32,17 +32,15 @@ async function reactToContextMenu(
     }
 
     const { linkText: text, linkUrl: url } = contextMenuInfo;
+    const link: Link | undefined =
+        url == null || text == null ? undefined : { text, url };
 
     switch (contextMenuInfo.menuItemId) {
         case CONTEXT_MENU_IDS.copyLinks:
-            await arrangeCopy(
-                tab,
-                contextMenuInfo.frameId,
-                url == null || text == null ? undefined : { text, url }
-            );
+            await arrangeCopy(tab, contextMenuInfo.frameId, link);
             break;
         case CONTEXT_MENU_IDS.openLinks:
-            await arrangeOpen(tab, contextMenuInfo.frameId, url);
+            await arrangeOpen(tab, contextMenuInfo.frameId, link);
             break;
         default:
             throw new Error(

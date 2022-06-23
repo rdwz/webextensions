@@ -1,6 +1,6 @@
 import type { IpCountryData } from "../common/";
 import { FlagImage } from "./flag-image";
-import { copyToClipboard, sendCopyHappened } from "./util";
+import { sendCopyHappened } from "./util";
 import React, { ReactElement, useCallback } from "react";
 
 interface Props {
@@ -9,9 +9,12 @@ interface Props {
 
 export function DataSection({ data }: Props): ReactElement {
     const copy = useCallback(() => {
-        copyToClipboard(data.ip, document)
+        navigator.clipboard
+            .writeText(data.ip)
             .then(() => sendCopyHappened(data.ip))
-            .catch(console.error);
+            .catch((error) =>
+                console.error("Failed to copy to clipboard.", error)
+            );
     }, [data]);
 
     return (
