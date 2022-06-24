@@ -5,6 +5,7 @@
         ":automergePatch",
         ":automergeTypes"
     ],
+    "gitAuthor": "\"RenovateBot\" <renovate-bot.marnes@gitlab.com>",
     "nvm": {
         "fileMatch": ["^\\.node-version$"]
     },
