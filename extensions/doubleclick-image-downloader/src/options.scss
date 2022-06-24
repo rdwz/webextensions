@@ -1,47 +1,8 @@
-// from basscss
-.my2 {
-    @extend .mb2;
-    @extend .mt2;
-}
+@import "~modern-normalize";
 
-.mt2 {
-    margin-top: 1em;
-}
-
-.mb2 {
-    margin-bottom: 1em;
-}
-
-.block {
-    display: block;
-}
-
-.display-none {
-    display: none;
-}
-
-.flex {
-    display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-auto {
-    flex: 1 1 auto;
-    min-width: 0; /* 1 */
-    min-height: 0; /* 1 */
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-// end of basscss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 label {
     font-weight: bold;
@@ -58,8 +19,7 @@ input[type="text"] {
     }
 }
 
-textarea,
-#fileNamePattern {
+textarea {
     width: 100%;
 }
 

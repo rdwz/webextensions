@@ -1,9 +1,9 @@
+@import "~modern-normalize";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 label {
     font-weight: bold;
-}
-
-// from basscss
-.my1 {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
 }

@@ -7,13 +7,13 @@
         <title>Copy Selected Links Options</title>
     </head>
 
-    <body>
-        <section class="my1">
+    <body class="p-1">
+        <section class="my-2">
             <input type="checkbox" id="finalNewline" />
             <label for="finalNewline">Include final newline</label>
         </section>
 
-        <section class="my1">
+        <section class="my-2">
             <label>
                 Copy pattern
                 <input
@@ -37,9 +37,9 @@
             </dl>
         </section>
 
-        <section class="my1">
+        <section class="my-2">
             <strong>
-                <span style="font-size: 1.5rem; color: dodgerblue">🛈</span>
+                <span class="text-xl text-blue-400">🛈</span>
                 Hotkey settings?
             </strong>
             <br />
@@ -47,10 +47,10 @@
             extension hotkey management!
         </section>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Link gathering</legend>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="includeCommandTarget" />
                 <label for="includeCommandTarget">
                     Consider the context menu target a selected link
@@ -62,37 +62,37 @@
                 </small>
             </section>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="deduplicateHrefs" />
                 <label for="deduplicateHrefs">Omit duplicate links</label>
             </section>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Notifications</legend>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="popupSuccess" />
                 <label for="popupSuccess">After copying at least 1 link</label>
             </section>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="popupFail" />
                 <label for="popupFail">If no links were copied</label>
             </section>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Context menu</legend>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="showCopyMenuAction" />
                 <label for="showCopyMenuAction">
                     Enable the titular context menu item
                 </label>
             </section>
 
-            <section class="my1">
+            <section class="my-1">
                 <input type="checkbox" id="showOpenMenuAction" />
                 <label for="showOpenMenuAction">
                     Show a context menu item to

@@ -7,8 +7,8 @@
         <title>Double-click Image Downloader Options</title>
     </head>
 
-    <body>
-        <section class="my2">
+    <body class="p-1">
+        <section class="my-2">
             <label>
                 <input type="checkbox" id="notify" />
                 Notify when download completes
@@ -19,16 +19,16 @@
             </span>
         </section>
 
-        <section class="my2">
+        <section class="my-2">
             <label>
                 <input type="checkbox" id="greyOut" />
                 "Grey out" image during download
             </label>
         </section>
 
-        <section class="my2">
+        <section class="my-2">
             <strong>
-                <span style="font-size: 1.5rem; color: dodgerblue">🛈</span>
+                <span class="text-xl text-blue-400">🛈</span>
                 Hover Hotkey settings?
             </strong>
             <br />
@@ -36,17 +36,17 @@
             management!
         </section>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Context menu</legend>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="enableImageContextMenu" />
                     Show "Download" on images
                 </label>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="enableSelectionContextMenu" />
                     Show "Download images" on selections
@@ -54,10 +54,10 @@
             </section>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Restrictions</legend>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="requireShift" />
                     Require Shift key to be pressed
@@ -65,7 +65,7 @@
                 <span class="block">Does not restrict Hover Hotkey.</span>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label for="minimumImageSize" class="block">
                     Ignore images smaller than
                 </label>
@@ -81,7 +81,7 @@
                 <span class="block">Does not restrict Hover Hotkey.</span>
             </section>
 
-            <section class="mt2">
+            <section class="mt-1">
                 <label for="excludedPageDomains" class="block">
                     Page domains to ignore
                 </label>
@@ -92,7 +92,7 @@
                 ></textarea>
             </section>
 
-            <section class="mb2" id="invertExcludedPageDomains">
+            <section class="mb-1" id="invertExcludedPageDomains">
                 <label>
                     <input
                         type="radio"
@@ -112,7 +112,7 @@
                 </label>
             </section>
 
-            <section class="mt2">
+            <section class="mt-1">
                 <label for="excludedSourceDomains" class="block">
                     Image domains to ignore
                 </label>
@@ -123,7 +123,7 @@
                 ></textarea>
             </section>
 
-            <section class="mb2" id="invertExcludedSourceDomains">
+            <section class="mb-1" id="invertExcludedSourceDomains">
                 <label>
                     <input
                         type="radio"
@@ -149,24 +149,24 @@
             </ul>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Hover Button</legend>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="singleClickEnabled" />
                     Enabled
                 </label>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="supportDragDrop" />
                     Enable "drag & drop" onto the button
                 </label>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label for="oneClickStyle-alt1">Button skin</label>
                 <div id="oneClickStyles">
                     <label>
@@ -190,7 +190,7 @@
                 </div>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label for="buttonSize" class="block">Button size</label>
                 <input
                     type="number"
@@ -204,7 +204,7 @@
                 pixels
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label for="buttonOpacity" class="block">Button opacity</label>
                 <input
                     type="range"
@@ -217,7 +217,7 @@
                 %
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <img
                     id="oneClickStyle-preview"
                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
@@ -225,14 +225,14 @@
                 />
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label>
                     <input type="checkbox" id="persist" />
                     Persist after mousing out of image
                 </label>
             </section>
 
-            <section class="my2">
+            <section class="my-1">
                 <label for="defaultPosition">Button position</label>
                 <table id="positionPicker" class="block">
                     <tbody>
@@ -449,10 +449,10 @@
             </section>
         </fieldset>
 
-        <fieldset id="renamingSettings">
+        <fieldset class="my-2" id="renamingSettings">
             <legend>Destination</legend>
 
-            <section id="renamingSettingsNotSupported" class="display-none">
+            <section id="renamingSettingsNotSupported" class="hidden">
                 <strong>⚠️ Not supported by this browser!</strong>
                 This feature will be available the moment your browser supports
                 it. For Firefox, check
@@ -462,7 +462,7 @@
                 .
             </section>
 
-            <section class="my2">
+            <section class="my-2">
                 <label>
                     <input type="checkbox" id="enableRename" />
                     Enable file renaming
@@ -487,10 +487,11 @@
                 </ul>
             </section>
 
-            <section class="my2">
+            <section class="my-2">
                 <label>
                     Filename pattern
                     <input
+                        class="w-full"
                         type="text"
                         id="fileNamePattern"
                         placeholder="%pagedomain%/%imagepath%/%original%"
@@ -590,14 +591,14 @@
             </section>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="my-2">
             <legend>Niche options</legend>
             <span>
                 These are not necessarily applied in realtime, unlike the
                 regular options.
             </span>
 
-            <section class="my2" id="conflictActions">
+            <section class="my-2" id="conflictActions">
                 <label for="uniquify">To resolve filename conflicts</label>
                 <div>
                     <label>
@@ -641,9 +642,9 @@
                 </div>
             </section>
 
-            <section class="my2">
+            <section class="my-2">
                 <label for="doubleLeft">Mouse button download trigger</label>
-                <div id="clickTypes" class="flex flex-column">
+                <div id="clickTypes" class="flex flex-col">
                     <label>
                         <input type="radio" name="clickType" value="none" />
                         disabled
@@ -697,7 +698,7 @@
                 </div>
             </section>
 
-            <section class="my2">
+            <section class="my-2">
                 <label>
                     <input type="checkbox" id="aggressiveCursorTracking" />
                     Aggressively track cursor position
