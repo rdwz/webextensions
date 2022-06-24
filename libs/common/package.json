@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "tslib": "^2.4.0",
-        "type-fest": "^2.13.1"
+        "type-fest": "^2.14.0"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^3.2.0",
