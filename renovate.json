@@ -5,14 +5,14 @@
         ":automergePatch",
         ":automergeTypes"
     ],
-    "packageRules": [
-        {
-            "matchPackagePatterns": "^@?parcel(/|$)",
-            "groupName": ["parcel packages"]
-        }
-    ],
     "nvm": {
         "fileMatch": ["^\\.node-version$"]
     },
+    "packageRules": [
+        {
+            "groupName": ["parcel packages"],
+            "matchPackagePatterns": "^@?parcel(/|$)"
+        }
+    ],
     "rangeStrategy": "bump"
 }
