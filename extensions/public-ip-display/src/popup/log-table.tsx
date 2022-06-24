@@ -5,7 +5,7 @@ import React, { ReactElement, useMemo } from "react";
 function stub(label: string): ReactElement {
     return (
         <tr>
-            <td className="pt1 pb1" colSpan={3}>
+            <td className="py-1" colSpan={3}>
                 {label}
             </td>
         </tr>
@@ -32,17 +32,17 @@ export function LogTable({ entries }: Props): ReactElement {
     }, [entries]);
 
     return (
-        <div className="db overflow-y-scroll" style={{ maxHeight: "10em" }}>
-            <table className="w-100 bg-white collapse">
+        <div className="block max-h-[10em] overflow-y-scroll">
+            <table className="bg-white border-collapse border-spacing-0 w-full">
                 <thead>
                     <tr>
-                        <th className="bg-black pl1 pr1 white">IP</th>
+                        <th className="bg-black px-1 text-white">IP</th>
 
-                        <th className="bg-black pl1 pr1 white b--white bl br bw1">
+                        <th className="bg-black border-solid border-white border-x-2 border-y-0 px-1 text-white">
                             Country
                         </th>
 
-                        <th className="bg-black pl1 pr1 white">Time</th>
+                        <th className="bg-black px-1 text-white">Time</th>
                     </tr>
                 </thead>
 

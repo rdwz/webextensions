@@ -19,9 +19,8 @@ export function RefreshHeader({ lastResult }: Props): ReactElement {
 
     return (
         <header
+            className="items-baseline grid"
             style={{
-                alignItems: "baseline",
-                display: "grid",
                 gridTemplateAreas: '"left center right"',
                 gridTemplateColumns: "1fr min-content 1fr",
             }}
@@ -29,13 +28,13 @@ export function RefreshHeader({ lastResult }: Props): ReactElement {
             <div style={{ gridArea: "left" }}>Status at:</div>
 
             <div
-                className="pl1 pr1 nowrap"
-                style={{ gridArea: "center", justifySelf: "center" }}
+                className="justify-self-center px-1 whitespace-nowrap"
+                style={{ gridArea: "center" }}
             >
                 {heading}
             </div>
 
-            <div style={{ gridArea: "right", justifySelf: "end" }}>
+            <div className="justify-self-end" style={{ gridArea: "right" }}>
                 <button
                     disabled={action == null}
                     onClick={action}

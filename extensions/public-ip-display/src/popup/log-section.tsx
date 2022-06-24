@@ -1,6 +1,7 @@
 import type { IpLogEntry } from "../common/";
 import { LogTable } from "./log-table";
 import { useConfirmation, useLogs, useSeparator } from "./state";
+import classNames from "classnames";
 import React, { ReactElement, useCallback, useMemo } from "react";
 
 function toCsvRow(...values: string[]): string {
@@ -55,16 +56,15 @@ export function LogSection(): ReactElement {
     return (
         <>
             <div
+                className="items-center grid"
                 style={{
-                    alignItems: "center",
-                    display: "grid",
                     gridTemplateAreas: '"left center right"',
                     gridTemplateColumns: "1fr min-content 1fr",
                 }}
             >
                 <div style={{ gridArea: "left" }}>
                     <button
-                        className="nowrap"
+                        className="whitespace-nowrap"
                         disabled={logs != null}
                         onClick={load}
                         type="button"
@@ -75,7 +75,7 @@ export function LogSection(): ReactElement {
 
                 <div style={{ gridArea: "center" }}>
                     <button
-                        className="nowrap"
+                        className="whitespace-nowrap"
                         disabled={copyCsv == null}
                         onClick={copyCsv}
                         type="button"
@@ -84,17 +84,15 @@ export function LogSection(): ReactElement {
                     </button>
                 </div>
 
-                <div style={{ gridArea: "right", justifySelf: "end" }}>
+                <div className="justify-self-end" style={{ gridArea: "right" }}>
                     <button
-                        className="nowrap"
+                        className={classNames("whitespace-nowrap", {
+                            "bg-red-400": denyClear != null,
+                        })}
                         disabled={logs == null || logs.length === 0}
                         onBlur={denyClear}
                         onClick={confirmClear}
                         onMouseOut={denyClear}
-                        style={{
-                            backgroundColor:
-                                denyClear == null ? undefined : "tomato",
-                        }}
                         type="button"
                     >
                         {denyClear == null ? "🗑️ Delete" : "🗑️ Really delete?"}

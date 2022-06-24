@@ -24,7 +24,7 @@
     },
     "options_ui": {
         "page": "options.html",
-        "browser_style": true
+        "browser_style": false
     },
     "background": {
         "scripts": ["background.ts"],

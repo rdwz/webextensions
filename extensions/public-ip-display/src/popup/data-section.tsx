@@ -18,28 +18,28 @@ export function DataSection({ data }: Props): ReactElement {
     }, [data]);
 
     return (
-        <div className="flex justify-around items-baseline">
-            <div className="pa2 ba ma3 bg-white">
-                <div className="nowrap">
-                    <code className="mr1">{data.ip}</code>
+        <div className="flex items-baseline justify-around">
+            <div className="bg-white border border-solid m-4 p-2">
+                <div className="whitespace-nowrap">
+                    <code className="mr-1">{data.ip}</code>
 
                     <button onClick={copy} title="Copy IP" type="button">
                         📋
                     </button>
                 </div>
 
-                <small className="i">{data.ipService}</small>
+                <small className="italic">{data.ipService}</small>
             </div>
 
             {data.country == null || data.countryService == null ? null : (
-                <div className="pa2 ba ma3 bg-white">
-                    <div className="nowrap">
+                <div className="bg-white border border-solid m-4 p-2">
+                    <div className="whitespace-nowrap">
                         <FlagImage country={data.country} />
 
-                        <code className="ml1">{data.country}</code>
+                        <code className="ml-1">{data.country}</code>
                     </div>
 
-                    <small className="i">{data.countryService}</small>
+                    <small className="italic">{data.countryService}</small>
                 </div>
             )}
         </div>

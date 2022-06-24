@@ -9,30 +9,34 @@ interface Props {
 export function LogRow({ entry }: Props): ReactElement {
     return (
         <tr>
-            <td className="bb">
-                <div className="tc">{entry.ip}</div>
+            <td className="border-0 border-b border-solid">
+                {entry.ip}
 
-                <small className="tr db i">{entry.service}</small>
+                <br />
+
+                <small className="block italic">{entry.service}</small>
             </td>
 
-            <td className="bb">
+            <td className="border-0 border-b border-solid">
                 {entry.country == null ||
                 entry.countryService == null ? null : (
                     <>
-                        <div className="tc">
+                        <div>
                             <FlagImage country={entry.country} />
 
-                            <span className="ml1">{entry.country}</span>
+                            <span className="ml-1">{entry.country}</span>
                         </div>
 
-                        <small className="tr db i">
+                        <small className="block italic">
                             {entry.countryService}
                         </small>
                     </>
                 )}
             </td>
 
-            <td className="v-base bb tc">{entry.timestamp.toLocaleString()}</td>
+            <td className="align-baseline border-0 border-b border-solid">
+                {entry.timestamp.toLocaleString()}
+            </td>
         </tr>
     );
 }

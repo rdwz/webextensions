@@ -14,8 +14,8 @@ export function FlagImage({ country }: Props): ReactElement {
     return (
         <img
             alt={`flag of ${country}`}
+            className="align-sub h-[1em]"
             src={flag}
-            style={{ height: `1em`, verticalAlign: "sub" }}
         />
     );
 }
