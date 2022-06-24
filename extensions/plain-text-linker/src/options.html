@@ -7,8 +7,8 @@
         <title>Plain Text Linker Options</title>
     </head>
 
-    <body>
-        <section>
+    <body class="p-1">
+        <section class="my-2">
             <h1>Triggering</h1>
 
             <div>
@@ -19,7 +19,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="my-2">
             <h1>Text processing</h1>
 
             <div>
@@ -27,12 +27,10 @@
                     <input type="checkbox" id="tryHttp" />
                     If opening a raw domain with https:// fails, try insecure
                     http:// as well
-                    <sup>1</sup>
                 </label>
             </div>
 
             <p>
-                <sup>1</sup>
                 When a URL doesn't specify a protocol (e.g. "example.net/foo"),
                 Plain Text Linker will automatically assume the https:// prefix.
                 <br />
@@ -41,25 +39,28 @@
             </p>
         </section>
 
-        <section>
+        <section class="my-2">
             <h1>Appearance</h1>
 
-            <div>
+            <div class="my-1">
                 <label for="notifyInvalidUrl">
                     <input type="checkbox" id="notifyInvalidUrl" />
                     Notify if a URL could not be opened
                 </label>
             </div>
-            <div>
+
+            <div class="my-1">
                 <label for="foregroundByDefault">
                     <input type="checkbox" id="foregroundByDefault" />
                     Switch to opened tab immediately (inverted by holding Ctrl
                     key)
                 </label>
             </div>
-            <fieldset id="newTabPositionPicker">
+
+            <fieldset class="my-1" id="newTabPositionPicker">
                 <legend>New tab position</legend>
-                <label for="newTabPositionDefault">
+
+                <label class="block" for="newTabPositionDefault">
                     <input
                         type="radio"
                         id="newTabPositionDefault"
@@ -68,7 +69,7 @@
                     />
                     Browser default
                 </label>
-                <label for="newTabPositionRight">
+                <label class="block" for="newTabPositionRight">
                     <input
                         type="radio"
                         id="newTabPositionRight"
@@ -77,7 +78,7 @@
                     />
                     To the right of the current tab
                 </label>
-                <label for="newTabPositionFarRight">
+                <label class="block" for="newTabPositionFarRight">
                     <input
                         type="radio"
                         id="newTabPositionFarRight"

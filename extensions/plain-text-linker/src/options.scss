@@ -1,3 +1,9 @@
+@import "~modern-normalize";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 label {
     font-weight: bold;
 }

@@ -16,8 +16,9 @@
         "128": "images/icon-128.png"
     },
     "options_ui": {
+        "open_in_tab": true,
         "page": "options.html",
-        "browser_style": true
+        "browser_style": false
     },
     "background": {
         "scripts": ["background.ts"],
