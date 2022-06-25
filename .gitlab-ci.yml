@@ -9,6 +9,8 @@ cache:
 
 ci:
   script:
+    # https://github.com/parcel-bundler/parcel/issues/8005#issuecomment-1120149358
+    - export NODE_OPTIONS=--no-experimental-fetch
     # necessary with alpine's minimal image
     - apk add --no-cache git make python3 util-linux
     - yarn install --immutable
