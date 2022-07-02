@@ -1,9 +1,9 @@
-import { triggerable } from "../../common/";
 import { isButton } from "./element";
+import { newTriggerable } from "@webextensions/common";
 
 let lastHoveredElement: Element | null = null;
 
-const { hide: hoverEvent, expose: hover } = triggerable<MouseEvent>();
+const { hide: hoverEvent, expose: hover } = newTriggerable<MouseEvent>();
 // will not trigger for the hoverbutton's image or the same image redundantly
 export { hover };
 

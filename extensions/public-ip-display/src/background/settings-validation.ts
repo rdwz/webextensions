@@ -1,6 +1,7 @@
-import { Local, Sync, SyncIO, ipGetter, triggerable } from "../common/";
+import { Local, Sync, SyncIO, ipGetter } from "../common/";
 import { setTimer } from "./timing";
 import { setToolbarIcon } from "./toolbar";
+import { newTriggerable } from "@webextensions/common";
 import browser, { Runtime, Storage } from "webextension-polyfill";
 
 async function monitorUpdates(
@@ -18,7 +19,7 @@ async function monitorUpdates(
 }
 
 const { hide: essentialConfigChangedEvent, expose: essentialConfigChanged } =
-    triggerable();
+    newTriggerable();
 export { essentialConfigChanged };
 
 async function onSettingChange(

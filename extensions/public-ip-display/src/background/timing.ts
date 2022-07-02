@@ -1,4 +1,4 @@
-import { triggerable } from "../common/";
+import { newTriggerable } from "@webextensions/common";
 import browser from "webextension-polyfill";
 
 const REFRESH_IP = "refresh";
@@ -9,7 +9,7 @@ export function setTimer(timeout: number): void {
     });
 }
 
-const { hide: timerEvent, expose: timerPassed } = triggerable();
+const { hide: timerEvent, expose: timerPassed } = newTriggerable();
 export { timerPassed };
 
 export function armTimer(): void {

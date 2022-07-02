@@ -11,7 +11,7 @@ interface Triggerable<T> {
     };
 }
 
-export function triggerable<T = undefined>(): Triggerable<T> {
+export function newTriggerable<T = undefined>(): Triggerable<T> {
     const actions = new Map<symbol, Action<T>>();
 
     return {

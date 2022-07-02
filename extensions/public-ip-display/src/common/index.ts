@@ -5,4 +5,3 @@ export * from "./ipdata";
 export * from "./iplog";
 export * from "./messages";
 export * from "./settings";
-export * from "./triggerable";

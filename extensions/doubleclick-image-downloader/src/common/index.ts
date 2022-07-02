@@ -3,4 +3,3 @@ export * from "./filename";
 export * from "./filtering";
 export * from "./messages";
 export * from "./settings";
-export * from "./triggerable";
