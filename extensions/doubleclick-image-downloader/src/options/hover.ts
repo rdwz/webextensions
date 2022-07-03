@@ -2,9 +2,9 @@ import {
     HoverButtonPosition,
     HoverButtonSkin,
     Settings,
+    buttonSkins,
     write,
 } from "../common/";
-import browser from "webextension-polyfill";
 
 const dragDropSupported = document.getElementById(
     "supportDragDrop"
@@ -37,11 +37,9 @@ function previewButton(): void {
     const opacity = parseInt(hoverButtonOpacity.value, 10) / 100;
     const skin = [...hoverButtonSkins.getElementsByTagName("input")].filter(
         (input) => input.checked
-    )[0]!.value;
+    )[0]!.value as HoverButtonSkin;
 
-    hoverButtonPreview.src = browser.runtime.getURL(
-        `images/download_off_${skin}.png`
-    );
+    hoverButtonPreview.src = buttonSkins.off[skin];
     hoverButtonPreview.width = size;
     hoverButtonPreview.height = size;
     hoverButtonPreview.style.opacity = String(opacity);

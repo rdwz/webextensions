@@ -1,5 +1,7 @@
 import {
     AdvancedNotificationOptions,
+    error128,
+    icon128,
     tryCreateFancyNotification,
 } from "../common/";
 import { notifications } from "./state";
@@ -37,13 +39,11 @@ export function monitorNotifications(): void {
     );
 }
 
-const iconUrl = "images/icon-128.png";
-
 export async function notifyCompletion(
     downloadItem: Downloads.DownloadItem
 ): Promise<void> {
     const basicOptions: Notifications.CreateNotificationOptions = {
-        iconUrl,
+        iconUrl: icon128,
         message: downloadItem.filename,
         title: "Image downloaded",
         type: "basic",
@@ -68,7 +68,7 @@ export async function notifyCompletion(
 
 export async function notifyNoImageForHotkey(): Promise<void> {
     await browser.notifications.create({
-        iconUrl,
+        iconUrl: icon128,
         message: "No image found under cursor.",
         title: "Hotkey activated",
         type: "basic",
@@ -85,7 +85,7 @@ export async function notifyFailure(
     );
 
     await browser.notifications.create({
-        iconUrl: "images/error-128.png",
+        iconUrl: error128,
         message: `Reason: ${download.error}\nFile: ${filename}`,
         title: "Double-click download failed!",
         type: "basic",
