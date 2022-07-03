@@ -30,7 +30,7 @@
         "@types/webextension-polyfill": "^0.9.0",
         "@typescript-eslint/eslint-plugin": "^5.30.3",
         "@typescript-eslint/parser": "^5.30.3",
-        "eslint": "^8.18.0",
+        "eslint": "^8.19.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-prettier": "^4.2.1",
         "parcel": "^2.6.2",
