@@ -10,7 +10,9 @@ import browser, { Tabs } from "webextension-polyfill";
 
 async function notify(title: string, message: string): Promise<void> {
     await browser.notifications.create({
-        iconUrl: "/images/icon-128.png",
+        iconUrl: browser.runtime.getURL(
+            new URL("../images/icon-128.png", import.meta.url).pathname
+        ),
         message,
         title,
         type: "basic",

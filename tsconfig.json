@@ -3,16 +3,20 @@
         "composite": true,
         "esModuleInterop": true,
         "importHelpers": true,
-        "inlineSourceMap": false, // maximum js parsing performance
+        "inlineSourceMap": false,
+        // maximum js parsing performance
         "importsNotUsedAsValues": "error",
         "isolatedModules": true,
         "jsx": "react",
+        "module": "ES2020",
         "moduleResolution": "node",
         "noEmit": true,
         "noUncheckedIndexedAccess": true,
         "strict": true,
-        "target": "es2020", // compile as modernly as possible, parcel will downcompile anyway with babel and browserslist
+        "target": "es2020",
+        // compile as modernly as possible, parcel will downcompile anyway with babel and browserslist
         "useUnknownInCatchVariables": true
     },
-    "include": [] // against accidentally building the root
+    "include": []
+    // against accidentally building the root
 }

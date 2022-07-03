@@ -40,7 +40,9 @@ export async function open(
     if (url === null) {
         if (settings.notifyInvalidUrl) {
             await browser.notifications.create({
-                iconUrl: "/images/icon-128.png",
+                iconUrl: browser.runtime.getURL(
+                    new URL("../images/icon-128.png", import.meta.url).pathname
+                ),
                 message: `Could not read this as a URL:\n${msg.text}`,
                 title: "Invalid URL",
                 type: "basic",
