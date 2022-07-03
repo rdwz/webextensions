@@ -43,6 +43,7 @@ rules:
   one-var:
     - error
     - never
+  require-await: off
   sort-imports: off
 
   # https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
@@ -69,6 +70,7 @@ rules:
       allowNullish: true
       allowNumber: true
   "@typescript-eslint/sort-type-union-intersection-members": off
+  "@typescript-eslint/require-await": error
   # enforced through tsconfig
   "@typescript-eslint/typedef": off
 
