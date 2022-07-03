@@ -1,4 +1,4 @@
-import { toggleDarkness } from "./darkness";
+import { toggleDarknessInPage } from "./darkness";
 import browser from "webextension-polyfill";
 
 async function toggleCurrenTabDarkness(): Promise<void> {
@@ -10,7 +10,7 @@ async function toggleCurrenTabDarkness(): Promise<void> {
         throw new Error("missing tab id");
     }
 
-    await toggleDarkness(tab);
+    await toggleDarknessInPage(tab);
 }
 
 export function monitorHotkey(): void {

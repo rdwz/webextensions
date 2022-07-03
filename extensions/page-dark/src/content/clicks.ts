@@ -1,5 +1,4 @@
-import { signal } from "../common/";
-import browser from "webextension-polyfill";
+import { turnDarknessOff } from "../common/";
 
 const MEDIA_NODE_NAMES = ["VIDEO", "EMBED", "OBJECT"];
 
@@ -9,7 +8,7 @@ async function requestDarknessOff(event: MouseEvent): Promise<void> {
     }
 
     if (!MEDIA_NODE_NAMES.includes(event.target.nodeName)) {
-        await browser.runtime.sendMessage(signal("turnDarknessOff"));
+        await turnDarknessOff.sendToRuntime();
     }
 }
 

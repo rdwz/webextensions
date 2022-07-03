@@ -1,5 +1,5 @@
 import { Settings, load, monitorSettingsStorage } from "../common/";
-import { toggleDarkness } from "./darkness";
+import { toggleDarknessInPage } from "./darkness";
 import browser, { Menus, Tabs } from "webextension-polyfill";
 
 const TOGGLE_DARKNESS_ID = "pageDark_toggleDarkness";
@@ -31,7 +31,7 @@ async function toggleDarknessInSourceTab(
         );
     }
 
-    await toggleDarkness(tab);
+    await toggleDarknessInPage(tab);
 }
 
 async function addOrRemoveContextMenu(settings: Settings): Promise<void> {

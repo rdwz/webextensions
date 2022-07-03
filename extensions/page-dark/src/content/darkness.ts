@@ -1,6 +1,5 @@
-import { reportState } from "../common/";
+import { reportingState } from "../common";
 import { detectClick, stopDetectingClick } from "./clicks";
-import browser from "webextension-polyfill";
 
 let isDark = false;
 
@@ -19,7 +18,7 @@ async function setDarkness(beDark: boolean): Promise<void> {
 
     isDark = beDark;
 
-    await browser.runtime.sendMessage(reportState(isDark));
+    await reportingState.sendToRuntime({ dark: isDark });
 }
 
 export async function toggle(dark?: boolean): Promise<void> {

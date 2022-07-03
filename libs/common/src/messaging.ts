@@ -29,10 +29,7 @@ function isMessage(value: unknown): value is Message {
         return false;
     }
     const { subject, payload } = value as Record<keyof Message, unknown>;
-    return (
-        typeof subject == "string" &&
-        (payload === undefined || isRecord(payload))
-    );
+    return typeof subject == "string" && (payload == null || isRecord(payload));
 }
 
 export function createChannel<

@@ -1,7 +1,7 @@
-import { signal } from "../common/";
+import { toggleDarkness } from "../common/";
 import browser, { Tabs } from "webextension-polyfill";
 
-export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
+export async function toggleDarknessInPage(tab: Tabs.Tab): Promise<void> {
     if (tab.id == null) {
         throw new Error("expected a tab with an id");
     }
@@ -18,8 +18,8 @@ export async function toggleDarkness(tab: Tabs.Tab): Promise<void> {
         // ignore
     }
 
-    await browser.tabs.sendMessage(tab.id, signal("toggleDarkness"), {
+    await toggleDarkness.sendToTab(tab.id, {
         // we want to send it to all frames in the tab
         frameId: undefined,
-    });
+    })();
 }

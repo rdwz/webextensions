@@ -1,5 +1,5 @@
-import { Message, asMessage, signal } from "../common/";
-import browser, { Runtime } from "webextension-polyfill";
+import { freshInjection, reportingState, turnDarknessOff } from "../common/";
+import browser from "webextension-polyfill";
 
 function getIcon(dark: boolean): Record<19 | 38, string> {
     const variant = dark ? "on" : "off";
@@ -10,44 +10,33 @@ function getIcon(dark: boolean): Record<19 | 38, string> {
     };
 }
 
-async function interpretMessage(
-    data: Message,
-    sender: Runtime.MessageSender
-): Promise<void> {
-    if (sender.tab?.id == null) {
-        throw new Error("received message from null-tab");
-    }
-
-    switch (data.subject) {
-        case "reportingState":
-            return browser.browserAction.setIcon({
-                path: getIcon(data.dark),
-                tabId: sender.tab.id,
-            });
-
-        case "turnDarknessOff":
-            await browser.tabs.sendMessage(
-                sender.tab.id,
-                signal("turnDarknessOff"),
-                {
-                    frameId: undefined,
-                }
-            );
-            break;
-
-        case "freshInjection":
-            return browser.tabs.insertCSS(sender.tab.id, {
-                file: "content.css",
-                frameId: sender.frameId,
-            });
-
-        default:
-            throw new Error(`unknown message: ${JSON.stringify(data)}`);
-    }
-}
-
 export function reactToMessages(): void {
-    browser.runtime.onMessage.addListener((data: unknown, sender) => {
-        interpretMessage(asMessage(data), sender).catch(console.error);
+    reportingState.onReceive(async (data, sender) => {
+        if (sender.tab?.id == null) {
+            throw new Error("received message from null-tab");
+        }
+        await browser.browserAction.setIcon({
+            path: getIcon(data.dark),
+            tabId: sender.tab.id,
+        });
+    });
+
+    turnDarknessOff.onReceive(async (data, sender) => {
+        if (sender.tab?.id == null) {
+            throw new Error("received message from null-tab");
+        }
+        await turnDarknessOff.sendToTab(sender.tab.id, {
+            frameId: undefined,
+        })();
+    });
+
+    freshInjection.onReceive(async (data, sender) => {
+        if (sender.tab?.id == null) {
+            throw new Error("received message from null-tab");
+        }
+        await browser.tabs.insertCSS(sender.tab.id, {
+            file: "content.css",
+            frameId: sender.frameId,
+        });
     });
 }
