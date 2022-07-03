@@ -11,7 +11,7 @@ async function showOptions(
 }
 
 export function fixSettingsOnUpdate(): void {
-    browser.runtime.onInstalled.addListener(
-        (details) => void showOptions(details).catch(console.error)
-    );
+    browser.runtime.onInstalled.addListener((details) => {
+        showOptions(details).catch(console.error);
+    });
 }

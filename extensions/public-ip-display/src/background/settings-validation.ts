@@ -71,11 +71,10 @@ async function monitorChanges(
 }
 
 export function watchSettingsChanges(): void {
-    browser.runtime.onInstalled.addListener(
-        (details) => void monitorUpdates(details).catch(console.error)
-    );
-    browser.storage.onChanged.addListener(
-        (changes, area) =>
-            void monitorChanges(changes, area).catch(console.error)
-    );
+    browser.runtime.onInstalled.addListener((details) => {
+        monitorUpdates(details).catch(console.error);
+    });
+    browser.storage.onChanged.addListener((changes, area) => {
+        monitorChanges(changes, area).catch(console.error);
+    });
 }

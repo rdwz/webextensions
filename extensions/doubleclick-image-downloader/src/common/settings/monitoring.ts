@@ -45,8 +45,7 @@ async function inspectChanges(
 }
 
 export function monitorStorage(): void {
-    browser.storage.onChanged.addListener(
-        (changes, area) =>
-            void inspectChanges(changes, area).catch(console.error)
-    );
+    browser.storage.onChanged.addListener((changes, area) => {
+        inspectChanges(changes, area).catch(console.error);
+    });
 }

@@ -16,8 +16,7 @@ async function interpretMessage(
 }
 
 export function waitForMessage(): void {
-    browser.runtime.onMessage.addListener(
-        (data: unknown, sender) =>
-            void interpretMessage(asMessage(data), sender).catch(console.error)
-    );
+    browser.runtime.onMessage.addListener((data: unknown, sender) => {
+        interpretMessage(asMessage(data), sender).catch(console.error);
+    });
 }

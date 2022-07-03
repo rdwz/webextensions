@@ -14,8 +14,7 @@ async function interpretMessage(data: Message): Promise<void> {
 }
 
 export function reactToMessages(): void {
-    browser.runtime.onMessage.addListener(
-        (message: unknown) =>
-            void interpretMessage(asMessage(message)).catch(console.error)
-    );
+    browser.runtime.onMessage.addListener((message: unknown) => {
+        interpretMessage(asMessage(message)).catch(console.error);
+    });
 }

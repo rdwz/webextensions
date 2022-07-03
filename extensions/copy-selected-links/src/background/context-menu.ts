@@ -75,18 +75,16 @@ async function manageMenus(settings: Settings): Promise<void> {
 }
 
 export function registerMenu(): void {
-    browser.contextMenus.onClicked.addListener(
-        (data, tab) => void reactToContextMenu(data, tab).catch(console.error)
-    );
+    browser.contextMenus.onClicked.addListener((data, tab) => {
+        reactToContextMenu(data, tab).catch(console.error);
+    });
 
     load().then(manageMenus).catch(console.error);
 
-    monitor(
-        "showCopyMenuAction",
-        (settings) => void manageMenus(settings).catch(console.error)
-    );
-    monitor(
-        "showOpenMenuAction",
-        (settings) => void manageMenus(settings).catch(console.error)
-    );
+    monitor("showCopyMenuAction", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
+    monitor("showOpenMenuAction", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
 }

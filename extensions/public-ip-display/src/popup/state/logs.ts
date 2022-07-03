@@ -5,10 +5,9 @@ import browser, { Storage } from "webextension-polyfill";
 export function useLogs(): [IpLogEntry[] | null, () => void, () => void] {
     const [logs, setLogs] = useState<IpLogEntry[] | null>(null);
 
-    const getLogs = useCallback(
-        () => void loadLog().then(setLogs).catch(console.error),
-        []
-    );
+    const getLogs = useCallback(() => {
+        loadLog().then(setLogs).catch(console.error);
+    }, []);
 
     useEffect(() => {
         function listener(

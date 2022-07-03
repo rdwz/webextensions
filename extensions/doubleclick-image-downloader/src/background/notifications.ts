@@ -29,9 +29,9 @@ async function inspectDownload(
 }
 
 export function monitorNotifications(): void {
-    browser.notifications.onButtonClicked.addListener(
-        (id, index) => void inspectDownload(id, index).catch(console.error)
-    );
+    browser.notifications.onButtonClicked.addListener((id, index) => {
+        inspectDownload(id, index).catch(console.error);
+    });
     browser.notifications.onClosed.addListener((id) =>
         notifications.delete(id)
     );

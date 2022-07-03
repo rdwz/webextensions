@@ -70,14 +70,13 @@ async function addOrRemoveContextMenu(settings: Settings): Promise<void> {
 }
 
 export function provideContextMenu(): void {
-    browser.contextMenus.onClicked.addListener(
-        (clicked, tab) =>
-            void toggleDarknessInSourceTab(clicked, tab).catch(console.error)
-    );
+    browser.contextMenus.onClicked.addListener((clicked, tab) => {
+        toggleDarknessInSourceTab(clicked, tab).catch(console.error);
+    });
 
     load().then(addOrRemoveContextMenu).catch(console.error);
 
-    monitorSettingsStorage(
-        (settings) => void addOrRemoveContextMenu(settings).catch(console.error)
-    );
+    monitorSettingsStorage((settings) => {
+        addOrRemoveContextMenu(settings).catch(console.error);
+    });
 }

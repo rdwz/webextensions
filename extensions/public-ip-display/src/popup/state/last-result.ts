@@ -13,10 +13,9 @@ export function useLastResult(): IpCountryData | null {
         placeholder
     );
 
-    const load = useCallback(
-        () => void loadLast().then(setData).catch(console.error),
-        []
-    );
+    const load = useCallback(() => {
+        loadLast().then(setData).catch(console.error);
+    }, []);
 
     useEffect(load, [load]);
 

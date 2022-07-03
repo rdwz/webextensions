@@ -44,9 +44,9 @@ async function trim(): Promise<void> {
 }
 
 export function trimLogOnBoot(): void {
-    browser.runtime.onStartup.addListener(
-        () => void trim().catch(console.error)
-    );
+    browser.runtime.onStartup.addListener(() => {
+        trim().catch(console.error);
+    });
 }
 
 export async function clearLog(): Promise<void> {

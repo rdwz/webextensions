@@ -91,19 +91,16 @@ async function manageMenus(settings: Settings): Promise<void> {
 }
 
 export function registerContextMenu(): void {
-    browser.contextMenus.onClicked.addListener(
-        (clicked, tab) =>
-            void downloadFocusedImage(clicked, tab).catch(console.error)
-    );
+    browser.contextMenus.onClicked.addListener((clicked, tab) => {
+        downloadFocusedImage(clicked, tab).catch(console.error);
+    });
 
     load().then(manageMenus).catch(console.error);
 
-    monitor(
-        "enableImageContextMenu",
-        (settings) => void manageMenus(settings).catch(console.error)
-    );
-    monitor(
-        "enableSelectionContextMenu",
-        (settings) => void manageMenus(settings).catch(console.error)
-    );
+    monitor("enableImageContextMenu", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
+    monitor("enableSelectionContextMenu", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
 }

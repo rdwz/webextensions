@@ -119,7 +119,9 @@ async function run(): Promise<void> {
 }
 
 export function refreshDataOnTriggers(): void {
-    const doRun = (): void => void run().catch(console.error);
+    const doRun = (): void => {
+        run().catch(console.error);
+    };
     const description = "refresh IP and country data";
 
     browser.runtime.onInstalled.addListener(doRun);

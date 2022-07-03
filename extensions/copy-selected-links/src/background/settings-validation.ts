@@ -13,7 +13,7 @@ async function onInstall(details: OnInstalledDetailsType): Promise<void> {
 }
 
 export function validateSettingsOnInstall(): void {
-    browser.runtime.onInstalled.addListener(
-        (details) => void onInstall(details).catch(console.error)
-    );
+    browser.runtime.onInstalled.addListener((details) => {
+        onInstall(details).catch(console.error);
+    });
 }

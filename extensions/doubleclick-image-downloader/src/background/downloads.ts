@@ -129,7 +129,7 @@ export async function startDownload(
 
 export function monitorDownloads(): void {
     fileNamingSupport()?.addListener(determiningFilename);
-    browser.downloads.onChanged.addListener(
-        (delta) => void handleEndOfDownload(delta).catch(console.error)
-    );
+    browser.downloads.onChanged.addListener((delta) => {
+        handleEndOfDownload(delta).catch(console.error);
+    });
 }

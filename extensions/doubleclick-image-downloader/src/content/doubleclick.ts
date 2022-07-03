@@ -77,8 +77,9 @@ function createListener(
 
         case ClickType.singleLeft:
         case ClickType.doubleLeft: {
-            const listener = (event: MouseEvent): void =>
-                void detectLeftClick(settings, event).catch(console.error);
+            const listener = (event: MouseEvent): void => {
+                detectLeftClick(settings, event).catch(console.error);
+            };
             const clickType =
                 settings.triggerByClickType === ClickType.singleLeft
                     ? "click"
@@ -88,8 +89,9 @@ function createListener(
 
         case ClickType.singleRight:
         case ClickType.doubleRight: {
-            const listener = (event: MouseEvent): void =>
-                void detectRightClick(settings, event).catch(console.error);
+            const listener = (event: MouseEvent): void => {
+                detectRightClick(settings, event).catch(console.error);
+            };
             const clickType = "mouseup";
             return [clickType, listener];
         }

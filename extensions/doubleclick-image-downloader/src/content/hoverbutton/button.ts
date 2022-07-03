@@ -40,13 +40,9 @@ let listenerToken: symbol | null = null;
 function actualizeState(settings: Settings): void {
     if (settings.singleClickEnabled) {
         if (listenerToken == null) {
-            listenerToken = hover.subscribe(
-                (event) =>
-                    void adaptToHoveredElement(settings, event).catch(
-                        console.error
-                    ),
-                "move button onto hovered image"
-            );
+            listenerToken = hover.subscribe((event) => {
+                adaptToHoveredElement(settings, event).catch(console.error);
+            }, "move button onto hovered image");
         }
     } else {
         if (listenerToken != null) {
