@@ -33,7 +33,9 @@ async function reactToContextMenu(
 
     const { linkText: text, linkUrl: url } = contextMenuInfo;
     const link: Link | undefined =
-        url == null || text == null ? undefined : { text, url };
+        url == null || text == null
+            ? undefined
+            : { text: text.trim().replace(/\s+/gu, " "), url };
 
     switch (contextMenuInfo.menuItemId) {
         case CONTEXT_MENU_IDS.copyLinks:

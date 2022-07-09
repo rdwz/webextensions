@@ -13,7 +13,10 @@ export function getLinks(
 
     const links = [...document.links]
         .filter((anchor) => selection.containsNode(anchor, true))
-        .map<Link>((link) => ({ text: link.innerText, url: link.href }));
+        .map<Link>((link) => ({
+            text: link.innerText.trim().replace(/\s+/gu, " "),
+            url: link.href,
+        }));
 
     if (settings.includeCommandTarget && msg.externalContextLink != null) {
         // people probably drag from start to end
