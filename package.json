@@ -21,7 +21,7 @@
         "@parcel/config-webextension": "^2.6.2",
         "@parcel/core": "^2.6.2",
         "@parcel/transformer-sass": "^2.6.2",
-        "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+        "@trivago/prettier-plugin-sort-imports": "^3.3.0",
         "@typescript-eslint/parser": "^5.30.7",
         "bestzip": "^2.2.1",
         "eslint": "^8.20.0",
