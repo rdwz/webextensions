@@ -1795,7 +1795,7 @@ __metadata:
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
@@ -2956,7 +2956,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-essentials: ^9.2.0
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -3477,7 +3477,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-essentials: ^9.2.0
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -4932,7 +4932,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-essentials: ^9.2.0
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -6771,7 +6771,7 @@ __metadata:
     rimraf: ^3.0.2
     tailwindcss: ^3.1.7
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -7002,7 +7002,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-essentials: ^9.2.0
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -7262,7 +7262,7 @@ __metadata:
     tailwindcss: ^3.1.7
     ts-essentials: ^9.2.0
     tslib: ^2.4.0
-    type-fest: ^2.17.0
+    type-fest: ^2.18.0
     typescript: ^4.7.4
     web-ext: ^7.1.0
     webextension-polyfill: ^0.9.0
@@ -8549,10 +8549,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^2.17.0":
-  version: 2.17.0
-  resolution: "type-fest@npm:2.17.0"
-  checksum: cb626b7434f463632643ee8681c900d17739decd820f28ed2e77de7fb8fc406f30f3e86b1b8f26a76f94fbf781e96347febaa8d06b5cef21fdc5f65ded86ad05
+"type-fest@npm:^2.18.0":
+  version: 2.18.0
+  resolution: "type-fest@npm:2.18.0"
+  checksum: 0737128d9d77b93793c6ee443e304462a792f5b723a6be035d6cb488c5610a8baa00522805421341c04324c80efba9849885bbfbc5a9623d0672fe8712969f62
   languageName: node
   linkType: hard
 
