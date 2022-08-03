@@ -18,6 +18,8 @@ async function setDarkness(beDark: boolean): Promise<void> {
 
     isDark = beDark;
 
+    console.info("alerting background");
+
     await reportingState.sendToRuntime({ dark: isDark });
 }
 

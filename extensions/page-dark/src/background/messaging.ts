@@ -12,6 +12,7 @@ function getIcon(dark: boolean): Record<19 | 38, string> {
 
 export function reactToMessages(): void {
     reportingState.onReceive(async (data, sender) => {
+        console.info("received");
         if (sender.tab?.id == null) {
             throw new Error("received message from null-tab");
         }
