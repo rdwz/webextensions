@@ -7,8 +7,12 @@ export async function setToolbarIcon(
     if (countryCode == null) {
         await browser.browserAction.setIcon({
             path: {
-                19: "/images/icon-19.png",
-                38: "/images/icon-38.png",
+                19: browser.runtime.getURL(
+                    new URL("../images/icon-19.png", import.meta.url).pathname
+                ),
+                38: browser.runtime.getURL(
+                    new URL("../images/icon-38.png", import.meta.url).pathname
+                ),
             },
         });
     } else {

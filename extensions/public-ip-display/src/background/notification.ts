@@ -5,7 +5,9 @@ export async function showNotification(
     message: string
 ): Promise<void> {
     await browser.notifications.create({
-        iconUrl: "/images/icon-128.png",
+        iconUrl: browser.runtime.getURL(
+            new URL("../images/icon-128.png", import.meta.url).pathname
+        ),
         message,
         title,
         type: "basic",
@@ -14,7 +16,9 @@ export async function showNotification(
 
 export async function showError(title: string, message: string): Promise<void> {
     await browser.notifications.create({
-        iconUrl: "/images/error-128.png",
+        iconUrl: browser.runtime.getURL(
+            new URL("../images/error-128.png", import.meta.url).pathname
+        ),
         message,
         title,
         type: "basic",

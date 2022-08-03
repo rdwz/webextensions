@@ -1,14 +1,23 @@
 import { Message, asMessage, signal } from "../common/";
 import browser, { Runtime } from "webextension-polyfill";
 
-function getIcon(dark: boolean): Record<19 | 38, string> {
-    const variant = dark ? "on" : "off";
+const offIcons = {
+    19: browser.runtime.getURL(
+        new URL("../images/icon-off-19.png", import.meta.url).pathname
+    ),
+    38: browser.runtime.getURL(
+        new URL("../images/icon-off-38.png", import.meta.url).pathname
+    ),
+};
 
-    return {
-        19: browser.runtime.getURL(`images/icon-${variant}-19.png`),
-        38: browser.runtime.getURL(`images/icon-${variant}-38.png`),
-    };
-}
+const onIcons = {
+    19: browser.runtime.getURL(
+        new URL("../images/icon-on-19.png", import.meta.url).pathname
+    ),
+    38: browser.runtime.getURL(
+        new URL("../images/icon-on-38.png", import.meta.url).pathname
+    ),
+};
 
 async function interpretMessage(
     data: Message,
@@ -21,7 +30,7 @@ async function interpretMessage(
     switch (data.subject) {
         case "reportingState":
             return browser.browserAction.setIcon({
-                path: getIcon(data.dark),
+                path: data.dark ? onIcons : offIcons,
                 tabId: sender.tab.id,
             });
 
