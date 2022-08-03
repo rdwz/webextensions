@@ -4,7 +4,7 @@ import browser from "webextension-polyfill";
 
 async function reset(): Promise<void> {
     const settings = await load();
-    resetCounter(settings);
+    await resetCounter(settings);
 }
 
 export function reactToToolbarButton(): void {

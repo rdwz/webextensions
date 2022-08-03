@@ -76,11 +76,11 @@ interface FunctionalContext {
     imageUrl: URL;
 }
 
-export function renameFunctionally(
+export async function renameFunctionally(
     filename: string,
-    counter: (st: Settings) => number,
+    counter: (st: Settings) => Promise<number>,
     { imageUrl, settings, tab }: FunctionalContext
-): string {
+): Promise<string> {
     if (tab.url == null) {
         throw new Error("missing url on tab?");
     }
@@ -90,7 +90,7 @@ export function renameFunctionally(
     }
 
     return renameTechnically(filename, settings.fileNamePattern, {
-        counter: counter(settings),
+        counter: await counter(settings),
         counterPadding: settings.counterPadding,
         imageUrl,
         tabTitle: tab.title,

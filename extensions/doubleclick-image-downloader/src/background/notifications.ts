@@ -9,7 +9,7 @@ async function inspectDownload(
     notificationId: string,
     buttonIndex: number
 ): Promise<void> {
-    const downloadId = notifications.get(notificationId);
+    const downloadId = await notifications.get(notificationId);
 
     if (downloadId == null) {
         throw new Error(
@@ -32,9 +32,9 @@ export function monitorNotifications(): void {
     browser.notifications.onButtonClicked.addListener((id, index) => {
         inspectDownload(id, index).catch(console.error);
     });
-    browser.notifications.onClosed.addListener((id) =>
-        notifications.delete(id)
-    );
+    browser.notifications.onClosed.addListener((id) => {
+        notifications.delete(id).catch(console.error);
+    });
 }
 
 const iconUrl = "images/icon-128.png";
@@ -63,7 +63,7 @@ export async function notifyCompletion(
     };
 
     const id = await tryCreateFancyNotification(basicOptions, advancedOptions);
-    notifications.set(id, downloadItem.id);
+    await notifications.set(id, downloadItem.id);
 }
 
 export async function notifyNoImageForHotkey(): Promise<void> {

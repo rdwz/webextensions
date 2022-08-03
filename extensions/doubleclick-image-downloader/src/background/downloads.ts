@@ -9,23 +9,21 @@ import { notifyCompletion, notifyFailure } from "./notifications";
 import { TabAndFrameId, downloads, tickCounter } from "./state";
 import browser, { Downloads, Tabs } from "webextension-polyfill";
 
-function indicateFinished(
+async function indicateFinished(
     source: TabAndFrameId,
     delta: Downloads.OnChangedDownloadDeltaType
-): void {
+): Promise<void> {
     const [tabId, frameId] = source;
-    downloads.delete(delta.id);
-    browser.tabs
-        .sendMessage(tabId, finished(delta.id), {
-            frameId: frameId ?? undefined,
-        })
-        .catch(console.error);
+    await downloads.delete(delta.id);
+    await browser.tabs.sendMessage(tabId, finished(delta.id), {
+        frameId: frameId ?? undefined,
+    });
 }
 
 async function handleEndOfDownload(
     delta: Downloads.OnChangedDownloadDeltaType
 ): Promise<void> {
-    const source = downloads.get(delta.id);
+    const source = await downloads.get(delta.id);
     if (source == null) {
         // not a download from this addon!
         return;
@@ -35,7 +33,7 @@ async function handleEndOfDownload(
 
     switch (state) {
         case "complete": {
-            indicateFinished(source, delta);
+            indicateFinished(source, delta).catch(console.error);
 
             const settings = await load();
 
@@ -56,7 +54,7 @@ async function handleEndOfDownload(
                 id: delta.id,
             });
             if (download == null || download.error === "USER_CANCELED") {
-                indicateFinished(source, delta);
+                indicateFinished(source, delta).catch(console.error);
             } else {
                 await notifyFailure(download);
             }
@@ -72,38 +70,37 @@ function determiningFilename(
     downloadItem: Downloads.DownloadItem,
     suggest: SuggestionCallback
 ): true | undefined {
-    const downloadData = downloads.get(downloadItem.id);
-    if (downloadData == null) {
-        // not a download from this addon!
-        return;
-    }
+    (async () => {
+        const downloadData = await downloads.get(downloadItem.id);
+        if (downloadData == null) {
+            // not a download from this addon!
+            return;
+        }
 
-    load()
-        .then(async (settings) => {
-            if (settings.enableRename) {
-                const tab = await browser.tabs.get(downloadData[0]);
-                const filename = renameFunctionally(
-                    downloadItem.filename,
-                    tickCounter,
-                    {
-                        imageUrl: new URL(downloadItem.url),
-                        settings,
-                        tab,
-                    }
-                );
+        const settings = await load();
+        if (settings.enableRename) {
+            const tab = await browser.tabs.get(downloadData[0]);
+            const filename = await renameFunctionally(
+                downloadItem.filename,
+                tickCounter,
+                {
+                    imageUrl: new URL(downloadItem.url),
+                    settings,
+                    tab,
+                }
+            );
 
-                suggest({
-                    conflictAction: settings.onFilenameConflict,
-                    filename,
-                });
-            } else {
-                suggest();
-            }
-        })
-        .catch((error: Error) => {
-            console.error(error);
+            suggest({
+                conflictAction: settings.onFilenameConflict,
+                filename,
+            });
+        } else {
             suggest();
-        });
+        }
+    })().catch((error) => {
+        console.error(error);
+        suggest();
+    });
 
     return true;
 }
@@ -122,7 +119,7 @@ export async function startDownload(
     if (tab.id == null) {
         throw new Error("tab without id?");
     }
-    downloads.set(downloadId, [tab.id, frameId]);
+    await downloads.set(downloadId, [tab.id, frameId]);
 
     return downloadId;
 }

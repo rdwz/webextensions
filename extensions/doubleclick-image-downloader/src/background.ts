@@ -7,10 +7,12 @@ import {
     reactToToolbarButton,
     registerContextMenu,
 } from "./background/";
+import { clearStateOnStartup } from "./background/state";
 import { monitorStorage } from "./common/";
 
 monitorStorage();
 fixSettingsOnUpdate();
+clearStateOnStartup();
 monitorNotifications();
 monitorDownloads();
 monitorHotkey();

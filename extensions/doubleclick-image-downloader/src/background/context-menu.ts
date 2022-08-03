@@ -63,7 +63,7 @@ async function reactToMenuAction(
 
         case RESET_COUNTER_ID: {
             const settings = await load();
-            resetCounter(settings);
+            await resetCounter(settings);
             return;
         }
 
