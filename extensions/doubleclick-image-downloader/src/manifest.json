@@ -52,5 +52,12 @@
             },
             "description": "Download the hovered image."
         }
+    },
+    "browser_action": {
+        "default_area": "menupanel",
+        "default_icon": {
+            "16": "images/reset-16.png"
+        },
+        "default_title": "Reset Double-click Image Downloader %counter%"
     }
 }

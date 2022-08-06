@@ -4,6 +4,7 @@ import {
     monitorDownloads,
     monitorHotkey,
     monitorNotifications,
+    reactToToolbarButton,
     registerContextMenu,
 } from "./background/";
 import { monitorStorage } from "./common/";
@@ -14,4 +15,5 @@ monitorNotifications();
 monitorDownloads();
 monitorHotkey();
 listenForMessages();
+reactToToolbarButton();
 registerContextMenu();

@@ -10,6 +10,7 @@ export const notifications = new Map<string, number>();
 // requires persistent script
 // TODO move to local storage?
 let counter = NaN;
+
 export function tickCounter(settings: Settings): number {
     if (isNaN(counter)) {
         counter = settings.counterStart;
@@ -17,4 +18,8 @@ export function tickCounter(settings: Settings): number {
         counter += settings.counterStep;
     }
     return counter;
+}
+
+export function resetCounter(settings: Settings): void {
+    counter = settings.counterStart - settings.counterStep;
 }
