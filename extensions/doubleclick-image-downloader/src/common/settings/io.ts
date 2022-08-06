@@ -38,6 +38,7 @@ const spec = {
     doubleRightClickMillis: num(250, Number.isInteger, gt(0)),
     enableImageContextMenu: bool(true),
     enableRename: bool(false),
+    enableResetCounterContextMenu: bool(false),
     enableSelectionContextMenu: bool(true),
     excludedPageDomains: stringArray([], matching(DOMAIN_NAME_FILTER_PATTERN)),
     excludedSourceDomains: stringArray(

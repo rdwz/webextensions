@@ -6,6 +6,9 @@ const imageContextMenuButton = document.getElementById(
 const selectionContextMenuButton = document.getElementById(
     "enableSelectionContextMenu"
 ) as HTMLInputElement;
+const resetCounterContextMenuButton = document.getElementById(
+    "enableResetCounterContextMenu"
+) as HTMLInputElement;
 
 function rigEnableImageContextMenu(settings: Settings): void {
     imageContextMenuButton.checked = settings.enableImageContextMenu;
@@ -27,7 +30,20 @@ function rigEnableSelectionContextMenu(settings: Settings): void {
     });
 }
 
+function rigEnableResetCounterContextMenu(settings: Settings): void {
+    resetCounterContextMenuButton.checked =
+        settings.enableResetCounterContextMenu;
+
+    resetCounterContextMenuButton.addEventListener("change", () => {
+        write({
+            enableResetCounterContextMenu:
+                resetCounterContextMenuButton.checked,
+        }).catch(console.error);
+    });
+}
+
 export function rigContextMenu(settings: Settings): void {
     rigEnableImageContextMenu(settings);
     rigEnableSelectionContextMenu(settings);
+    rigEnableResetCounterContextMenu(settings);
 }

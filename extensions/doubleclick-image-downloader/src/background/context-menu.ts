@@ -1,11 +1,13 @@
 import { Settings, load, monitor, signal } from "../common/";
 import { startDownload } from "./downloads";
+import { resetCounter } from "./state";
 import { noop } from "ts-essentials";
 import browser, { Menus, Tabs } from "webextension-polyfill";
 
 const DOWNLOAD_IMAGE_ID = "doubleClickImageDownloader_DownloadImage";
 const DOWNLOAD_SELECTED_IMAGES_ID =
     "doubleClickImageDownloader_DownloadImagesInSelection";
+const RESET_COUNTER_ID = "doubleClickImageDownloader_ResetCounterVariable";
 
 async function createContextMenu(
     options: Menus.CreateCreatePropertiesType
@@ -21,7 +23,7 @@ async function createContextMenu(
     });
 }
 
-async function downloadFocusedImage(
+async function reactToMenuAction(
     contextMenuInfo: Menus.OnClickData,
     tab?: Tabs.Tab
 ): Promise<void> {
@@ -46,6 +48,7 @@ async function downloadFocusedImage(
 
             return;
         }
+
         case DOWNLOAD_SELECTED_IMAGES_ID: {
             await browser.tabs.sendMessage(
                 tab.id,
@@ -57,6 +60,13 @@ async function downloadFocusedImage(
 
             return;
         }
+
+        case RESET_COUNTER_ID: {
+            const settings = await load();
+            resetCounter(settings);
+            return;
+        }
+
         default: {
             throw new Error(
                 `received context menu ${contextMenuInfo.menuItemId} and tab ${tab.id}?`
@@ -68,6 +78,7 @@ async function downloadFocusedImage(
 async function manageMenus(settings: Settings): Promise<void> {
     await browser.contextMenus.remove(DOWNLOAD_IMAGE_ID).catch(noop);
     await browser.contextMenus.remove(DOWNLOAD_SELECTED_IMAGES_ID).catch(noop);
+    await browser.contextMenus.remove(RESET_COUNTER_ID).catch(noop);
 
     if (settings.enableImageContextMenu) {
         await createContextMenu({
@@ -88,11 +99,21 @@ async function manageMenus(settings: Settings): Promise<void> {
             type: "normal",
         });
     }
+
+    if (settings.enableRename && settings.enableResetCounterContextMenu) {
+        await createContextMenu({
+            contexts: ["image"],
+            documentUrlPatterns: ["*://*/*", "file:///*"],
+            id: RESET_COUNTER_ID,
+            title: "Reset %counter% variable",
+            type: "normal",
+        });
+    }
 }
 
 export function registerContextMenu(): void {
     browser.contextMenus.onClicked.addListener((clicked, tab) => {
-        downloadFocusedImage(clicked, tab).catch(console.error);
+        reactToMenuAction(clicked, tab).catch(console.error);
     });
 
     load().then(manageMenus).catch(console.error);
@@ -101,6 +122,12 @@ export function registerContextMenu(): void {
         manageMenus(settings).catch(console.error);
     });
     monitor("enableSelectionContextMenu", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
+    monitor("enableResetCounterContextMenu", (settings) => {
+        manageMenus(settings).catch(console.error);
+    });
+    monitor("enableRename", (settings) => {
         manageMenus(settings).catch(console.error);
     });
 }
