@@ -22,7 +22,7 @@
         "classnames": "^2.3.1",
         "fast-equals": "^4.0.1",
         "modern-normalize": "^1.1.0",
-        "preact": "^10.10.1",
+        "preact": "^10.10.2",
         "ts-essentials": "^9.2.0",
         "tslib": "^2.4.0",
         "type-fest": "^2.18.0",
