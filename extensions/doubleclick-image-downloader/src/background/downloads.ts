@@ -33,6 +33,8 @@ async function handleEndOfDownload(
 
     switch (state) {
         case "complete": {
+            console.info("end dl");
+
             indicateFinished(source, delta).catch(console.error);
 
             const settings = await load();
@@ -66,43 +68,40 @@ async function handleEndOfDownload(
     }
 }
 
-function determiningFilename(
+async function determineFilename(
     downloadItem: Downloads.DownloadItem,
     suggest: SuggestionCallback
-): true | undefined {
-    (async () => {
-        const downloadData = await downloads.get(downloadItem.id);
-        if (downloadData == null) {
-            // not a download from this addon!
-            return;
-        }
+): Promise<void> {
+    console.info("rename started", downloadItem);
 
-        const settings = await load();
-        if (settings.enableRename) {
-            const tab = await browser.tabs.get(downloadData[0]);
-            const filename = await renameFunctionally(
-                downloadItem.filename,
-                tickCounter,
-                {
-                    imageUrl: new URL(downloadItem.url),
-                    settings,
-                    tab,
-                }
-            );
+    const downloadData = await downloads.get(downloadItem.id);
+    if (downloadData == null) {
+        // not a download from this addon!
+        return;
+    }
 
-            suggest({
-                conflictAction: settings.onFilenameConflict,
-                filename,
-            });
-        } else {
-            suggest();
-        }
-    })().catch((error) => {
-        console.error(error);
+    const settings = await load();
+    if (settings.enableRename) {
+        const tab = await browser.tabs.get(downloadData[0]);
+        const filename = await renameFunctionally(
+            downloadItem.filename,
+            tickCounter,
+            {
+                imageUrl: new URL(downloadItem.url),
+                settings,
+                tab,
+            }
+        );
+
+        console.info(filename);
+
+        suggest({
+            conflictAction: settings.onFilenameConflict,
+            filename,
+        });
+    } else {
         suggest();
-    });
-
-    return true;
+    }
 }
 
 export async function startDownload(
@@ -110,6 +109,7 @@ export async function startDownload(
     tab: Tabs.Tab,
     frameId: number | null
 ): Promise<number> {
+    console.info("starting dl");
     const settings = await load();
     const downloadId = await browser.downloads.download({
         conflictAction: settings.onFilenameConflict,
@@ -125,7 +125,13 @@ export async function startDownload(
 }
 
 export function monitorDownloads(): void {
-    fileNamingSupport()?.addListener(determiningFilename);
+    fileNamingSupport()?.addListener((item, suggest) => {
+        determineFilename(item, suggest).catch((error) => {
+            console.error(error);
+            suggest();
+        });
+        return true;
+    });
     browser.downloads.onChanged.addListener((delta) => {
         handleEndOfDownload(delta).catch(console.error);
     });
