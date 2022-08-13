@@ -24,7 +24,7 @@
         "ts-essentials": "^9.2.0",
         "tslib": "^2.4.0",
         "type-fest": "^2.18.0",
-        "webextension-polyfill": "^0.9.0"
+        "webextension-polyfill": "^0.10.0"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^3.3.0",
