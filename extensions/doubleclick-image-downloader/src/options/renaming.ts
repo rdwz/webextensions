@@ -5,7 +5,7 @@ import {
     renameTechnically,
     write,
 } from "../common/";
-import type { Mutable } from "type-fest";
+import type { Writable } from "type-fest";
 
 const TUMBLR_PAGE = new URL("https://photo-blog.tumblr.com/posts/1");
 const TUMBLR_TITLE = "My photo album";
@@ -87,7 +87,7 @@ function rigEnableFileRename(settings: Settings): void {
     enableFileRename.checked = settings.enableRename;
 
     enableFileRename.addEventListener("change", () => {
-        const update: Partial<Mutable<Settings>> = {
+        const update: Partial<Writable<Settings>> = {
             enableRename: enableFileRename.checked,
         };
 
