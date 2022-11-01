@@ -25,3 +25,6 @@ ci:
     paths:
       - extensions/*/dist/webext/*.zip
       - sources.zip
+
+variables:
+  BROWSERSLIST_IGNORE_OLD_DATA: "true"
