@@ -9,7 +9,7 @@ import browser, { Storage } from "webextension-polyfill";
 const placeholder = Symbol("not yet loaded");
 
 export function useLastResult(): IpCountryData | null {
-    const [data, setData] = useState<IpCountryData | null | typeof placeholder>(
+    const [data, setData] = useState<IpCountryData | typeof placeholder | null>(
         placeholder
     );
 

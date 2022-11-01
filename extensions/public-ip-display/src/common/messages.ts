@@ -37,8 +37,8 @@ export function reportSeparator(separator: string): SeparatorMessage {
 const subjects = [...signals, ...Object.values(topics)] as string[];
 
 export type Message =
-    | ReturnType<typeof signal>
     | CopiedMessage
+    | ReturnType<typeof signal>
     | SeparatorMessage;
 
 function hasSubject(value: {

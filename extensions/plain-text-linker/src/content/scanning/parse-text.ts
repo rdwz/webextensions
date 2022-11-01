@@ -7,7 +7,7 @@ interface IBoundedText {
 }
 
 export function textReader(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (text: string) => IBoundedText {
     const regex =
         direction === "up"

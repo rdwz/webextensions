@@ -16,15 +16,17 @@ const topics = {
 } as const;
 
 export type DownloadChangedMessage = {
-    subject: typeof topics.downloadStarted | typeof topics.downloadFinished;
+    subject: typeof topics.downloadFinished | typeof topics.downloadStarted;
     downloadId: number;
 };
+
 export function started(downloadId: number): DownloadChangedMessage {
     return {
         downloadId,
         subject: topics.downloadStarted,
     };
 }
+
 export function finished(downloadId: number): DownloadChangedMessage {
     return {
         downloadId,
@@ -36,6 +38,7 @@ type RequestedMessage = {
     subject: typeof topics.downloadRequested;
     imageUrl: string;
 };
+
 export function requestDownload(image: HTMLImageElement): RequestedMessage {
     return {
         imageUrl: image.src,
@@ -47,6 +50,7 @@ export type TriggeredMessage = {
     subject: typeof topics.afterHotkeyTriggered;
     imageFound: boolean;
 };
+
 export function hotkeyTriggered(imageFound: boolean): TriggeredMessage {
     return {
         imageFound,
@@ -59,9 +63,9 @@ export function hotkeyTriggered(imageFound: boolean): TriggeredMessage {
 const subjects = [...signals, ...Object.values(topics)] as string[];
 
 export type Message =
-    | ReturnType<typeof signal>
     | DownloadChangedMessage
     | RequestedMessage
+    | ReturnType<typeof signal>
     | TriggeredMessage;
 
 function hasSubject(value: {

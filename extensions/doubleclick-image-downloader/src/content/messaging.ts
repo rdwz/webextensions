@@ -6,7 +6,7 @@ import browser from "webextension-polyfill";
 
 async function reactToMessage(
     msg: Message
-): Promise<undefined | TriggeredMessage> {
+): Promise<TriggeredMessage | undefined> {
     switch (msg.subject) {
         case "downloadStarted":
             throw new Error(

@@ -32,7 +32,7 @@ export function renameTechnically(
 
     // replace in order of unlikeliness to accidentally create new %xyz% patterns, i.e. most predictable first
     let newName = pattern;
-    const replace = (flag: FilenameVariables, value: string | number): void => {
+    const replace = (flag: FilenameVariables, value: number | string): void => {
         newName = newName.replace(
             new RegExp(flag, "gu"),
             typeof value == "string" ? value : String(value)

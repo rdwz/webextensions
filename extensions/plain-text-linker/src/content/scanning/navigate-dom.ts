@@ -1,5 +1,5 @@
 function siblingFinder(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (origin: Node) => [Node] | null {
     const getSibling =
         direction === "up"
@@ -13,7 +13,7 @@ function siblingFinder(
 }
 
 function childFinder(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (origin: Node) => [Node] | null {
     const getChild =
         direction === "up"
@@ -27,7 +27,7 @@ function childFinder(
 }
 
 function parentsWithFirstSiblingFinder(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (origin: Node) => Node[] | null {
     const findSibling = siblingFinder(direction);
 
@@ -50,7 +50,7 @@ function parentsWithFirstSiblingFinder(
 }
 
 export function nodeWalker(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (origin: Node) => Iterable<Node> {
     const findChild = childFinder(direction);
     const findSibling = siblingFinder(direction);

@@ -14,7 +14,7 @@ const MARKUP_NODE_NAMES = [
 ];
 
 export function textNodeWalker(
-    direction: "up" | "down"
+    direction: "down" | "up"
 ): (origin: Node) => Iterable<Node> {
     const walkNodes = nodeWalker(direction);
 

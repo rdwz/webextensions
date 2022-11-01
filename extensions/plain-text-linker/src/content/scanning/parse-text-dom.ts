@@ -1,14 +1,14 @@
 import { textNodeWalker } from "./navigate-dom-text";
 import { textReader } from "./parse-text";
 
-function adder<T>(direction: "up" | "down", array: T[]): (value: T) => void {
+function adder<T>(direction: "down" | "up", array: T[]): (value: T) => void {
     return direction === "up"
         ? (text) => array.unshift(text)
         : (text) => array.push(text);
 }
 
 export function step(
-    direction: "up" | "down",
+    direction: "down" | "up",
     result: string[]
 ): (node: Node, index: number) => boolean {
     const substring: (text: string, index: number) => string =
@@ -29,7 +29,7 @@ export function step(
 const ONLY_WHITESPACE = /^\s*$/u;
 
 export function walk(
-    direction: "up" | "down",
+    direction: "down" | "up",
     result: string[]
 ): (pivot: Node) => void {
     const walkTextNodes = textNodeWalker(direction);

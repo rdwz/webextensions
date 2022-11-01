@@ -7,7 +7,7 @@ import browser from "webextension-polyfill";
 const { hide: refreshEvent, expose: refreshOrdered } = newTriggerable();
 export { refreshOrdered };
 
-async function onMessage(msg: Message): Promise<undefined | Message> {
+async function onMessage(msg: Message): Promise<Message | undefined> {
     switch (msg.subject) {
         case "copyPerformed":
             await showNotification("", `Copied ${msg.text} to clipboard.`);
