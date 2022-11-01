@@ -10,6 +10,8 @@
         "build:extensions": "yarn workspace @marnes/webextensions-extensions run build",
         "build:libs": "yarn workspace @marnes/webextensions-libs run build",
         "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach -p run clean",
+        "eslint": "yarn workspaces foreach run eslint",
+        "eslint:fix": "yarn workspaces foreach run eslint:fix",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock",
         "sources": "bestzip sources.zip \"extensions/*/*.*\" \"extensions/*/.*\" \"extensions/*/src\" \"libs/*/*.*\" \"libs/*/src\" .editorconfig .eslintrc.react.yml .eslintrc.yml .gitignore .node-version .parcelrc .prettierrc.yml .yarnrc.yml browserslist license.md package.json readme.md tsconfig.json web-ext-config.js yarn.lock",
         "tsc": "yarn tsc:libs && yarn tsc:extensions",

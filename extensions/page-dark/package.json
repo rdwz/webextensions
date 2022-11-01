@@ -9,6 +9,7 @@
         "build": "yarn clean && yarn tsc && yarn eslint && yarn parcel:build && yarn webext:lint && yarn webext:build",
         "clean": "rimraf dist",
         "eslint": "eslint \"src/**/*.ts\" --cache --cache-location dist/eslint/",
+        "eslint:fix": "eslint \"src/**/*.ts\" --cache --cache-location dist/eslint/ --fix",
         "parcel:build": "parcel build src/manifest.json src/content.* --dist-dir dist/parcel",
         "parcel:watch": "parcel watch src/manifest.json src/content.* --dist-dir dist/parcel --no-autoinstall --no-hmr",
         "start": "web-ext run",
