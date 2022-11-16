@@ -1,4 +1,4 @@
-image: node:19.0.1-alpine
+image: node:19.1.0-alpine
 
 cache:
   paths:
