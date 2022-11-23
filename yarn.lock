@@ -623,7 +623,7 @@ __metadata:
     eslint-plugin-import: ^2.26.0
     git-is-clean: ^3.0.1
     parcel-namer-hashless: ^1.0.3
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     typescript: ^4.9.3
@@ -2004,7 +2004,7 @@ __metadata:
     eslint: ^8.28.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-prettier: ^4.2.1
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tslib: ^2.4.1
@@ -3234,7 +3234,7 @@ __metadata:
     modern-normalize: ^1.1.0
     parcel: ^2.8.0
     postcss: ^8.4.19
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
@@ -3764,7 +3764,7 @@ __metadata:
     modern-normalize: ^1.1.0
     parcel: ^2.8.0
     postcss: ^8.4.19
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
@@ -5313,7 +5313,7 @@ __metadata:
     modern-normalize: ^1.1.0
     parcel: ^2.8.0
     postcss: ^8.4.19
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
@@ -7356,7 +7356,7 @@ __metadata:
     modern-normalize: ^1.1.0
     parcel: ^2.8.0
     postcss: ^8.4.19
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
@@ -7600,7 +7600,7 @@ __metadata:
     modern-normalize: ^1.1.0
     parcel: ^2.8.0
     postcss: ^8.4.19
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
@@ -7765,12 +7765,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
+"prettier@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "prettier@npm:2.8.0"
   bin:
     prettier: bin-prettier.js
-  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+  checksum: 72004ce0cc9bb097daf3e3833f62495768724392c1d5b178dd47372337616e9e50ecbb0804f236596223f7b5eb1bbe69cefc8957dca21112c5777e77ef73a564
   languageName: node
   linkType: hard
 
@@ -7878,7 +7878,7 @@ __metadata:
     parcel: ^2.8.0
     postcss: ^8.4.19
     preact: ^10.11.3
-    prettier: ^2.7.1
+    prettier: ^2.8.0
     prettier-plugin-package: ^1.3.0
     rimraf: ^3.0.2
     tailwindcss: ^3.2.4
