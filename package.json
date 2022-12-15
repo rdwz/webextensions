@@ -19,10 +19,10 @@
         "tsc:libs": "yarn workspace @marnes/webextensions-libs run tsc"
     },
     "devDependencies": {
-        "@parcel/config-default": "^2.8.1",
-        "@parcel/config-webextension": "^2.8.1",
-        "@parcel/core": "^2.8.1",
-        "@parcel/transformer-sass": "^2.8.1",
+        "@parcel/config-default": "^2.8.2",
+        "@parcel/config-webextension": "^2.8.2",
+        "@parcel/core": "^2.8.2",
+        "@parcel/transformer-sass": "^2.8.2",
         "@trivago/prettier-plugin-sort-imports": "^4.0.0",
         "@typescript-eslint/parser": "^5.46.0",
         "bestzip": "^2.2.1",
