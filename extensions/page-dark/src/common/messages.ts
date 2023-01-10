@@ -4,7 +4,7 @@ const signals = [
     "turnDarknessOff",
 ] as const;
 
-export function signal<T extends typeof signals[number]>(
+export function signal<T extends (typeof signals)[number]>(
     subject: T
 ): { subject: T } {
     return { subject };
