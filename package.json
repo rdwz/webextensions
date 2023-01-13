@@ -29,7 +29,7 @@
         "eslint": "^8.31.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-config-react": "^1.1.7",
-        "eslint-import-resolver-node": "^0.3.6",
+        "eslint-import-resolver-node": "^0.3.7",
         "eslint-plugin-import": "^2.26.0",
         "git-is-clean": "^3.0.1",
         "parcel-namer-hashless": "^1.0.3",
