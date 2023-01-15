@@ -24,7 +24,7 @@
         "modern-normalize": "^1.1.0",
         "ts-essentials": "^9.3.0",
         "tslib": "^2.4.1",
-        "type-fest": "^3.5.1",
+        "type-fest": "^3.5.2",
         "webextension-polyfill": "^0.10.0"
     },
     "devDependencies": {
