@@ -1806,10 +1806,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webextension-polyfill@npm:^0.9.2":
-  version: 0.9.2
-  resolution: "@types/webextension-polyfill@npm:0.9.2"
-  checksum: c1ce97ee3f32140cce6d3e399d80603a4ac29650557486592a4cb48e94be7ae149e33c97b65bb1c2ed8a8634852db4b8943d6d5c50354df002cc251531c9bc74
+"@types/webextension-polyfill@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@types/webextension-polyfill@npm:0.10.0"
+  checksum: 1c6d0b3f6f1b1ba666c86d78d6bf079a5382e0c3084a307021ed19dc711a9fc044d82417e322ce403782e343b0fead8ad46db8d97ea19011fb1d85157e2b9d7f
   languageName: node
   linkType: hard
 
@@ -3172,7 +3172,7 @@ __metadata:
   resolution: "copy-selected-links@workspace:extensions/copy-selected-links"
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
@@ -3702,7 +3702,7 @@ __metadata:
   resolution: "doubleclick-image-downloader@workspace:extensions/doubleclick-image-downloader"
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
@@ -5298,7 +5298,7 @@ __metadata:
   resolution: "image-background-color-picker@workspace:extensions/image-background-color-picker"
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
@@ -7277,7 +7277,7 @@ __metadata:
   resolution: "page-dark@workspace:extensions/page-dark"
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
@@ -7521,7 +7521,7 @@ __metadata:
   resolution: "plain-text-linker@workspace:extensions/plain-text-linker"
   dependencies:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
@@ -7806,7 +7806,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": ^4.0.0
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.10
-    "@types/webextension-polyfill": ^0.9.2
+    "@types/webextension-polyfill": ^0.10.0
     "@typescript-eslint/eslint-plugin": ^5.48.1
     "@typescript-eslint/parser": ^5.48.1
     "@webextensions/common": "workspace:*"
