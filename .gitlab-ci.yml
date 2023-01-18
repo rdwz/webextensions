@@ -5,6 +5,7 @@ cache:
     - .yarn/cache/
     - .yarn/unplugged/
     - .yarn/install-state.gz
+    - .pnp.*
     - "*/*/dist/eslint/*"
 
 ci:
