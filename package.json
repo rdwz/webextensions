@@ -24,7 +24,7 @@
         "@parcel/core": "^2.8.3",
         "@parcel/transformer-sass": "^2.8.3",
         "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-        "@typescript-eslint/parser": "^5.49.0",
+        "@typescript-eslint/parser": "^5.50.0",
         "bestzip": "^2.2.1",
         "eslint": "^8.33.0",
         "eslint-config-prettier": "^8.6.0",
