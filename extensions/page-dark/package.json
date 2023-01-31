@@ -22,7 +22,7 @@
         "@webextensions/common": "workspace:*",
         "fast-equals": "^4.0.3",
         "modern-normalize": "^1.1.0",
-        "tslib": "^2.4.1",
+        "tslib": "^2.5.0",
         "type-fest": "^3.5.3",
         "webextension-polyfill": "^0.10.0"
     },
