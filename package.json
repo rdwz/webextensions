@@ -9,7 +9,7 @@
         "build": "yarn build:libs && yarn build:extensions",
         "build:extensions": "yarn workspace @marnes/webextensions-extensions run build",
         "build:libs": "yarn workspace @marnes/webextensions-libs run build",
-        "clean": "rimraf .parcel-cache sources.zip && yarn workspaces foreach -p run clean",
+        "clean": "rimraf --impl=native .parcel-cache sources.zip && yarn workspaces foreach -p run clean",
         "eslint": "yarn workspaces foreach run eslint",
         "eslint:fix": "yarn workspaces foreach run eslint:fix",
         "prettier": "prettier --write --list-different --ignore-unknown --ignore-path .gitignore . !.yarn !yarn.lock",
