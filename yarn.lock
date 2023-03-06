@@ -422,7 +422,7 @@ __metadata:
     parcel-namer-hashless: ^1.0.4
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
@@ -1540,7 +1540,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tslib: ^2.5.0
     type-fest: ^3.5.3
     typescript: ^4.9.5
@@ -2737,7 +2737,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     ts-essentials: ^9.3.0
     tslib: ^2.5.0
@@ -3267,7 +3267,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     ts-essentials: ^9.3.0
     tslib: ^2.5.0
@@ -4472,6 +4472,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"glob@npm:^9.2.0":
+  version: 9.2.1
+  resolution: "glob@npm:9.2.1"
+  dependencies:
+    fs.realpath: ^1.0.0
+    minimatch: ^7.4.1
+    minipass: ^4.2.4
+    path-scurry: ^1.6.1
+  checksum: ef9b1c32491e6b532bdd0d2abcc3c9f48e83446609e11285869156982fc5a756dfbaa6f59f797712343bd1e22500ac15708692806633653fde4ef67c85e2aab7
+  languageName: node
+  linkType: hard
+
 "global-dirs@npm:^3.0.0":
   version: 3.0.0
   resolution: "global-dirs@npm:3.0.0"
@@ -4841,7 +4853,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     ts-essentials: ^9.3.0
     tslib: ^2.5.0
@@ -5878,6 +5890,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^7.14.1":
+  version: 7.18.3
+  resolution: "lru-cache@npm:7.18.3"
+  checksum: e550d772384709deea3f141af34b6d4fa392e2e418c1498c078de0ee63670f1f46f5eee746e8ef7e69e1c895af0d4224e62ee33e66a543a14763b0f2e74c1356
+  languageName: node
+  linkType: hard
+
 "make-error@npm:^1.3.2":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
@@ -6050,6 +6069,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:^7.4.1":
+  version: 7.4.2
+  resolution: "minimatch@npm:7.4.2"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 9e341b04e69d5ab03e4206dcb61c8a158e3b8709628bf5e1a4eaa9f3b72c0ba925e24ad959b1f6ce6835caa5a927131d5087fae6836b69e7d99d7d5e63ef0bd8
+  languageName: node
+  linkType: hard
+
 "minimist@npm:^1.2.0, minimist@npm:^1.2.5":
   version: 1.2.5
   resolution: "minimist@npm:1.2.5"
@@ -6121,6 +6149,13 @@ __metadata:
   dependencies:
     yallist: ^4.0.0
   checksum: 8b410b9a5bd99ceb9d63c895891d1c30511791fdc7b717da4cf9403ca2419bc57af63b8485ffdaa421ef6cff56f63ae0b2f5135f8df502d21296e8c91460ebf9
+  languageName: node
+  linkType: hard
+
+"minipass@npm:^4.0.2, minipass@npm:^4.2.4":
+  version: 4.2.4
+  resolution: "minipass@npm:4.2.4"
+  checksum: c664f2ae4401408d1e7a6e4f50aca45f87b1b0634bc9261136df5c378e313e77355765f73f59c4a5abcadcdf43d83fcd3eb14e4a7cdcce8e36508e2290345753
   languageName: node
   linkType: hard
 
@@ -6765,7 +6800,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     tslib: ^2.5.0
     type-fest: ^3.5.3
@@ -6904,6 +6939,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-scurry@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "path-scurry@npm:1.6.1"
+  dependencies:
+    lru-cache: ^7.14.1
+    minipass: ^4.0.2
+  checksum: 7ba57e823cb7bb879669a4e5e05a283cde1bb9e81b6d806b2609f8d8026d0aef08f4b655b17fc86b21c9c32807851bba95ca715db5ab0605fb13c7a3e9172e42
+  languageName: node
+  linkType: hard
+
 "path-type@npm:^4.0.0":
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
@@ -7009,7 +7054,7 @@ __metadata:
     postcss: ^8.4.21
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     ts-essentials: ^9.3.0
     tslib: ^2.5.0
@@ -7286,7 +7331,7 @@ __metadata:
     preact: ^10.13.0
     prettier: ^2.8.4
     prettier-plugin-package: ^1.3.0
-    rimraf: ^4.1.3
+    rimraf: ^4.1.4
     tailwindcss: ^3.2.7
     ts-essentials: ^9.3.0
     tslib: ^2.5.0
@@ -7678,12 +7723,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^4.1.3":
-  version: 4.1.3
-  resolution: "rimraf@npm:4.1.3"
+"rimraf@npm:^4.1.4":
+  version: 4.3.0
+  resolution: "rimraf@npm:4.3.0"
+  dependencies:
+    glob: ^9.2.0
   bin:
     rimraf: dist/cjs/src/bin.js
-  checksum: 12c080cb3784186393a76a538b2ae7b3afbc2f609d9c51451d818295cc79d8dedbb61dd63b8f2aa0ec0f443e9d5247d559665501401fac3a39ffb67f6a58e843
+  checksum: 48498f1eeb9b6b848605d93fa79e7bf3c57bb47807500ee636848dc0fd3b69b6b532f1ce9d4e46c4feeb4c3ff0e8ab85cd177cbbbd65f635f8bc8cb88aee151c
   languageName: node
   linkType: hard
 
