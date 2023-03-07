@@ -2731,7 +2731,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-prettier: ^4.2.1
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
@@ -3261,7 +3261,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-prettier: ^4.2.1
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
@@ -3978,10 +3978,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-equals@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "fast-equals@npm:4.0.3"
-  checksum: 3d5935b757f9f2993e59b5164a7a9eeda0de149760495375cde14a4ed725186a7e6c1c0d58f7d42d2f91deb97f3fce1e0aad5591916ef0984278199a85c87c87
+"fast-equals@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "fast-equals@npm:5.0.0"
+  checksum: 2cb6c40896380ba6e4133f01eb4481bf2691a277748652d4f26aad343d84e6bb3011e76ee72ee3cf9f01affbd4acf0398e9f8330a5ac803a3f4960016187cb08
   languageName: node
   linkType: hard
 
@@ -4847,7 +4847,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-prettier: ^4.2.1
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
@@ -6794,7 +6794,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-prettier: ^4.2.1
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
@@ -7048,7 +7048,7 @@ __metadata:
     eslint: ^8.35.0
     eslint-plugin-import: ^2.27.5
     eslint-plugin-prettier: ^4.2.1
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
@@ -7324,7 +7324,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    fast-equals: ^4.0.3
+    fast-equals: ^5.0.0
     modern-normalize: ^1.1.0
     parcel: ^2.8.3
     postcss: ^8.4.21
