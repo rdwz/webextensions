@@ -20,7 +20,7 @@
     },
     "dependencies": {
         "@webextensions/common": "workspace:*",
-        "fast-equals": "^5.0.0",
+        "fast-equals": "^5.0.1",
         "modern-normalize": "^1.1.0",
         "ts-essentials": "^9.3.1",
         "tslib": "^2.5.0",
