@@ -40,7 +40,7 @@
     },
     "resolutions": {
         "@types/react": "^18.0.30",
-        "terser": "^5.16.6"
+        "terser": "^5.16.8"
     },
     "@parcel/bundler-default": {
         "minBundles": 99,
