@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
+        "composite": true,
         "esModuleInterop": true,
         "importHelpers": true,
-        "importsNotUsedAsValues": "error",
         "isolatedModules": true,
         "jsx": "react",
-        "moduleResolution": "NodeNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
         "noEmit": true,
         "noUncheckedIndexedAccess": true,
         "strict": true,
