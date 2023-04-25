@@ -23,7 +23,7 @@ export interface IpLogEntry {
 }
 
 export function validateLog(data: JsonValue): Persisted {
-    if (typeof data != "object" || Array.isArray(data) || data == null) {
+    if (typeof data != "object" || data instanceof Array || data == null) {
         throw new Error(`expected a log entry, got ${JSON.stringify(data)}`);
     }
 
