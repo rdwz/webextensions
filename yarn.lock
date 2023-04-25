@@ -2757,7 +2757,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -3267,7 +3267,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -4840,7 +4840,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -6818,7 +6818,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -7090,7 +7090,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -7378,7 +7378,7 @@ __metadata:
     tslib: ^2.5.0
     type-fest: ^3.9.0
     typescript: ^5.0.4
-    web-ext: ^7.6.1
+    web-ext: ^7.6.2
     webextension-polyfill: ^0.10.0
   languageName: unknown
   linkType: soft
@@ -8946,9 +8946,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-ext@npm:^7.6.1":
-  version: 7.6.1
-  resolution: "web-ext@npm:7.6.1"
+"web-ext@npm:^7.6.2":
+  version: 7.6.2
+  resolution: "web-ext@npm:7.6.2"
   dependencies:
     "@babel/runtime": 7.21.0
     "@devicefarmer/adbkit": 3.2.3
@@ -8984,7 +8984,7 @@ __metadata:
     zip-dir: 2.0.0
   bin:
     web-ext: bin/web-ext.js
-  checksum: 0dbac7892a11fe5407ff55072036af7f081a99f54718e9ac20b67cbae2666a2e2d43967badaedaddf1548a084503992039b3e96f3767157491cf575cf9799cde
+  checksum: b5487a9fc7efd7070e3827a634559ea91986ac4722d1c95c282c3c0669c4e500e289916679d58caaeafd6146fc5fa82ecc4f00c3cd1794bf5201934667563445
   languageName: node
   linkType: hard
 
