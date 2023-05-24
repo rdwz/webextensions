@@ -23,7 +23,7 @@
         "fast-equals": "^5.0.1",
         "modern-normalize": "^2.0.0",
         "tslib": "^2.5.2",
-        "type-fest": "^3.10.0",
+        "type-fest": "^3.11.0",
         "webextension-polyfill": "^0.10.0"
     },
     "devDependencies": {
