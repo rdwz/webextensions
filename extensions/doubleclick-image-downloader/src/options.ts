@@ -1,4 +1,3 @@
-import { load } from "./common/";
 import {
     rigContextMenu,
     rigGeneral,
@@ -6,7 +5,8 @@ import {
     rigNiche,
     rigRenaming,
     rigRestrictions,
-} from "./options/";
+} from "./_options";
+import { load } from "./common";
 
 load()
     .then((settings) => {

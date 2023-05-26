@@ -1,3 +1,3 @@
-import { fixSettingsOnUpdate } from "./background/";
+import { fixSettingsOnUpdate } from "./_background";
 
 fixSettingsOnUpdate();

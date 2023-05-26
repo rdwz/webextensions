@@ -4,7 +4,7 @@ import {
     provideContextMenu,
     reactToMessages,
     reactToToolbarButton,
-} from "./background/";
+} from "./_background";
 
 fixSettingsOnUpdate();
 monitorHotkey();

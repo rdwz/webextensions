@@ -3,7 +3,7 @@ import {
     LogSection,
     RefreshHeader,
     useLastResult,
-} from "./popup/";
+} from "./_popup/";
 import React, { ReactElement } from "react";
 import ReactDOM from "react-dom";
 

@@ -1,4 +1,3 @@
-import { load } from "./common/";
 import {
     provideCopyPattern,
     provideDeduplicateHrefs,
@@ -8,7 +7,8 @@ import {
     provideShowCopyMenuAction,
     provideShowOpenMenuAction,
     provideSuccessPopup,
-} from "./options/";
+} from "./_options";
+import { load } from "./common";
 
 load()
     .then((settings) => {

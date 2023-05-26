@@ -1,4 +1,4 @@
-import { Position, Settings, load, write } from "./common/";
+import { Position, Settings, load, write } from "./common";
 
 function provideRequireShift(settings: Settings): void {
     const requireShiftKeyCheckbox = document.getElementById(

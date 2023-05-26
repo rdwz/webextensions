@@ -3,8 +3,8 @@ import {
     listenForMessages,
     refreshDataOnTriggers,
     watchSettingsChanges,
-} from "./background/";
-import { trimLogOnBoot } from "./common/";
+} from "./_background";
+import { trimLogOnBoot } from "./common";
 
 refreshDataOnTriggers();
 

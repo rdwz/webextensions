@@ -1,3 +1,3 @@
-import { rig } from "./options/";
+import { rig } from "./_options";
 
 rig().catch(console.error);

@@ -1,4 +1,3 @@
-import { load, monitorStorage } from "./common/";
 import {
     armHoverButton,
     listenForMessages,
@@ -6,7 +5,8 @@ import {
     monitorDrags,
     trackCursor,
     trackHovers,
-} from "./content/";
+} from "./_content";
+import { load, monitorStorage } from "./common";
 
 load()
     .then((settings) => {

@@ -1,5 +1,5 @@
-import { signal } from "./common/";
-import { reactToMessages } from "./content/";
+import { reactToMessages } from "./_content";
+import { signal } from "./common";
 import browser from "webextension-polyfill";
 
 const flag = Symbol.for("page-dark-script-injection");

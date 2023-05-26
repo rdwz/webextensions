@@ -1,4 +1,4 @@
-import { Settings, load, write } from "./common/";
+import { Settings, load, write } from "./common";
 
 const enableContextMenuCheckbox = document.getElementById(
     "enableContextMenu"

@@ -1,4 +1,4 @@
-import type { IpCountryData } from "../common";
+import type { IpCountryData } from "../common/";
 import { useRateLimiting } from "./state";
 import { sendRefreshWanted } from "./util";
 import React, { ReactElement } from "react";

@@ -1,4 +1,3 @@
-import { Local, Sync } from "./common/";
 import {
     rigCountryCodeService,
     rigDisplayFlag,
@@ -7,7 +6,8 @@ import {
     rigLookUpCountry,
     rigNotify,
     rigRefreshRate,
-} from "./options/";
+} from "./_options";
+import { Local, Sync } from "./common";
 
 Sync.load()
     .then((settings) => {

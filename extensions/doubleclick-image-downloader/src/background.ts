@@ -6,8 +6,8 @@ import {
     monitorNotifications,
     reactToToolbarButton,
     registerContextMenu,
-} from "./background/";
-import { monitorStorage } from "./common/";
+} from "./_background";
+import { monitorStorage } from "./common";
 
 monitorStorage();
 fixSettingsOnUpdate();
