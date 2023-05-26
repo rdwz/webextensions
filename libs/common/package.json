@@ -8,7 +8,7 @@
     "main": "src/index.ts",
     "scripts": {
         "build": "yarn clean && yarn tsc && yarn eslint",
-        "clean": "rimraf --impl=native dist",
+        "clean": "rimraf dist",
         "eslint": "eslint \"src/**/*.ts\" --cache --cache-location dist/eslint/",
         "eslint:fix": "eslint \"src/**/*.ts\" --cache --cache-location dist/eslint/ --fix",
         "tsc": "tsc"
