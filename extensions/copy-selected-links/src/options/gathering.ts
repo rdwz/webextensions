@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/";
+import { Settings, write } from "../common";
 
 export function provideIncludeCommandTarget(settings: Settings): void {
     const includeCommandTarget = document.getElementById(

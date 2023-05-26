@@ -1,4 +1,4 @@
-import type { IpLogEntry } from "../common/";
+import type { IpLogEntry } from "../common";
 import { LogTable } from "./log-table";
 import { useConfirmation, useLogs, useSeparator } from "./state";
 import classNames from "classnames";

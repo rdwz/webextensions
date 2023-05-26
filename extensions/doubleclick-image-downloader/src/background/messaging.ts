@@ -1,9 +1,4 @@
-import {
-    DownloadChangedMessage,
-    Message,
-    asMessage,
-    started,
-} from "../common/";
+import { DownloadChangedMessage, Message, asMessage, started } from "../common";
 import { startDownload } from "./downloads";
 import browser, { Runtime } from "webextension-polyfill";
 

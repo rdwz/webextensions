@@ -1,4 +1,4 @@
-import { ClickType, ConflictAction, Settings, write } from "../common/";
+import { ClickType, ConflictAction, Settings, write } from "../common";
 
 const clickTypes = document.getElementById("clickTypes")!;
 const conflictActions = document.getElementById("conflictActions")!;

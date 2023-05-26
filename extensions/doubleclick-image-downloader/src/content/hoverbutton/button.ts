@@ -3,7 +3,7 @@ import {
     monitor,
     passesShiftKeySetting,
     passesSizeRestrictions,
-} from "../../common/";
+} from "../../common";
 import { isImage } from "../dom";
 import { filteringAllows } from "../filtering";
 import { hover } from "./hover-tracking";

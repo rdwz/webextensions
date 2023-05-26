@@ -1,4 +1,4 @@
-import { CountryService, IpService, SyncIO } from "../common/";
+import { CountryService, IpService, SyncIO } from "../common";
 
 const html = {
     countryCodeService: document.getElementById(

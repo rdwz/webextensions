@@ -1,4 +1,4 @@
-import { Message, asMessage } from "../common/";
+import { Message, asMessage } from "../common";
 import { toggle } from "./darkness";
 import browser from "webextension-polyfill";
 

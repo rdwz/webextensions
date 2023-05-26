@@ -3,7 +3,7 @@ import {
     Settings,
     passesShiftKeySetting,
     passesSizeRestrictions,
-} from "../common/";
+} from "../common";
 import { isImage, isLeftClick, isRightClick } from "./dom";
 import { startDownload } from "./downloads";
 import { filteringAllows } from "./filtering";

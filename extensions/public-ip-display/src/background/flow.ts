@@ -10,7 +10,7 @@ import {
     loadLog,
     record,
     saveAsLast,
-} from "../common/";
+} from "../common";
 import { refreshOrdered } from "./messaging";
 import { showError, showNotification } from "./notification";
 import { essentialConfigChanged } from "./settings-validation";

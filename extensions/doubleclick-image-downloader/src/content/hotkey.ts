@@ -1,4 +1,4 @@
-import { TriggeredMessage, hotkeyTriggered } from "../common/";
+import { TriggeredMessage, hotkeyTriggered } from "../common";
 import { getLastPosition } from "./cursor-tracking";
 import { findImageDepthFirst, isImage } from "./dom";
 import { startDownload } from "./downloads";

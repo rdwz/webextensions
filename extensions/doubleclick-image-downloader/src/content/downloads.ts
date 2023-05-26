@@ -3,7 +3,7 @@ import {
     asMessage,
     load,
     requestDownload,
-} from "../common/";
+} from "../common";
 import browser from "webextension-polyfill";
 
 const activeClass = "doubleclick-image-downloader-active";

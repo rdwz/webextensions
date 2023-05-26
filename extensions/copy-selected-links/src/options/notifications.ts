@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/";
+import { Settings, write } from "../common";
 
 export function provideSuccessPopup(settings: Settings): void {
     const popupSuccessCheckbox = document.getElementById(

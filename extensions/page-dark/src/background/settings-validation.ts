@@ -1,4 +1,4 @@
-import { validate } from "../common/";
+import { validate } from "../common";
 import browser, { Runtime } from "webextension-polyfill";
 
 async function showOptions(

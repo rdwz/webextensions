@@ -1,4 +1,4 @@
-import { Link, Settings, load, monitor } from "../common/";
+import { Link, Settings, load, monitor } from "../common";
 import { arrangeCopy } from "./copy";
 import { arrangeOpen } from "./open";
 import { noop } from "ts-essentials";

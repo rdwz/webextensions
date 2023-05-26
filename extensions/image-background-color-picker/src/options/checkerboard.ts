@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/";
+import { Settings, write } from "../common";
 import { checkerboardCheckbox, colorPicker, colorTextbox } from "./elements";
 
 function setColorInputsDisabled(disabled: boolean): void {

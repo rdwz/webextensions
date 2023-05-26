@@ -4,7 +4,7 @@ import {
     finished,
     load,
     renameFunctionally,
-} from "../common/";
+} from "../common";
 import { notifyCompletion, notifyFailure } from "./notifications";
 import { TabAndFrameId, downloads, tickCounter } from "./state";
 import browser, { Downloads, Tabs } from "webextension-polyfill";

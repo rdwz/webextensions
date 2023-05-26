@@ -1,4 +1,4 @@
-import { Message, asMessage, reportSeparator } from "../common/";
+import { Message, asMessage, reportSeparator } from "../common";
 import { showNotification } from "./notification";
 import { newTriggerable } from "@webextensions/common";
 import type { JsonObject } from "type-fest";

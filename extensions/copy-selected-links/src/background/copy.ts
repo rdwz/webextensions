@@ -1,10 +1,4 @@
-import {
-    Link,
-    applyPattern,
-    asMessage,
-    linksRequested,
-    load,
-} from "../common/";
+import { Link, applyPattern, asMessage, linksRequested, load } from "../common";
 import { injectContentScript } from "./inject";
 import browser, { Tabs } from "webextension-polyfill";
 

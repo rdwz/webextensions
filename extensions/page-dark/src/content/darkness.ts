@@ -1,4 +1,4 @@
-import { reportState } from "../common/";
+import { reportState } from "../common";
 import { detectClick, stopDetectingClick } from "./clicks";
 import browser from "webextension-polyfill";
 

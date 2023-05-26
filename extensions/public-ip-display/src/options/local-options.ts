@@ -1,4 +1,4 @@
-import { LocalIO } from "../common/";
+import { LocalIO } from "../common";
 
 const html = {
     logLifetime: document.getElementById("logLifetime") as HTMLInputElement,

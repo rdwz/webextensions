@@ -1,4 +1,4 @@
-import { clickedText, load } from "../common/";
+import { clickedText, load } from "../common";
 import { extractText } from "./scan";
 import browser from "webextension-polyfill";
 

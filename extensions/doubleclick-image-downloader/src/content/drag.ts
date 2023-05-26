@@ -1,13 +1,15 @@
-import { Settings, monitor } from "../common/";
+import { Settings, monitor } from "../common";
 import { findImageDepthFirst, isImage } from "./dom";
 import { startDownload } from "./downloads";
 import { drop } from "./hoverbutton";
 
 let dragged: Element | null = null;
+
 function setDragged(event: DragEvent): void {
     // can't drag much else
     dragged = event.target as Element;
 }
+
 function clearDragged(): void {
     dragged = null;
 }

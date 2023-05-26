@@ -3,7 +3,7 @@ import {
     HoverButtonSkin,
     Settings,
     write,
-} from "../common/";
+} from "../common";
 import browser from "webextension-polyfill";
 
 const dragDropSupported = document.getElementById(

@@ -1,4 +1,4 @@
-import { Local, Sync, SyncIO, ipGetter } from "../common/";
+import { Local, Sync, SyncIO, ipGetter } from "../common";
 import { setTimer } from "./timing";
 import { setToolbarIcon } from "./toolbar";
 import { newTriggerable } from "@webextensions/common";

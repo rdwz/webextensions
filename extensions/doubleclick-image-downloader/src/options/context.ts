@@ -1,4 +1,4 @@
-import { Settings, write } from "../common/";
+import { Settings, write } from "../common";
 
 const imageContextMenuButton = document.getElementById(
     "enableImageContextMenu"

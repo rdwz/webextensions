@@ -1,4 +1,4 @@
-import { ClickedMessage, load, toTabIndex } from "../common/";
+import { ClickedMessage, load, toTabIndex } from "../common";
 import browser, { Runtime } from "webextension-polyfill";
 
 function toUrl(text: string): URL | null {

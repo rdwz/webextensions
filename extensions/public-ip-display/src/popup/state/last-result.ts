@@ -2,7 +2,7 @@ import {
     IpCountryData,
     isPersistedIpCountryDataProperty,
     loadLast,
-} from "../../common/";
+} from "../../common";
 import { useCallback, useEffect, useState } from "react";
 import browser, { Storage } from "webextension-polyfill";
 

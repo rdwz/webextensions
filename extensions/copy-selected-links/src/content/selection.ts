@@ -1,4 +1,4 @@
-import type { Link, LinksRequestedMessage, Settings } from "../common/";
+import type { Link, LinksRequestedMessage, Settings } from "../common";
 import { deduplicateBy } from "./deduplicate";
 
 export function getLinks(

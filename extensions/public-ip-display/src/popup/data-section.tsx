@@ -1,4 +1,4 @@
-import type { IpCountryData } from "../common/";
+import type { IpCountryData } from "../common";
 import { FlagImage } from "./flag-image";
 import { sendCopyHappened } from "./util";
 import React, { ReactElement, useCallback } from "react";

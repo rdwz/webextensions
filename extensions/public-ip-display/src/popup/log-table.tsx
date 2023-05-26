@@ -1,4 +1,4 @@
-import type { IpLogEntry } from "../common/";
+import type { IpLogEntry } from "../common";
 import { LogRow } from "./log-row";
 import React, { ReactElement, useMemo } from "react";
 

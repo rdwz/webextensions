@@ -1,4 +1,4 @@
-import { Message, TriggeredMessage, asMessage } from "../common/";
+import { Message, TriggeredMessage, asMessage } from "../common";
 import { completeDownload, startDownload } from "./downloads";
 import { downloadHoveredImage } from "./hotkey";
 import { getImagesInSelection } from "./selection";

@@ -1,4 +1,4 @@
-import type { Settings } from "../../common/";
+import type { Settings } from "../../common";
 import { HTML_BUTTON_ID, SKIN_CLASSES, insertCss } from "./skinning";
 import { newTriggerable } from "@webextensions/common";
 

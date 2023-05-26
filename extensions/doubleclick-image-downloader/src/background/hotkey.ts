@@ -1,4 +1,4 @@
-import { asMessage, signal } from "../common/";
+import { asMessage, signal } from "../common";
 import { notifyNoImageForHotkey } from "./notifications";
 import browser from "webextension-polyfill";
 

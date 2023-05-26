@@ -1,4 +1,4 @@
-import { Link, asMessage, linksRequested } from "../common/";
+import { Link, asMessage, linksRequested } from "../common";
 import { injectContentScript } from "./inject";
 import browser, { Tabs } from "webextension-polyfill";
 

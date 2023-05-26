@@ -1,4 +1,4 @@
-import { asMessage } from "../common/";
+import { asMessage } from "../common";
 import { onMessageReceived } from "./messaging";
 import browser from "webextension-polyfill";
 

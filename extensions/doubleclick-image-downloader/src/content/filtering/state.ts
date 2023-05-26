@@ -1,4 +1,4 @@
-import { DomainFilter, domainFilterFrom, load, monitor } from "../../common/";
+import { DomainFilter, domainFilterFrom, load, monitor } from "../../common";
 
 type Filter = {
     filters: Promise<DomainFilter> | null;

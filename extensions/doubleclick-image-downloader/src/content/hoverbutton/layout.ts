@@ -1,4 +1,4 @@
-import { HoverButtonPosition, Settings, monitor } from "../../common/";
+import { HoverButtonPosition, Settings, monitor } from "../../common";
 import { startDownload } from "../downloads";
 import { matching, ofViewport, shrink } from "./area";
 import * as element from "./element";

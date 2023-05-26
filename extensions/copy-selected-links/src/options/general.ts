@@ -1,4 +1,4 @@
-import { PATTERN_VARIABLES, Settings, applyPattern, write } from "../common/";
+import { PATTERN_VARIABLES, Settings, applyPattern, write } from "../common";
 
 export function provideFinalNewline(settings: Settings): void {
     const finalNewlineCheckbox = document.getElementById(

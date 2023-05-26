@@ -1,7 +1,7 @@
 import {
     AdvancedNotificationOptions,
     tryCreateFancyNotification,
-} from "../common/";
+} from "../common";
 import { notifications } from "./state";
 import browser, { Downloads, Notifications } from "webextension-polyfill";
 
@@ -79,7 +79,7 @@ export async function notifyFailure(
     download: Downloads.DownloadItem
 ): Promise<void> {
     const { os } = await browser.runtime.getPlatformInfo();
-    const separator = os === "win" ? "\\" : "/";
+    const separator = os === "win" ? "\\" : "";
     const filename = download.filename.slice(
         download.filename.lastIndexOf(separator) + 1
     );

@@ -1,4 +1,4 @@
-import { signal } from "../common/";
+import { signal } from "../common";
 import browser from "webextension-polyfill";
 
 const MEDIA_NODE_NAMES = ["VIDEO", "EMBED", "OBJECT"];

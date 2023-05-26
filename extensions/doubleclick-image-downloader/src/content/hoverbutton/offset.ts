@@ -1,4 +1,4 @@
-import { HoverButtonPosition } from "../../common/";
+import { HoverButtonPosition } from "../../common";
 import type { Area } from "./area";
 
 type Calculator = (areaSize: number, selfSize: number) => number;

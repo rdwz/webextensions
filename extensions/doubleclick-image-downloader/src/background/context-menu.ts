@@ -1,4 +1,4 @@
-import { Settings, load, monitor, signal } from "../common/";
+import { Settings, load, monitor, signal } from "../common";
 import { startDownload } from "./downloads";
 import { resetCounter } from "./state";
 import { noop } from "ts-essentials";

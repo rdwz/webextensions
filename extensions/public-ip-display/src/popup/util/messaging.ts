@@ -1,4 +1,4 @@
-import { Message, asMessage, copied, signal } from "../../common/";
+import { Message, asMessage, copied, signal } from "../../common";
 import browser from "webextension-polyfill";
 
 export function sendCopyHappened(text: string): void {

@@ -3,7 +3,7 @@ import {
     LinksRequestedMessage,
     linksPicked,
     load,
-} from "../common/";
+} from "../common";
 import { getLinks } from "./selection";
 
 export async function onLinksRequested(

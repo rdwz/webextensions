@@ -1,4 +1,4 @@
-import { HoverButtonSkin } from "../../common/";
+import { HoverButtonSkin } from "../../common";
 import browser from "webextension-polyfill";
 
 export const HTML_BUTTON_ID = "singleclick-image-downloader";

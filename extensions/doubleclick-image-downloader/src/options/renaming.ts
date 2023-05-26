@@ -4,7 +4,7 @@ import {
     fileNamingSupport,
     renameTechnically,
     write,
-} from "../common/";
+} from "../common";
 import type { Writable } from "type-fest";
 
 const TUMBLR_PAGE = new URL("https://photo-blog.tumblr.com/posts/1");
