@@ -1,15 +1,4 @@
-type Action<T> = (data: T) => void;
-
-interface Triggerable<T> {
-    expose: {
-        unsubscribe: (key: symbol) => void;
-        subscribe: (action: Action<T>, description: string) => symbol;
-    };
-    hide: {
-        hasSubscribers: () => boolean;
-        trigger: (data: T) => void;
-    };
-}
+import { Action, Triggerable } from "./types";
 
 export function newTriggerable<T = undefined>(): Triggerable<T> {
     const actions = new Map<symbol, Action<T>>();
