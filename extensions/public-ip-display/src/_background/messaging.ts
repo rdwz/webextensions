@@ -1,10 +1,10 @@
 import { Message, asMessage, reportSeparator } from "../common";
 import { showNotification } from "./notification";
-import { newTriggerable } from "@webextensions/common";
+import { makeTriggerable } from "@webextensions/common";
 import type { JsonObject } from "type-fest";
 import browser from "webextension-polyfill";
 
-const { hide: refreshEvent, expose: refreshOrdered } = newTriggerable();
+const { hide: refreshEvent, expose: refreshOrdered } = makeTriggerable();
 export { refreshOrdered };
 
 async function onMessage(msg: Message): Promise<Message | undefined> {

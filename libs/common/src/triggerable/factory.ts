@@ -1,6 +1,6 @@
 import { Action, Triggerable } from "./types";
 
-export function newTriggerable<T = undefined>(): Triggerable<T> {
+export function makeTriggerable<T = undefined>(): Triggerable<T> {
     const actions = new Map<symbol, Action<T>>();
 
     return {

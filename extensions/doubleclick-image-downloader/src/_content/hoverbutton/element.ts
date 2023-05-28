@@ -1,15 +1,15 @@
 import type { Settings } from "../../common";
 import { HTML_BUTTON_ID, SKIN_CLASSES, insertCss } from "./skinning";
-import { newTriggerable } from "@webextensions/common";
+import { makeTriggerable } from "@webextensions/common";
 
 const button = document.createElement("div");
 button.id = HTML_BUTTON_ID;
 button.title = "Download image";
 
-const { hide: dropEvent, expose: drop } = newTriggerable();
+const { hide: dropEvent, expose: drop } = makeTriggerable();
 export { drop };
 
-const { hide: clickEvent, expose: click } = newTriggerable();
+const { hide: clickEvent, expose: click } = makeTriggerable();
 export { click };
 
 button.addEventListener("dragover", (event) => {
