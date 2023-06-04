@@ -36,6 +36,7 @@ rules:
   no-else-return: off
   no-eq-null: off
   no-lonely-if: off
+  no-return-await: off
   no-ternary: off
   no-undefined: off
   no-void: off
@@ -69,6 +70,9 @@ rules:
     - allowBoolean: true
       allowNullish: true
       allowNumber: true
+  "@typescript-eslint/return-await":
+    - error
+    - always
   "@typescript-eslint/sort-type-union-intersection-members": off
   "@typescript-eslint/require-await": error
   # enforced through tsconfig

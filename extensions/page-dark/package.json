@@ -20,11 +20,11 @@
     },
     "dependencies": {
         "@webextensions/common": "workspace:*",
-        "fast-equals": "^5.0.1",
         "modern-normalize": "^2.0.0",
         "tslib": "^2.5.3",
         "type-fest": "^3.11.1",
-        "webextension-polyfill": "^0.10.0"
+        "webextension-polyfill": "^0.10.0",
+        "zod": "^3.21.4"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.1.1",
