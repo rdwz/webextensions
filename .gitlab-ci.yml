@@ -10,8 +10,6 @@ cache:
 
 ci:
   script:
-    # https://github.com/parcel-bundler/parcel/issues/8005#issuecomment-1120149358
-    - export NODE_OPTIONS=--no-experimental-fetch
     - yarn install --immutable
     - yarn clean
     - yarn prettier
