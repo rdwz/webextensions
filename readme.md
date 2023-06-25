@@ -1,5 +1,11 @@
 # Marnes' WebExtensions
 
+## Deprecation notice
+
+These webextensions have been retired due to their overhead burden (nodejs tooling, CI infrastructure, 2 stores, feature creep from user requests, etc), aging code quality, lack of use to myself, and professionally having outgrown this project.
+
+**I do have a [greasyfork account](https://greasyfork.org/en/users/18593-marnes) and may publish works there in the future.** Copy Selected Links, Image Background Color Picker, and Doubleclick Image Downloader have always had and still have some use to me, and their core functionality should be trivial to implement in barebones userscripts.
+
 ## For users
 
 This repository hosts all extensions developed by Marnes (see
