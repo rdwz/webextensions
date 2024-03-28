@@ -41,7 +41,7 @@
         "typescript": "^5.1.3"
     },
     "resolutions": {
-        "@types/react": "^18.2.14",
+        "@types/react": "^18.2.73",
         "terser": "^5.18.1"
     },
     "@parcel/bundler-default": {
