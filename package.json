@@ -49,7 +49,7 @@
         "minBundleSize": 99999999,
         "maxParallelRequests": 1
     },
-    "packageManager": "yarn@3.6.0",
+    "packageManager": "yarn@3.6.4",
     "workspaces": [
         "extensions",
         "extensions/*",
